@@ -231,8 +231,9 @@
     {
       "path": "pyproject.toml",
       "source_sha256": "4289cd062799175aa0725cea4a590dcfbc3dcb647db2885bd7c2be4864e37abd",
-      "published_sha256": "4289cd062799175aa0725cea4a590dcfbc3dcb647db2885bd7c2be4864e37abd",
-      "redacted": false
+      "published_sha256": "8f212ba51699834600ecbba21561a86985efe047a8f42917b6bc02692eb58cd5",
+      "redacted": false,
+      "publication_edit": true
     },
     {
       "path": "requirements.lock",
@@ -552,7 +553,7 @@
       "path": "README.md",
       "source_sha256": null,
       "publication_edit": true,
-      "published_sha256": "65b6246a0413bea663bf27bd0d8fda99613d7040c5b38eef7edb2f7ae542a8f9"
+      "published_sha256": "7b5e8ee6018929c224a9e3a70958741be8437b35faff7ba770084c58711654cd"
     },
     {
       "path": "docs/figures/rl-comparison.png",
@@ -598,7 +599,8 @@
     "Checkpoint benchmarking uses platform temporary directory",
     "Added portable-command regression test and CPU CI workflow",
     "Added a results figure generated solely from the paired recorded validation slice",
-    "Included all12 completed initial learning records and all3 completed strong PPO fine-tuning records"
+    "Included all12 completed initial learning records and all3 completed strong PPO fine-tuning records",
+    "Renamed the public project and package to Experimental Scientist RL / experimental-scientist-rl at user request"
   ],
   "rl_included": [
     "full-history PPO",
@@ -613,5 +615,7 @@
     "local_tests_failed": 0,
     "scientific_diagnostics": "passed",
     "hosted_ci": "not_run_yet"
-  }
+  },
+  "public_repository": "https://github.com/Vajraaaang/experimental-scientist-rl",
+  "project_title": "Experimental Scientist RL"
 }

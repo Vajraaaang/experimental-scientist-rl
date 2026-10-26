@@ -3,9 +3,9 @@ requires = ["setuptools>=75"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "experimental-scientist"
+name = "experimental-scientist-rl"
 version = "0.1.0"
-description = "Cost-aware experimental design: a bounded scientific feasibility benchmark"
+description = "RL and Bayesian planning for cost-aware experimental design"
 requires-python = ">=3.12,<3.15"
 dependencies = ["numpy>=2.0", "scipy>=1.14", "torch>=2.5", "PyYAML>=6.0", "matplotlib>=3.9"]
 

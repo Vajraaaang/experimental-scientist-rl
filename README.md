@@ -1,6 +1,6 @@
-# Experimental Scientist
+# Experimental Scientist RL
 
-**Reinforcement learning and Bayesian planning for cost-aware experimental design.**
+**RL (reinforcement learning) and Bayesian planning for cost-aware experimental design.**
 
 A standalone Python research project in which an agent purchases experiments on a hidden synthetic regulatory system, then chooses a final intervention. It asks whether experiments help, whether adapting them helps, and whether PPO adds value beyond imitation learning.
 
