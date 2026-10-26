@@ -1,0 +1,4965 @@
+{
+  "tuning": {
+    "schedule": [
+      4,
+      12,
+      31
+    ],
+    "calibration_return": -0.37588301982009176,
+    "schedules_evaluated": 10373,
+    "calibration_tasks": 512,
+    "tuning_seconds": 51.840040542010684,
+    "search": "all singles/ordered pairs, repeated assays, identification subsets, beam extensions"
+  },
+  "quality_tuning": {
+    "schedule": [
+      4,
+      14,
+      31
+    ],
+    "calibration_return": -0.3109046781628934,
+    "schedules_evaluated": 10373,
+    "calibration_tasks": 512,
+    "tuning_seconds": 51.987157083000056,
+    "search": "all singles/ordered pairs, repeated assays, identification subsets, beam extensions"
+  },
+  "summary": {
+    "fixed_exhaustive": {
+      "aggregate_rmse": 0.053990527929157116,
+      "success_rate": 0.6328125,
+      "mean_return": -0.38081021060690945,
+      "mean_variable_cost": 6.400000000000001,
+      "mean_total_assay_cost": 9.400000000000002,
+      "mean_effort": 0.50625,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.0021902070475334767
+    },
+    "fixed_quality_exhaustive": {
+      "aggregate_rmse": 0.053990527929157116,
+      "success_rate": 0.6328125,
+      "mean_return": -0.39081021060690946,
+      "mean_variable_cost": 7.400000000000002,
+      "mean_total_assay_cost": 10.400000000000002,
+      "mean_effort": 0.50625,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.0026770458193823288
+    }
+  },
+  "rows": {
+    "fixed_exhaustive": [
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.002355291973799467,
+        "ess_min": 6.265033185384599,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000877153373595235,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1917153373595235,
+        "assays": 3,
+        "online_seconds": 0.0021542500471696258,
+        "ess_min": 7.822397082732928,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007995760792212665,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18395760792212665,
+        "assays": 3,
+        "online_seconds": 0.002139708027243614,
+        "ess_min": 5.780090196223634,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010554699604360814,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20954699604360816,
+        "assays": 3,
+        "online_seconds": 0.002129458007402718,
+        "ess_min": 7.88663517297618,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007337132625447498,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.177371326254475,
+        "assays": 3,
+        "online_seconds": 0.0022568340064026415,
+        "ess_min": 7.083570375665894,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009986668683257685,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20386668683257686,
+        "assays": 3,
+        "online_seconds": 0.0022044579964131117,
+        "ess_min": 7.933117944835948,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009347773027590804,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19747773027590804,
+        "assays": 3,
+        "online_seconds": 0.002266665978822857,
+        "ess_min": 7.037235840513101,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011489330059655405,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21889330059655407,
+        "assays": 3,
+        "online_seconds": 0.0022313339868560433,
+        "ess_min": 6.901635812129335,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011829905490992408,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22229905490992408,
+        "assays": 3,
+        "online_seconds": 0.0021036670077592134,
+        "ess_min": 7.084877481332051,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007981807054409724,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18381807054409724,
+        "assays": 3,
+        "online_seconds": 0.0020976249943487346,
+        "ess_min": 7.55756593620037,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.002058417012449354,
+        "ess_min": 6.525996225969433,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.0020618329872377217,
+        "ess_min": 7.150608593259993,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.002061292005237192,
+        "ess_min": 7.386718946077794,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0020306669757701457,
+        "ess_min": 7.290439274646429,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010651540928090372,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21051540928090373,
+        "assays": 3,
+        "online_seconds": 0.0020551669877022505,
+        "ess_min": 7.800070624613509,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.00206920801429078,
+        "ess_min": 7.071457263296691,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0021124170161783695,
+        "ess_min": 7.6483145694897265,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.0021569160162471235,
+        "ess_min": 7.103806850829071,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007354372834466326,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17754372834466325,
+        "assays": 3,
+        "online_seconds": 0.002435667032841593,
+        "ess_min": 7.814255381291077,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007386465420978672,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17786465420978673,
+        "assays": 3,
+        "online_seconds": 0.0021087080240249634,
+        "ess_min": 7.48477055792292,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0020789579721167684,
+        "ess_min": 7.291484185864786,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.002196500019636005,
+        "ess_min": 7.487132390296401,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.0021100000012665987,
+        "ess_min": 6.5320800208417635,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009856066351355724,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20256066351355723,
+        "assays": 3,
+        "online_seconds": 0.0021698750206269324,
+        "ess_min": 4.843965803372331,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007372764277332923,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17772764277332925,
+        "assays": 3,
+        "online_seconds": 0.0023979999823495746,
+        "ess_min": 7.810792577431494,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.002226750017143786,
+        "ess_min": 7.373407391385288,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.002409790991805494,
+        "ess_min": 7.316038071966523,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009698340377558352,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20098340377558355,
+        "assays": 3,
+        "online_seconds": 0.0022913750144653022,
+        "ess_min": 7.6083082008634895,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000670784326085905,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1710784326085905,
+        "assays": 3,
+        "online_seconds": 0.0022894160356372595,
+        "ess_min": 7.938720293365028,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010367240206896468,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2076724020689647,
+        "assays": 3,
+        "online_seconds": 0.002103291975799948,
+        "ess_min": 7.56440238509236,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.0020714160054922104,
+        "ess_min": 7.711652461220627,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010331476598655761,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20731476598655763,
+        "assays": 3,
+        "online_seconds": 0.0020947909797541797,
+        "ess_min": 6.863871745972429,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008377945127660163,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18777945127660162,
+        "assays": 3,
+        "online_seconds": 0.0024522499879822135,
+        "ess_min": 7.860026911927167,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008069984509266507,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18469984509266507,
+        "assays": 3,
+        "online_seconds": 0.0022281669662334025,
+        "ess_min": 4.282036366942306,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.0021742500248365104,
+        "ess_min": 7.6118657743176215,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.002214500040281564,
+        "ess_min": 7.473846856744726,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011119148424578607,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21519148424578607,
+        "assays": 3,
+        "online_seconds": 0.0021915000397711992,
+        "ess_min": 7.647313185268528,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010023605611208177,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2042360561120818,
+        "assays": 3,
+        "online_seconds": 0.0021479169954545796,
+        "ess_min": 7.394423204258787,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009006921447126213,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19406921447126213,
+        "assays": 3,
+        "online_seconds": 0.00213350000558421,
+        "ess_min": 7.301742210808606,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008468035079085974,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18868035079085976,
+        "assays": 3,
+        "online_seconds": 0.00216524995630607,
+        "ess_min": 6.91001787169613,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.002463415963575244,
+        "ess_min": 7.149657876957647,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0022266250452958047,
+        "ess_min": 6.828704685800152,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010350620363026562,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20750620363026562,
+        "assays": 3,
+        "online_seconds": 0.002333084004931152,
+        "ess_min": 6.5541113648141645,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006518247209194322,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.16918247209194323,
+        "assays": 3,
+        "online_seconds": 0.0021281670196913183,
+        "ess_min": 7.820754339245301,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010967353456569939,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21367353456569937,
+        "assays": 3,
+        "online_seconds": 0.0021459999843500555,
+        "ess_min": 7.451887340679825,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000912252969577753,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1952252969577753,
+        "assays": 3,
+        "online_seconds": 0.0022652079933322966,
+        "ess_min": 9.187352918509408,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0021912920055910945,
+        "ess_min": 7.713980168614803,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.002266708994284272,
+        "ess_min": 4.913182494403061,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.002170249994378537,
+        "ess_min": 6.8659917641683315,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007998666308838875,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18398666308838876,
+        "assays": 3,
+        "online_seconds": 0.0021512919920496643,
+        "ess_min": 6.623693185572688,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.0021500830189324915,
+        "ess_min": 7.682866375209947,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.002179084054660052,
+        "ess_min": 7.712204045935007,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006921254497176051,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17321254497176053,
+        "assays": 3,
+        "online_seconds": 0.002195458044297993,
+        "ess_min": 5.708522304118585,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.0023362080100923777,
+        "ess_min": 5.3013910573269385,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010245572428425461,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20645572428425463,
+        "assays": 3,
+        "online_seconds": 0.0022414999548345804,
+        "ess_min": 7.5886888547674465,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011300446743671613,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21700446743671614,
+        "assays": 3,
+        "online_seconds": 0.0022853330010548234,
+        "ess_min": 6.477104720929273,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007728084393142192,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1812808439314219,
+        "assays": 3,
+        "online_seconds": 0.0021790830069221556,
+        "ess_min": 7.8476719211654595,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006745812104164363,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17145812104164365,
+        "assays": 3,
+        "online_seconds": 0.002169500046875328,
+        "ess_min": 6.303416778734568,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009640085707438874,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20040085707438876,
+        "assays": 3,
+        "online_seconds": 0.0023362499778158963,
+        "ess_min": 7.905662236354041,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009914080458287703,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20314080458287703,
+        "assays": 3,
+        "online_seconds": 0.002137292001862079,
+        "ess_min": 4.49648577849123,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.002074874995741993,
+        "ess_min": 7.725197775378186,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008064046152830047,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1846404615283005,
+        "assays": 3,
+        "online_seconds": 0.0021782920230180025,
+        "ess_min": 5.2797635582235865,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001026672172898989,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2066672172898989,
+        "assays": 3,
+        "online_seconds": 0.0021864169975742698,
+        "ess_min": 7.238007508209907,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008399876893945585,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18799876893945586,
+        "assays": 3,
+        "online_seconds": 0.002186208963394165,
+        "ess_min": 7.692024289477059,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009676950687370504,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20076950687370504,
+        "assays": 3,
+        "online_seconds": 0.0022965410025790334,
+        "ess_min": 6.071491352843265,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006914157777011914,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17314157777011915,
+        "assays": 3,
+        "online_seconds": 0.002178416005335748,
+        "ess_min": 6.7216713226848315,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009499330085447999,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19899330085448,
+        "assays": 3,
+        "online_seconds": 0.002144834026694298,
+        "ess_min": 7.7939487843705715,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007603714283781805,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18003714283781808,
+        "assays": 3,
+        "online_seconds": 0.002096917014569044,
+        "ess_min": 5.996878364524445,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008288107571162483,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18688107571162482,
+        "assays": 3,
+        "online_seconds": 0.002081208978779614,
+        "ess_min": 7.4980184678121065,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010466686858410107,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20866686858410108,
+        "assays": 3,
+        "online_seconds": 0.0023630420328117907,
+        "ess_min": 7.789570800249765,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009362539921953857,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1976253992195386,
+        "assays": 3,
+        "online_seconds": 0.0021692499867640436,
+        "ess_min": 7.6723197139083705,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007175462883238444,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17575462883238446,
+        "assays": 3,
+        "online_seconds": 0.002158457995392382,
+        "ess_min": 7.812385139549418,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.0022562500089406967,
+        "ess_min": 7.724533632448204,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007899913555832064,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18299913555832065,
+        "assays": 3,
+        "online_seconds": 0.0022289580083452165,
+        "ess_min": 7.396043858405808,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000785994911245177,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1825994911245177,
+        "assays": 3,
+        "online_seconds": 0.0022104159579612315,
+        "ess_min": 7.7484705878572875,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007462915157292149,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1786291515729215,
+        "assays": 3,
+        "online_seconds": 0.0022012920235283673,
+        "ess_min": 6.614473563989309,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.0021900419960729778,
+        "ess_min": 4.203689046628728,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006866975095867487,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17266975095867487,
+        "assays": 3,
+        "online_seconds": 0.0022297079558484256,
+        "ess_min": 7.52314331212345,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008960233239965816,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19360233239965818,
+        "assays": 3,
+        "online_seconds": 0.0021374999778345227,
+        "ess_min": 7.624580481400918,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000914554960843461,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19545549608434612,
+        "assays": 3,
+        "online_seconds": 0.0022147909621708095,
+        "ess_min": 7.180459791437751,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.002092249982524663,
+        "ess_min": 5.429581259134367,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001034993166134204,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20749931661342041,
+        "assays": 3,
+        "online_seconds": 0.0021402910351753235,
+        "ess_min": 7.859334193718542,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008130148675992864,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18530148675992864,
+        "assays": 3,
+        "online_seconds": 0.0021292499732226133,
+        "ess_min": 6.038608715932414,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008131743449842096,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18531743449842097,
+        "assays": 3,
+        "online_seconds": 0.002183667034842074,
+        "ess_min": 6.810258722308792,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.002123542013578117,
+        "ess_min": 7.407791576162298,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.002207249985076487,
+        "ess_min": 7.715596624445762,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.002187957987189293,
+        "ess_min": 7.184570189882041,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008802383465192279,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1920238346519228,
+        "assays": 3,
+        "online_seconds": 0.0021490000071935356,
+        "ess_min": 5.975482746133117,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001067539763105372,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21075397631053722,
+        "assays": 3,
+        "online_seconds": 0.002132790978066623,
+        "ess_min": 6.124200382515288,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.002212541992776096,
+        "ess_min": 6.11870903839713,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007257894056929421,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17657894056929424,
+        "assays": 3,
+        "online_seconds": 0.0022186249843798578,
+        "ess_min": 5.816660176318818,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.0022411250392906368,
+        "ess_min": 6.643549208397428,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000884067018188899,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1924067018188899,
+        "assays": 3,
+        "online_seconds": 0.002212083956692368,
+        "ess_min": 7.10744352178405,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.0022319579729810357,
+        "ess_min": 7.869636450300873,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008739266436216545,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19139266436216545,
+        "assays": 3,
+        "online_seconds": 0.002191042003687471,
+        "ess_min": 6.839183013852212,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008030383943035755,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18430383943035755,
+        "assays": 3,
+        "online_seconds": 0.0021780839888378978,
+        "ess_min": 6.331493242737309,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009717594952181649,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2011759495218165,
+        "assays": 3,
+        "online_seconds": 0.002289000025484711,
+        "ess_min": 6.752396404843878,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.002162083052098751,
+        "ess_min": 6.969890639912913,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.0020777919562533498,
+        "ess_min": 6.409502288658395,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006838931419290397,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.172389314192904,
+        "assays": 3,
+        "online_seconds": 0.0020988750038668513,
+        "ess_min": 7.7362007056032835,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.704,
+        "assays": 3,
+        "online_seconds": 0.0022627500002272427,
+        "ess_min": 7.814220231954436,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011943004086219754,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22343004086219753,
+        "assays": 3,
+        "online_seconds": 0.0021496249828487635,
+        "ess_min": 5.312997562697878,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009995885762128247,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20395885762128246,
+        "assays": 3,
+        "online_seconds": 0.002216625027358532,
+        "ess_min": 5.041513256721788,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010526566234619532,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2092656623461953,
+        "assays": 3,
+        "online_seconds": 0.0023208329803310335,
+        "ess_min": 7.850237550230946,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007382186072164909,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1778218607216491,
+        "assays": 3,
+        "online_seconds": 0.002304334018845111,
+        "ess_min": 7.764253340290642,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000907786701922925,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1947786701922925,
+        "assays": 3,
+        "online_seconds": 0.0022956670145504177,
+        "ess_min": 7.1071548257692045,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006991301110094871,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17391301110094873,
+        "assays": 3,
+        "online_seconds": 0.0023899999796412885,
+        "ess_min": 6.774547905547118,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0020872079767286777,
+        "ess_min": 7.414410335101227,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0020819169585593045,
+        "ess_min": 7.783098275563517,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007893406581901922,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18293406581901922,
+        "assays": 3,
+        "online_seconds": 0.002176749985665083,
+        "ess_min": 7.774983043126306,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.0022384580224752426,
+        "ess_min": 6.699167548136376,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0020843750098720193,
+        "ess_min": 7.890675556338377,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0021530420053750277,
+        "ess_min": 11.295467799148327,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008573423006950388,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1897342300695039,
+        "assays": 3,
+        "online_seconds": 0.00212133297463879,
+        "ess_min": 4.666405004894633,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.002036791993305087,
+        "ess_min": 7.116240992002246,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011140480639409897,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21540480639409898,
+        "assays": 3,
+        "online_seconds": 0.0020387090044096112,
+        "ess_min": 5.307926609775191,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999995,
+        "assays": 3,
+        "online_seconds": 0.0023314999998547137,
+        "ess_min": 5.4064353402835925,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7040000000000004,
+        "assays": 3,
+        "online_seconds": 0.0022560840006917715,
+        "ess_min": 6.055273955482582,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.0022614580229856074,
+        "ess_min": 6.6002398289775845,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010210777631298371,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20610777631298371,
+        "assays": 3,
+        "online_seconds": 0.0021642919746227562,
+        "ess_min": 7.808573879679593,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001022897772246457,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2062897772246457,
+        "assays": 3,
+        "online_seconds": 0.0022259170073084533,
+        "ess_min": 7.17854112235365,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7039999999999997,
+        "assays": 3,
+        "online_seconds": 0.002196375047788024,
+        "ess_min": 4.580110905018811,
+        "choices": [
+          4,
+          12,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006883231466323286,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17283231466323287,
+        "assays": 3,
+        "online_seconds": 0.002166750025935471,
+        "ess_min": 7.558392225820996,
+        "choices": [
+          4,
+          12,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010418851477017128,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2081885147701713,
+        "assays": 3,
+        "online_seconds": 0.002124207967426628,
+        "ess_min": 7.886584729810686,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009704511977875684,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20104511977875686,
+        "assays": 3,
+        "online_seconds": 0.0021181670017540455,
+        "ess_min": 7.333427892703955,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007955582515888039,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18355582515888041,
+        "assays": 3,
+        "online_seconds": 0.002091291011311114,
+        "ess_min": 7.764726547725009,
+        "choices": [
+          4,
+          12,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009026497843836131,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19426497843836132,
+        "assays": 3,
+        "online_seconds": 0.0021989999804645777,
+        "ess_min": 7.3217438197687645,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000825155323935516,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 6.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18651553239355162,
+        "assays": 3,
+        "online_seconds": 0.0022214999771676958,
+        "ess_min": 6.732482458796824,
+        "choices": [
+          4,
+          12,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      }
+    ],
+    "fixed_quality_exhaustive": [
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0026981669943779707,
+        "ess_min": 5.786822207976228,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000877153373595235,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20171533735952352,
+        "assays": 3,
+        "online_seconds": 0.0028577500488609076,
+        "ess_min": 7.857384958620686,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007995760792212665,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19395760792212666,
+        "assays": 3,
+        "online_seconds": 0.002756583970040083,
+        "ess_min": 6.788512954940387,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010554699604360814,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21954699604360817,
+        "assays": 3,
+        "online_seconds": 0.0027136250282637775,
+        "ess_min": 6.899813072268641,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007337132625447498,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.187371326254475,
+        "assays": 3,
+        "online_seconds": 0.0028910000110045075,
+        "ess_min": 6.000922538689018,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009986668683257685,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21386668683257687,
+        "assays": 3,
+        "online_seconds": 0.002584667003247887,
+        "ess_min": 7.748135528348291,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009347773027590804,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20747773027590805,
+        "assays": 3,
+        "online_seconds": 0.002540290995966643,
+        "ess_min": 7.532889415016467,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011489330059655405,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22889330059655408,
+        "assays": 3,
+        "online_seconds": 0.002775917004328221,
+        "ess_min": 5.24414033129235,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011829905490992408,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.23229905490992409,
+        "assays": 3,
+        "online_seconds": 0.0027217920287512243,
+        "ess_min": 5.644374153919221,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007981807054409724,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19381807054409725,
+        "assays": 3,
+        "online_seconds": 0.0026645420002751052,
+        "ess_min": 7.808944220828171,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.002796499989926815,
+        "ess_min": 5.503912227328456,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.002650333975907415,
+        "ess_min": 6.58476967182036,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.002678082964848727,
+        "ess_min": 6.836815201412365,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.002573665988165885,
+        "ess_min": 7.159044849968259,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010651540928090372,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22051540928090374,
+        "assays": 3,
+        "online_seconds": 0.002534290950279683,
+        "ess_min": 7.463895906891427,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0026659999857656658,
+        "ess_min": 5.793795143996356,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0025378750287927687,
+        "ess_min": 6.966816589137812,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.0025255840155296028,
+        "ess_min": 5.74900970156194,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007354372834466326,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18754372834466326,
+        "assays": 3,
+        "online_seconds": 0.002686167019419372,
+        "ess_min": 6.076427511605898,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007386465420978672,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18786465420978674,
+        "assays": 3,
+        "online_seconds": 0.0027465829625725746,
+        "ess_min": 7.3729541946290675,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0025710000190883875,
+        "ess_min": 7.351755100755374,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.0026098749949596822,
+        "ess_min": 7.407499333274921,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0027359999949112535,
+        "ess_min": 5.803679244606163,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009856066351355724,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21256066351355724,
+        "assays": 3,
+        "online_seconds": 0.002549665980041027,
+        "ess_min": 4.411068304400958,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007372764277332923,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18772764277332926,
+        "assays": 3,
+        "online_seconds": 0.0028690409963019192,
+        "ess_min": 7.301586675985358,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.00278095796238631,
+        "ess_min": 7.332502632675446,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.00290004099952057,
+        "ess_min": 7.397749575721977,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009698340377558352,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21098340377558356,
+        "assays": 3,
+        "online_seconds": 0.0026149580371566117,
+        "ess_min": 7.532941386145702,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000670784326085905,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18107843260859052,
+        "assays": 3,
+        "online_seconds": 0.0024863749858923256,
+        "ess_min": 7.523803839090757,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010367240206896468,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2176724020689647,
+        "assays": 3,
+        "online_seconds": 0.0025596669875085354,
+        "ess_min": 7.045874274757316,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0028070000116713345,
+        "ess_min": 7.8888705897878095,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010331476598655761,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21731476598655763,
+        "assays": 3,
+        "online_seconds": 0.002557541010901332,
+        "ess_min": 6.354400038928594,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008377945127660163,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19777945127660163,
+        "assays": 3,
+        "online_seconds": 0.0025577910128049552,
+        "ess_min": 7.159868580410321,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008069984509266507,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19469984509266508,
+        "assays": 3,
+        "online_seconds": 0.002867708040867001,
+        "ess_min": 3.8614372935562566,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.002634833042975515,
+        "ess_min": 7.026503995106326,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.002620332990773022,
+        "ess_min": 7.154537541545057,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011119148424578607,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22519148424578608,
+        "assays": 3,
+        "online_seconds": 0.0028641659882850945,
+        "ess_min": 6.783203810707603,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010023605611208177,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2142360561120818,
+        "assays": 3,
+        "online_seconds": 0.0026382500072941184,
+        "ess_min": 6.81896447987869,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009006921447126213,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20406921447126214,
+        "assays": 3,
+        "online_seconds": 0.0026255000266246498,
+        "ess_min": 6.339973728931549,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008468035079085974,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19868035079085977,
+        "assays": 3,
+        "online_seconds": 0.002532666956540197,
+        "ess_min": 5.689236738603593,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.002514583000447601,
+        "ess_min": 5.502865123452797,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.002533000020775944,
+        "ess_min": 6.6671682240337615,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010350620363026562,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21750620363026563,
+        "assays": 3,
+        "online_seconds": 0.002896833000704646,
+        "ess_min": 6.85776095491677,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006518247209194322,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.17918247209194324,
+        "assays": 3,
+        "online_seconds": 0.0026761660119518638,
+        "ess_min": 7.566727325450398,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010967353456569939,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22367353456569938,
+        "assays": 3,
+        "online_seconds": 0.0025666250148788095,
+        "ess_min": 7.1875881306476135,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000912252969577753,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2052252969577753,
+        "assays": 3,
+        "online_seconds": 0.0026807920075953007,
+        "ess_min": 8.585694359804663,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0028537919861264527,
+        "ess_min": 7.194637059521203,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.002715958980843425,
+        "ess_min": 4.229074699543291,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0026714159757830203,
+        "ess_min": 5.820735409135998,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007998666308838875,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19398666308838877,
+        "assays": 3,
+        "online_seconds": 0.002542082977015525,
+        "ess_min": 7.098024963329583,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0026822079671546817,
+        "ess_min": 7.723694017341374,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.0027642499771900475,
+        "ess_min": 7.518141938358629,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006921254497176051,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18321254497176054,
+        "assays": 3,
+        "online_seconds": 0.0025705420412123203,
+        "ess_min": 4.491204796975589,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.002792458049952984,
+        "ess_min": 4.4757229142717065,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010245572428425461,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21645572428425464,
+        "assays": 3,
+        "online_seconds": 0.0026749169919639826,
+        "ess_min": 6.967636139621874,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011300446743671613,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22700446743671615,
+        "assays": 3,
+        "online_seconds": 0.002687457948923111,
+        "ess_min": 5.370733790253612,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007728084393142192,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19128084393142192,
+        "assays": 3,
+        "online_seconds": 0.002789999998640269,
+        "ess_min": 7.058910740777123,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006745812104164363,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18145812104164366,
+        "assays": 3,
+        "online_seconds": 0.0028099999763071537,
+        "ess_min": 5.405476129328116,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009640085707438874,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21040085707438877,
+        "assays": 3,
+        "online_seconds": 0.002661041042301804,
+        "ess_min": 7.751597663843388,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009914080458287703,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21314080458287704,
+        "assays": 3,
+        "online_seconds": 0.0027602080372162163,
+        "ess_min": 4.036410196629121,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.002741082978900522,
+        "ess_min": 5.708159261609571,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008064046152830047,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1946404615283005,
+        "assays": 3,
+        "online_seconds": 0.002715707989409566,
+        "ess_min": 4.867966253055527,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001026672172898989,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2166672172898989,
+        "assays": 3,
+        "online_seconds": 0.0027150000096298754,
+        "ess_min": 7.083875080999553,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008399876893945585,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19799876893945587,
+        "assays": 3,
+        "online_seconds": 0.0025608750293031335,
+        "ess_min": 7.382233892663588,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009676950687370504,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21076950687370505,
+        "assays": 3,
+        "online_seconds": 0.0025517080212011933,
+        "ess_min": 5.80119920007091,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006914157777011914,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18314157777011916,
+        "assays": 3,
+        "online_seconds": 0.0028546250541694462,
+        "ess_min": 5.275953441345274,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009499330085447999,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20899330085448,
+        "assays": 3,
+        "online_seconds": 0.002625791006721556,
+        "ess_min": 7.010689602333184,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007603714283781805,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19003714283781808,
+        "assays": 3,
+        "online_seconds": 0.00256958301179111,
+        "ess_min": 5.242626984884287,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008288107571162483,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19688107571162483,
+        "assays": 3,
+        "online_seconds": 0.0028619159711524844,
+        "ess_min": 7.61311768113177,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010466686858410107,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2186668685841011,
+        "assays": 3,
+        "online_seconds": 0.002705541963223368,
+        "ess_min": 7.688307957345747,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009362539921953857,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2076253992195386,
+        "assays": 3,
+        "online_seconds": 0.0026671250234358013,
+        "ess_min": 7.200248710848502,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007175462883238444,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18575462883238447,
+        "assays": 3,
+        "online_seconds": 0.0027953750104643404,
+        "ess_min": 7.713897759745737,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.0026282499893568456,
+        "ess_min": 7.189843296126394,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007899913555832064,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19299913555832066,
+        "assays": 3,
+        "online_seconds": 0.0027487080078572035,
+        "ess_min": 6.971869350457992,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000785994911245177,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1925994911245177,
+        "assays": 3,
+        "online_seconds": 0.0026787910028360784,
+        "ess_min": 7.325800269823053,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007462915157292149,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1886291515729215,
+        "assays": 3,
+        "online_seconds": 0.0026045000413432717,
+        "ess_min": 5.415710911756169,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.002594041987322271,
+        "ess_min": 3.773233956940878,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006866975095867487,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18266975095867488,
+        "assays": 3,
+        "online_seconds": 0.0027631669654510915,
+        "ess_min": 5.754921227286428,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008960233239965816,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2036023323996582,
+        "assays": 3,
+        "online_seconds": 0.0026297089643776417,
+        "ess_min": 7.1924334751410415,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000914554960843461,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20545549608434613,
+        "assays": 3,
+        "online_seconds": 0.0025637500220909715,
+        "ess_min": 7.691095766496746,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.0025253749918192625,
+        "ess_min": 5.3880182433749315,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001034993166134204,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21749931661342042,
+        "assays": 3,
+        "online_seconds": 0.002554333012085408,
+        "ess_min": 7.597739256306855,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008130148675992864,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19530148675992864,
+        "assays": 3,
+        "online_seconds": 0.002536082989536226,
+        "ess_min": 6.415832848899518,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008131743449842096,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19531743449842098,
+        "assays": 3,
+        "online_seconds": 0.0028385419864207506,
+        "ess_min": 7.92815387639002,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0027775419875979424,
+        "ess_min": 6.042528911783546,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.002733792003709823,
+        "ess_min": 7.8495677538883015,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0027201659977436066,
+        "ess_min": 6.4827615235396925,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008802383465192279,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2020238346519228,
+        "assays": 3,
+        "online_seconds": 0.0026555410004220903,
+        "ess_min": 6.333412010607533,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001067539763105372,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.22075397631053723,
+        "assays": 3,
+        "online_seconds": 0.0028172910097055137,
+        "ess_min": 4.629417021696683,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.0025760839926078916,
+        "ess_min": 6.297730791597065,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007257894056929421,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18657894056929425,
+        "assays": 3,
+        "online_seconds": 0.0026439589564688504,
+        "ess_min": 5.231391444983329,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.002656124997884035,
+        "ess_min": 7.129966126607946,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000884067018188899,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20240670181888992,
+        "assays": 3,
+        "online_seconds": 0.002722625038586557,
+        "ess_min": 6.015126416391341,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0027765840059146285,
+        "ess_min": 7.856568509576793,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008739266436216545,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20139266436216546,
+        "assays": 3,
+        "online_seconds": 0.002625332970637828,
+        "ess_min": 5.689980319965264,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008030383943035755,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19430383943035756,
+        "assays": 3,
+        "online_seconds": 0.00290004099952057,
+        "ess_min": 6.3333629300970635,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009717594952181649,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2111759495218165,
+        "assays": 3,
+        "online_seconds": 0.002639667014591396,
+        "ess_min": 6.682822087151668,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.0026427909615449607,
+        "ess_min": 6.8024749436595195,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.002594374993350357,
+        "ess_min": 6.043785669319194,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006838931419290397,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.182389314192904,
+        "assays": 3,
+        "online_seconds": 0.0027417500386945903,
+        "ess_min": 6.140242432555876,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0063999999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.714,
+        "assays": 3,
+        "online_seconds": 0.0026020410005003214,
+        "ess_min": 7.017293364670822,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011943004086219754,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.23343004086219754,
+        "assays": 3,
+        "online_seconds": 0.0025204159901477396,
+        "ess_min": 4.8721763920262084,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009995885762128247,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21395885762128247,
+        "assays": 3,
+        "online_seconds": 0.002540958987083286,
+        "ess_min": 5.062567318953095,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010526566234619532,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21926566234619532,
+        "assays": 3,
+        "online_seconds": 0.002544082992244512,
+        "ess_min": 6.519674383053403,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007382186072164909,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.1878218607216491,
+        "assays": 3,
+        "online_seconds": 0.002510832971893251,
+        "ess_min": 7.573156446132873,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000907786701922925,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2047786701922925,
+        "assays": 3,
+        "online_seconds": 0.002781708026304841,
+        "ess_min": 7.055230016821072,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006991301110094871,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18391301110094874,
+        "assays": 3,
+        "online_seconds": 0.0027032500365749,
+        "ess_min": 6.089982619659371,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0026956669753417373,
+        "ess_min": 6.725981442238576,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0028384579927660525,
+        "ess_min": 6.9426939295036805,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007893406581901922,
+        "effort": 0.8,
+        "action_id": 38,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19293406581901923,
+        "assays": 3,
+        "online_seconds": 0.0028896249714307487,
+        "ess_min": 6.401927838262946,
+        "choices": [
+          4,
+          14,
+          31,
+          38
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.002625417022500187,
+        "ess_min": 5.078470142590241,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0027219579787924886,
+        "ess_min": 7.033890477447843,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0026035410119220614,
+        "ess_min": 10.127969939845174,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0008573423006950388,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19973423006950392,
+        "assays": 3,
+        "online_seconds": 0.002622750005684793,
+        "ess_min": 4.206852629897701,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.0027151659596711397,
+        "ess_min": 6.708334543722731,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0011140480639409897,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.225404806394099,
+        "assays": 3,
+        "online_seconds": 0.002634582982864231,
+        "ess_min": 4.471256632108723,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999994,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999995,
+        "assays": 3,
+        "online_seconds": 0.002685749961528927,
+        "ess_min": 5.874228611221717,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006400000000000003,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7140000000000004,
+        "assays": 3,
+        "online_seconds": 0.0025331670185551047,
+        "ess_min": 5.804807986759543,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.0025322079891338944,
+        "ess_min": 4.9924939645157975,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010210777631298371,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21610777631298372,
+        "assays": 3,
+        "online_seconds": 0.002726666978560388,
+        "ess_min": 6.80814263649784,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.001022897772246457,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.2162897772246457,
+        "assays": 3,
+        "online_seconds": 0.002575292019173503,
+        "ess_min": 6.862546855945417,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.006399999999999998,
+        "effort": 0.0,
+        "action_id": 36,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.7139999999999997,
+        "assays": 3,
+        "online_seconds": 0.002538292028475553,
+        "ess_min": 5.137964284204794,
+        "choices": [
+          4,
+          14,
+          31,
+          36
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0006883231466323286,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.18283231466323288,
+        "assays": 3,
+        "online_seconds": 0.002870791999157518,
+        "ess_min": 7.752118549386498,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0010418851477017128,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21818851477017132,
+        "assays": 3,
+        "online_seconds": 0.0026674579712562263,
+        "ess_min": 7.378775459671901,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009704511977875684,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.21104511977875687,
+        "assays": 3,
+        "online_seconds": 0.002624124987050891,
+        "ess_min": 6.259620981296221,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0007955582515888039,
+        "effort": 0.8,
+        "action_id": 44,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19355582515888042,
+        "assays": 3,
+        "online_seconds": 0.0026545419823378325,
+        "ess_min": 7.9496931924525445,
+        "choices": [
+          4,
+          14,
+          31,
+          44
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.0009026497843836131,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.20426497843836133,
+        "assays": 3,
+        "online_seconds": 0.0028962090145796537,
+        "ess_min": 6.904059663071735,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      },
+      {
+        "final_mse": 0.000825155323935516,
+        "effort": 0.8,
+        "action_id": 40,
+        "variable_cost": 7.4,
+        "setup_cost": 3.0,
+        "final_cultures": 32,
+        "return_": -0.19651553239355163,
+        "assays": 3,
+        "online_seconds": 0.002726542006712407,
+        "ess_min": 6.2763519355648745,
+        "choices": [
+          4,
+          14,
+          31,
+          40
+        ],
+        "hypothetical_outcomes": 0
+      }
+    ]
+  },
+  "comparison": {
+    "fixed_exhaustive": {
+      "utility": {
+        "mean": 0.07354777588555474,
+        "ci95": [
+          0.04678246186850319,
+          0.10399776234778846
+        ],
+        "unit": "mechanism",
+        "units": 128
+      },
+      "error": {
+        "mean": 0.0005971965088555473,
+        "ci95": [
+          0.00030100932206165624,
+          0.0009340920292869734
+        ],
+        "unit": "mechanism",
+        "units": 128
+      },
+      "raw_gap_recovery": 0.14629211463938252,
+      "gate_C": true
+    },
+    "fixed_quality_exhaustive": {
+      "utility": {
+        "mean": 0.08354777588555475,
+        "ci95": [
+          0.0567824618685032,
+          0.11399776234778845
+        ],
+        "unit": "mechanism",
+        "units": 128
+      },
+      "error": {
+        "mean": 0.0005971965088555473,
+        "ci95": [
+          0.00030100932206165624,
+          0.0009340920292869734
+        ],
+        "unit": "mechanism",
+        "units": 128
+      },
+      "raw_gap_recovery": 0.14629211463938252,
+      "gate_C": true
+    }
+  },
+  "gate_C": true
+}

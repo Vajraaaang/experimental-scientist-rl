@@ -1,0 +1,35 @@
+{
+  "predictive": [
+    {
+      "offset_sd": 0.0,
+      "samples": 256,
+      "mean_packet_95pct_coverage": 0.96875,
+      "mean_mahalanobis_squared": 1.8396321979787076,
+      "expected_under_exact_model": 2.0,
+      "likelihood": "exact Gaussian",
+      "scope": "predictive mean coverage; does not alone validate the full posterior"
+    },
+    {
+      "offset_sd": 0.03,
+      "samples": 256,
+      "mean_packet_95pct_coverage": 0.96875,
+      "mean_mahalanobis_squared": 1.809069296437185,
+      "expected_under_exact_model": 2.0,
+      "likelihood": "Gaussian moment approximation to culture-offset mixture",
+      "scope": "predictive mean coverage; does not alone validate the full posterior"
+    }
+  ],
+  "planner_draws": {
+    "draws_per_hypothesis": [
+      12,
+      64
+    ],
+    "first_action_agreement": 1.0,
+    "seconds": [
+      0.27672279201215133,
+      1.2503575419541448
+    ],
+    "cases": 16,
+    "scope": "Monte Carlo first-action stability, not proof of planner optimality"
+  }
+}

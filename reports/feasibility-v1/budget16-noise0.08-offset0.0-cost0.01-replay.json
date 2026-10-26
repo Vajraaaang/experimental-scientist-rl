@@ -1,0 +1,1050 @@
+{
+  "public": {
+    "target": [
+      0.58,
+      0.58
+    ],
+    "budget": 16,
+    "trace": [
+      {
+        "action_id": -1,
+        "readouts": [
+          [
+            0.41713385587440055,
+            0.5247941994488501,
+            0.524846488878976,
+            0.50785142250926,
+            0.5123159876929462,
+            0.3816076684831319,
+            0.3771432343032848,
+            0.5719274259944909
+          ],
+          [
+            0.5741264268293934,
+            0.5678524377805753,
+            0.5819921268275747,
+            0.3440421901816208,
+            0.4374486421993047,
+            0.5171410322418388,
+            0.4731997753318872,
+            0.5309237946235069
+          ],
+          [
+            0.49573758974640425,
+            0.4547081448054699,
+            0.5988917027491074,
+            0.6126543589404649,
+            0.47956298603390896,
+            0.5037678851515721,
+            0.4629935894062312,
+            0.4714143020726934
+          ],
+          [
+            0.48059379754127246,
+            0.44214516253985214,
+            0.6242552302497345,
+            0.4555706473994478,
+            0.5059305120897699,
+            0.630808148408676,
+            0.5849370786577657,
+            0.4785156712209471
+          ],
+          [
+            0.5414712668019125,
+            0.4634691740975258,
+            0.5053537501595768,
+            0.5011872824026472,
+            0.44598653118826176,
+            0.3918607210502331,
+            0.4377023130946909,
+            0.4703945772315139
+          ],
+          [
+            0.5737170768714877,
+            0.3291009952575781,
+            0.5118186677804715,
+            0.5600705969713675,
+            0.5786614165103056,
+            0.5062424427046042,
+            0.5400646864464019,
+            0.48669336032590327
+          ],
+          [
+            0.4909415167654397,
+            0.5053480894391259,
+            0.5714986544035398,
+            0.46171650810573167,
+            0.6190609307787117,
+            0.49761475021197066,
+            0.6274465808046468,
+            0.4615658788437648
+          ],
+          [
+            0.4594520448067643,
+            0.4179949843214187,
+            0.44852822537390813,
+            0.48019637403727466,
+            0.5845440691501422,
+            0.3247167963053898,
+            0.5221736941769077,
+            0.5299785071252713
+          ]
+        ],
+        "measured_mask": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "cost_ticks": 0
+      },
+      {
+        "action_id": 11,
+        "readouts": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.770386471380715,
+            0.5348061143206857
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.6027206214512282,
+            0.6380328824271421
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.48604113650599645,
+            0.5837559428542998
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.6650158271786221,
+            0.5952378665850314
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.5639512083151489,
+            0.46678590617180293
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.5180808503241598,
+            0.5474787502286061
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.6496122087708716,
+            0.6048718523973674
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0.45621958014217096,
+            0.43065203144603525
+          ]
+        ],
+        "measured_mask": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        "cost_ticks": 58
+      }
+    ],
+    "actions": [
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 34
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 34
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 54
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 54
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 36
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 56
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 1.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 38
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          4,
+          5
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "experiment",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [
+          6,
+          7
+        ],
+        "cost_ticks": 58
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.4,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      },
+      {
+        "kind": "commit",
+        "intervention": [
+          0.0,
+          0.0,
+          0.0,
+          0.8,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration": 6.0,
+        "panel": [],
+        "cost_ticks": 0
+      }
+    ]
+  },
+  "post_episode_private_result": {
+    "final_mse": 0.0008355794498782212,
+    "effort": 0.8,
+    "action_id": 38,
+    "variable_cost": 2.9,
+    "setup_cost": 3.0,
+    "final_cultures": 32,
+    "return_": -0.15255794498782213,
+    "assays": 1,
+    "online_seconds": 0.033916749991476536,
+    "ess_min": 8.019824108671395,
+    "choices": [
+      11,
+      38
+    ],
+    "hypothetical_outcomes": 27648
+  }
+}

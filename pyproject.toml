@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "experimental-scientist"
+version = "0.1.0"
+description = "Cost-aware experimental design: a bounded scientific feasibility benchmark"
+requires-python = ">=3.12,<3.15"
+dependencies = ["numpy>=2.0", "scipy>=1.14", "torch>=2.5", "PyYAML>=6.0", "matplotlib>=3.9"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+experimentlab = "experimentlab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

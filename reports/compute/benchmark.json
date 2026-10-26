@@ -1,0 +1,154 @@
+{
+  "hardware": {
+    "python": "${PROJECT}/.venv/bin/python",
+    "python_version": "3.12.1",
+    "architecture": "arm64",
+    "macos": "ProductName:\t\tmacOS\nProductVersion:\t\t26.3.1\nProductVersionExtra:\t(a)\nBuildVersion:\t\t25D771280a",
+    "ram_bytes": "38654705664",
+    "hardware_model": "Mac15,11",
+    "chip": "Apple M3 Max",
+    "logical_cpus": 14,
+    "torch_cpu": true,
+    "mps_built": true,
+    "mps_available": true,
+    "mps_fallback_environment": "unset",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "torch": "2.14.1",
+      "PyYAML": "6.0.3",
+      "pytest": "9.1.1"
+    },
+    "reference_dtype": "NumPy/SciPy float64 CPU",
+    "learning_dtype": "PyTorch float32"
+  },
+  "cpu": {
+    "status": "ok",
+    "device": "cpu",
+    "repeats_excluding_warmup": 3,
+    "results": [
+      {
+        "total_seconds": 0.06496262497967109,
+        "rollout_seconds": 0.05314066697610542,
+        "update_seconds": 0.004226291028317064,
+        "evaluation_checkpoint_seconds": 0.007595666975248605,
+        "transitions": 75,
+        "episodes": 24,
+        "transitions_per_second": 1154.5099974557668,
+        "metrics": {
+          "loss": 0.4460821747779846,
+          "value_error": 0.9631059765815735,
+          "entropy": 3.4847359657287598,
+          "gradient_norm": 1.2699064016342163,
+          "kl": 0.00030261994106695056,
+          "initial_logp_error": 4.76837158203125e-07
+        }
+      },
+      {
+        "total_seconds": 0.06362016702769324,
+        "rollout_seconds": 0.05172004201449454,
+        "update_seconds": 0.0037806250038556755,
+        "evaluation_checkpoint_seconds": 0.008119500009343028,
+        "transitions": 72,
+        "episodes": 24,
+        "transitions_per_second": 1131.716613831886,
+        "metrics": {
+          "loss": 0.2651839852333069,
+          "value_error": 0.600967288017273,
+          "entropy": 3.4795467853546143,
+          "gradient_norm": 1.0223537683486938,
+          "kl": 0.00012877251720055938,
+          "initial_logp_error": 4.76837158203125e-07
+        }
+      },
+      {
+        "total_seconds": 0.06368770898552611,
+        "rollout_seconds": 0.05215391697129235,
+        "update_seconds": 0.0035789580433629453,
+        "evaluation_checkpoint_seconds": 0.007954833970870823,
+        "transitions": 73,
+        "episodes": 24,
+        "transitions_per_second": 1146.2180248404009,
+        "metrics": {
+          "loss": 0.2904287278652191,
+          "value_error": 0.6506502032279968,
+          "entropy": 3.4748892784118652,
+          "gradient_norm": 1.0847477912902832,
+          "kl": 2.8326086976449005e-05,
+          "initial_logp_error": 2.384185791015625e-07
+        }
+      }
+    ],
+    "median_total_seconds": 0.06368770898552611,
+    "peak_process_rss_bytes": 339656704,
+    "mps_allocated_bytes": 0,
+    "forecast_100k_transitions_seconds": 87.24343696647414,
+    "forecast_scope": "Short end-to-end smoke throughput; excludes planner/teacher generation and long-run thermal effects."
+  },
+  "mps": {
+    "status": "ok",
+    "device": "mps",
+    "repeats_excluding_warmup": 3,
+    "results": [
+      {
+        "total_seconds": 0.569012333988212,
+        "rollout_seconds": 0.20579170901328325,
+        "update_seconds": 0.3152056660037488,
+        "evaluation_checkpoint_seconds": 0.04801495897118002,
+        "transitions": 64,
+        "episodes": 24,
+        "transitions_per_second": 112.47559354543948,
+        "metrics": {
+          "loss": 0.38989150524139404,
+          "value_error": 0.852479100227356,
+          "entropy": 3.557515859603882,
+          "gradient_norm": 1.2126855850219727,
+          "kl": -0.0001913607120513916,
+          "initial_logp_error": 7.152557373046875e-07
+        }
+      },
+      {
+        "total_seconds": 0.530217666993849,
+        "rollout_seconds": 0.31074883398832753,
+        "update_seconds": 0.18477254098979756,
+        "evaluation_checkpoint_seconds": 0.034696292015723884,
+        "transitions": 72,
+        "episodes": 24,
+        "transitions_per_second": 135.7932873270993,
+        "metrics": {
+          "loss": 0.31191548705101013,
+          "value_error": 0.6955987215042114,
+          "entropy": 3.506828546524048,
+          "gradient_norm": 1.143505573272705,
+          "kl": 0.000258498708717525,
+          "initial_logp_error": 4.76837158203125e-07
+        }
+      },
+      {
+        "total_seconds": 0.47743354202248156,
+        "rollout_seconds": 0.26200508303008974,
+        "update_seconds": 0.17903962498530746,
+        "evaluation_checkpoint_seconds": 0.03638883400708437,
+        "transitions": 77,
+        "episodes": 24,
+        "transitions_per_second": 161.2789911530225,
+        "metrics": {
+          "loss": 0.25840693712234497,
+          "value_error": 0.5879759192466736,
+          "entropy": 3.490950584411621,
+          "gradient_norm": 0.9961220622062683,
+          "kl": -9.729645535117015e-05,
+          "initial_logp_error": 4.76837158203125e-07
+        }
+      }
+    ],
+    "median_total_seconds": 0.530217666993849,
+    "peak_process_rss_bytes": 520994816,
+    "mps_allocated_bytes": 564736,
+    "forecast_100k_transitions_seconds": 736.4134263803459,
+    "forecast_scope": "Short end-to-end smoke throughput; excludes planner/teacher generation and long-run thermal effects."
+  },
+  "selected_device": "cpu",
+  "selection_rule": "MPS only if full workload succeeds and is at least 5% faster than CPU.",
+  "peak_process_rss_bytes": 521404416
+}

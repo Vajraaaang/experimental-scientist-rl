@@ -1,0 +1,17 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "on_policy_transitions_per_seed": 100000,
+  "imitation": "512 public-history demos,5000 augmented epochs,hidden64 GRU",
+  "critic_warmup": 500,
+  "critic_policy_frozen": true,
+  "ppo_learning_rate": 0.0001,
+  "ppo_epochs": 2,
+  "clip": 0.1,
+  "selection": "fixed final transition budget; no validation checkpoint selection",
+  "training_seed_prefix": 600000,
+  "locked_test_opened": false
+}

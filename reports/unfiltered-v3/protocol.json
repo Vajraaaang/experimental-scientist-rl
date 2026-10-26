@@ -1,0 +1,18 @@
+{
+  "stage": "unfiltered_prior_development_revision",
+  "noise": 0.02,
+  "budget": 8,
+  "offset_sd": 0.0,
+  "cost_weight": 0.01,
+  "calibration_mechanisms": 128,
+  "validation_mechanisms": 128,
+  "fixed_beam_width": 24,
+  "quadrature_particles": 128,
+  "draws_per_hypothesis": 12,
+  "gate_C": "positive mechanism-paired utility and error CI plus >=.10 raw gap recovery against strongest fixed design",
+  "locked_test_opened": false,
+  "source_hash": "c0817970201735debdb58bc14e7ea88863cc4b8bab2ff88d6964e4d901616e37",
+  "script_hash": "5982d77f22f5d090284480c067c6303363d3b6f34d18a3730aebc1d3086ae914",
+  "prior": "unfiltered",
+  "revision_rationale": "Feasibility admission makes an unmeasured sibling control inferable when its partner is ineffective. Remove this implicit information by retaining unreachable targets and all mechanisms. Dynamics, costs, actions, baselines, noise and targets stay at the original primary setting."
+}

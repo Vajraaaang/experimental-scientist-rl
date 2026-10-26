@@ -1,0 +1,48 @@
+{
+  "status": "independent_reconstruction_not_exact_original_script_reproduction",
+  "seed": 46193,
+  "calibration_attempted": 300,
+  "calibration_admitted": 121,
+  "heldout_attempted": 600,
+  "heldout_admitted": 258,
+  "evaluated": 128,
+  "tuned_control_pair": [
+    2,
+    3
+  ],
+  "summary": {
+    "no_experiment_no_intervention": {
+      "aggregate_rmse": 0.08047445593523374,
+      "success_rate": 0.0,
+      "variable_cost": 0
+    },
+    "fixed_two_additive": {
+      "aggregate_rmse": 0.05627679125680856,
+      "success_rate": 0.3203125,
+      "variable_cost": 5.8
+    },
+    "fixed_four_additive": {
+      "aggregate_rmse": 0.026197570535675247,
+      "success_rate": 0.9765625,
+      "variable_cost": 11.6
+    },
+    "private_nominal_reference": {
+      "aggregate_rmse": 0.024558402808208528,
+      "success_rate": 0.9921875,
+      "variable_cost": 0
+    }
+  },
+  "seconds": 1.9261054579983465,
+  "original_reported": {
+    "calibration_admitted": 119,
+    "heldout_admitted": 237,
+    "rmse": [
+      0.08038,
+      0.05631,
+      0.02755,
+      0.02628
+    ]
+  },
+  "scope": "Exploratory 33-intervention audit only, not the restricted 45-action pilot or locked evaluation.",
+  "limitation": "Exact original seeds/scripts and per-row sign-balancing convention unavailable; numerical agreement is not asserted."
+}

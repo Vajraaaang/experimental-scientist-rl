@@ -1,0 +1,248 @@
+{
+  "history-imitation-seed0": {
+    "validation": {
+      "aggregate_rmse": 0.050843862125308704,
+      "success_rate": 0.6953125,
+      "mean_return": -0.33308014408174014,
+      "mean_variable_cost": 4.67578125,
+      "mean_total_assay_cost": 7.675781249999998,
+      "mean_effort": 0.55625,
+      "mean_assays": 2.03125,
+      "mean_online_seconds": 0.0022975166089054255
+    },
+    "training_seconds": 38.31912329205079,
+    "curve": [
+      {
+        "epoch": 1000,
+        "cross_entropy": 0.19906073808670044,
+        "training_action_accuracy": 0.9253246784210205
+      },
+      {
+        "epoch": 2000,
+        "cross_entropy": 0.15322287380695343,
+        "training_action_accuracy": 0.9383116960525513
+      },
+      {
+        "epoch": 3000,
+        "cross_entropy": 0.11735367029905319,
+        "training_action_accuracy": 0.9545454382896423
+      },
+      {
+        "epoch": 4000,
+        "cross_entropy": 0.09037517011165619,
+        "training_action_accuracy": 0.9694805145263672
+      },
+      {
+        "epoch": 5000,
+        "cross_entropy": 0.07593800127506256,
+        "training_action_accuracy": 0.9753246903419495
+      }
+    ],
+    "scope": "converged_imitation_development"
+  },
+  "history-imitation-seed1": {
+    "validation": {
+      "aggregate_rmse": 0.050843862125308704,
+      "success_rate": 0.6953125,
+      "mean_return": -0.33316608158174016,
+      "mean_variable_cost": 4.684375,
+      "mean_total_assay_cost": 7.684374999999999,
+      "mean_effort": 0.55625,
+      "mean_assays": 2.03125,
+      "mean_online_seconds": 0.00226371350709087
+    },
+    "training_seconds": 38.84008737502154,
+    "curve": [
+      {
+        "epoch": 1000,
+        "cross_entropy": 0.2003255933523178,
+        "training_action_accuracy": 0.9253246784210205
+      },
+      {
+        "epoch": 2000,
+        "cross_entropy": 0.15214069187641144,
+        "training_action_accuracy": 0.9441558718681335
+      },
+      {
+        "epoch": 3000,
+        "cross_entropy": 0.12187504023313522,
+        "training_action_accuracy": 0.9474025964736938
+      },
+      {
+        "epoch": 4000,
+        "cross_entropy": 0.09631001204252243,
+        "training_action_accuracy": 0.9662337899208069
+      },
+      {
+        "epoch": 5000,
+        "cross_entropy": 0.07830504328012466,
+        "training_action_accuracy": 0.9733766317367554
+      }
+    ],
+    "scope": "converged_imitation_development"
+  },
+  "history-imitation-seed2": {
+    "validation": {
+      "aggregate_rmse": 0.050843862125308704,
+      "success_rate": 0.6953125,
+      "mean_return": -0.3331113940817402,
+      "mean_variable_cost": 4.678906250000001,
+      "mean_total_assay_cost": 7.678906249999999,
+      "mean_effort": 0.55625,
+      "mean_assays": 2.03125,
+      "mean_online_seconds": 0.002230494495051971
+    },
+    "training_seconds": 37.64721691701561,
+    "curve": [
+      {
+        "epoch": 1000,
+        "cross_entropy": 0.20041579008102417,
+        "training_action_accuracy": 0.9272727370262146
+      },
+      {
+        "epoch": 2000,
+        "cross_entropy": 0.1565881073474884,
+        "training_action_accuracy": 0.9389610290527344
+      },
+      {
+        "epoch": 3000,
+        "cross_entropy": 0.12527664005756378,
+        "training_action_accuracy": 0.9487013220787048
+      },
+      {
+        "epoch": 4000,
+        "cross_entropy": 0.09820721298456192,
+        "training_action_accuracy": 0.9629870057106018
+      },
+      {
+        "epoch": 5000,
+        "cross_entropy": 0.08085642009973526,
+        "training_action_accuracy": 0.9733766317367554
+      }
+    ],
+    "scope": "converged_imitation_development"
+  },
+  "recurrent-imitation-seed0": {
+    "validation": {
+      "aggregate_rmse": 0.050843862125308704,
+      "success_rate": 0.6953125,
+      "mean_return": -0.3329317065817401,
+      "mean_variable_cost": 4.660937499999999,
+      "mean_total_assay_cost": 7.660937499999999,
+      "mean_effort": 0.55625,
+      "mean_assays": 2.0234375,
+      "mean_online_seconds": 0.002215954797975428
+    },
+    "training_seconds": 42.824517583008856,
+    "curve": [
+      {
+        "epoch": 1000,
+        "cross_entropy": 0.16888408362865448,
+        "training_action_accuracy": 0.9396103620529175
+      },
+      {
+        "epoch": 2000,
+        "cross_entropy": 0.12034647911787033,
+        "training_action_accuracy": 0.9525973796844482
+      },
+      {
+        "epoch": 3000,
+        "cross_entropy": 0.09711100906133652,
+        "training_action_accuracy": 0.9662337899208069
+      },
+      {
+        "epoch": 4000,
+        "cross_entropy": 0.07932386547327042,
+        "training_action_accuracy": 0.9753246903419495
+      },
+      {
+        "epoch": 5000,
+        "cross_entropy": 0.06511831283569336,
+        "training_action_accuracy": 0.9792208075523376
+      }
+    ],
+    "scope": "converged_imitation_development"
+  },
+  "recurrent-imitation-seed1": {
+    "validation": {
+      "aggregate_rmse": 0.05165461209274044,
+      "success_rate": 0.6875,
+      "mean_return": -0.3411558325451487,
+      "mean_variable_cost": 4.62109375,
+      "mean_total_assay_cost": 7.621093749999999,
+      "mean_effort": 0.5625,
+      "mean_assays": 2.0,
+      "mean_online_seconds": 0.002198291961576615
+    },
+    "training_seconds": 42.7175381249981,
+    "curve": [
+      {
+        "epoch": 1000,
+        "cross_entropy": 0.17925940454006195,
+        "training_action_accuracy": 0.9383116960525513
+      },
+      {
+        "epoch": 2000,
+        "cross_entropy": 0.1271870732307434,
+        "training_action_accuracy": 0.9487013220787048
+      },
+      {
+        "epoch": 3000,
+        "cross_entropy": 0.09966639429330826,
+        "training_action_accuracy": 0.9577922224998474
+      },
+      {
+        "epoch": 4000,
+        "cross_entropy": 0.08369968831539154,
+        "training_action_accuracy": 0.9707792401313782
+      },
+      {
+        "epoch": 5000,
+        "cross_entropy": 0.0722493827342987,
+        "training_action_accuracy": 0.9759740233421326
+      }
+    ],
+    "scope": "converged_imitation_development"
+  },
+  "recurrent-imitation-seed2": {
+    "validation": {
+      "aggregate_rmse": 0.05148345867324972,
+      "success_rate": 0.6875,
+      "mean_return": -0.3395077766960213,
+      "mean_variable_cost": 4.6640625,
+      "mean_total_assay_cost": 7.664062499999998,
+      "mean_effort": 0.55625,
+      "mean_assays": 2.0234375,
+      "mean_online_seconds": 0.0022605439298786223
+    },
+    "training_seconds": 43.926475709013175,
+    "curve": [
+      {
+        "epoch": 1000,
+        "cross_entropy": 0.16989365220069885,
+        "training_action_accuracy": 0.9389610290527344
+      },
+      {
+        "epoch": 2000,
+        "cross_entropy": 0.1141260489821434,
+        "training_action_accuracy": 0.9538961052894592
+      },
+      {
+        "epoch": 3000,
+        "cross_entropy": 0.08150326460599899,
+        "training_action_accuracy": 0.9714285731315613
+      },
+      {
+        "epoch": 4000,
+        "cross_entropy": 0.06464206427335739,
+        "training_action_accuracy": 0.981168806552887
+      },
+      {
+        "epoch": 5000,
+        "cross_entropy": 0.055549491196870804,
+        "training_action_accuracy": 0.982467532157898
+      }
+    ],
+    "scope": "converged_imitation_development"
+  }
+}
