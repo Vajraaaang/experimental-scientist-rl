@@ -1,0 +1,16 @@
+{
+  "batch": 128,
+  "epochs": 2,
+  "clip": 0.1,
+  "entropy": 0.03,
+  "entropy_final": 0.005,
+  "learning_rate": 0.0003,
+  "normalize_advantage": false,
+  "curriculum": true,
+  "bias_end_fraction": 0.3,
+  "initial_outcome_bias": 3.0,
+  "minimum_assays": 2,
+  "maximum_assays": 3,
+  "value_coef": 0.1,
+  "evaluation_every": 100000
+}

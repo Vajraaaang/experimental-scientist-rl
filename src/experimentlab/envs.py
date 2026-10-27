@@ -74,9 +74,8 @@ class ScientistEnv:
         self.done = False
         self.private_result = None
         self.public_trace = []
-        baseline = measure(self._task.mechanism, np.zeros(self.n), 0., self.config.cultures,
-                           self.config.offset_sd, self.config.readout_sd,
-                           stream(self._task.seed, 'baseline_culture'), stream(self._task.seed, 'baseline_noise'), self.config.dt)
+        baseline = self._measure(np.zeros(self.n), 0., self.config.cultures,
+                                 stream(self._task.seed, 'baseline_culture'), stream(self._task.seed, 'baseline_noise'))
         self.public_trace.append({'action_id': -1, 'readouts': baseline,
                                   'measured_mask': np.ones(self.n, dtype=bool), 'cost_ticks': 0})
         return self._obs(True), {}
@@ -108,8 +107,8 @@ class ScientistEnv:
             return self._obs(), -10. if self.done else -self.config.cost_weight * charge / 20, self.done, False, info
         a = self.actions[int(action_id)]
         if a.kind == 'commit':
-            y = final_outcomes(self._task.mechanism, np.array(a.intervention), self.config.final_cultures,
-                               self.config.offset_sd, stream(self._task.seed, 'final'), dt=self.config.dt)
+            y = self._final_outcomes(np.array(a.intervention), self.config.final_cultures,
+                                     stream(self._task.seed, 'final'))
             mse = float(np.mean((y[:, list(self.goals)] - self._task.target)**2))
             effort = float(sum(a.intervention))
             self.private_result = {'final_mse': mse, 'effort': effort, 'action_id': int(action_id),
@@ -119,9 +118,8 @@ class ScientistEnv:
             return self._obs(), -100 * mse - self.config.effort_weight * effort, True, False, {}
         self.budget_ticks -= a.cost_ticks
         self.count += 1
-        full = measure(self._task.mechanism, np.array(a.intervention), a.duration, self.config.cultures,
-                       self.config.offset_sd, self.config.readout_sd,
-                       stream(self._task.seed, 'culture', self.count), stream(self._task.seed, 'noise', self.count), self.config.dt)
+        full = self._measure(np.array(a.intervention), a.duration, self.config.cultures,
+                             stream(self._task.seed, 'culture', self.count), stream(self._task.seed, 'noise', self.count))
         mask = np.zeros(self.n, dtype=bool); mask[list(a.panel)] = True
         full[:, ~mask] = np.nan
         self.public_trace.append({'action_id': int(action_id), 'readouts': full, 'measured_mask': mask,
@@ -130,6 +128,15 @@ class ScientistEnv:
             self.done = True
             return self._obs(), -10., True, False, {'error': 'invalid_run'}
         return self._obs(), -self.config.cost_weight * a.cost_ticks / 20, False, False, {}
+
+    def _measure(self, u, duration, count, culture_rng, noise_rng):
+        return measure(self._task.mechanism, u, duration, count,
+                       self.config.offset_sd, self.config.readout_sd,
+                       culture_rng, noise_rng, self.config.dt)
+
+    def _final_outcomes(self, u, count, rng, duration=6.):
+        return final_outcomes(self._task.mechanism, u, count,
+                              self.config.offset_sd, rng, duration=duration, dt=self.config.dt)
 
     def public_record(self):
         return {'target': list(self._task.target), 'budget': self.config.budget,

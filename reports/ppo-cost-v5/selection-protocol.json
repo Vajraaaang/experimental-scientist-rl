@@ -1,0 +1,48 @@
+{
+  "candidates": {
+    "original": {
+      "model": "ppo",
+      "calibration": {
+        "duration_penalty": 0.0,
+        "dose_penalty": 0.0,
+        "stop_bonus": 0.0
+      }
+    },
+    "calibrated_original": {
+      "model": "ppo",
+      "calibration": {
+        "duration_penalty": 2.0,
+        "dose_penalty": 4.0,
+        "stop_bonus": 1.0
+      }
+    },
+    "paired_training": {
+      "model": "trained",
+      "calibration": {
+        "duration_penalty": 0.0,
+        "dose_penalty": 0.0,
+        "stop_bonus": 0.0
+      }
+    },
+    "paired_training_calibrated": {
+      "model": "trained",
+      "calibration": {
+        "duration_penalty": 4.0,
+        "dose_penalty": 4.0,
+        "stop_bonus": 0.5
+      }
+    }
+  },
+  "selection": "rank original mean tuning return; confirmation screen before locked test",
+  "minimum_development_cost_reduction": 0.15,
+  "maximum_mean_mse_increase": 0.0001,
+  "confirmation_is_development_and_has_been_inspected": true,
+  "fresh_test_not_opened": true,
+  "seeds": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "hardware": {
+    "python": "<development-project>/.venv/bin/python",
+    "python_version": "3.12.1",
+    "architecture": "arm64",
+    "macos": "ProductName:\t\tmacOS\nProductVersion:\t\t26.3.1\nProductVersionExtra:\t(a)\nBuildVersion:\t\t25D771280a",
+    "ram_bytes": "38654705664",
+    "hardware_model": "Mac15,11",
+    "chip": "Apple M3 Max",
+    "logical_cpus": 14,
+    "torch_cpu": true,
+    "mps_built": true,
+    "mps_available": true,
+    "mps_fallback_environment": "unset",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "torch": "2.14.1",
+      "PyYAML": "6.0.3",
+      "pytest": "9.1.1"
+    },
+    "reference_dtype": "NumPy/SciPy float64 CPU",
+    "learning_dtype": "PyTorch float32"
+  },
+  "cache_setup_seconds": 0.560853082977701,
+  "batch_episodes": 128,
+  "devices": {
+    "cpu": {
+      "status": "ok",
+      "measurements": [
+        {
+          "seconds": 0.05842237500473857,
+          "transitions": 397,
+          "transitions_per_second": 6795.341681467072
+        },
+        {
+          "seconds": 0.0554512909729965,
+          "transitions": 356,
+          "transitions_per_second": 6420.048906947248
+        },
+        {
+          "seconds": 0.05490166594972834,
+          "transitions": 376,
+          "transitions_per_second": 6848.60820697665
+        }
+      ],
+      "median_seconds": 0.0554512909729965,
+      "median_transitions_per_second": 6795.341681467072,
+      "peak_process_rss_bytes": 469729280
+    },
+    "mps": {
+      "status": "ok",
+      "measurements": [
+        {
+          "seconds": 0.67463924997719,
+          "transitions": 363,
+          "transitions_per_second": 538.0653438297182
+        },
+        {
+          "seconds": 0.6073545420076698,
+          "transitions": 362,
+          "transitions_per_second": 596.0274847099581
+        },
+        {
+          "seconds": 0.5999438329599798,
+          "transitions": 353,
+          "transitions_per_second": 588.3884133926041
+        }
+      ],
+      "median_seconds": 0.6073545420076698,
+      "median_transitions_per_second": 588.3884133926041,
+      "peak_process_rss_bytes": 644644864
+    }
+  },
+  "selected_device": "cpu",
+  "forecast_15m_transitions_seconds": 2207.3945215896183,
+  "scope": "complete batched rollout/update/evaluation/checkpoint workload; startup separately measured"
+}

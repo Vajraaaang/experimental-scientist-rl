@@ -1,0 +1,34 @@
+{
+  "full_menu_public_design_ceiling": {
+    "aggregate_rmse": 0.063139461172966,
+    "success_rate": 0.4375,
+    "mean_return": -0.46361228072124805,
+    "mean_variable_cost": 4.7453125,
+    "mean_total_assay_cost": 7.745312500000001,
+    "mean_effort": 0.35,
+    "mean_assays": 2.015625,
+    "mean_online_seconds": 0.0018187863588536857
+  },
+  "learned_full_menu_selector": {
+    "episodes": 128,
+    "transitions": 386,
+    "policy_decisions": 128,
+    "mean_return": -0.48481301881081307,
+    "mean_assays": 2.015625,
+    "mean_variable_cost": 4.7453125,
+    "aggregate_rmse": 0.06484480656234647,
+    "initial_experiment_probability": 1.0,
+    "seconds": 0.05773570900782943
+  },
+  "matched_paired": {
+    "episodes": 128,
+    "transitions": 256,
+    "policy_decisions": 128,
+    "mean_return": -0.5739521689811052,
+    "mean_assays": 1.0,
+    "mean_variable_cost": 2.899999999999999,
+    "aggregate_rmse": 0.0733111293720882,
+    "initial_experiment_probability": 1.0,
+    "seconds": 0.014640040986705571
+  }
+}

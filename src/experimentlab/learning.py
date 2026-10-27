@@ -84,14 +84,20 @@ def returns_gae(rewards, values, terminated=True, last_value=0., gae_lambda=.95)
 def episode_batch(episodes, device):
     B, T = len(episodes), max(len(e['actions']) for e in episodes)
     shapes = {'tokens': (B, T, TOKEN_SIZE), 'masks': (B, T, 45), 'actions': (B, T),
-              'rewards': (B, T), 'old_logp': (B, T), 'old_values': (B, T)}
-    result = {k: torch.zeros(shape, dtype=torch.bool if k == 'masks' else torch.long if k == 'actions' else torch.float32, device=device)
+              'rewards': (B, T), 'old_logp': (B, T), 'old_values': (B, T),
+              'terminated': (B,T), 'truncated': (B,T)}
+    result = {k: torch.zeros(shape, dtype=torch.bool if k in ('masks','terminated','truncated') else torch.long if k == 'actions' else torch.float32, device=device)
               for k, shape in shapes.items()}
     result['valid'] = torch.zeros((B, T), dtype=torch.bool, device=device)
     for i, e in enumerate(episodes):
         n = len(e['actions']); result['valid'][i, :n] = True
         for k in shapes:
-            result[k][i, :n] = torch.as_tensor(np.asarray(e[k]), dtype=result[k].dtype, device=device)
+            # v1 saved demonstrations were complete episodes with implicit final
+            # termination. Preserve that documented schema when reading them.
+            values=e.get(k, ([False]*(n-1)+[True]) if k=='terminated' else [False]*n if k=='truncated' else None)
+            result[k][i, :n] = torch.as_tensor(np.asarray(values), dtype=result[k].dtype, device=device)
+        if bool(result['truncated'][i,:n].any()) or not bool(result['terminated'][i,n-1]):
+            raise ValueError('PPO batches require complete terminal episodes; external truncation needs explicit bootstrapping')
     return result
 
 
@@ -129,7 +135,7 @@ def ppo_update(model, optimizer, batch, epochs=2, clip=.2):
 
 def collect_episode(model, env, device, deterministic=False, teacher=None):
     obs, _ = env.reset()
-    records = {k: [] for k in ('tokens', 'masks', 'actions', 'rewards', 'old_logp', 'old_values')}
+    records = {k: [] for k in ('tokens', 'masks', 'actions', 'rewards', 'old_logp', 'old_values','terminated','truncated')}
     history = []
     while True:
         current = token(obs); history.append(current)
@@ -147,6 +153,7 @@ def collect_episode(model, env, device, deterministic=False, teacher=None):
         records['old_values'].append(values[0, -1].item())
         obs, reward, terminated, truncated, _ = env.step(action)
         records['rewards'].append(reward)
+        records['terminated'].append(bool(terminated)); records['truncated'].append(bool(truncated))
         if truncated: raise RuntimeError('external truncation: collector requires complete episodes')
         if terminated: break
     return records

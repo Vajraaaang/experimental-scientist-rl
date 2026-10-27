@@ -1,0 +1,12 @@
+{
+  "batch": 128,
+  "epochs": 2,
+  "clip": 0.1,
+  "entropy": 0.03,
+  "entropy_final": 0.005,
+  "learning_rate": 0.0003,
+  "normalize_advantage": false,
+  "value_coef": 0.1,
+  "evaluation_every": 100000,
+  "episode_namespace": 4
+}

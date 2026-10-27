@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26",
+  "test_exit_code": 0,
+  "test_output": "........................................................................ [ 93%]\n.....                                                                    [100%]\n77 passed in 4.84s",
+  "fresh_lock_environment_import_exit_code": 0,
+  "source_hash": "2e89d5512e73d6c7c05d7830e37c58ce515de04d01dbe6caf2759d329593561a",
+  "new_main_interactions": 5000839,
+  "pilot_interactions": 3801961,
+  "seeds": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "fresh_mechanisms": 2048,
+  "models_and_previous_studies_integrity": "reports/ppo-cost-v5/integrity-final.json",
+  "cost_reduction": 0.442197265625,
+  "cost_ci95": [
+    0.286092529296875,
+    0.6075903320312501
+  ],
+  "mse_noninferiority_margin": 0.0001,
+  "mse_increase_ci95": [
+    -0.0000033056177543122367,
+    0.00007532125406307522
+  ],
+  "net_return_ci95": [
+    -0.001365613002375631,
+    0.004844693797893298
+  ],
+  "screen_components": {
+    "cost_reduction": true,
+    "quality_noninferiority": true,
+    "net_return_improvement": false
+  },
+  "full_efficiency_screen_passed": false,
+  "architecture_unchanged": true,
+  "scientific_reward_and_prices_unchanged": true,
+  "post_test_retuning": false
+}

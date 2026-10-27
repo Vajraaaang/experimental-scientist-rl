@@ -1,0 +1,459 @@
+{
+  "scope": "fresh_parameter_holdout_same_unfiltered_task",
+  "mechanisms": 1024,
+  "training_seeds": 5,
+  "methods": {
+    "prior": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0013068332478383127
+    },
+    "fixed": {
+      "aggregate_rmse": 0.055895879048570775,
+      "success_rate": 0.59765625,
+      "mean_return": -0.4003802419612454,
+      "mean_variable_cost": 6.400000000000001,
+      "mean_total_assay_cost": 9.400000000000002,
+      "mean_effort": 0.47890625,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.0026222637459909492
+    },
+    "fixed_quality": {
+      "aggregate_rmse": 0.055801610822633116,
+      "success_rate": 0.599609375,
+      "mean_return": -0.4094054145400605,
+      "mean_variable_cost": 7.400000000000002,
+      "mean_total_assay_cost": 10.400000000000002,
+      "mean_effort": 0.48046874999999994,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.003084434390586921
+    },
+    "additive": {
+      "aggregate_rmse": 0.061207946799099605,
+      "success_rate": 0.4892578125,
+      "mean_return": -0.4531295563861408,
+      "mean_variable_cost": 5.799999999999998,
+      "mean_total_assay_cost": 8.799999999999999,
+      "mean_effort": 0.40976562499999997,
+      "mean_assays": 2.0,
+      "mean_online_seconds": 0.002852417160738696
+    },
+    "random": {
+      "aggregate_rmse": 0.07021798546042708,
+      "success_rate": 0.240234375,
+      "mean_return": -0.5812411185245749,
+      "mean_variable_cost": 7.16220703125,
+      "mean_total_assay_cost": 10.162207031249999,
+      "mean_effort": 0.33125,
+      "mean_assays": 3.1640625,
+      "mean_online_seconds": 0.0028615405876166733
+    },
+    "bo": {
+      "aggregate_rmse": 0.06267269711095275,
+      "success_rate": 0.451171875,
+      "mean_return": -0.4625464619411225,
+      "mean_variable_cost": 5.1712890625,
+      "mean_total_assay_cost": 8.1712890625,
+      "mean_effort": 0.3609375,
+      "mean_assays": 1.783203125,
+      "mean_online_seconds": 0.003012303284663176
+    },
+    "eig": {
+      "aggregate_rmse": 0.055153253083206406,
+      "success_rate": 0.61328125,
+      "mean_return": -0.40567055444102174,
+      "mean_variable_cost": 7.695117187500002,
+      "mean_total_assay_cost": 10.6951171875,
+      "mean_effort": 0.490625,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.059405497480327085
+    },
+    "voi": {
+      "aggregate_rmse": 0.04901869434011276,
+      "success_rate": 0.7294921875,
+      "mean_return": -0.3156738644809403,
+      "mean_variable_cost": 4.62109375,
+      "mean_total_assay_cost": 7.621093749999999,
+      "mean_effort": 0.58359375,
+      "mean_assays": 1.998046875,
+      "mean_online_seconds": 0.05954924987861432
+    },
+    "reference": {
+      "aggregate_rmse": 0.04896393938631884,
+      "success_rate": 0.73046875,
+      "mean_return": -0.26896548602271053,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.5843750000000001,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0
+    },
+    "curriculum_ppo": {
+      "aggregate_rmse": 0.04985118702952364,
+      "success_rate": 0.687890625,
+      "mean_return": -0.33160763951275457,
+      "mean_variable_cost": 5.4726367187500005,
+      "mean_total_assay_cost": 8.472636718750001,
+      "mean_effort": 0.5673437500000001,
+      "mean_assays": 2.1552734375,
+      "mean_online_seconds": 0.0029438784892249713
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04939634251793596,
+      "success_rate": 0.7248046875,
+      "mean_return": -0.3190385372899248,
+      "mean_variable_cost": 4.589804687499999,
+      "mean_total_assay_cost": 7.589804687499997,
+      "mean_effort": 0.5828125,
+      "mean_assays": 1.992578125,
+      "mean_online_seconds": 0.002656723485677048
+    },
+    "imitation_ppo": {
+      "aggregate_rmse": 0.04934635008403269,
+      "success_rate": 0.725390625,
+      "mean_return": -0.3186911875990913,
+      "mean_variable_cost": 4.60443359375,
+      "mean_total_assay_cost": 7.60443359375,
+      "mean_effort": 0.5828125,
+      "mean_assays": 1.991796875,
+      "mean_online_seconds": 0.002667697351591869
+    },
+    "legacy_ppo": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0015168600399798986
+    },
+    "legacy_imitation": {
+      "aggregate_rmse": 0.050007479500906046,
+      "success_rate": 0.7184244791666666,
+      "mean_return": -0.32518970945752057,
+      "mean_variable_cost": 4.600032552083333,
+      "mean_total_assay_cost": 7.600032552083332,
+      "mean_effort": 0.5822916666666667,
+      "mean_assays": 1.9899088541666667,
+      "mean_online_seconds": 0.0027190711080038454
+    }
+  },
+  "stochastic_methods": {
+    "curriculum_ppo": {
+      "aggregate_rmse": 0.05090249001212217,
+      "success_rate": 0.670703125,
+      "mean_return": -0.3465204114434198,
+      "mean_variable_cost": 5.9605468749999995,
+      "mean_total_assay_cost": 8.960546875,
+      "mean_effort": 0.5561718750000001,
+      "mean_assays": 2.318359375,
+      "mean_online_seconds": 0.0030805451730429923
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04977601731940804,
+      "success_rate": 0.721875,
+      "mean_return": -0.32304214314320095,
+      "mean_variable_cost": 4.608164062499999,
+      "mean_total_assay_cost": 7.608164062499999,
+      "mean_effort": 0.5839062500000001,
+      "mean_assays": 1.9919921875,
+      "mean_online_seconds": 0.0026564648300904992
+    },
+    "imitation_ppo": {
+      "aggregate_rmse": 0.0496257522672407,
+      "success_rate": 0.722265625,
+      "mean_return": -0.3217215288089545,
+      "mean_variable_cost": 4.62859375,
+      "mean_total_assay_cost": 7.62859375,
+      "mean_effort": 0.58328125,
+      "mean_assays": 1.9927734375,
+      "mean_online_seconds": 0.00268775620006636
+    }
+  },
+  "shared_final_estimator": {
+    "curriculum_ppo": {
+      "aggregate_rmse": 0.04896393938631884,
+      "success_rate": 0.73046875,
+      "mean_return": -0.32369185321021055,
+      "mean_variable_cost": 5.4726367187500005,
+      "mean_total_assay_cost": 8.472636718750001,
+      "mean_effort": 0.5843750000000001,
+      "mean_assays": 2.1552734375,
+      "mean_online_seconds": 0.002594686525890211
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04921460418653021,
+      "success_rate": 0.7259765625,
+      "mean_return": -0.31715264839868373,
+      "mean_variable_cost": 4.589804687499999,
+      "mean_total_assay_cost": 7.589804687499997,
+      "mean_effort": 0.5809374999999999,
+      "mean_assays": 1.992578125,
+      "mean_online_seconds": 0.002346631706654989
+    },
+    "imitation_ppo": {
+      "aggregate_rmse": 0.049181872308915874,
+      "success_rate": 0.7265625,
+      "mean_return": -0.3170003048185506,
+      "mean_variable_cost": 4.60443359375,
+      "mean_total_assay_cost": 7.60443359375,
+      "mean_effort": 0.58140625,
+      "mean_assays": 1.991796875,
+      "mean_online_seconds": 0.0023505326463350686
+    },
+    "legacy_ppo": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0013089577879744259
+    },
+    "legacy_imitation": {
+      "aggregate_rmse": 0.049472990474460195,
+      "success_rate": 0.7213541666666666,
+      "mean_return": -0.31963821250276964,
+      "mean_variable_cost": 4.600032552083333,
+      "mean_total_assay_cost": 7.600032552083332,
+      "mean_effort": 0.5776041666666667,
+      "mean_assays": 1.9899088541666667,
+      "mean_online_seconds": 0.0023734076939945226
+    }
+  },
+  "paired_differences": {
+    "curriculum_ppo_return_minus_imitation": {
+      "mean": -0.01256910222282973,
+      "ci95": [
+        -0.02769905683781874,
+        -0.0026687521553832613
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "curriculum_ppo_mse_reduction_vs_imitation": {
+      "mean": -4.514219410329752e-05,
+      "ci95": [
+        -0.0002329211309453219,
+        6.657623756995566e-05
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "curriculum_ppo_cost_reduction_vs_imitation": {
+      "mean": -0.8828320312500001,
+      "ci95": [
+        -1.1409404296875,
+        -0.6197519531250001
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "imitation_ppo_return_minus_imitation": {
+      "mean": 0.00034734969083357513,
+      "ci95": [
+        -0.0007837312235374421,
+        0.0017794195388418678
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "imitation_ppo_mse_reduction_vs_imitation": {
+      "mean": 4.936387533335752e-06,
+      "ci95": [
+        -6.381249234130822e-06,
+        2.02680135661913e-05
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "imitation_ppo_cost_reduction_vs_imitation": {
+      "mean": -0.014628906250000037,
+      "ci95": [
+        -0.031933593750000086,
+        -0.0008398437499999974
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "curriculum_ppo_return_minus_fixed": {
+      "mean": 0.06877260244849079,
+      "ci95": [
+        0.05165593324991434,
+        0.08358026611055216
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "curriculum_ppo_mse_reduction_vs_fixed": {
+      "mean": 0.0006392084463599077,
+      "ci95": [
+        0.0004289897888976682,
+        0.0008095675057962307
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    },
+    "curriculum_ppo_cost_reduction_vs_fixed": {
+      "mean": 0.9273632812500004,
+      "ci95": [
+        0.6788642578125004,
+        1.1929775390625004
+      ],
+      "training_seeds": 5,
+      "mechanisms": 1024,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    }
+  },
+  "compute": {
+    "scratch_interactions": 15001648,
+    "finetune_interactions": 5001107,
+    "sampled_policy_decisions": 16669040,
+    "training_validation_seconds_sum": 3164.899087167927,
+    "imitation_seconds_sum": 275.75641566707054,
+    "critic_warmup_seconds_sum": 27.28200333408313,
+    "seeds": {
+      "20": {
+        "selector_interactions": 1000051,
+        "joint_interactions": 2000147,
+        "joint_selected_at": 2000147,
+        "finetune_interactions": 1000370,
+        "finetune_selected_at": 378
+      },
+      "21": {
+        "selector_interactions": 1000142,
+        "joint_interactions": 2000318,
+        "joint_selected_at": 2000318,
+        "finetune_interactions": 1000122,
+        "finetune_selected_at": 370
+      },
+      "22": {
+        "selector_interactions": 1000145,
+        "joint_interactions": 2000326,
+        "joint_selected_at": 1400392,
+        "finetune_interactions": 1000343,
+        "finetune_selected_at": 100086
+      },
+      "23": {
+        "selector_interactions": 1000115,
+        "joint_interactions": 2000030,
+        "joint_selected_at": 2000030,
+        "finetune_interactions": 1000232,
+        "finetune_selected_at": 400272
+      },
+      "24": {
+        "selector_interactions": 1000078,
+        "joint_interactions": 2000296,
+        "joint_selected_at": 2000296,
+        "finetune_interactions": 1000040,
+        "finetune_selected_at": 600374
+      }
+    },
+    "main_interactions": 20002755,
+    "development_control_interactions": 5492836,
+    "teacher": {
+      "episodes": 2048,
+      "transitions": 6145,
+      "seconds": 122.50281554105459,
+      "hypothetical_outcomes": 27510624,
+      "source_hash": "68b8b17f55a89865ef2d0f6fa3c9a7948f63b92f7c61cd78a711e982eccaf5ed"
+    }
+  },
+  "gpu_cores": 30,
+  "batch128_benchmark": {
+    "hardware": {
+      "python": "<development-project>/.venv/bin/python",
+      "python_version": "3.12.1",
+      "architecture": "arm64",
+      "macos": "ProductName:\t\tmacOS\nProductVersion:\t\t26.3.1\nProductVersionExtra:\t(a)\nBuildVersion:\t\t25D771280a",
+      "ram_bytes": "38654705664",
+      "hardware_model": "Mac15,11",
+      "chip": "Apple M3 Max",
+      "logical_cpus": 14,
+      "torch_cpu": true,
+      "mps_built": true,
+      "mps_available": true,
+      "mps_fallback_environment": "unset",
+      "dependencies": {
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "torch": "2.14.1",
+        "PyYAML": "6.0.3",
+        "pytest": "9.1.1"
+      },
+      "reference_dtype": "NumPy/SciPy float64 CPU",
+      "learning_dtype": "PyTorch float32"
+    },
+    "cache_setup_seconds": 0.6714802500209771,
+    "batch_episodes": 128,
+    "accelerated": true,
+    "devices": {
+      "cpu": {
+        "status": "ok",
+        "measurements": [
+          {
+            "seconds": 0.06372925004689023,
+            "transitions": 397,
+            "transitions_per_second": 6229.478610024413
+          },
+          {
+            "seconds": 0.06532104196958244,
+            "transitions": 356,
+            "transitions_per_second": 5450.004918258589
+          },
+          {
+            "seconds": 0.06697787501616403,
+            "transitions": 376,
+            "transitions_per_second": 5613.794106027676
+          }
+        ],
+        "median_seconds": 0.06532104196958244,
+        "median_transitions_per_second": 5613.794106027676,
+        "peak_process_rss_bytes": 561807360
+      },
+      "mps": {
+        "status": "ok",
+        "measurements": [
+          {
+            "seconds": 0.16612433304544538,
+            "transitions": 363,
+            "transitions_per_second": 2185.1103528626168
+          },
+          {
+            "seconds": 0.16746283299289644,
+            "transitions": 362,
+            "transitions_per_second": 2161.673689202162
+          },
+          {
+            "seconds": 0.2625249999691732,
+            "transitions": 353,
+            "transitions_per_second": 1344.6338445536644
+          }
+        ],
+        "median_seconds": 0.16746283299289644,
+        "median_transitions_per_second": 2161.673689202162,
+        "peak_process_rss_bytes": 737378304
+      }
+    },
+    "selected_device": "cpu",
+    "forecast_15m_transitions_seconds": 2671.9896947937777,
+    "scope": "complete batched rollout/update/evaluation/checkpoint workload; startup separately measured"
+  },
+  "fresh_checkpoint_hashes_unchanged": true,
+  "previous_v3_results_unchanged": true
+}

@@ -1,0 +1,370 @@
+{
+  "created_utc": "2026-10-26T22:29:40.522225+00:00",
+  "scope": "Synthetic packing/GAE and GRU64 imitation microbenchmarks; not full PPO or scientific training throughput.",
+  "complete_microstep_scope": "host packing + transfer + GAE + one imitation optimizer update; excludes environment simulation, collection, PPO loss/diagnostics, validation and checkpoints",
+  "nn_only_scope": "preloaded device tensors; GRU64 actor forward, masked cross-entropy backward, Adam step; no critic loss or gradient clipping",
+  "cpu_contended": true,
+  "contention_caveat": "Concurrent CPU training can bias CPU timings and host overhead on both devices; do not choose the production device from these timings alone.",
+  "torch_version": "2.14.1",
+  "python_version": "3.12.1",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "cpu_threads": 1,
+  "mps_built": true,
+  "mps_available": true,
+  "mps_fallback_env": "0",
+  "device_support": {
+    "cpu": {
+      "packing": true,
+      "tensor_gae": true,
+      "gru64_forward_backward_adam": true,
+      "model_parameter_device": "cpu"
+    },
+    "mps": {
+      "packing": true,
+      "tensor_gae": true,
+      "gru64_forward_backward_adam": true,
+      "model_parameter_device": "mps:0"
+    }
+  },
+  "profiles": [
+    {
+      "device": "cpu",
+      "batch_size": 256,
+      "horizon": 5,
+      "valid_transitions": 766,
+      "gae_max_abs_error": 0.0,
+      "timings": {
+        "pack_host_and_transfer": {
+          "median_ms": 3.336624999064952,
+          "min_ms": 3.236000018659979,
+          "max_ms": 3.4370000357739627,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "legacy_pack_host_and_transfer": {
+          "median_ms": 9.630749991629273,
+          "min_ms": 8.887416974175721,
+          "max_ms": 9.763041976839304,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_tensor": {
+          "median_ms": 0.08108303882181644,
+          "min_ms": 0.07816602010279894,
+          "max_ms": 0.08812500163912773,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_scalar": {
+          "median_ms": 9.017250034958124,
+          "min_ms": 9.005499945487827,
+          "max_ms": 9.062000026460737,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "nn_only_preloaded_im_update": {
+          "median_ms": 2.571500022895634,
+          "min_ms": 2.2522910148836672,
+          "max_ms": 2.777709043584764,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "complete_pack_gae_im_update": {
+          "median_ms": 6.8272079806774855,
+          "min_ms": 6.778542010579258,
+          "max_ms": 7.06854194868356,
+          "repeats": 3,
+          "warmup": 1
+        }
+      },
+      "memory": {
+        "process_peak_rss_bytes": 325255168,
+        "rss_scope": "cumulative process high-water mark; macOS bytes"
+      }
+    },
+    {
+      "device": "cpu",
+      "batch_size": 1024,
+      "horizon": 5,
+      "valid_transitions": 3070,
+      "gae_max_abs_error": 0.0,
+      "timings": {
+        "pack_host_and_transfer": {
+          "median_ms": 13.855417026206851,
+          "min_ms": 13.751541031524539,
+          "max_ms": 14.27037501707673,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "legacy_pack_host_and_transfer": {
+          "median_ms": 37.27391600841656,
+          "min_ms": 37.17883303761482,
+          "max_ms": 37.89475001394749,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_tensor": {
+          "median_ms": 0.08679198799654841,
+          "min_ms": 0.0843749730847776,
+          "max_ms": 0.09229197166860104,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_scalar": {
+          "median_ms": 35.880416049622,
+          "min_ms": 35.533832968212664,
+          "max_ms": 36.09691699966788,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "nn_only_preloaded_im_update": {
+          "median_ms": 11.249332979787141,
+          "min_ms": 9.89033404039219,
+          "max_ms": 12.014999985694885,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "complete_pack_gae_im_update": {
+          "median_ms": 25.79212503042072,
+          "min_ms": 25.263041025027633,
+          "max_ms": 25.844499992672354,
+          "repeats": 3,
+          "warmup": 1
+        }
+      },
+      "memory": {
+        "process_peak_rss_bytes": 416841728,
+        "rss_scope": "cumulative process high-water mark; macOS bytes"
+      }
+    },
+    {
+      "device": "cpu",
+      "batch_size": 4096,
+      "horizon": 5,
+      "valid_transitions": 12286,
+      "gae_max_abs_error": 0.0,
+      "timings": {
+        "pack_host_and_transfer": {
+          "median_ms": 55.937667028047144,
+          "min_ms": 55.40458403993398,
+          "max_ms": 56.278917007148266,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "legacy_pack_host_and_transfer": {
+          "median_ms": 147.8527080034837,
+          "min_ms": 146.71312499558553,
+          "max_ms": 148.39229098288342,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_tensor": {
+          "median_ms": 0.1384579809382558,
+          "min_ms": 0.1378749730065465,
+          "max_ms": 0.15820801490917802,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_scalar": {
+          "median_ms": 139.03316698269919,
+          "min_ms": 137.87849998334423,
+          "max_ms": 141.03616698412225,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "nn_only_preloaded_im_update": {
+          "median_ms": 45.97616696264595,
+          "min_ms": 45.839917031116784,
+          "max_ms": 46.92712496034801,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "complete_pack_gae_im_update": {
+          "median_ms": 103.41604094719514,
+          "min_ms": 103.35008398396894,
+          "max_ms": 103.99487498216331,
+          "repeats": 3,
+          "warmup": 1
+        }
+      },
+      "memory": {
+        "process_peak_rss_bytes": 700612608,
+        "rss_scope": "cumulative process high-water mark; macOS bytes"
+      }
+    },
+    {
+      "device": "mps",
+      "batch_size": 256,
+      "horizon": 5,
+      "valid_transitions": 766,
+      "gae_max_abs_error": 0.0,
+      "timings": {
+        "pack_host_and_transfer": {
+          "median_ms": 7.574832998216152,
+          "min_ms": 7.24875001469627,
+          "max_ms": 7.909958017989993,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "legacy_pack_host_and_transfer": {
+          "median_ms": 695.0773749849759,
+          "min_ms": 691.8944580247626,
+          "max_ms": 697.0671660383232,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_tensor": {
+          "median_ms": 0.9086669888347387,
+          "min_ms": 0.8514159708283842,
+          "max_ms": 1.9637499935925007,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_scalar": {
+          "median_ms": 99.27520900964737,
+          "min_ms": 90.65637498861179,
+          "max_ms": 104.35045801568776,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "nn_only_preloaded_im_update": {
+          "median_ms": 4.760499985422939,
+          "min_ms": 4.731499997433275,
+          "max_ms": 4.877957981079817,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "complete_pack_gae_im_update": {
+          "median_ms": 11.957207985688001,
+          "min_ms": 10.787291976157576,
+          "max_ms": 12.598458037246019,
+          "repeats": 3,
+          "warmup": 1
+        }
+      },
+      "memory": {
+        "process_peak_rss_bytes": 842874880,
+        "rss_scope": "cumulative process high-water mark; macOS bytes",
+        "mps_current_allocated_bytes": 1237760,
+        "mps_driver_allocated_bytes": 19660800,
+        "mps_recommended_max_bytes": 30150672384
+      }
+    },
+    {
+      "device": "mps",
+      "batch_size": 1024,
+      "horizon": 5,
+      "valid_transitions": 3070,
+      "gae_max_abs_error": 0.0,
+      "timings": {
+        "pack_host_and_transfer": {
+          "median_ms": 16.862040967680514,
+          "min_ms": 16.274499997962266,
+          "max_ms": 17.440915980841964,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "legacy_pack_host_and_transfer": {
+          "median_ms": 2559.8473750287667,
+          "min_ms": 2426.9748749793507,
+          "max_ms": 2671.260082977824,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_tensor": {
+          "median_ms": 1.0097080375999212,
+          "min_ms": 0.8721660124137998,
+          "max_ms": 1.0241669951938093,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_scalar": {
+          "median_ms": 361.2176250317134,
+          "min_ms": 358.46808401402086,
+          "max_ms": 361.451750039123,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "nn_only_preloaded_im_update": {
+          "median_ms": 4.843208007514477,
+          "min_ms": 4.747166996821761,
+          "max_ms": 4.9656249466352165,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "complete_pack_gae_im_update": {
+          "median_ms": 22.203874948900193,
+          "min_ms": 21.658124984242022,
+          "max_ms": 23.10474996920675,
+          "repeats": 3,
+          "warmup": 1
+        }
+      },
+      "memory": {
+        "process_peak_rss_bytes": 853032960,
+        "rss_scope": "cumulative process high-water mark; macOS bytes",
+        "mps_current_allocated_bytes": 3380736,
+        "mps_driver_allocated_bytes": 69992448,
+        "mps_recommended_max_bytes": 30150672384
+      }
+    },
+    {
+      "device": "mps",
+      "batch_size": 4096,
+      "horizon": 5,
+      "valid_transitions": 12286,
+      "gae_max_abs_error": 0.0,
+      "timings": {
+        "pack_host_and_transfer": {
+          "median_ms": 55.11191702680662,
+          "min_ms": 54.91754203103483,
+          "max_ms": 55.59987499145791,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "legacy_pack_host_and_transfer": {
+          "median_ms": 9741.339083004277,
+          "min_ms": 9306.47420801688,
+          "max_ms": 10322.991833963897,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_tensor": {
+          "median_ms": 0.8720000041648746,
+          "min_ms": 0.8672090480104089,
+          "max_ms": 0.9727920405566692,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "gae_preloaded_scalar": {
+          "median_ms": 1550.9734170045704,
+          "min_ms": 1547.9225000017323,
+          "max_ms": 1551.33983399719,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "nn_only_preloaded_im_update": {
+          "median_ms": 5.070999963209033,
+          "min_ms": 4.585749993566424,
+          "max_ms": 11.060124961659312,
+          "repeats": 3,
+          "warmup": 1
+        },
+        "complete_pack_gae_im_update": {
+          "median_ms": 67.08070798777044,
+          "min_ms": 66.49200001265854,
+          "max_ms": 68.51150002330542,
+          "repeats": 3,
+          "warmup": 1
+        }
+      },
+      "memory": {
+        "process_peak_rss_bytes": 866435072,
+        "rss_scope": "cumulative process high-water mark; macOS bytes",
+        "mps_current_allocated_bytes": 11997696,
+        "mps_driver_allocated_bytes": 147587072,
+        "mps_recommended_max_bytes": 30150672384
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "scope": "development_selected_followup",
+  "seeds": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "architecture": {
+    "kind": "recurrent",
+    "hidden": 64,
+    "input_size": 75,
+    "actions": 45
+  },
+  "selector": {
+    "batch": 64,
+    "epochs": 4,
+    "entropy": 0.05,
+    "learning_rate": 0.001,
+    "selector_fraction": 1.0,
+    "normalize_advantage": false,
+    "evaluation_every": 100000,
+    "episode_namespace": 11,
+    "graduation_minimum": 1000000,
+    "graduation_return": -0.51
+  },
+  "selector_cap": 2000000,
+  "joint": {
+    "batch": 128,
+    "epochs": 2,
+    "clip": 0.1,
+    "entropy": 0.03,
+    "entropy_final": 0.001,
+    "learning_rate": 0.0003,
+    "normalize_advantage": false,
+    "curriculum": true,
+    "bias_end_fraction": 0.3,
+    "initial_outcome_bias": 3.0,
+    "minimum_assays": 2,
+    "maximum_assays": 3,
+    "value_coef": 0.1,
+    "evaluation_every": 100000,
+    "episode_namespace": 12,
+    "selection_on_validation": true,
+    "select_after_fraction": 0.5
+  },
+  "joint_budget": 2000000,
+  "imitation": {
+    "demonstrations": 2048,
+    "optimizer_updates": 12000,
+    "episode_minibatch": 256,
+    "learning_rate": 0.001,
+    "validation_every": 2000,
+    "public_nuisance_augmentation": true
+  },
+  "finetune": {
+    "batch": 128,
+    "epochs": 2,
+    "clip": 0.1,
+    "entropy": 0.01,
+    "entropy_final": 0.001,
+    "learning_rate": 0.0001,
+    "normalize_advantage": false,
+    "value_coef": 0.1,
+    "evaluation_every": 100000,
+    "episode_namespace": 13,
+    "selection_on_validation": true
+  },
+  "finetune_budget": 1000000,
+  "critic_only_warmup_updates": 500,
+  "selection": "best mean deterministic development return; all seeds retained; PPO joint selection only after bias removed and >=1M joint transitions",
+  "strong_baselines": "v3 exhaustive fixed/quality schedules unchanged, plus original imitation/PPO controls; BO,EIG,VOI,random and prior included",
+  "fresh_test": {
+    "reserved_pool_seed": 27401,
+    "mechanisms": 1024,
+    "not_opened": true
+  },
+  "source_hash": "68b8b17f55a89865ef2d0f6fa3c9a7948f63b92f7c61cd78a711e982eccaf5ed"
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-26",
+  "test_command": "'<development-project>/.venv/bin/python' -m pytest '<development-project>/tests'",
+  "test_exit_code": 0,
+  "test_output": "......................................                                   [100%]\n38 passed in 3.19s",
+  "fresh_lock_installation": "Verified in independent /private/tmp/experimental-scientist-install-check environment",
+  "fresh_install_cli_exit_code": 0,
+  "source_hash": "0c809695d7d3a4af761b926953d2c65d71ba7a1c4aeac788e4f7c37589056370",
+  "frozen_source_unchanged": true,
+  "frozen_checkpoint_hashes_unchanged": true,
+  "frozen_checkpoint_count": 15,
+  "unique_locked_mechanisms": 512,
+  "public_replay_examples": [
+    "success",
+    "learned-policy-failure",
+    "unreachable-target"
+  ],
+  "device_benchmark": "reports/compute-final/benchmark.json",
+  "matched_online_benchmark": "reports/online-compute.json",
+  "locked_results": "reports/unfiltered-v3/locked-test/results.json",
+  "limitations": [
+    "Familiar motif support and held-out continuous parameters only",
+    "Primary revised study culture-offset SD zero",
+    "No statistically clear PPO added value over converged imitation",
+    "Original external audit scripts absent; generous-budget reconstruction labeled explicitly"
+  ]
+}

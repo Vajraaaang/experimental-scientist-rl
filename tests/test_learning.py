@@ -52,6 +52,20 @@ def test_true_terminal_and_external_truncation_have_different_bootstrap():
     assert returns_gae(r, v, terminated=False, last_value=5.)[1].item() == 6.
 
 
+def test_collector_records_terminal_flags_and_batch_rejects_external_truncation():
+    from experimentlab.learning import collect_episode
+    from experimentlab.envs import PilotConfig,ScientistEnv
+    from experimentlab.tasks import finite_family,make_task
+    config=PilotConfig(budget=0.)
+    env=ScientistEnv(make_task(finite_family()[0],941,config),config)
+    records=collect_episode(ActorCritic(),env,'cpu')
+    assert records['terminated']==[True] and records['truncated']==[False]
+    bad=example()[0]
+    bad['terminated']=[False,False];bad['truncated']=[False,True]
+    with pytest.raises(ValueError,match='complete'):
+        episode_batch([bad],'cpu')
+
+
 def test_checkpoint_cpu_random_and_optimizer_continuation(tmp_path):
     torch.manual_seed(5)
     model = ActorCritic(75, 45, hidden=32, kind='recurrent')

@@ -4,9 +4,9 @@
 
 A standalone Python research project in which an agent purchases experiments on a hidden synthetic regulatory system, then chooses a final intervention. It asks whether experiments help, whether adapting them helps, and whether PPO adds value beyond imitation learning.
 
-The project includes actual PPO training code and measured runs. It is a **development research release**: locked-test evaluation and structural generalization remain unqualified, and an RL-specific advantage has not been established.
+The project includes actual PPO training code and measured runs. It is a **synthetic research release** with three completed locked continuous-parameter tests. Reward-only PPO now learns useful adaptive experiments and beats a strong fixed design. Strong imitation remains more cost-effective; PPO-specific added value over imitation is not established. Structural generalization and real biology remain unqualified.
 
-![Recorded RL and baseline comparison on paired development mechanisms](docs/figures/rl-comparison.png)
+![Fresh test cost decomposition and final quality](reports/ppo-cost-v5/figures/fresh-efficiency.png)
 
 ## What is implemented
 
@@ -33,9 +33,21 @@ A documented development revision retains unreachable targets and removes the at
 
 The planner recovers **14.6%** more of the prior-to-reference error gap than the empirically tuned exhaustive-search fixed design; the paired improvement intervals are positive on this development set. The search covers 10,373 candidates and uses 512 calibration mechanisms. It is not an exact optimization of expected fixed-design performance.
 
-On a separate paired development slice, converged full-history and recurrent imitation policies approach the planner's final quality. Completed recurrent fine-tuning runs use **three seeds with at least 100,000 PPO transitions per seed**. These runs establish a real RL training pipeline; they do not establish a robust PPO advantage. Full-history imitation is a strong equal-information comparator.
+The collapse follow-up trained five seeds with **20,002,755 main physical interactions**. A reward-only curriculum teaches intervention interpretation before releasing experiment selection. On 1,024 new locked mechanisms, curriculum PPO improves return over the exhaustive fixed design by **0.06877**, with a hierarchical 95% interval **[0.05166, 0.08358]**. Strong imitation still has better return and spends less.
 
-Read [the results guide](docs/results.md) and the raw records under `reports/`. Do not combine results from different validation slices as though they were paired. These are synthetic-system findings, not wet-lab or therapeutic evidence.
+A second follow-up investigates that spending gap on development data, retaining all prices, the GRU64 architecture and strong baselines. Five-seed paired-return continuation and public-price logit calibration use another **5,000,839 main interactions**. On another **2,048 fresh locked mechanisms**:
+
+| Method | Final target RMSE | Mean variable assay cost | Mean return |
+|---|---:|---:|---:|
+| Original curriculum PPO | 0.04836 | 5.391 | -0.31728 |
+| Paired-return PPO + public-price calibration | 0.04860 | 4.949 | -0.31501 |
+| Strong imitation | 0.04790 | 4.622 | -0.30582 |
+| Adaptive decision-value planner | 0.04763 | 4.644 | -0.30349 |
+| Preserved exhaustive fixed design | 0.05439 | 6.400 | -0.38508 |
+
+PPO spending falls **8.2%**: cost reduction 0.4422, 95% interval **[0.2861, 0.6076]**. Raw MSE meets the predeclared noninferiority margin of 0.0001. The net-return improvement interval **[-0.00137, 0.00484]** includes zero, so the full efficiency screen fails. This is evidence for lower spending with bounded quality loss, not an established overall utility win. The public-price calibration is explicit post-processing, not a PPO gradient discovery; imitation receives the same calibration search.
+
+Read [the results guide](docs/results.md), [PPO collapse investigation](docs/ppo_followup.md), and [cost-efficiency report](docs/ppo_cost_efficiency.md). Raw rows, protocols, failed controls, curves and freeze hashes are under `reports/`. Each test uses different mechanisms; compare methods within a study. Familiar motif support and zero culture-offset SD limit these synthetic findings.
 
 ## Quick start
 
@@ -76,6 +88,10 @@ PROJECT="$PWD"
   --output "$PROJECT/runs/reproduced-v3"
 ```
 
+The later study workflows are `scripts/ppo_followup.py`, `scripts/ppo_v4_main.py`, `scripts/ppo_cost_study.py` and `scripts/ppo_cost_select.py`. Read the reports and scripts before launching them. Their defaults point to recorded study directories: use a separate project/output copy for new training. Never select methods using saved locked outcomes. The locked runners refuse to overwrite completed results. Pretrained weights are excluded, so report rendering is available from the evidence but trained-policy reruns require reproducing training.
+
+The latest 73 MiB raw cost-test JSON is stored losslessly as `reports/ppo-cost-v5/fresh-locked/results.json.gz`; Python `gzip.open` reads it directly. `scripts/report_ppo_cost.py` supports this compressed record without retraining. Earlier locked records retain ordinary JSON. Machine paths were redacted; original hashes refer to the original development artifacts.
+
 The larger commands can take considerably longer than the smoke check. Checkpoints and fresh outputs go into ignored `runs/`; pretrained weights are not bundled. The frozen dependency versions are in `requirements.lock`.
 
 ## Design and evidence
@@ -84,7 +100,8 @@ The larger commands can take considerably longer than the smoke check. Checkpoin
 - [Development revisions and preserved negative results](docs/revisions.md)
 - [Results and publication scope](docs/results.md)
 - [Build specification](autonomous_scientist_build_spec.md)
-- [Publication manifest](docs/publication-manifest.json)
+- [Original publication manifest](docs/publication-manifest.json)
+- [Completed-study update manifest](docs/publication-update-2026-10-26.json)
 
 The public snapshot excludes credentials, virtual environments, checkpoints, live training outputs, and a private document handoff link. It was prepared separately from the active development checkout. Original development hashes are retained in the evidence; publication-only changes and redactions are documented in the manifest.
 

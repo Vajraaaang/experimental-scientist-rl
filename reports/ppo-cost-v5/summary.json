@@ -1,0 +1,426 @@
+{
+  "methods": {
+    "prior": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0012818482018417399
+    },
+    "fixed": {
+      "aggregate_rmse": 0.05439295680472945,
+      "success_rate": 0.62890625,
+      "mean_return": -0.38508398437111635,
+      "mean_variable_cost": 6.400000000000001,
+      "mean_total_assay_cost": 9.400000000000002,
+      "mean_effort": 0.5044921874999999,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.0025744698866958515
+    },
+    "fixed_quality": {
+      "aggregate_rmse": 0.05430908748552022,
+      "success_rate": 0.630859375,
+      "mean_return": -0.394240667100989,
+      "mean_variable_cost": 7.400000000000002,
+      "mean_total_assay_cost": 10.400000000000002,
+      "mean_effort": 0.5058593749999999,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.0030310525120285092
+    },
+    "additive": {
+      "aggregate_rmse": 0.060713586603842504,
+      "success_rate": 0.501953125,
+      "mean_return": -0.4477760692052284,
+      "mean_variable_cost": 5.799999999999998,
+      "mean_total_assay_cost": 8.799999999999999,
+      "mean_effort": 0.4232421875,
+      "mean_assays": 2.0,
+      "mean_online_seconds": 0.0028025363418180405
+    },
+    "random": {
+      "aggregate_rmse": 0.06814735560113196,
+      "success_rate": 0.2783203125,
+      "mean_return": -0.5532890200427132,
+      "mean_variable_cost": 7.1568359375,
+      "mean_total_assay_cost": 10.156835937499999,
+      "mean_effort": 0.3462890625,
+      "mean_assays": 3.1630859375,
+      "mean_online_seconds": 0.002797735251164113
+    },
+    "bo": {
+      "aggregate_rmse": 0.061094191111499815,
+      "success_rate": 0.4873046875,
+      "mean_return": -0.4437754093818463,
+      "mean_variable_cost": 5.103320312499999,
+      "mean_total_assay_cost": 8.1033203125,
+      "mean_effort": 0.38984374999999993,
+      "mean_assays": 1.759765625,
+      "mean_online_seconds": 0.0028966695447536495
+    },
+    "eig": {
+      "aggregate_rmse": 0.05437064854389606,
+      "success_rate": 0.62939453125,
+      "mean_return": -0.3977876407458867,
+      "mean_variable_cost": 7.699511718750002,
+      "mean_total_assay_cost": 10.69951171875,
+      "mean_effort": 0.5035156249999999,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.057051305383112094
+    },
+    "voi": {
+      "aggregate_rmse": 0.04762969608875433,
+      "success_rate": 0.7548828125,
+      "mean_return": -0.30349356057571,
+      "mean_variable_cost": 4.6439453125,
+      "mean_total_assay_cost": 7.6439453125,
+      "mean_effort": 0.60390625,
+      "mean_assays": 2.0126953125,
+      "mean_online_seconds": 0.05723907012554719
+    },
+    "reference": {
+      "aggregate_rmse": 0.04751898229306737,
+      "success_rate": 0.7568359375,
+      "mean_return": -0.25607880531688504,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.60546875,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0
+    },
+    "original_ppo": {
+      "aggregate_rmse": 0.04836087512204381,
+      "success_rate": 0.71796875,
+      "mean_return": -0.31728142816324156,
+      "mean_variable_cost": 5.391181640625,
+      "mean_total_assay_cost": 8.391181640625001,
+      "mean_effort": 0.58984375,
+      "mean_assays": 2.1107421875,
+      "mean_online_seconds": 0.00237582295322909
+    },
+    "efficient_ppo": {
+      "aggregate_rmse": 0.04859956872406748,
+      "success_rate": 0.71376953125,
+      "mean_return": -0.31500977676653585,
+      "mean_variable_cost": 4.948984374999999,
+      "mean_total_assay_cost": 7.948984375,
+      "mean_effort": 0.5865625000000001,
+      "mean_assays": 2.0314453125,
+      "mean_online_seconds": 0.0022224528649530837
+    },
+    "paired_ppo": {
+      "aggregate_rmse": 0.048349562120374306,
+      "success_rate": 0.7181640625,
+      "mean_return": -0.31497299619194347,
+      "mean_variable_cost": 5.170498046875,
+      "mean_total_assay_cost": 8.170498046875,
+      "mean_effort": 0.5900000000000001,
+      "mean_assays": 2.05458984375,
+      "mean_online_seconds": 0.0023056339636184477
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04790043817325881,
+      "success_rate": 0.7525390625,
+      "mean_return": -0.30582058834401904,
+      "mean_variable_cost": 4.6215234375,
+      "mean_total_assay_cost": 7.6215234375,
+      "mean_effort": 0.603203125,
+      "mean_assays": 2.010546875,
+      "mean_online_seconds": 0.002174501215802138
+    },
+    "calibrated_imitation": {
+      "aggregate_rmse": 0.04795773169557619,
+      "success_rate": 0.7525390625,
+      "mean_return": -0.3063205748134874,
+      "mean_variable_cost": 4.6138671875,
+      "mean_total_assay_cost": 7.613867187499999,
+      "mean_effort": 0.60375,
+      "mean_assays": 2.007421875,
+      "mean_online_seconds": 0.002166293408305364
+    },
+    "imitation_ppo": {
+      "aggregate_rmse": 0.04776304712946807,
+      "success_rate": 0.75361328125,
+      "mean_return": -0.30467754679667886,
+      "mean_variable_cost": 4.637089843749999,
+      "mean_total_assay_cost": 7.637089843749999,
+      "mean_effort": 0.6035156249999999,
+      "mean_assays": 2.00966796875,
+      "mean_online_seconds": 0.0021778273678592086
+    }
+  },
+  "cost_decomposition": {
+    "original_ppo": {
+      "short_assay_base": 3.58826171875,
+      "long_duration_increment": 1.4,
+      "dose_premium": 0.40291992187502634,
+      "assays": 2.1107421875,
+      "exact_repeats": 0.0888671875
+    },
+    "efficient_ppo": {
+      "short_assay_base": 3.4534570312499993,
+      "long_duration_increment": 1.09931640625,
+      "dose_premium": 0.3962109375000241,
+      "assays": 2.0314453125,
+      "exact_repeats": 0.03193359375
+    },
+    "paired_ppo": {
+      "short_assay_base": 3.492802734375,
+      "long_duration_increment": 1.27841796875,
+      "dose_premium": 0.39927734375002494,
+      "assays": 2.05458984375,
+      "exact_repeats": 0.0345703125
+    },
+    "imitation": {
+      "short_assay_base": 3.4179296875,
+      "long_duration_increment": 1.0,
+      "dose_premium": 0.20359375000001223,
+      "assays": 2.010546875,
+      "exact_repeats": 0.00234375
+    },
+    "calibrated_imitation": {
+      "short_assay_base": 3.4126171874999995,
+      "long_duration_increment": 1.0,
+      "dose_premium": 0.20125000000001222,
+      "assays": 2.007421875,
+      "exact_repeats": 0.0013671875
+    },
+    "imitation_ppo": {
+      "short_assay_base": 3.4164355468749994,
+      "long_duration_increment": 1.0,
+      "dose_premium": 0.2206542968750118,
+      "assays": 2.00966796875,
+      "exact_repeats": 0.00146484375
+    }
+  },
+  "shared_final_estimator": {
+    "original_ppo": {
+      "aggregate_rmse": 0.04751898229306737,
+      "success_rate": 0.7568359375,
+      "mean_return": -0.309990621723135,
+      "mean_variable_cost": 5.391181640625,
+      "mean_total_assay_cost": 8.391181640625001,
+      "mean_effort": 0.60546875,
+      "mean_assays": 2.1107421875,
+      "mean_online_seconds": 0.00237582295322909
+    },
+    "efficient_ppo": {
+      "aggregate_rmse": 0.04774247202464108,
+      "success_rate": 0.7529296875,
+      "mean_return": -0.30754139475236375,
+      "mean_variable_cost": 4.948984374999999,
+      "mean_total_assay_cost": 7.948984375,
+      "mean_effort": 0.60234375,
+      "mean_assays": 2.0314453125,
+      "mean_online_seconds": 0.0022224528649530837
+    },
+    "paired_ppo": {
+      "aggregate_rmse": 0.04751898229306737,
+      "success_rate": 0.7568359375,
+      "mean_return": -0.30778378578563503,
+      "mean_variable_cost": 5.170498046875,
+      "mean_total_assay_cost": 8.170498046875,
+      "mean_effort": 0.60546875,
+      "mean_assays": 2.05458984375,
+      "mean_online_seconds": 0.0023056339636184477
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04769013137476619,
+      "success_rate": 0.7529296875,
+      "mean_return": -0.3037965818042458,
+      "mean_variable_cost": 4.6215234375,
+      "mean_total_assay_cost": 7.6215234375,
+      "mean_effort": 0.6029296875,
+      "mean_assays": 2.010546875,
+      "mean_online_seconds": 0.002174501215802138
+    },
+    "calibrated_imitation": {
+      "aggregate_rmse": 0.04775623563840178,
+      "success_rate": 0.75244140625,
+      "mean_return": -0.3043490073600556,
+      "mean_variable_cost": 4.6138671875,
+      "mean_total_assay_cost": 7.613867187499999,
+      "mean_effort": 0.6028906249999999,
+      "mean_assays": 2.007421875,
+      "mean_online_seconds": 0.002166293408305364
+    },
+    "imitation_ppo": {
+      "aggregate_rmse": 0.04766752910260528,
+      "success_rate": 0.7533203125,
+      "mean_return": -0.30375234088727215,
+      "mean_variable_cost": 4.637089843749999,
+      "mean_total_assay_cost": 7.637089843749999,
+      "mean_effort": 0.6032421875,
+      "mean_assays": 2.00966796875,
+      "mean_online_seconds": 0.0021778273678592086
+    }
+  },
+  "stochastic": {
+    "original_ppo": {
+      "aggregate_rmse": 0.04956438231327023,
+      "success_rate": 0.7005859375,
+      "mean_return": -0.3333305728471016,
+      "mean_variable_cost": 5.867949218750001,
+      "mean_total_assay_cost": 8.86794921875,
+      "mean_effort": 0.5797656250000001,
+      "mean_assays": 2.2763671875,
+      "mean_online_seconds": 0.002484358870469805
+    },
+    "efficient_ppo": {
+      "aggregate_rmse": 0.050728475462481826,
+      "success_rate": 0.68203125,
+      "mean_return": -0.33587639649351203,
+      "mean_variable_cost": 5.010302734375,
+      "mean_total_assay_cost": 8.010302734375,
+      "mean_effort": 0.5687109375,
+      "mean_assays": 2.06123046875,
+      "mean_online_seconds": 0.002230943306562949
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04812374842964929,
+      "success_rate": 0.749609375,
+      "mean_return": -0.30814752410451723,
+      "mean_variable_cost": 4.63978515625,
+      "mean_total_assay_cost": 7.639785156249999,
+      "mean_effort": 0.6032031250000001,
+      "mean_assays": 2.010546875,
+      "mean_online_seconds": 0.002166843391620432
+    },
+    "calibrated_imitation": {
+      "aggregate_rmse": 0.04830263302276926,
+      "success_rate": 0.74853515625,
+      "mean_return": -0.3096507638182319,
+      "mean_variable_cost": 4.612148437499999,
+      "mean_total_assay_cost": 7.612148437499999,
+      "mean_effort": 0.604296875,
+      "mean_assays": 2.00380859375,
+      "mean_online_seconds": 0.002165409468841517
+    }
+  },
+  "differences": {
+    "efficient_vs_original_ppo": {
+      "cost_reduction": {
+        "mean": 0.44219726562500006,
+        "ci95": [
+          0.286092529296875,
+          0.6075903320312501
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": 2.3143837595442483e-05,
+        "ci95": [
+          -3.3056177543122367e-06,
+          7.532125406307522e-05
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": 0.002271651396705746,
+        "ci95": [
+          -0.001365613002375631,
+          0.004844693797893298
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "efficient_vs_imitation": {
+      "cost_reduction": {
+        "mean": -0.32746093750000005,
+        "ci95": [
+          -0.4897963867187502,
+          -0.19746899414062508
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": 6.746610297516799e-05,
+        "ci95": [
+          -3.951776236522069e-05,
+          0.00021750491580473831
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": -0.009189188422516783,
+        "ci95": [
+          -0.022023862895538347,
+          0.0005868600281328931
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "efficient_vs_calibrated_imitation": {
+      "cost_reduction": {
+        "mean": -0.3351171875000001,
+        "ci95": [
+          -0.496841796875,
+          -0.20498291015625006
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": 6.197405078048449e-05,
+        "ci95": [
+          -4.193228106676116e-05,
+          0.0002079095518392806
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": -0.008689201953048436,
+        "ci95": [
+          -0.021198691387756877,
+          0.0007448940998904808
+        ],
+        "training_seeds": 5,
+        "mechanisms": 2048,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    }
+  },
+  "efficiency_screen": false,
+  "screen_components": {
+    "cost_reduction": true,
+    "quality_noninferiority": true,
+    "net_return_improvement": false
+  },
+  "compute": {
+    "new_main_interactions": 5000839,
+    "new_main_policy_decisions": 5000839,
+    "new_main_seconds_sum": 671.5423705850262,
+    "pilots_interactions": 3801961
+  },
+  "selection": {
+    "selected_name": "paired_training_calibrated",
+    "selected_model": "trained",
+    "selected_calibration": {
+      "duration_penalty": 4.0,
+      "dose_penalty": 4.0,
+      "stop_bonus": 0.5
+    },
+    "imitation_calibration": {
+      "duration_penalty": 0.0,
+      "dose_penalty": 16.0,
+      "stop_bonus": 0.1
+    }
+  }
+}

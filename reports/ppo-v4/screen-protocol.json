@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "original_like": {
+      "batch": 32,
+      "epochs": 4,
+      "entropy": 0.01,
+      "clip": 0.2,
+      "gae_lambda": 0.95,
+      "target_kl": null,
+      "evaluation_every": 10000
+    },
+    "entropy_only": {
+      "batch": 32,
+      "epochs": 4,
+      "entropy": 0.1,
+      "clip": 0.2,
+      "gae_lambda": 0.95,
+      "target_kl": null,
+      "evaluation_every": 10000
+    },
+    "batch_only": {
+      "batch": 256,
+      "epochs": 4,
+      "entropy": 0.01,
+      "clip": 0.2,
+      "gae_lambda": 0.95,
+      "target_kl": null,
+      "evaluation_every": 10000
+    },
+    "selector_control": {
+      "batch": 256,
+      "epochs": 4,
+      "entropy": 0.05,
+      "learning_rate": 0.001,
+      "selector_fraction": 1.0,
+      "evaluation_every": 20000
+    },
+    "exploration": {
+      "batch": 256,
+      "epochs": 2,
+      "entropy": 0.1,
+      "entropy_final": 0.02,
+      "learning_rate": 0.0003,
+      "evaluation_every": 20000
+    },
+    "curriculum": {
+      "batch": 256,
+      "epochs": 2,
+      "entropy": 0.05,
+      "entropy_final": 0.005,
+      "selector_fraction": 0.4,
+      "curriculum": true,
+      "bias_end_fraction": 0.65,
+      "learning_rate": 0.0003,
+      "evaluation_every": 20000
+    }
+  },
+  "seed": 10,
+  "budgets": {
+    "single_factor_controls": 30000,
+    "selector": 200000,
+    "joint_candidates": 200000
+  },
+  "selection": "development free-policy return and stability only; selector control is not a free-policy success",
+  "fresh_locked_outcomes_opened": false
+}

@@ -1,0 +1,1499 @@
+{
+  "history-ppo-seed0": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.000985225641670695
+    },
+    "training_seconds": 119.118210540968,
+    "on_policy_transitions": 100004,
+    "teacher_seconds_shared": 0.0,
+    "teacher_transitions": 0,
+    "seed": 0,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "history",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 93,
+        "seconds": 0.08513658295851201,
+        "metrics": {
+          "loss": 0.23362204432487488,
+          "value_error": 0.5540805459022522,
+          "entropy": 3.537794589996338,
+          "gradient_norm": 1.2890681028366089,
+          "kl": -8.795851317699999e-05,
+          "initial_logp_error": 4.76837158203125e-07
+        }
+      },
+      {
+        "transitions": 10012,
+        "seconds": 10.05477016599616,
+        "metrics": {
+          "loss": -6.250676233321428e-05,
+          "value_error": 4.758073373523075e-06,
+          "entropy": 0.006477776449173689,
+          "gradient_norm": 0.006934934761375189,
+          "kl": 1.7881393432617188e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20031,
+        "seconds": 22.157859041006304,
+        "metrics": {
+          "loss": -3.144442234770395e-05,
+          "value_error": 3.7306665490177693e-07,
+          "entropy": 0.0031608606223016977,
+          "gradient_norm": 0.0004380385798867792,
+          "kl": 1.1920928955078125e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30016,
+        "seconds": 34.13004458299838,
+        "metrics": {
+          "loss": -1.526970481791068e-05,
+          "value_error": 1.3042736668467114e-07,
+          "entropy": 0.0015383347636088729,
+          "gradient_norm": 0.00015191041165962815,
+          "kl": 8.940696716308594e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40001,
+        "seconds": 46.30662049999228,
+        "metrics": {
+          "loss": -1.0914210179180373e-05,
+          "value_error": 7.320390977838542e-07,
+          "entropy": 0.0011179647408425808,
+          "gradient_norm": 0.006107563152909279,
+          "kl": -4.202127456665039e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50018,
+        "seconds": 58.33974495797884,
+        "metrics": {
+          "loss": -1.3154481166566256e-06,
+          "value_error": 7.184448236330354e-08,
+          "entropy": 0.00013662714627571404,
+          "gradient_norm": 0.00041040440555661917,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60002,
+        "seconds": 70.56245729100192,
+        "metrics": {
+          "loss": -1.3422907159110764e-06,
+          "value_error": 1.0371994108027138e-07,
+          "entropy": 0.0001394150749547407,
+          "gradient_norm": 0.0021346472203731537,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70018,
+        "seconds": 82.74474424996879,
+        "metrics": {
+          "loss": -1.4512320376525167e-06,
+          "value_error": 3.0980032761362963e-08,
+          "entropy": 0.00014741727500222623,
+          "gradient_norm": 1.1888128938153386e-05,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80002,
+        "seconds": 94.8235965409549,
+        "metrics": {
+          "loss": -1.1471652214822825e-06,
+          "value_error": 1.0149863101105439e-06,
+          "entropy": 0.00016472078277729452,
+          "gradient_norm": 0.007913636974990368,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90018,
+        "seconds": 107.00013337499695,
+        "metrics": {
+          "loss": -2.0894619865430286e-06,
+          "value_error": 7.716021599435408e-08,
+          "entropy": 0.00021801961702294648,
+          "gradient_norm": 0.0020354525186121464,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100004,
+        "seconds": 119.11819399998058,
+        "metrics": {
+          "loss": -6.245550321182236e-05,
+          "value_error": 1.2634406232336914e-07,
+          "entropy": 0.006228025536984205,
+          "gradient_norm": 0.0013150671729817986,
+          "kl": 2.4437904357910156e-06,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "recurrent-imitation-seed0": {
+    "validation": {
+      "aggregate_rmse": 0.09456294121073822,
+      "success_rate": 0.25,
+      "mean_return": -0.9802149850425533,
+      "mean_variable_cost": 4.6,
+      "mean_total_assay_cost": 7.599999999999998,
+      "mean_effort": 0.8000000000000002,
+      "mean_assays": 2.0,
+      "mean_online_seconds": 0.0020090999141757493
+    },
+    "training_seconds": 3.0263486249605194,
+    "on_policy_transitions": 0,
+    "teacher_seconds_shared": 461.9307123339968,
+    "teacher_transitions": 1540,
+    "seed": 0,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": []
+  },
+  "recurrent-ppo-seed0": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0013662223254868877
+    },
+    "training_seconds": 123.78630104201147,
+    "on_policy_transitions": 100026,
+    "teacher_seconds_shared": 0.0,
+    "teacher_transitions": 0,
+    "seed": 0,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 97,
+        "seconds": 0.07796924997819588,
+        "metrics": {
+          "loss": 0.28893429040908813,
+          "value_error": 0.6575160622596741,
+          "entropy": 3.5289669036865234,
+          "gradient_norm": 1.0939916372299194,
+          "kl": -0.0005081043927930295,
+          "initial_logp_error": 2.384185791015625e-07
+        }
+      },
+      {
+        "transitions": 10023,
+        "seconds": 10.12233624997316,
+        "metrics": {
+          "loss": -0.0002187119534937665,
+          "value_error": 2.3841454094508663e-05,
+          "entropy": 0.023043710738420486,
+          "gradient_norm": 0.0049502612091600895,
+          "kl": 2.473592758178711e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20014,
+        "seconds": 22.39290766697377,
+        "metrics": {
+          "loss": -6.0328864492475986e-05,
+          "value_error": 5.989375949866371e-06,
+          "entropy": 0.00633943360298872,
+          "gradient_norm": 0.0017762471688911319,
+          "kl": 2.384185791015625e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30001,
+        "seconds": 34.7083064999897,
+        "metrics": {
+          "loss": -1.4053458471607883e-05,
+          "value_error": 2.991155724885175e-06,
+          "entropy": 0.0015563936904072762,
+          "gradient_norm": 0.0013567779678851366,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40018,
+        "seconds": 46.76029458298581,
+        "metrics": {
+          "loss": 4.085994987690356e-06,
+          "value_error": 2.7533598768059164e-05,
+          "entropy": 0.0009756707586348057,
+          "gradient_norm": 0.03835189715027809,
+          "kl": -3.039836883544922e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50002,
+        "seconds": 58.73623458301881,
+        "metrics": {
+          "loss": -1.6471305571030825e-05,
+          "value_error": 1.6417978940808098e-06,
+          "entropy": 0.001724005094729364,
+          "gradient_norm": 0.0004993823822587729,
+          "kl": 8.940696716308594e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60019,
+        "seconds": 71.03239995799959,
+        "metrics": {
+          "loss": -1.0688750990084372e-05,
+          "value_error": 8.879290476215829e-07,
+          "entropy": 0.0011125265154987574,
+          "gradient_norm": 0.0009735997882671654,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70004,
+        "seconds": 83.38842095801374,
+        "metrics": {
+          "loss": -6.335184025374474e-06,
+          "value_error": 4.745967032704357e-07,
+          "entropy": 0.000654268020298332,
+          "gradient_norm": 0.002186288358643651,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80022,
+        "seconds": 95.90992254199227,
+        "metrics": {
+          "loss": -9.51504334807396e-05,
+          "value_error": 6.546845838784066e-07,
+          "entropy": 0.00955746416002512,
+          "gradient_norm": 0.0016750236973166466,
+          "kl": -3.9249658584594727e-05,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90009,
+        "seconds": 108.7517553329817,
+        "metrics": {
+          "loss": -7.2602383625053335e-06,
+          "value_error": 3.287351830749685e-07,
+          "entropy": 0.0007413430139422417,
+          "gradient_norm": 0.0009823620785027742,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100026,
+        "seconds": 123.78628837497672,
+        "metrics": {
+          "loss": -5.69330295547843e-05,
+          "value_error": 2.348995167267276e-07,
+          "entropy": 0.005716689396649599,
+          "gradient_norm": 0.0011400885414332151,
+          "kl": -7.033348083496094e-06,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "recurrent-imitation_ppo-seed0": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0009802715180740051
+    },
+    "training_seconds": 123.37076375004835,
+    "on_policy_transitions": 100001,
+    "teacher_seconds_shared": 461.9307123339968,
+    "teacher_transitions": 1540,
+    "seed": 0,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 100,
+        "seconds": 3.6017954160342924,
+        "metrics": {
+          "loss": 0.8067022562026978,
+          "value_error": 1.635335087776184,
+          "entropy": 0.9019222855567932,
+          "gradient_norm": 5.871288776397705,
+          "kl": -0.0011374354362487793,
+          "initial_logp_error": 1.9073486328125e-06
+        }
+      },
+      {
+        "transitions": 10029,
+        "seconds": 12.874913541018032,
+        "metrics": {
+          "loss": -0.00029205504688434303,
+          "value_error": 1.130441978602903e-05,
+          "entropy": 0.029755452647805214,
+          "gradient_norm": 0.0042505753226578236,
+          "kl": -9.179115295410156e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20020,
+        "seconds": 25.173325541021768,
+        "metrics": {
+          "loss": -4.9829915951704606e-05,
+          "value_error": 1.1502278312036651e-06,
+          "entropy": 0.005026347003877163,
+          "gradient_norm": 0.0004934582393616438,
+          "kl": 2.980232238769531e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30007,
+        "seconds": 37.39986612502253,
+        "metrics": {
+          "loss": -9.97640108835185e-06,
+          "value_error": 8.851292818690126e-07,
+          "entropy": 0.001041896641254425,
+          "gradient_norm": 0.0008680698811076581,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40024,
+        "seconds": 49.70112295803847,
+        "metrics": {
+          "loss": -6.666350600426085e-06,
+          "value_error": 6.408477020158898e-07,
+          "entropy": 0.000706500606611371,
+          "gradient_norm": 0.003714754479005933,
+          "kl": -1.7881393432617188e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50009,
+        "seconds": 62.01869762502611,
+        "metrics": {
+          "loss": -5.736227194574894e-06,
+          "value_error": 3.951487883568916e-07,
+          "entropy": 0.0005948703037574887,
+          "gradient_norm": 0.0016252993373200297,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60025,
+        "seconds": 74.38809050002601,
+        "metrics": {
+          "loss": -6.365218268911121e-06,
+          "value_error": 2.278778623576727e-07,
+          "entropy": 0.0006482882308773696,
+          "gradient_norm": 0.00010438888421049342,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70010,
+        "seconds": 86.5974129580427,
+        "metrics": {
+          "loss": -2.920814495155355e-06,
+          "value_error": 2.1952294559923757e-07,
+          "entropy": 0.0003041751915588975,
+          "gradient_norm": 0.0011029759189113975,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80026,
+        "seconds": 98.98226354102371,
+        "metrics": {
+          "loss": -4.181780241196975e-06,
+          "value_error": 1.0878328282615257e-07,
+          "entropy": 0.0004228721372783184,
+          "gradient_norm": 0.0011228217044845223,
+          "kl": 5.960464477539063e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90016,
+        "seconds": 111.24070000002393,
+        "metrics": {
+          "loss": -5.6717331062827725e-06,
+          "value_error": 8.534300377505133e-07,
+          "entropy": 0.000609099748544395,
+          "gradient_norm": 0.0023616517428308725,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100001,
+        "seconds": 123.3707491250243,
+        "metrics": {
+          "loss": -4.786576937476639e-06,
+          "value_error": 1.3689654565496312e-07,
+          "entropy": 0.0004851300036534667,
+          "gradient_norm": 0.0007800935418345034,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "history-ppo-seed1": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0009775442431418924
+    },
+    "training_seconds": 119.16114116599783,
+    "on_policy_transitions": 100019,
+    "teacher_seconds_shared": 0.0,
+    "teacher_transitions": 0,
+    "seed": 1,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "history",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 93,
+        "seconds": 0.07636124995769933,
+        "metrics": {
+          "loss": 0.3051469027996063,
+          "value_error": 0.6945295333862305,
+          "entropy": 3.488044023513794,
+          "gradient_norm": 1.4384946823120117,
+          "kl": -0.0027444157749414444,
+          "initial_logp_error": 4.76837158203125e-07
+        }
+      },
+      {
+        "transitions": 10018,
+        "seconds": 10.07872699998552,
+        "metrics": {
+          "loss": -0.0002057537785731256,
+          "value_error": 8.022298061405309e-06,
+          "entropy": 0.020959356799721718,
+          "gradient_norm": 0.005186995025724173,
+          "kl": 1.996755599975586e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20009,
+        "seconds": 21.7531543749501,
+        "metrics": {
+          "loss": -2.910941475420259e-05,
+          "value_error": 6.674222845504119e-07,
+          "entropy": 0.002946547931060195,
+          "gradient_norm": 0.002458784496411681,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30026,
+        "seconds": 33.83985120797297,
+        "metrics": {
+          "loss": -2.381178092036862e-05,
+          "value_error": 3.3797854825934337e-07,
+          "entropy": 0.0023995672818273306,
+          "gradient_norm": 0.0003019791911356151,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40012,
+        "seconds": 45.84164379100548,
+        "metrics": {
+          "loss": -8.232981599576306e-06,
+          "value_error": 4.329055229845835e-07,
+          "entropy": 0.0008434533374384046,
+          "gradient_norm": 0.00010150874004466459,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50028,
+        "seconds": 58.294842957984656,
+        "metrics": {
+          "loss": -9.548596608510707e-06,
+          "value_error": 2.5226722755178344e-07,
+          "entropy": 0.000964492792263627,
+          "gradient_norm": 0.0011225867783650756,
+          "kl": 8.940696716308594e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60012,
+        "seconds": 70.23994666599901,
+        "metrics": {
+          "loss": -1.4081100744078867e-05,
+          "value_error": 9.180962479149457e-07,
+          "entropy": 0.0014674259582534432,
+          "gradient_norm": 0.006512324325740337,
+          "kl": 3.2782554626464844e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70030,
+        "seconds": 82.45896037499188,
+        "metrics": {
+          "loss": -5.1307430112501606e-05,
+          "value_error": 2.53985312781424e-08,
+          "entropy": 0.005134993232786655,
+          "gradient_norm": 0.0008792734588496387,
+          "kl": 1.1920928955078125e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80018,
+        "seconds": 94.48915404098807,
+        "metrics": {
+          "loss": -1.2544379387691151e-05,
+          "value_error": 6.46895728095842e-08,
+          "entropy": 0.0012599076144397259,
+          "gradient_norm": 0.0003865211911033839,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90003,
+        "seconds": 106.8067412909586,
+        "metrics": {
+          "loss": -6.6845536821347196e-06,
+          "value_error": 1.958131292667531e-07,
+          "entropy": 0.000678618554957211,
+          "gradient_norm": 0.0007352022803388536,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100019,
+        "seconds": 119.16112662496744,
+        "metrics": {
+          "loss": -1.4835412002867088e-05,
+          "value_error": 1.5234782324569096e-07,
+          "entropy": 0.0014866882702335715,
+          "gradient_norm": 0.0021682216320186853,
+          "kl": 3.904104232788086e-06,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "recurrent-imitation-seed1": {
+    "validation": {
+      "aggregate_rmse": 0.09456294121073822,
+      "success_rate": 0.25,
+      "mean_return": -0.9802149850425533,
+      "mean_variable_cost": 4.6,
+      "mean_total_assay_cost": 7.599999999999998,
+      "mean_effort": 0.8000000000000002,
+      "mean_assays": 2.0,
+      "mean_online_seconds": 0.0022656940086562827
+    },
+    "training_seconds": 3.440217458992265,
+    "on_policy_transitions": 0,
+    "teacher_seconds_shared": 461.9307123339968,
+    "teacher_transitions": 1540,
+    "seed": 1,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": []
+  },
+  "recurrent-ppo-seed1": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0010329085644116276
+    },
+    "training_seconds": 121.33892520796508,
+    "on_policy_transitions": 100020,
+    "teacher_seconds_shared": 0.0,
+    "teacher_transitions": 0,
+    "seed": 1,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 80,
+        "seconds": 0.07541045796824619,
+        "metrics": {
+          "loss": 0.5233587026596069,
+          "value_error": 1.1264185905456543,
+          "entropy": 3.5444302558898926,
+          "gradient_norm": 1.429893970489502,
+          "kl": 0.0012273043394088745,
+          "initial_logp_error": 2.384185791015625e-07
+        }
+      },
+      {
+        "transitions": 10019,
+        "seconds": 10.25145254097879,
+        "metrics": {
+          "loss": -0.0002143622114090249,
+          "value_error": 1.2646319191844668e-05,
+          "entropy": 0.02206183224916458,
+          "gradient_norm": 0.01048864796757698,
+          "kl": 1.9371509552001953e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20008,
+        "seconds": 22.74590891599655,
+        "metrics": {
+          "loss": -4.215185981593095e-05,
+          "value_error": 4.8575802793493494e-06,
+          "entropy": 0.00445545744150877,
+          "gradient_norm": 0.0026147954631596804,
+          "kl": 5.960464477539063e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30026,
+        "seconds": 35.27847424999345,
+        "metrics": {
+          "loss": -2.1860138076590374e-05,
+          "value_error": 2.1670925889338832e-06,
+          "entropy": 0.002292878460139036,
+          "gradient_norm": 0.001703684451058507,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40012,
+        "seconds": 47.43266554095317,
+        "metrics": {
+          "loss": -7.037372142804088e-06,
+          "value_error": 1.1860638551297598e-06,
+          "entropy": 0.000763040385209024,
+          "gradient_norm": 0.0020899814553558826,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50029,
+        "seconds": 59.54463712498546,
+        "metrics": {
+          "loss": -3.538214969012188e-06,
+          "value_error": 9.511934990769078e-07,
+          "entropy": 0.00040175369940698147,
+          "gradient_norm": 0.0039438605308532715,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60014,
+        "seconds": 71.5559661249863,
+        "metrics": {
+          "loss": -1.748524596223433e-06,
+          "value_error": 8.621012170806353e-07,
+          "entropy": 0.00021702620142605156,
+          "gradient_norm": 0.004436804912984371,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70030,
+        "seconds": 83.30940570798703,
+        "metrics": {
+          "loss": -2.0912639229209162e-06,
+          "value_error": 5.08992286540888e-07,
+          "entropy": 0.00023234084073919803,
+          "gradient_norm": 0.002576860599219799,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80014,
+        "seconds": 95.25131491594948,
+        "metrics": {
+          "loss": -2.484300011929008e-06,
+          "value_error": 3.5593589586824237e-07,
+          "entropy": 0.00026697185239754617,
+          "gradient_norm": 0.002452485030516982,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90030,
+        "seconds": 108.23929374996806,
+        "metrics": {
+          "loss": -3.875770744343754e-06,
+          "value_error": 2.2900402996128832e-07,
+          "entropy": 0.000388223968911916,
+          "gradient_norm": 0.0015867786714807153,
+          "kl": 8.940696716308594e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100020,
+        "seconds": 121.33890474995133,
+        "metrics": {
+          "loss": -0.0003712628094945103,
+          "value_error": 2.961904556286754e-06,
+          "entropy": 0.03542216122150421,
+          "gradient_norm": 0.00583853293210268,
+          "kl": 0.0002795755863189697,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "recurrent-imitation_ppo-seed1": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.001014212275549653
+    },
+    "training_seconds": 130.0874286670005,
+    "on_policy_transitions": 100012,
+    "teacher_seconds_shared": 461.9307123339968,
+    "teacher_transitions": 1540,
+    "seed": 1,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 90,
+        "seconds": 4.075132708996534,
+        "metrics": {
+          "loss": 0.20097342133522034,
+          "value_error": 0.4292636811733246,
+          "entropy": 0.9137660264968872,
+          "gradient_norm": 2.536210298538208,
+          "kl": 0.0009832594078034163,
+          "initial_logp_error": 1.6689300537109375e-06
+        }
+      },
+      {
+        "transitions": 10019,
+        "seconds": 13.493510791973677,
+        "metrics": {
+          "loss": -0.00012187656102469191,
+          "value_error": 4.2369170841993764e-05,
+          "entropy": 0.014303134754300117,
+          "gradient_norm": 0.013077130541205406,
+          "kl": 1.7285346984863281e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20007,
+        "seconds": 26.5743338749744,
+        "metrics": {
+          "loss": -2.6201862056041136e-05,
+          "value_error": 1.3773836826658226e-06,
+          "entropy": 0.0026898004580289125,
+          "gradient_norm": 0.0002434038178762421,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30023,
+        "seconds": 39.94261916697724,
+        "metrics": {
+          "loss": -1.690518911345862e-05,
+          "value_error": 7.09917571839469e-07,
+          "entropy": 0.0017248973017558455,
+          "gradient_norm": 0.001636025495827198,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40011,
+        "seconds": 53.32179220899707,
+        "metrics": {
+          "loss": -1.3318858691491187e-06,
+          "value_error": 1.219278601638507e-06,
+          "entropy": 0.000195642642211169,
+          "gradient_norm": 0.0019332603551447392,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50027,
+        "seconds": 66.47680845897412,
+        "metrics": {
+          "loss": -1.7108322936110198e-06,
+          "value_error": 5.651891683555732e-07,
+          "entropy": 0.00019971522851847112,
+          "gradient_norm": 0.0004978746874257922,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60012,
+        "seconds": 79.17287499998929,
+        "metrics": {
+          "loss": -5.070709221399738e-07,
+          "value_error": 5.723201752516616e-07,
+          "entropy": 7.969563012011349e-05,
+          "gradient_norm": 0.001136421924456954,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70028,
+        "seconds": 91.97000062500592,
+        "metrics": {
+          "loss": -5.987801046103414e-07,
+          "value_error": 4.270112015092309e-07,
+          "entropy": 8.122857252601534e-05,
+          "gradient_norm": 0.0004001677443739027,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80012,
+        "seconds": 104.67950154200662,
+        "metrics": {
+          "loss": -6.06092328325758e-07,
+          "value_error": 4.4239052954253566e-07,
+          "entropy": 8.45914037199691e-05,
+          "gradient_norm": 0.003528325818479061,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90028,
+        "seconds": 117.51447437499883,
+        "metrics": {
+          "loss": -7.82082679506857e-07,
+          "value_error": 2.5951186444217456e-07,
+          "entropy": 9.192891593556851e-05,
+          "gradient_norm": 0.0028796703554689884,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100012,
+        "seconds": 130.08741375000682,
+        "metrics": {
+          "loss": -1.0536147101447568e-06,
+          "value_error": 6.242414229973292e-08,
+          "entropy": 0.00010960026702377945,
+          "gradient_norm": 0.000289036805042997,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "history-ppo-seed2": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0010169215229325346
+    },
+    "training_seconds": 124.81351695797639,
+    "on_policy_transitions": 100000,
+    "teacher_seconds_shared": 0.0,
+    "teacher_transitions": 0,
+    "seed": 2,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "history",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 94,
+        "seconds": 0.07647199998609722,
+        "metrics": {
+          "loss": 0.11067438125610352,
+          "value_error": 0.30373987555503845,
+          "entropy": 3.526534080505371,
+          "gradient_norm": 0.910513162612915,
+          "kl": -0.0020266366191208363,
+          "initial_logp_error": 2.384185791015625e-07
+        }
+      },
+      {
+        "transitions": 10003,
+        "seconds": 10.698583624965977,
+        "metrics": {
+          "loss": -0.00011173865641467273,
+          "value_error": 8.59558622323675e-06,
+          "entropy": 0.011646485887467861,
+          "gradient_norm": 0.0010042729554697871,
+          "kl": -1.5974044799804688e-05,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20022,
+        "seconds": 23.050497374963015,
+        "metrics": {
+          "loss": -4.415062358020805e-05,
+          "value_error": 4.893112873105565e-06,
+          "entropy": 0.004663815721869469,
+          "gradient_norm": 0.00519947987049818,
+          "kl": 2.086162567138672e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30010,
+        "seconds": 35.540762749966234,
+        "metrics": {
+          "loss": -1.1504420399433002e-05,
+          "value_error": 1.5123132470762357e-06,
+          "entropy": 0.0012234500609338284,
+          "gradient_norm": 0.00253102695569396,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40027,
+        "seconds": 48.27464137499919,
+        "metrics": {
+          "loss": -6.917349310242571e-06,
+          "value_error": 1.0106164154422004e-06,
+          "entropy": 0.0007433833670802414,
+          "gradient_norm": 0.0011633416870608926,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50012,
+        "seconds": 61.010938332998194,
+        "metrics": {
+          "loss": -3.433558504184475e-06,
+          "value_error": 8.209034945139138e-07,
+          "entropy": 0.00038514609332196414,
+          "gradient_norm": 0.004099131561815739,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60028,
+        "seconds": 73.7914122910006,
+        "metrics": {
+          "loss": -1.9319847979204496e-06,
+          "value_error": 5.729012855226756e-07,
+          "entropy": 0.00022556883050128818,
+          "gradient_norm": 0.0003153091238345951,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70012,
+        "seconds": 86.71828649996314,
+        "metrics": {
+          "loss": -5.08638959217933e-06,
+          "value_error": 1.591323695038227e-07,
+          "entropy": 0.0004908911068923771,
+          "gradient_norm": 0.00044950388837605715,
+          "kl": 4.172325134277344e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80031,
+        "seconds": 99.40305641596206,
+        "metrics": {
+          "loss": -8.128686204145197e-06,
+          "value_error": 2.2524414333702225e-08,
+          "entropy": 0.0008128772606141865,
+          "gradient_norm": 0.0006089677917771041,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90016,
+        "seconds": 112.00116204097867,
+        "metrics": {
+          "loss": -2.4094076707115164e-06,
+          "value_error": 2.606560087770049e-07,
+          "entropy": 0.00025248347083106637,
+          "gradient_norm": 0.003833468072116375,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100000,
+        "seconds": 124.81349974998739,
+        "metrics": {
+          "loss": -2.7541314011614304e-06,
+          "value_error": 8.139713791877057e-09,
+          "entropy": 0.0002743299992289394,
+          "gradient_norm": 0.000564395624678582,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "recurrent-imitation-seed2": {
+    "validation": {
+      "aggregate_rmse": 0.09456294121073822,
+      "success_rate": 0.25,
+      "mean_return": -0.9802149850425533,
+      "mean_variable_cost": 4.6,
+      "mean_total_assay_cost": 7.599999999999998,
+      "mean_effort": 0.8000000000000002,
+      "mean_assays": 2.0,
+      "mean_online_seconds": 0.0024322320541614317
+    },
+    "training_seconds": 3.57682679197751,
+    "on_policy_transitions": 0,
+    "teacher_seconds_shared": 461.9307123339968,
+    "teacher_transitions": 1540,
+    "seed": 2,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": []
+  },
+  "recurrent-ppo-seed2": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0010307816096428724
+    },
+    "training_seconds": 127.69339212501654,
+    "on_policy_transitions": 100007,
+    "teacher_seconds_shared": 0.0,
+    "teacher_transitions": 0,
+    "seed": 2,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 83,
+        "seconds": 0.08902279200265184,
+        "metrics": {
+          "loss": 0.3130735158920288,
+          "value_error": 0.7057125568389893,
+          "entropy": 3.532421112060547,
+          "gradient_norm": 0.9989999532699585,
+          "kl": -0.00020481878891587257,
+          "initial_logp_error": 4.76837158203125e-07
+        }
+      },
+      {
+        "transitions": 10009,
+        "seconds": 10.71313933399506,
+        "metrics": {
+          "loss": -0.00016825099010020494,
+          "value_error": 7.490602911275346e-06,
+          "entropy": 0.017193669453263283,
+          "gradient_norm": 0.001539793680422008,
+          "kl": 1.2814998626708984e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 20031,
+        "seconds": 23.74154387501767,
+        "metrics": {
+          "loss": -1.740519655868411e-05,
+          "value_error": 5.82816801397712e-06,
+          "entropy": 0.002034163335338235,
+          "gradient_norm": 0.0006942931795492768,
+          "kl": -5.066394805908203e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30016,
+        "seconds": 36.572580167034175,
+        "metrics": {
+          "loss": -9.304392733611166e-06,
+          "value_error": 2.0060424503753893e-06,
+          "entropy": 0.0010299963178113103,
+          "gradient_norm": 0.002017231658101082,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40000,
+        "seconds": 49.75576920900494,
+        "metrics": {
+          "loss": -1.114932274504099e-05,
+          "value_error": 4.849401875617332e-07,
+          "entropy": 0.001137689221650362,
+          "gradient_norm": 0.0003731816541403532,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50017,
+        "seconds": 62.861125499999616,
+        "metrics": {
+          "loss": -6.326695711322827e-06,
+          "value_error": 5.723970275539614e-07,
+          "entropy": 0.0006663185777142644,
+          "gradient_norm": 0.001854901434853673,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60002,
+        "seconds": 75.8452174590202,
+        "metrics": {
+          "loss": -3.7286326914909296e-06,
+          "value_error": 2.959473590635753e-07,
+          "entropy": 0.00038021005457267165,
+          "gradient_norm": 0.001307255937717855,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70019,
+        "seconds": 88.87503254204057,
+        "metrics": {
+          "loss": -2.0169009076198563e-06,
+          "value_error": 2.2598531757012097e-07,
+          "entropy": 0.00021298936917446554,
+          "gradient_norm": 0.00048818616778589785,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80004,
+        "seconds": 101.87008241703734,
+        "metrics": {
+          "loss": -3.3378521038684994e-05,
+          "value_error": 1.890500271883866e-07,
+          "entropy": 0.0033607156947255135,
+          "gradient_norm": 0.0013581594685092568,
+          "kl": 6.556510925292969e-07,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90022,
+        "seconds": 114.80775075004203,
+        "metrics": {
+          "loss": -2.6098257421836024e-06,
+          "value_error": 1.514562484317139e-07,
+          "entropy": 0.00026892792084254324,
+          "gradient_norm": 0.001694127218797803,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100007,
+        "seconds": 127.69337729201652,
+        "metrics": {
+          "loss": -7.348567692133656e-07,
+          "value_error": 6.801435858960758e-08,
+          "entropy": 7.614133937750012e-05,
+          "gradient_norm": 0.001239972421899438,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      }
+    ]
+  },
+  "recurrent-imitation_ppo-seed2": {
+    "validation": {
+      "aggregate_rmse": 0.08,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.000994966484086035
+    },
+    "training_seconds": 127.19174495799234,
+    "on_policy_transitions": 100021,
+    "teacher_seconds_shared": 461.9307123339968,
+    "teacher_transitions": 1540,
+    "seed": 2,
+    "architecture": {
+      "input_size": 75,
+      "actions": 45,
+      "hidden": 64,
+      "kind": "recurrent",
+      "horizon": 5
+    },
+    "curve": [
+      {
+        "transitions": 97,
+        "seconds": 3.736861457990017,
+        "metrics": {
+          "loss": 0.5653473734855652,
+          "value_error": 1.156077265739441,
+          "entropy": 0.885466456413269,
+          "gradient_norm": 4.204789638519287,
+          "kl": 0.0001919048372656107,
+          "initial_logp_error": 1.430511474609375e-06
+        }
+      },
+      {
+        "transitions": 10009,
+        "seconds": 12.691814749967307,
+        "metrics": {
+          "loss": -0.04638499394059181,
+          "value_error": 0.0012169358087703586,
+          "entropy": 0.923826277256012,
+          "gradient_norm": 0.3043082356452942,
+          "kl": 0.024451687932014465,
+          "initial_logp_error": 1.9073486328125e-06
+        }
+      },
+      {
+        "transitions": 20016,
+        "seconds": 25.67354029096896,
+        "metrics": {
+          "loss": -2.615512494230643e-05,
+          "value_error": 5.141614565218333e-06,
+          "entropy": 0.0028867493383586407,
+          "gradient_norm": 0.004136476665735245,
+          "kl": -1.1026859283447266e-06,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 30001,
+        "seconds": 38.65079516597325,
+        "metrics": {
+          "loss": -1.970012453966774e-05,
+          "value_error": 2.0054581000295e-06,
+          "entropy": 0.002064324915409088,
+          "gradient_norm": 0.0019160030642524362,
+          "kl": 5.960464477539063e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 40018,
+        "seconds": 51.661751249979716,
+        "metrics": {
+          "loss": -1.1410169463488273e-05,
+          "value_error": 1.500755956840294e-06,
+          "entropy": 0.0012149371905252337,
+          "gradient_norm": 0.001312750275246799,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 50003,
+        "seconds": 64.60192699998152,
+        "metrics": {
+          "loss": -5.174221769266296e-06,
+          "value_error": 6.894396165080252e-07,
+          "entropy": 0.0005507766036316752,
+          "gradient_norm": 0.0004455184971448034,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 60020,
+        "seconds": 77.273924832989,
+        "metrics": {
+          "loss": -2.026124775511562e-06,
+          "value_error": 2.8161881004962197e-07,
+          "entropy": 0.00021483076852746308,
+          "gradient_norm": 0.0013003784697502851,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 70004,
+        "seconds": 89.86314379097894,
+        "metrics": {
+          "loss": -1.6394965314248111e-06,
+          "value_error": 1.249063529940031e-06,
+          "entropy": 0.00022509897826239467,
+          "gradient_norm": 0.007701722905039787,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 80020,
+        "seconds": 102.43675466597779,
+        "metrics": {
+          "loss": -2.47062985181401e-06,
+          "value_error": 3.5632390904538624e-07,
+          "entropy": 0.00026078138034790754,
+          "gradient_norm": 0.003741195425391197,
+          "kl": 2.9802322387695312e-08,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 90004,
+        "seconds": 114.81037233298412,
+        "metrics": {
+          "loss": -3.555097009666497e-06,
+          "value_error": 3.8027258142392384e-07,
+          "entropy": 0.0003745233407244086,
+          "gradient_norm": 0.004282526671886444,
+          "kl": 0.0,
+          "initial_logp_error": 0.0
+        }
+      },
+      {
+        "transitions": 100021,
+        "seconds": 127.19173195795156,
+        "metrics": {
+          "loss": -6.355907680699602e-05,
+          "value_error": 7.752070087008178e-05,
+          "entropy": 0.011063055135309696,
+          "gradient_norm": 0.052067019045352936,
+          "kl": -0.00013151764869689941,
+          "initial_logp_error": 9.5367431640625e-07
+        }
+      }
+    ]
+  }
+}

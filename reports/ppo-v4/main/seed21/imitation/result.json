@@ -1,0 +1,118 @@
+{
+  "seed": 21,
+  "curve": [
+    {
+      "updates": 2000,
+      "training": {
+        "cross_entropy": 0.21758140623569489,
+        "training_action_accuracy": 0.9174311757087708
+      },
+      "validation": {
+        "episodes": 128,
+        "transitions": 390,
+        "policy_decisions": 390,
+        "mean_return": -0.30094440608103934,
+        "mean_assays": 2.046875,
+        "mean_variable_cost": 4.684374999999999,
+        "aggregate_rmse": 0.047207060497455176,
+        "initial_experiment_probability": 0.9998511672019958,
+        "seconds": 0.025861583999358118
+      }
+    },
+    {
+      "updates": 4000,
+      "training": {
+        "cross_entropy": 0.18446500599384308,
+        "training_action_accuracy": 0.9244791865348816
+      },
+      "validation": {
+        "episodes": 128,
+        "transitions": 390,
+        "policy_decisions": 390,
+        "mean_return": -0.2969195423290515,
+        "mean_assays": 2.046875,
+        "mean_variable_cost": 4.68671875,
+        "aggregate_rmse": 0.04674289837280648,
+        "initial_experiment_probability": 0.999956046231091,
+        "seconds": 0.026630416978150606
+      }
+    },
+    {
+      "updates": 6000,
+      "training": {
+        "cross_entropy": 0.18362833559513092,
+        "training_action_accuracy": 0.9315245747566223
+      },
+      "validation": {
+        "episodes": 128,
+        "transitions": 390,
+        "policy_decisions": 390,
+        "mean_return": -0.29692735482905147,
+        "mean_assays": 2.046875,
+        "mean_variable_cost": 4.6875,
+        "aggregate_rmse": 0.04674289837280648,
+        "initial_experiment_probability": 0.9999793032184243,
+        "seconds": 0.02555149997351691
+      }
+    },
+    {
+      "updates": 8000,
+      "training": {
+        "cross_entropy": 0.18002326786518097,
+        "training_action_accuracy": 0.9335071444511414
+      },
+      "validation": {
+        "episodes": 128,
+        "transitions": 391,
+        "policy_decisions": 391,
+        "mean_return": -0.28903823317214333,
+        "mean_assays": 2.0546875,
+        "mean_variable_cost": 4.7015625,
+        "aggregate_rmse": 0.04590997801917829,
+        "initial_experiment_probability": 0.999987474642694,
+        "seconds": 0.028587000037077814
+      }
+    },
+    {
+      "updates": 10000,
+      "training": {
+        "cross_entropy": 0.14019040763378143,
+        "training_action_accuracy": 0.9479166865348816
+      },
+      "validation": {
+        "episodes": 128,
+        "transitions": 391,
+        "policy_decisions": 391,
+        "mean_return": -0.3068235141614186,
+        "mean_assays": 2.0546875,
+        "mean_variable_cost": 4.7046874999999995,
+        "aggregate_rmse": 0.04780445995526135,
+        "initial_experiment_probability": 0.9999930365011096,
+        "seconds": 0.025909791991580278
+      }
+    },
+    {
+      "updates": 12000,
+      "training": {
+        "cross_entropy": 0.13769516348838806,
+        "training_action_accuracy": 0.9445910453796387
+      },
+      "validation": {
+        "episodes": 128,
+        "transitions": 391,
+        "policy_decisions": 391,
+        "mean_return": -0.3068235141614186,
+        "mean_assays": 2.0546875,
+        "mean_variable_cost": 4.7046874999999995,
+        "aggregate_rmse": 0.04780445995526135,
+        "initial_experiment_probability": 0.999996296595782,
+        "seconds": 0.02835349994711578
+      }
+    }
+  ],
+  "selected_validation_return": -0.28903823317214333,
+  "selected_checkpoint": "<development-project>/reports/ppo-v4/main/seed21/imitation/selected.pt",
+  "seconds": 56.611589000036474,
+  "optimizer_updates": 12000,
+  "teacher_demonstrations": 2048
+}

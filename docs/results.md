@@ -3,9 +3,9 @@
 ## Separate claims
 
 1. **Information value:** experiments improve final interventions after cost in the declared synthetic tasks.
-2. **Adaptive value:** the original admitted task has no extra final-quality gain over a strong fixed design. The unfiltered development revision shows an adaptive advantage against both the original tuned designs and a stronger exhaustive affordable-design search.
+2. **Adaptive value:** the original admitted task has no extra final-quality gain over a strong fixed design. The unfiltered development revision and subsequent locked tests show an adaptive advantage against the original tuned designs and a stronger exhaustive affordable-design search.
 3. **Learnability:** converged imitation provides a useful learned approximation to the public-history planner on independent continuous-parameter validation mechanisms within familiar topology support.
-4. **RL-specific value:** PPO and imitation→PPO are implemented and trained. A robust added benefit from PPO remains unestablished. Do not label imitation's speed advantage as an RL achievement.
+4. **RL-specific value:** PPO and imitation→PPO are implemented and trained. Reward-only curriculum PPO beats the exhaustive fixed design on the 1,024-mechanism locked test, but a robust added benefit over strong imitation remains unestablished. Do not label imitation's speed advantage as an RL achievement.
 
 ## Evidence map
 
@@ -19,13 +19,16 @@
 | `reports/unfiltered-v3/converged-imitation/` | Three full-history and three recurrent imitation seeds, 512 teacher demonstrations and 5,000 augmented epochs |
 | `reports/unfiltered-v3/strong-finetune/` | Three recurrent imitation→PPO runs with at least 100,000 on-policy transitions each |
 | `reports/unfiltered-v3/initial-learning-completed.json` | All 12 completed initial learning records, including three full-history PPO seeds and three recurrent PPO seeds; preliminary undertrained warm starts are preserved |
+| `reports/unfiltered-v3/locked-test/` | First frozen 512-mechanism test, preserving the original PPO collapse and imitation comparison |
+| `reports/ppo-v4/` | Reward-only curriculum, five-seed training, failed controls, GPU profiles and fresh 1,024-mechanism frozen comparison |
+| `reports/ppo-cost-v5/` | Development cost diagnosis/calibration, paired-return controls and another 2,048-mechanism frozen comparison |
 | `reports/compute/benchmark.json` | Complete CPU/MPS workload measurements on the actual Mac |
 
 The original external audit scripts and seeds were absent from the supplied specification. `generous-audit.json` is explicitly an independent reconstruction, not an exact reproduction of its original rows.
 
 ## Statistical and scientific limits
 
-The validation mechanisms have independent continuous gain/rate values, but familiar topology support. Locked-test evaluation, withheld structures, parameter-range extrapolation, and simulator misspecification are not qualified. A per-model mechanism bootstrap does not measure uncertainty across training seeds. Three observed seeds do not establish universal training reliability.
+The validation mechanisms have independent continuous gain/rate values, but familiar topology support. Locked continuous-parameter evaluation is completed in three successive studies. Withheld structures, parameter-range extrapolation, culture variation and simulator misspecification remain unqualified. A per-model mechanism bootstrap does not measure uncertainty across training seeds. Three seeds in the initial study and five in each follow-up do not establish universal training reliability. Follow-up intervals resample both seeds and paired mechanisms.
 
 The private informed reference has privileged mechanism access and no variable assay cost. Its condition differs from attainable methods. Unreachable targets remain in the revised study's main results; a success rate below 100% can reflect task reachability rather than agent error.
 
@@ -38,3 +41,9 @@ The snapshot includes completed evidence records and the complete training code.
 Publication-only portability changes make optional Mac hardware commands report unavailability on other platforms and use the platform's temporary directory for checkpoint round trips. They do not change simulator dynamics, observations, costs, or learning objectives. The local publication tests exercise these changes. Hosted CPU CI is configured separately and is not considered passing until GitHub runs it.
 
 Measured records originated in the development environment before publication-only portability cleanup. Their original code hashes are provenance, not assertions that the cleaned snapshot is byte-identical. Reproduction commands write to `runs/` to preserve the supplied evidence.
+
+## Latest cost-efficiency conclusion
+
+The development-selected paired-return PPO plus public-price calibration spends 8.2% less than original curriculum PPO on the latest test. The cost interval is positive and the declared MSE noninferiority criterion passes. The net-return interval crosses zero, so the full utility-inclusive screen fails. Imitation remains cheaper. Original prices, raw MSE and strong baselines are unchanged. See [the complete cost report](ppo_cost_efficiency.md) for margins, intervals, controls and limitations.
+
+The raw latest record is gzip-compressed to avoid an oversized Git blob. The report renderer accepts it directly. Checkpoint binaries and source archives are excluded from this public snapshot; their hashes and training configuration are retained. Original freeze hashes describe the measured development snapshot before publication-only redaction/portability edits. The previous publication manifest is historical; the update manifest records the current mapping.

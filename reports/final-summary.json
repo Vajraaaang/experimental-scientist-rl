@@ -1,0 +1,434 @@
+{
+  "scope": "frozen_parameter_holdout_unfiltered_v3",
+  "test_mechanisms": 512,
+  "training_seeds": 3,
+  "methods": {
+    "prior": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0013358688257767426
+    },
+    "fixed": {
+      "aggregate_rmse": 0.05541257467071285,
+      "success_rate": 0.607421875,
+      "mean_return": -0.39535221816373284,
+      "mean_variable_cost": 6.400000000000001,
+      "mean_total_assay_cost": 9.400000000000002,
+      "mean_effort": 0.4859374999999999,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.002715566448841855
+    },
+    "fixed_quality": {
+      "aggregate_rmse": 0.05541257467071285,
+      "success_rate": 0.607421875,
+      "mean_return": -0.4053522181637328,
+      "mean_variable_cost": 7.400000000000002,
+      "mean_total_assay_cost": 10.400000000000002,
+      "mean_effort": 0.4859374999999999,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.003197348486082774
+    },
+    "random": {
+      "aggregate_rmse": 0.0693049801061687,
+      "success_rate": 0.271484375,
+      "mean_return": -0.5696969330016439,
+      "mean_variable_cost": 7.199609375,
+      "mean_total_assay_cost": 10.199609375,
+      "mean_effort": 0.34765625,
+      "mean_assays": 3.17578125,
+      "mean_online_seconds": 0.002974838672912483
+    },
+    "eig": {
+      "aggregate_rmse": 0.054913546256863385,
+      "success_rate": 0.6171875,
+      "mean_return": -0.40323725625046747,
+      "mean_variable_cost": 7.700000000000002,
+      "mean_total_assay_cost": 10.699999999999998,
+      "mean_effort": 0.49374999999999997,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.06139352580657942
+    },
+    "voi": {
+      "aggregate_rmse": 0.04816155664688399,
+      "success_rate": 0.744140625,
+      "mean_return": -0.3093324601151016,
+      "mean_variable_cost": 4.761328125,
+      "mean_total_assay_cost": 7.7613281249999995,
+      "mean_effort": 0.5953124999999999,
+      "mean_assays": 2.076171875,
+      "mean_online_seconds": 0.06218689260424526
+    },
+    "bo": {
+      "aggregate_rmse": 0.0605949329617004,
+      "success_rate": 0.498046875,
+      "mean_return": -0.43926248068829654,
+      "mean_variable_cost": 5.216601562499999,
+      "mean_total_assay_cost": 8.2166015625,
+      "mean_effort": 0.3984375,
+      "mean_assays": 1.798828125,
+      "mean_online_seconds": 0.0031689393767919682
+    },
+    "reference": {
+      "aggregate_rmse": 0.04816155664688399,
+      "success_rate": 0.744140625,
+      "mean_return": -0.26171917886510165,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.5953124999999999,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0
+    },
+    "history_ppo": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0015794510176571446
+    },
+    "recurrent_ppo": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0015949258680999872
+    },
+    "history_imitation": {
+      "aggregate_rmse": 0.049803007548256215,
+      "success_rate": 0.7272135416666666,
+      "mean_return": -0.3248829144185,
+      "mean_variable_cost": 4.744791666666667,
+      "mean_total_assay_cost": 7.744791666666667,
+      "mean_effort": 0.5880208333333333,
+      "mean_assays": 2.068359375,
+      "mean_online_seconds": 0.0027658849014263374
+    },
+    "recurrent_imitation": {
+      "aggregate_rmse": 0.04954451999995313,
+      "success_rate": 0.7330729166666666,
+      "mean_return": -0.3224926389109089,
+      "mean_variable_cost": 4.739127604166666,
+      "mean_total_assay_cost": 7.739127604166666,
+      "mean_effort": 0.5927083333333333,
+      "mean_assays": 2.06640625,
+      "mean_online_seconds": 0.0028056688413092465
+    },
+    "recurrent_imitation_ppo": {
+      "aggregate_rmse": 0.04935441289331768,
+      "success_rate": 0.736328125,
+      "mean_return": -0.32082083324607497,
+      "mean_variable_cost": 4.741731770833333,
+      "mean_total_assay_cost": 7.741731770833333,
+      "mean_effort": 0.5963541666666666,
+      "mean_assays": 2.0677083333333335,
+      "mean_online_seconds": 0.002780322731685677
+    }
+  },
+  "shared_final_estimator_ablation": {
+    "history_imitation": {
+      "same_assays_common_selector_rmse": 0.04827460602837814,
+      "same_assays_common_selector_return": -0.3101921962195124
+    },
+    "recurrent_imitation": {
+      "same_assays_common_selector_rmse": 0.04846398335810459,
+      "same_assays_common_selector_return": -0.31183735683513064
+    },
+    "recurrent_imitation_ppo": {
+      "same_assays_common_selector_rmse": 0.04831407217433207,
+      "same_assays_common_selector_return": -0.3105167538816569
+    }
+  },
+  "primary_differences": {
+    "voi_minus_fixed_return": {
+      "mean": 0.08601975804863117,
+      "ci95": [
+        0.07079860227740298,
+        0.10161082030641384
+      ],
+      "unit": "mechanism",
+      "units": 512
+    },
+    "voi_error_reduction": {
+      "mean": 0.0007510178929863117,
+      "ci95": [
+        0.0005867330768016828,
+        0.0009148888233798415
+      ],
+      "unit": "mechanism",
+      "units": 512
+    },
+    "recurrent_ppo_minus_imitation_return": {
+      "mean": -0.3175073610890909,
+      "ci95": [
+        -0.33999487262073635,
+        -0.2942757024370368
+      ],
+      "training_seeds": 3,
+      "mechanisms": 512,
+      "unit": "paired_training_seed_and_mechanism_bootstrap",
+      "limitation": "Three seeds limit inference over the training-seed distribution."
+    },
+    "recurrent_imitation_ppo_minus_imitation_return": {
+      "mean": 0.0016718056648339773,
+      "ci95": [
+        -0.004093508347031598,
+        0.008814411308636043
+      ],
+      "training_seeds": 3,
+      "mechanisms": 512,
+      "unit": "paired_training_seed_and_mechanism_bootstrap",
+      "limitation": "Three seeds limit inference over the training-seed distribution."
+    }
+  },
+  "secondary_differences": {
+    "history_imitation_minus_fixed": {
+      "mean": 0.07046930374523284,
+      "ci95": [
+        0.051274753312782674,
+        0.08870048582133136
+      ],
+      "training_seeds": 3,
+      "mechanisms": 512,
+      "unit": "paired_training_seed_and_mechanism_bootstrap",
+      "limitation": "Three seeds limit inference over the training-seed distribution."
+    },
+    "recurrent_imitation_minus_fixed": {
+      "mean": 0.0728595792528239,
+      "ci95": [
+        0.05431751209868326,
+        0.09006353525433147
+      ],
+      "training_seeds": 3,
+      "mechanisms": 512,
+      "unit": "paired_training_seed_and_mechanism_bootstrap",
+      "limitation": "Three seeds limit inference over the training-seed distribution."
+    },
+    "recurrent_imitation_ppo_minus_fixed": {
+      "mean": 0.07453138491765787,
+      "ci95": [
+        0.0568505323982036,
+        0.09170718367357732
+      ],
+      "training_seeds": 3,
+      "mechanisms": 512,
+      "unit": "paired_training_seed_and_mechanism_bootstrap",
+      "limitation": "Three seeds limit inference over the training-seed distribution."
+    }
+  },
+  "on_policy_transitions_total": 1200316,
+  "teacher_seconds_shared": 461.9307123339968,
+  "teacher_transitions_shared": 1540,
+  "raw_gap_recovery": 0.18405206076418767,
+  "device": {
+    "hardware": {
+      "python": "<development-project>/.venv/bin/python",
+      "python_version": "3.12.1",
+      "architecture": "arm64",
+      "macos": "ProductName:\t\tmacOS\nProductVersion:\t\t26.3.1\nProductVersionExtra:\t(a)\nBuildVersion:\t\t25D771280a",
+      "ram_bytes": "38654705664",
+      "hardware_model": "Mac15,11",
+      "chip": "Apple M3 Max",
+      "logical_cpus": 14,
+      "torch_cpu": true,
+      "mps_built": true,
+      "mps_available": true,
+      "mps_fallback_environment": "unset",
+      "dependencies": {
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "torch": "2.14.1",
+        "PyYAML": "6.0.3",
+        "pytest": "9.1.1"
+      },
+      "reference_dtype": "NumPy/SciPy float64 CPU",
+      "learning_dtype": "PyTorch float32"
+    },
+    "cpu": {
+      "status": "ok",
+      "device": "cpu",
+      "repeats_excluding_warmup": 3,
+      "results": [
+        {
+          "total_seconds": 0.07016620895592496,
+          "rollout_seconds": 0.05673208396183327,
+          "update_seconds": 0.005135000043082982,
+          "evaluation_checkpoint_seconds": 0.008299124951008707,
+          "transitions": 75,
+          "episodes": 24,
+          "transitions_per_second": 1068.8905830313763,
+          "metrics": {
+            "loss": 0.4460821747779846,
+            "value_error": 0.9631059765815735,
+            "entropy": 3.4847359657287598,
+            "gradient_norm": 1.2699064016342163,
+            "kl": 0.00030261994106695056,
+            "initial_logp_error": 4.76837158203125e-07
+          }
+        },
+        {
+          "total_seconds": 0.06807083397870883,
+          "rollout_seconds": 0.05526462499983609,
+          "update_seconds": 0.004633167001884431,
+          "evaluation_checkpoint_seconds": 0.008173041976988316,
+          "transitions": 72,
+          "episodes": 24,
+          "transitions_per_second": 1057.721725908634,
+          "metrics": {
+            "loss": 0.2651839852333069,
+            "value_error": 0.600967288017273,
+            "entropy": 3.4795467853546143,
+            "gradient_norm": 1.0223537683486938,
+            "kl": 0.00012877251720055938,
+            "initial_logp_error": 4.76837158203125e-07
+          }
+        },
+        {
+          "total_seconds": 0.0682827080017887,
+          "rollout_seconds": 0.05597116600256413,
+          "update_seconds": 0.004441249999217689,
+          "evaluation_checkpoint_seconds": 0.007870292000006884,
+          "transitions": 73,
+          "episodes": 24,
+          "transitions_per_second": 1069.08472344254,
+          "metrics": {
+            "loss": 0.2904287278652191,
+            "value_error": 0.6506502032279968,
+            "entropy": 3.4748892784118652,
+            "gradient_norm": 1.0847477912902832,
+            "kl": 2.8326086976449005e-05,
+            "initial_logp_error": 2.384185791015625e-07
+          }
+        }
+      ],
+      "median_total_seconds": 0.0682827080017887,
+      "peak_process_rss_bytes": 343556096,
+      "mps_allocated_bytes": 0,
+      "forecast_100k_transitions_seconds": 93.5549452745666,
+      "forecast_scope": "Short end-to-end smoke throughput; excludes planner/teacher generation and long-run thermal effects."
+    },
+    "mps": {
+      "status": "ok",
+      "device": "mps",
+      "repeats_excluding_warmup": 3,
+      "results": [
+        {
+          "total_seconds": 0.3953869999968447,
+          "rollout_seconds": 0.22972212499007583,
+          "update_seconds": 0.12571975000901148,
+          "evaluation_checkpoint_seconds": 0.039945124997757375,
+          "transitions": 64,
+          "episodes": 24,
+          "transitions_per_second": 161.86672804242613,
+          "metrics": {
+            "loss": 0.38989150524139404,
+            "value_error": 0.852479100227356,
+            "entropy": 3.557515859603882,
+            "gradient_norm": 1.2126855850219727,
+            "kl": -0.0001913607120513916,
+            "initial_logp_error": 7.152557373046875e-07
+          }
+        },
+        {
+          "total_seconds": 0.43939408304868266,
+          "rollout_seconds": 0.2706356670241803,
+          "update_seconds": 0.10877483297372237,
+          "evaluation_checkpoint_seconds": 0.05998358305078,
+          "transitions": 72,
+          "episodes": 24,
+          "transitions_per_second": 163.86201539273517,
+          "metrics": {
+            "loss": 0.31191548705101013,
+            "value_error": 0.6955987215042114,
+            "entropy": 3.506828546524048,
+            "gradient_norm": 1.143505573272705,
+            "kl": 0.000258498708717525,
+            "initial_logp_error": 4.76837158203125e-07
+          }
+        },
+        {
+          "total_seconds": 0.4625510409823619,
+          "rollout_seconds": 0.32613987498916686,
+          "update_seconds": 0.09608787501929328,
+          "evaluation_checkpoint_seconds": 0.04032329097390175,
+          "transitions": 77,
+          "episodes": 24,
+          "transitions_per_second": 166.46811525160135,
+          "metrics": {
+            "loss": 0.25840693712234497,
+            "value_error": 0.5879759192466736,
+            "entropy": 3.490950584411621,
+            "gradient_norm": 0.9961220622062683,
+            "kl": -9.729645535117015e-05,
+            "initial_logp_error": 4.76837158203125e-07
+          }
+        }
+      ],
+      "median_total_seconds": 0.43939408304868266,
+      "peak_process_rss_bytes": 517193728,
+      "mps_allocated_bytes": 565248,
+      "forecast_100k_transitions_seconds": 610.2695597898371,
+      "forecast_scope": "Short end-to-end smoke throughput; excludes planner/teacher generation and long-run thermal effects."
+    },
+    "selected_device": "cpu",
+    "selection_rule": "MPS only if full workload succeeds and is at least 5% faster than CPU.",
+    "peak_process_rss_bytes": 518045696
+  },
+  "online": {
+    "scope": "development_latency_only_no_test_reexecution",
+    "episodes_per_repeat": 32,
+    "repeats": 3,
+    "includes": [
+      "environment construction/reset",
+      "common baseline",
+      "all online inference",
+      "assays",
+      "final scoring"
+    ],
+    "excludes": [
+      "prior cache construction",
+      "checkpoint loading",
+      "offline teacher and training"
+    ],
+    "cache_seconds": 0.017731832980643958,
+    "policy_seed": 0,
+    "seed_selection": "fixed lowest seed, not best-performing seed",
+    "measurements": {
+      "fixed": {
+        "seconds_per_complete_episode": [
+          0.0029691106556128943,
+          0.002939895843155682,
+          0.0029741653434030013
+        ],
+        "median_seconds": 0.0029691106556128943
+      },
+      "voi": {
+        "seconds_per_complete_episode": [
+          0.06119252081225568,
+          0.06419688931237033,
+          0.061009570312307915
+        ],
+        "median_seconds": 0.06119252081225568
+      },
+      "learned_imitation": {
+        "seconds_per_complete_episode": [
+          0.0022088815003371565,
+          0.002228115907200845,
+          0.0022177382816153113
+        ],
+        "median_seconds": 0.0022177382816153113
+      }
+    },
+    "planner_to_learned_ratio": 27.592309389945466
+  },
+  "locked_checkpoint_hashes_unchanged": true
+}
