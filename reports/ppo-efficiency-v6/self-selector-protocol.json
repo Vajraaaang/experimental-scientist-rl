@@ -1,0 +1,38 @@
+{
+  "reason": "fixed random cheap designs learned conditional reward but did not repair the on-policy interpretation deficit; specialize the reward-only selector curriculum to a frozen previous PPO assay strategy with explicit low-dose projection",
+  "settings": {
+    "batch": 256,
+    "epochs": 4,
+    "clip": 0.1,
+    "entropy": 0.01,
+    "entropy_final": 0.001,
+    "learning_rate": 0.0003,
+    "normalize_advantage": true,
+    "advantage_std_floor": 0.02,
+    "center_advantage": false,
+    "value_coef": 0.1,
+    "target_kl": 0.01,
+    "evaluation_every": 250000,
+    "episode_namespace": 77,
+    "paired_rollouts": 4,
+    "self_selector": true,
+    "temperature_start": 4.0,
+    "temperature_end_fraction": 0.8
+  },
+  "seeds": [
+    20,
+    21
+  ],
+  "interactions_per_seed": 1500000,
+  "previous_policy": {
+    "20": "<development-project>/reports/ppo-efficiency-v6/development/extended_temperature/seed20/selected.pt",
+    "21": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed21/selected.pt",
+    "22": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed22/selected.pt",
+    "23": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed23/selected.pt",
+    "24": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed24/selected.pt"
+  },
+  "public_only": true,
+  "no_terminal_labels": true,
+  "forced_assays_charged_and_excluded_from_actor": true,
+  "fresh_test_generated": false
+}

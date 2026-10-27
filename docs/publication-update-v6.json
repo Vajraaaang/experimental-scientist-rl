@@ -1,0 +1,972 @@
+{
+  "date": "2026-10-27",
+  "scope": "v6_completed_continuation_and_fourth_locked_test",
+  "previous_manifest": "docs/publication-update-2026-10-26.json",
+  "excludes": [
+    "credentials",
+    "environments",
+    "checkpoints",
+    "source ZIP archives",
+    "planning notes",
+    "live outputs"
+  ],
+  "provenance": "Original hashes describe the measured development snapshot. Machine paths are redacted; gzip changes are lossless after redaction. No metrics or baseline schedules were altered.",
+  "files": [
+    {
+      "path": "src/experimentlab/self_selector.py",
+      "source_sha256": "9ba89a82699ddbd20c46d4bb2581904b4abc9caaa8591a6857bd994036dc450d",
+      "published_sha256": "9ba89a82699ddbd20c46d4bb2581904b4abc9caaa8591a6857bd994036dc450d",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "tests/test_self_selector.py",
+      "source_sha256": "4e1b75a38d47050239dc7f7b37c40a872f8d7fd9059a6f412107fc67a1d2c008",
+      "published_sha256": "4e1b75a38d47050239dc7f7b37c40a872f8d7fd9059a6f412107fc67a1d2c008",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "tests/test_efficiency_v6.py",
+      "source_sha256": "1be27230ca61f0c8f3d52827c20a2e3840d6b7538318ee8f4e68c0a4028cafa1",
+      "published_sha256": "1be27230ca61f0c8f3d52827c20a2e3840d6b7538318ee8f4e68c0a4028cafa1",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "docs/ppo_efficiency_v6.md",
+      "source_sha256": "3bc8c53429d94b48199c997e775d2cfc19b4f330def66cb4a9adcab594b2d2ce",
+      "published_sha256": "ad88d03bb15ad6bddaa4ace504aaffbf9a810918fcce7f3268dc54ed299a8741",
+      "gzip": false,
+      "redacted": false,
+      "publication_edit": true
+    },
+    {
+      "path": "scripts/benchmark_ppo_v6.py",
+      "source_sha256": "060a8c7b0e8827d67a0bf02b8772a14f6de88cf8ba056bacd08086d09f2c471b",
+      "published_sha256": "060a8c7b0e8827d67a0bf02b8772a14f6de88cf8ba056bacd08086d09f2c471b",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "scripts/ppo_efficiency_v6.py",
+      "source_sha256": "71e587de8e034692885fa17952efc17a9b3ec91f7653a87114269a78bb20b415",
+      "published_sha256": "71e587de8e034692885fa17952efc17a9b3ec91f7653a87114269a78bb20b415",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "scripts/ppo_v6_calibration.py",
+      "source_sha256": "095c96daa09be349bc77d47ccf6cba01d2d695aa8261f53c600e3e0497dd9e74",
+      "published_sha256": "095c96daa09be349bc77d47ccf6cba01d2d695aa8261f53c600e3e0497dd9e74",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "scripts/ppo_v6_locked.py",
+      "source_sha256": "558be5213f3b2c7c2bed3f7865a08096c2346063af8ec0d6f7b5a649d7659539",
+      "published_sha256": "558be5213f3b2c7c2bed3f7865a08096c2346063af8ec0d6f7b5a649d7659539",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "scripts/ppo_v6_select.py",
+      "source_sha256": "e4aece8ff464b1cd87bb4fe5f085285133c8c2150e72f20b8ee55a989c0d4d34",
+      "published_sha256": "e4aece8ff464b1cd87bb4fe5f085285133c8c2150e72f20b8ee55a989c0d4d34",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "scripts/report_ppo_v6.py",
+      "source_sha256": "d36629034072d9201beca2c1301c7e6226929547d6a0b40eb8f9af62e1ebb4ca",
+      "published_sha256": "d36629034072d9201beca2c1301c7e6226929547d6a0b40eb8f9af62e1ebb4ca",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-cheap-joint.json",
+      "source_sha256": "d44fe365a9daf2a954fe422d3603960e5c0fbea32d547c6ca6feb32e241e4c7d",
+      "published_sha256": "d44fe365a9daf2a954fe422d3603960e5c0fbea32d547c6ca6feb32e241e4c7d",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-cheap-selector.json",
+      "source_sha256": "769bb69feb2de4c30d67db9e5d962492fcfd24bdf37f71f2e6b64c244f18b3cd",
+      "published_sha256": "769bb69feb2de4c30d67db9e5d962492fcfd24bdf37f71f2e6b64c244f18b3cd",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-cost-scale.json",
+      "source_sha256": "e31567ebf1bf0e466317a4e39a1cc99179a12dce4554fde8fa27348785cf72e6",
+      "published_sha256": "e31567ebf1bf0e466317a4e39a1cc99179a12dce4554fde8fa27348785cf72e6",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-extended_exploration.json",
+      "source_sha256": "f60a4c6e1c1cfdaccae617c4e0f38de883a35abd2ae86ceb68c80aa78ae0b97c",
+      "published_sha256": "f60a4c6e1c1cfdaccae617c4e0f38de883a35abd2ae86ceb68c80aa78ae0b97c",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-extended_temperature.json",
+      "source_sha256": "55f48f32bc919ce925d3eab7846fae7cbb4fee52c7cd603a4bc67cd4b8a26012",
+      "published_sha256": "55f48f32bc919ce925d3eab7846fae7cbb4fee52c7cd603a4bc67cd4b8a26012",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-self-reset.json",
+      "source_sha256": "7a2ce6a196a858c38a70c8b26a37006a91f4fc0549e57efa85e8c51da25d6f36",
+      "published_sha256": "7a2ce6a196a858c38a70c8b26a37006a91f4fc0549e57efa85e8c51da25d6f36",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-self-selector.json",
+      "source_sha256": "15da2920e948e274c8cb8b2c748126215f8de4df7ae454e0c216286753fe6225",
+      "published_sha256": "15da2920e948e274c8cb8b2c748126215f8de4df7ae454e0c216286753fe6225",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-temperature_exploration.json",
+      "source_sha256": "8b2968b6db05748535312eab036c1be4ac7c2aca74d4392c3b69afa129f98098",
+      "published_sha256": "8b2968b6db05748535312eab036c1be4ac7c2aca74d4392c3b69afa129f98098",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "configs/ppo-v6-temperature_gae.json",
+      "source_sha256": "d843cf9af72f6fc9d32056977346476dd4f8c8172406734a94c62db0ff7ec351",
+      "published_sha256": "d843cf9af72f6fc9d32056977346476dd4f8c8172406734a94c62db0ff7ec351",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/calibration-imitation.json",
+      "source_sha256": "1d51a97e24bbe12e8eb7490d2763f0b25a241f35f6efa018b949cd1c27d4302c",
+      "published_sha256": "e416cd4750b06b2daf23189a02caafa76e0bd2c117980bec9449280f831e7630",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/calibration-main_ppo.json",
+      "source_sha256": "48472ce48f01a8b61b1cbdce759bfa7f19b2efa34115aa21cf3faeefb7e3eb8a",
+      "published_sha256": "6a10d044a9f74c6c5fde73dccf6473fd4aafac8699179e27d2701d7a31f3ca6c",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/calibration-self_curriculum.json",
+      "source_sha256": "4f4332f213ee2bf0033854cce362dccb9569024cb14c13e54392abcfec0a0117",
+      "published_sha256": "c679a524fb42edd3a73b15a0bc3cd0ebdc040771c748f036e5f64a7e7c89d50a",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/calibration-v5_ppo.json",
+      "source_sha256": "da43b3aa5abc10eecd76468f7f09f9564550f9209eda3fda9ac20d5eb2cd203d",
+      "published_sha256": "5a9a11c9f4a9e537d65db50454ed1ef56f8e77fecf7ffd74240be8dbf3cbd013",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/cheap-joint-protocol.json",
+      "source_sha256": "b97e981e820015bb1bcb8c80d9b3f2a52d7d261a08810dd5340118cb71c8b21a",
+      "published_sha256": "b97e981e820015bb1bcb8c80d9b3f2a52d7d261a08810dd5340118cb71c8b21a",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/cheap-selector-protocol.json",
+      "source_sha256": "8ea7a69e6b765d837eb2b1b279487a5539a00227177a5441355bd56b63844fc8",
+      "published_sha256": "8ea7a69e6b765d837eb2b1b279487a5539a00227177a5441355bd56b63844fc8",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/cost-scale-protocol.json",
+      "source_sha256": "e4dabcc6282963fdb2e5fa62ee0e18ef0339ca4ff656e9498e823ac1796d8fdc",
+      "published_sha256": "e4dabcc6282963fdb2e5fa62ee0e18ef0339ca4ff656e9498e823ac1796d8fdc",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/calibrated_restart/seed20/progress.json",
+      "source_sha256": "4a3176c38545846840512b7082fa15f561632b31867f86b0b548d77919dd170e",
+      "published_sha256": "4a3176c38545846840512b7082fa15f561632b31867f86b0b548d77919dd170e",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/calibrated_restart/seed20/result.json",
+      "source_sha256": "b52fd6dc9a63d6745ab1cf014b0edb6f4103c3c2501440bfffb7e4451b3bb37f",
+      "published_sha256": "7545d7905620f34276f8178b32076555bce4038b26dd1d1799315a9af5d46265",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/calibrated_restart/seed21/progress.json",
+      "source_sha256": "68e140c196d6cd4e9b82b9698557fb1907dce3303896c3a2a6318a652cbd20dc",
+      "published_sha256": "68e140c196d6cd4e9b82b9698557fb1907dce3303896c3a2a6318a652cbd20dc",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/calibrated_restart/seed21/result.json",
+      "source_sha256": "1eda41aa735ba84329bfd4e513431553ece2be5e15a229aa2e3c0825844e7bdc",
+      "published_sha256": "4d103a148f1408453e07f83c788bb59ee7addd42ec67d0da0654baafcc9cb116",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_joint/seed20/progress.json",
+      "source_sha256": "b14925826fd97f79877f515af6638dfec4de0dc1346d34a1722c094470c30b2b",
+      "published_sha256": "b14925826fd97f79877f515af6638dfec4de0dc1346d34a1722c094470c30b2b",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_joint/seed20/result.json",
+      "source_sha256": "f2c275c5b89a3b66d279cad44424294eb155d0ac64ba9c53ad6a81bfed389926",
+      "published_sha256": "870b37a8ffad24703378ac3143ed7989991013dda78d3f4ae846d70316560ac6",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_joint/seed21/progress.json",
+      "source_sha256": "16c396fcef32268295d4a343ee8401d799f3eab0e290ff44aa626558abad6d6e",
+      "published_sha256": "16c396fcef32268295d4a343ee8401d799f3eab0e290ff44aa626558abad6d6e",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_joint/seed21/result.json",
+      "source_sha256": "ffc4edaa75a4f279e78907d516b3406968675c38624331b81e3314a6bcae872e",
+      "published_sha256": "19a4049aab4c693aa6054cec735f906da19c543ab8f193f1eba64e0822f6b901",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_selector/seed20/progress.json",
+      "source_sha256": "1775e41a6aeec13777fc967881e5da93bddae8dc5b28bdb49f225124fa41d334",
+      "published_sha256": "1775e41a6aeec13777fc967881e5da93bddae8dc5b28bdb49f225124fa41d334",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_selector/seed20/result.json",
+      "source_sha256": "ffd2d9fb997f28f4d6c99b37faa72e6d9bfb9eac1d4922160efe3568b7666933",
+      "published_sha256": "3f38845dc300ae2a6203e9f1352cff78b1e26990f3e3bb3e0486fa6e7d675720",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_selector/seed21/progress.json",
+      "source_sha256": "ffaab7b33d59c98a420c84afbbc49d6a5f1c1eb68d7d00c49494a8d782dba5fd",
+      "published_sha256": "ffaab7b33d59c98a420c84afbbc49d6a5f1c1eb68d7d00c49494a8d782dba5fd",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cheap_selector/seed21/result.json",
+      "source_sha256": "cc5506e3c5069f0f1565dba79c3a64ddc214e72bc97e7877b7d935067ac5f300",
+      "published_sha256": "e3dc4367fd8db0366cd3f38b2459b3efa13877db2c37e937f2b4a3185e0d9a4e",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cost_scale/seed20/progress.json",
+      "source_sha256": "edeb2b5f78591d25fc1687ff750a8d97a596d10447ffb54df02cb650f7be78d6",
+      "published_sha256": "edeb2b5f78591d25fc1687ff750a8d97a596d10447ffb54df02cb650f7be78d6",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cost_scale/seed20/result.json",
+      "source_sha256": "36efb2e31e1a30f1b778a1723b859cef23d37bb9a8cd26a6ba1a078964c98a4c",
+      "published_sha256": "52cdafe1664ecc0564a67291e7387c07e857c31b01e28b3c3dffaf055c23548f",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cost_scale/seed21/progress.json",
+      "source_sha256": "191d3e51122c8c659b53eb9365c8842889b8da8df73d95154d6fee2337e9821b",
+      "published_sha256": "191d3e51122c8c659b53eb9365c8842889b8da8df73d95154d6fee2337e9821b",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/cost_scale/seed21/result.json",
+      "source_sha256": "61c1ef095d1509bba974c38cbdc9b66703afb08834e2a2c7a1e1763e806393cb",
+      "published_sha256": "df4f9fcdf97af60383072e7c1f34356be920cfc61490bcfa9f0744c080dfd891",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed20/progress.json",
+      "source_sha256": "7e4604fc8d682cec16e7f82f598ebd2652ffb826e14e5b67f89651fe0f13dd9c",
+      "published_sha256": "7e4604fc8d682cec16e7f82f598ebd2652ffb826e14e5b67f89651fe0f13dd9c",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed20/result.json",
+      "source_sha256": "0e8427ecfe694f49d12beed0e8b4d01b4b7513554ac7377fadd9c704e5a9b20d",
+      "published_sha256": "9a4ca6b329b393892b6da62b1b0eb2e3f7b88ed1c629a0bdc936d6a4ef913996",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed21/progress.json",
+      "source_sha256": "3ff2c9e0207b1b790848d3844bccb901a607c92de0425b9b6b68952e8e851a7c",
+      "published_sha256": "3ff2c9e0207b1b790848d3844bccb901a607c92de0425b9b6b68952e8e851a7c",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed21/result.json",
+      "source_sha256": "81c706f26adae8018f0de0055b41d78c12d325863fbddb7bf6e24ce6100161af",
+      "published_sha256": "5b76786733aeb9bb3db7719d72fa1ba126efc9490fb7ff6739b14704881921d7",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed22/progress.json",
+      "source_sha256": "12fa9af7d49e9fc528752ce78578cbea706d0f7b20ac4d00d54429452dd29210",
+      "published_sha256": "12fa9af7d49e9fc528752ce78578cbea706d0f7b20ac4d00d54429452dd29210",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed22/result.json",
+      "source_sha256": "3ef83b47e65c152cc429d0beaf5515dcad0cb23ae2fa50a62f11cb77b4b5b276",
+      "published_sha256": "96051aebd0607e089a110fd45cb5a7c302dd57abd0649a4598993b69e4a30e7f",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed23/progress.json",
+      "source_sha256": "699208f5663bd293abc6201ebe2b9ea059bb66ef16f48529d8b188c0e9faf9c1",
+      "published_sha256": "699208f5663bd293abc6201ebe2b9ea059bb66ef16f48529d8b188c0e9faf9c1",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed23/result.json",
+      "source_sha256": "8b9d3e0dacb73a4af850edba3635a657d404ffdcf7d34a34d9fb824fa759c01a",
+      "published_sha256": "f633350c09a94f3ce91eb39d2c2099d9bab0849344512b7801eb70bb185f1f6c",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed24/progress.json",
+      "source_sha256": "e88878c1aa47d1d3d2140d902b97400f27bd8957bd89b49f424b2de9083ddbd4",
+      "published_sha256": "e88878c1aa47d1d3d2140d902b97400f27bd8957bd89b49f424b2de9083ddbd4",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_exploration/seed24/result.json",
+      "source_sha256": "d9dbd0f5b4c370c5bac2ca1e48380132e632722128448af240f4fe77c6ae6ab9",
+      "published_sha256": "9a6953bf5490885ae4280f6c3435e3a714013b59de5ec9f5b780151e48ef91f6",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed20/progress.json",
+      "source_sha256": "1c2dcac7ced9adffcdacac25d87cc94a658519031f62350923b67240bfb24779",
+      "published_sha256": "1c2dcac7ced9adffcdacac25d87cc94a658519031f62350923b67240bfb24779",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed20/result.json",
+      "source_sha256": "cd83d2f5728bd817d8a0537a1a19ab16b5a67c545cbb8d9ab61a66b7c1e10f17",
+      "published_sha256": "5cece28ed3a8d26816c7b7e756306700e0467ed9eed51b612af0b48028220394",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed21/progress.json",
+      "source_sha256": "34b459ed5298bb5f0fef0544454268853e026b54285cc47ba6335a7f46a5b7a8",
+      "published_sha256": "34b459ed5298bb5f0fef0544454268853e026b54285cc47ba6335a7f46a5b7a8",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed21/result.json",
+      "source_sha256": "92dcf664faea084103d250773042fe2979257f605fd5301cc8244ccc9f41db80",
+      "published_sha256": "7a98ccd038f4fc7ee824d599d861dd2f3c82e61f91c2669403e772e1ef7c44ef",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed22/progress.json",
+      "source_sha256": "8e145a9c53165be677c690a9a5b6799731fec5785fa69c569f123b54aa7e8276",
+      "published_sha256": "8e145a9c53165be677c690a9a5b6799731fec5785fa69c569f123b54aa7e8276",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed22/result.json",
+      "source_sha256": "688de33e6fdb0c7f721c663753cbe330f84b9b56316d666830f374aa73094520",
+      "published_sha256": "61b6f190f945fbf089d5b32eaa25ac1805be7d75fe66dcfb4fdef2c9dbc12057",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed23/progress.json",
+      "source_sha256": "6a25f32cd60234c38c2186f2b73241146eae1291d3835d7a8724449aca0ad8e4",
+      "published_sha256": "6a25f32cd60234c38c2186f2b73241146eae1291d3835d7a8724449aca0ad8e4",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed23/result.json",
+      "source_sha256": "21cc216c62b83e247d738311adf8d322dbee40b4b6e7fe0ab9b9e6eeeae0c056",
+      "published_sha256": "dd58d838366a08d875b750d72cabed38f4a11c74c66b710a871368a64d1c7718",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed24/progress.json",
+      "source_sha256": "3be276fe0a7599407201975c027f8f8708073f7144f10deb8263eedab903db62",
+      "published_sha256": "3be276fe0a7599407201975c027f8f8708073f7144f10deb8263eedab903db62",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/extended_temperature/seed24/result.json",
+      "source_sha256": "655ccf1057ccec06ce29103e3dd3cc768bde51b1af80fcd3c09949c2b7ee5d21",
+      "published_sha256": "0173d23d19ec14def709f5fef6d1022f4ae55bcf1892a3eeed6afe36fc117ea3",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/gae_exploration/seed20/progress.json",
+      "source_sha256": "24f20abff062ef117511cc403efa5c36daa475b00fb9c891e7bcecb98bcdec37",
+      "published_sha256": "24f20abff062ef117511cc403efa5c36daa475b00fb9c891e7bcecb98bcdec37",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/gae_exploration/seed20/result.json",
+      "source_sha256": "cdb9ed59e0b0a0d022ae8bbc7acad9448006b74ecb062c06e09f8ffd202ed32e",
+      "published_sha256": "67dea6bf3633b31af8e81027feaaf603ac9f623a893002d53eec674cbc50ee0a",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/gae_exploration/seed21/progress.json",
+      "source_sha256": "a5b161ad453f04c7f36de7c0ce6f1b4efc6dcfd19c68fb19eea8bc59cecd2789",
+      "published_sha256": "a5b161ad453f04c7f36de7c0ce6f1b4efc6dcfd19c68fb19eea8bc59cecd2789",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/gae_exploration/seed21/result.json",
+      "source_sha256": "d382f50fe8e8f3b329e61bdc41764a75c62f06c5bfc7ee9d3972d8fa8a538c94",
+      "published_sha256": "6064f01b4926f8c09532982bd325acb99d606afe9b164f57e63c56b1427a0b56",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/self_reset/seed20/progress.json",
+      "source_sha256": "a332360291af7ac2ce7745ff251f4a381c8e1523ed43e73787ec835ba758bb1b",
+      "published_sha256": "a332360291af7ac2ce7745ff251f4a381c8e1523ed43e73787ec835ba758bb1b",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/self_reset/seed21/progress.json",
+      "source_sha256": "a0dec9d78adccc42822cb8c1207f6db0d95551f138e8decb2deb5fb9d329d0e2",
+      "published_sha256": "a0dec9d78adccc42822cb8c1207f6db0d95551f138e8decb2deb5fb9d329d0e2",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/self_selector/seed20/progress.json",
+      "source_sha256": "73637c0e389c92d243ed29b7cd15bba0856d0ee64c1c5c714dde4a6da012bb36",
+      "published_sha256": "73637c0e389c92d243ed29b7cd15bba0856d0ee64c1c5c714dde4a6da012bb36",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/self_selector/seed20/result.json",
+      "source_sha256": "ed0ab5bee849c3937c96c3bfadd99f6427dd9d2ed86f5351fd99babedda9d735",
+      "published_sha256": "830814b1ba3a7e288e1fd38da08bc6d45b7b81e9cd366af8f5966bfdb60ccacc",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/self_selector/seed21/progress.json",
+      "source_sha256": "235b7abe3adb109f9d61b2ddf1da60fd99a3e1870e73d8ad9ad85db4ceff98c5",
+      "published_sha256": "235b7abe3adb109f9d61b2ddf1da60fd99a3e1870e73d8ad9ad85db4ceff98c5",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/self_selector/seed21/result.json",
+      "source_sha256": "1b02d1cce596a57713b3c39fd3cd3704a3a2f7f63bd4381569f0b4395ddfa1e8",
+      "published_sha256": "7c0e8ef92676f2a6c9cae99dca765026d4a4aea872d7e464c59ece8e37dcdd59",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_exploration/seed20/progress.json",
+      "source_sha256": "6d888200dc3417e020be07c042f22597e89f69b48cca5c639e3a2cfc572eb19d",
+      "published_sha256": "6d888200dc3417e020be07c042f22597e89f69b48cca5c639e3a2cfc572eb19d",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_exploration/seed20/result.json",
+      "source_sha256": "9256435488a877a4100b4a78c183134f5310734cf08c5e9cdff3a1e64410be30",
+      "published_sha256": "52d8108c100060e5f2763a88109e1cb8dd23431678278d9a97af75edfd5bcea2",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_exploration/seed21/progress.json",
+      "source_sha256": "675edb3188bfb19a155539f0656f48da3c8baf95860978c503a917fe96d16235",
+      "published_sha256": "675edb3188bfb19a155539f0656f48da3c8baf95860978c503a917fe96d16235",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_exploration/seed21/result.json",
+      "source_sha256": "8b7221b5761bee564d7adefb49a36e30da05d1f73e56259eb5a2de4dcbff6519",
+      "published_sha256": "d6a23bcddb5e5e945e511114eb8646c5897cca47d5750024ccc033f2fff39ec2",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_updates/seed20/progress.json",
+      "source_sha256": "dea64cb5cc7ace2d85f2dbe7cb99900d7f7754a17364f7eea84da2c9aa5fdfa4",
+      "published_sha256": "dea64cb5cc7ace2d85f2dbe7cb99900d7f7754a17364f7eea84da2c9aa5fdfa4",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_updates/seed20/result.json",
+      "source_sha256": "51b3d193746c8023217bc124bdb88cae6ed2a8dc23a5afd0b7afdb2c2e117245",
+      "published_sha256": "9612ec15f7f7e0fb58ef4382528b2c9c3337e636b287e8ceff59383ca9e10ac6",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_updates/seed21/progress.json",
+      "source_sha256": "3fe1b1b35df79e0ddd6babcc17440e1b7704b3fd49ea08164793f6c0264a3e14",
+      "published_sha256": "3fe1b1b35df79e0ddd6babcc17440e1b7704b3fd49ea08164793f6c0264a3e14",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/strong_updates/seed21/result.json",
+      "source_sha256": "efe7231ecf6f22a129a77d57a09dd6ec66125fecca419510fc32e448309ef748",
+      "published_sha256": "503f34e180178b4dc5a42557d1dc48f432db24ba14370b6d2e2a739918655663",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_exploration/seed20/progress.json",
+      "source_sha256": "f7474ff4741613bcd5a0b784ec546da511e09bbc8b291ca26fab3522f10a2897",
+      "published_sha256": "f7474ff4741613bcd5a0b784ec546da511e09bbc8b291ca26fab3522f10a2897",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_exploration/seed20/result.json",
+      "source_sha256": "0a65b4d7cca7cd58ac16335cd8311ad87d79ade328efcbd10d6f752d14cdd815",
+      "published_sha256": "614c63730d21817db9d628a586e22de68eab6a229bedcedd61630c797729c6be",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_exploration/seed21/progress.json",
+      "source_sha256": "7bf794b6be9da56b0a757b07d3afe8d487828921ec69df9d7e48acf94f7d762f",
+      "published_sha256": "7bf794b6be9da56b0a757b07d3afe8d487828921ec69df9d7e48acf94f7d762f",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_exploration/seed21/result.json",
+      "source_sha256": "9e8ecff97819082d662549a66e88a22ea9853ece935087e9f9873232ac6d55d1",
+      "published_sha256": "b3f6648d53b21c4c695ea39f2eaf2ea82459887ff801e1fbd9debd40066b9fda",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_gae/seed20/progress.json",
+      "source_sha256": "184d194542dec1d1e0ca6ce7eb791ad7cd8e156ecc03a3693d48878804d97ad0",
+      "published_sha256": "184d194542dec1d1e0ca6ce7eb791ad7cd8e156ecc03a3693d48878804d97ad0",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_gae/seed20/result.json",
+      "source_sha256": "f34c6571c50f4f664e8500f62bb404444f3d00f1def243f500e418e2d264aed0",
+      "published_sha256": "8c41bec0bd7f5b32816457da6e2922766d6d3844bf203caea593f0b8cbc112a5",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_gae/seed21/progress.json",
+      "source_sha256": "cd3a013a0ff0911cfe4dac5d3fcf35031798a94f8f086e8b3581d5107f267fb5",
+      "published_sha256": "cd3a013a0ff0911cfe4dac5d3fcf35031798a94f8f086e8b3581d5107f267fb5",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development/temperature_gae/seed21/result.json",
+      "source_sha256": "705d5f8bbe9c4daf01539e17d4f43d6fccffab8ec77e6433a84f01c0b89cde9a",
+      "published_sha256": "b4570de6671d4eb9c6ab278928a564f7d783d016fb5f436998f0e1c989778497",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/development-manifest.json",
+      "source_sha256": "9628fcb4ff39e9dca8058ab66e0e9f88f4f3971109b1187067a945e8449c6d91",
+      "published_sha256": "9628fcb4ff39e9dca8058ab66e0e9f88f4f3971109b1187067a945e8449c6d91",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/device-benchmark.json",
+      "source_sha256": "bf7896b9f266a82e67515952a6ad5bde320fd6f407402698ddf994abf24c7f5b",
+      "published_sha256": "bf7896b9f266a82e67515952a6ad5bde320fd6f407402698ddf994abf24c7f5b",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/extended-calibration-protocol.json",
+      "source_sha256": "004f7b44f92a02afbc908e010a4b66f2df402d66972cba22bab98f4878916daa",
+      "published_sha256": "004f7b44f92a02afbc908e010a4b66f2df402d66972cba22bab98f4878916daa",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/extended-training-protocol.json",
+      "source_sha256": "568535d03a653e082a1a0a2a605091c7631ae9b216928a5c7925a3f3bbb0c9f5",
+      "published_sha256": "568535d03a653e082a1a0a2a605091c7631ae9b216928a5c7925a3f3bbb0c9f5",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/figures/fresh-efficiency.png",
+      "source_sha256": "b8b895590b3160a5532bdef4386e71383d4e419b6e2991cbc170d4b2a82476d5",
+      "published_sha256": "b8b895590b3160a5532bdef4386e71383d4e419b6e2991cbc170d4b2a82476d5",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/final-selection-protocol.json",
+      "source_sha256": "db66f49e44ad3f0959884ab0b98d6958179b92b6cc30122f9e6ab87a5220e333",
+      "published_sha256": "82d2d83428ded5ab86f42fb36474b487ef917b517c86eba4fa2763c65121dc73",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part00.json.gz",
+      "source_sha256": "2feeb7d5ec7f9c65c1637ad0fec1ef690543eaed8c4610cc97e5302cb580a55b",
+      "published_sha256": "6194367ca1d8879baf9ab1ab58454a2b0cb85f7244cb352aa13130ced4d3cf2b",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part01.json.gz",
+      "source_sha256": "ab7ed0045ec118ca6f013364cbfde9de04949dbab020bb4bf3f527ccb806d573",
+      "published_sha256": "ac9e5e4db065c74533eb8d3f243b5e2cd4fa1444568c22829ea2c5f0d22cb3a9",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part02.json.gz",
+      "source_sha256": "8f96fb2b0087f620520002f93f118cea9cddc8538bc3212ddf4f2e66d762e5cd",
+      "published_sha256": "27ab11705af3c69297e620a6820465c3ee7e13cc6bff6efae1e14a018fafaec3",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part03.json.gz",
+      "source_sha256": "e494ca0e9f318c41368b1b90a3e6e934cd5beb8fc08cb2fe5571491af6b31e5f",
+      "published_sha256": "acf0a21603c3c942977ec0af349d8a4901bc20b80cc6d780876a0e38ccd3c311",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part04.json.gz",
+      "source_sha256": "3a8b0a02b86e266daae1826ed5a823b766bb9211115ad9b44c861cd2b0787d63",
+      "published_sha256": "3d7530273456e4d32aa59588fac6b514926b5550c1c888d5fce16ea73c9cffa3",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part05.json.gz",
+      "source_sha256": "d1033e21bedeaf78f998dd2e2b164e854d044a71621883281eaafa17c535d897",
+      "published_sha256": "62205c3a3e2125377be0e22dc678c5f33ea20d6236167d8e338cb7572c76dd22",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part06.json.gz",
+      "source_sha256": "009bdad865e561ded3193736871a4fd7f66264fdd3cc915c91fcfe3756706bb5",
+      "published_sha256": "d2f8517cbade83614c282be0c39054ecdc05aa64eae7c53e936fd9393cafb97f",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/baseline-part07.json.gz",
+      "source_sha256": "8c00645ba11c0af4b6cefb30c9b1d68c4e608f914c03f901a4f4bf09cd1b091d",
+      "published_sha256": "415fd0ed01be0cfe533bb16be924948ef8336f6c2975411d98ef594a582a7826",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/freeze.json",
+      "source_sha256": "a167c7ee0ff753ea026841bab11f47feb406041be3bd32efd4f5ba80cea445ef",
+      "published_sha256": "30944e4db551a6bdc59bc1bab36f509714196ecd67e3a73a45bfac3ca9cd259b",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part00.json.gz",
+      "source_sha256": "cb3b1f2ef29108e710f6b638d7887d17a5e2a1917acaf75843e92dd691ab6a06",
+      "published_sha256": "813d4d0841205da9e310ff9b4bde409f5f7bd9da4e4bed802e02440beaf3c60d",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part01.json.gz",
+      "source_sha256": "dc7257698fa85d85bf72f813ac8115493185096879227e18c4e4eed0fb43271b",
+      "published_sha256": "4cf1bab48b2fa67a81cb94f00667f7e096686f2828617e206c82542343fc41aa",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part02.json.gz",
+      "source_sha256": "497c7f78b110f09797b35fe25c80b18e26dcf3150cd9ccd40a110ee152d9abfd",
+      "published_sha256": "a266156386d395bcd6e18dc5db3f9b758940fe7f0236129cf1e8e52216ade766",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part03.json.gz",
+      "source_sha256": "14a352cc654ff7dc99ed9f0b02c52633ad771e0f807304c32d5bf4b4aabb12bc",
+      "published_sha256": "44b586129265b9ec9a320d4cd6b5c79c0a38fe69e4f74361751cf3886591d561",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part04.json.gz",
+      "source_sha256": "f2e3c54309b98b1c39f7c24c943159123769d7d14ab47d84bb1378cdf3f3713b",
+      "published_sha256": "e0d17cf9b7d4a30746284821bd15cddbb169eadfca2091ab7d1e8f61811cbe4d",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part05.json.gz",
+      "source_sha256": "0ef8af082f92e127c1791fcae5d9c26672b3779a96950cf2bdb4f949a490c031",
+      "published_sha256": "dd38dac3ba6b18734cb878f0894764cb1e14197b7cd1ba59177eead373ffed2d",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part06.json.gz",
+      "source_sha256": "69d2545a6ec5cc5ece8da23ef48766b746437c0be1159c6d1780d9a0309bbe5c",
+      "published_sha256": "0b7e89803fa8465381fba67aeca367123a3a04d5a1baac05c1044d8ba4204225",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/neural-part07.json.gz",
+      "source_sha256": "f5447ca774ab8d7dec29e5fef89066b47aa296ac9475edfcc175a24ede6cbe55",
+      "published_sha256": "9bd6658414dc27c3b3f94173c2dd4b1982bf7976ba81311de070c0c658e0997d",
+      "gzip": true,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/fresh-locked/results.json.gz",
+      "source_sha256": "a64d3333d4bd9b7e78bf7b121e6d16b3d4516e72728d294ab05245ab874a7bb1",
+      "published_sha256": "51d57e124979a93797deb4f4bd4b7daae4dd295377b45881a6f19e7b98086ec5",
+      "gzip": true,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/initial-training-runner.snapshot.py",
+      "source_sha256": "b9ac22e56db9176b5ad93cad2ee729d13d2ada8cfa6d8032c5579b790625b77e",
+      "published_sha256": "b9ac22e56db9176b5ad93cad2ee729d13d2ada8cfa6d8032c5579b790625b77e",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/interrupted-controls.json",
+      "source_sha256": "ab9fd253208a3f002150bafcb0766447b2d6870835257ca2a82d35bdbc0b7f94",
+      "published_sha256": "ab9fd253208a3f002150bafcb0766447b2d6870835257ca2a82d35bdbc0b7f94",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/main-comparison-protocol.json",
+      "source_sha256": "7aca37e6fb769e348fef995ddcddfde345befc8c03af6da603a91b7912f78395",
+      "published_sha256": "7aca37e6fb769e348fef995ddcddfde345befc8c03af6da603a91b7912f78395",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/main-registry.json",
+      "source_sha256": "711c91836c3ebda5f8ba453a606284c15eaede6c95bc62d0f840dbba9a72e1c8",
+      "published_sha256": "e6919982209b75911a2727ba975e67a5d728eb1d33959fe27bdba88fb061848f",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/new-development-baselines.json",
+      "source_sha256": "569ba321ee29edae5272e60fc4ae4cd65bde775b113cb2288bad2fcacc7b9243",
+      "published_sha256": "569ba321ee29edae5272e60fc4ae4cd65bde775b113cb2288bad2fcacc7b9243",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/per-seed-selection-protocol.json",
+      "source_sha256": "d67170bf385aef46c2ec187a47c0c475320940a3e395b9a5e4ec27ac5f4587a3",
+      "published_sha256": "79cf3750846fd73a2d132b35ec5c46aa2a78250993937b5e963b7ce3a7f13303",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/pre-self-curriculum-paths.json",
+      "source_sha256": "1e5b0f805a181538e6ea59a084819058314a335313e93cc932adaf630f3add80",
+      "published_sha256": "681a08b5b60d16cc83efd9ebe1692c346abc103b04d60b3ad4189d6d34aa3d59",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/preserved-studies.json",
+      "source_sha256": "a88f81811582cfab9ff5f35363f1e511f932fcb3857ee6eba30076cd3e1a4102",
+      "published_sha256": "a88f81811582cfab9ff5f35363f1e511f932fcb3857ee6eba30076cd3e1a4102",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/protocol.json",
+      "source_sha256": "da470b1e2b580273fd6c081dfb5a0205b71a55fbc69b67b7e3f034a608f694c1",
+      "published_sha256": "da470b1e2b580273fd6c081dfb5a0205b71a55fbc69b67b7e3f034a608f694c1",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/provenance-final.json",
+      "source_sha256": "194f3a00444ec2ba09d0f960b276e931265eb6dcf5110ee5be5135b82911604a",
+      "published_sha256": "194f3a00444ec2ba09d0f960b276e931265eb6dcf5110ee5be5135b82911604a",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/public-belief-diagnosis.json",
+      "source_sha256": "38d0088c6e9b7d6dee1e4c48db0dba80fb822b845b090cb5aff6032c47a8305f",
+      "published_sha256": "38d0088c6e9b7d6dee1e4c48db0dba80fb822b845b090cb5aff6032c47a8305f",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/reference-deployment-check.json",
+      "source_sha256": "a8a3f60fd9dc458c8aea24da879a2a2975d94747e5fe97e12b5785c0431e6aad",
+      "published_sha256": "a8a3f60fd9dc458c8aea24da879a2a2975d94747e5fe97e12b5785c0431e6aad",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/selection.json",
+      "source_sha256": "7ce716b6873c002226abb829d5285558f0be3a48a1dca22cb65af2d8be5a37d1",
+      "published_sha256": "2987da8e737ae86c48a86f253866cc68ec684740bf30690eecf5e56d3302f2d7",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/self-curriculum-registry.json",
+      "source_sha256": "fc689de8d95e879489db2541406dbaf346b3a685cbe15b802139aaabc3b1b998",
+      "published_sha256": "5a50570b187ceb72b91a58dbdadc2b5811dad8a5d391c529287f3bbb9a07e7cc",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/self-reset-protocol.json",
+      "source_sha256": "885481cf811fc027b0ee0c71d3e7a56b0bd6d79c57c9c822dad14fc6d72336da",
+      "published_sha256": "885481cf811fc027b0ee0c71d3e7a56b0bd6d79c57c9c822dad14fc6d72336da",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/self-selector-protocol.json",
+      "source_sha256": "307a2c1fa34290f6b6c1afafc7cd0928281b179f2b208410b424677c7162ac4e",
+      "published_sha256": "6db6be6cad38c307aa715985d9f65d320ca3d2c45ac2731f92ae6b0d530e116f",
+      "gzip": false,
+      "redacted": true
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/summary.json",
+      "source_sha256": "692b98af880dea302ef74a393d4b5218a491cc28e89fd14b7f9cf60ddb460da5",
+      "published_sha256": "692b98af880dea302ef74a393d4b5218a491cc28e89fd14b7f9cf60ddb460da5",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/temperature-control-protocol.json",
+      "source_sha256": "007abceb761a00cc3fdb14a330a22d04c36909453d99a9437e360683960e1a8c",
+      "published_sha256": "007abceb761a00cc3fdb14a330a22d04c36909453d99a9437e360683960e1a8c",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/temperature-training-runner.snapshot.py",
+      "source_sha256": "d15eea39b3890499dc85ab15e0170bc95e5869716773af2acd646e2b3a02b4ef",
+      "published_sha256": "d15eea39b3890499dc85ab15e0170bc95e5869716773af2acd646e2b3a02b4ef",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/validation-before-freeze.json",
+      "source_sha256": "b432d395f4b2af3faeefdc124df69bd7ca5ca6bd6635deb1ca274ae36d9a37c6",
+      "published_sha256": "b432d395f4b2af3faeefdc124df69bd7ca5ca6bd6635deb1ca274ae36d9a37c6",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "reports/ppo-efficiency-v6/validation-final.json",
+      "source_sha256": "024e4fe12501aefd9ab4fb5abd1b37fe205a80e0231ae8802730acdbad8daf4a",
+      "published_sha256": "024e4fe12501aefd9ab4fb5abd1b37fe205a80e0231ae8802730acdbad8daf4a",
+      "gzip": false,
+      "redacted": false
+    },
+    {
+      "path": "README.md",
+      "source_sha256": null,
+      "publication_edit": true,
+      "published_sha256": "019971337d979726ab455c0a29d9f191691e3669bd9590ab303517c0dd488357"
+    },
+    {
+      "path": "docs/results.md",
+      "source_sha256": null,
+      "publication_edit": true,
+      "published_sha256": "0ffb16e1f58d34ca2549fc6652e2e2b971b7a1faa3ae45d58ce82543de9c4837"
+    },
+    {
+      "path": "tests/test_publication_evidence.py",
+      "source_sha256": null,
+      "publication_edit": true,
+      "published_sha256": "150fe9b3f48503e10d1842794d028cfd69ea47d22c82b319cfd17370f85ed5a1"
+    },
+    {
+      "path": "reports/publication-validation-v6.json",
+      "source_sha256": null,
+      "publication_edit": true,
+      "published_sha256": "21fd03636d82e1c90c8017ea5c1cdae5ac07abcebef5e7d8b0a967b13b1b5f83"
+    }
+  ]
+}

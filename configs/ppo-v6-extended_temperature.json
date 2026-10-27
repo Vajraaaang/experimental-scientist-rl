@@ -1,0 +1,18 @@
+{
+  "batch": 256,
+  "epochs": 4,
+  "clip": 0.1,
+  "entropy": 0.01,
+  "learning_rate": 0.0005,
+  "normalize_advantage": false,
+  "center_advantage": false,
+  "value_coef": 0.1,
+  "target_kl": 0.01,
+  "evaluation_every": 250000,
+  "episode_namespace": 73,
+  "paired_rollouts": 4,
+  "entropy_final": 0.001,
+  "entropy_anneal_fraction": 0.5,
+  "temperature_start": 4.0,
+  "temperature_end_fraction": 0.8
+}

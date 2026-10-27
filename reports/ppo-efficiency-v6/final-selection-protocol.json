@@ -1,0 +1,175 @@
+{
+  "scope": "development_only",
+  "candidates": {
+    "previous_efficient": {
+      "records": [
+        {
+          "seed": 20,
+          "path": "<development-project>/reports/ppo-cost-v5/development/main_paired_cost/seed20/selected.pt"
+        },
+        {
+          "seed": 21,
+          "path": "<development-project>/reports/ppo-cost-v5/development/main_paired_cost/seed21/selected.pt"
+        },
+        {
+          "seed": 22,
+          "path": "<development-project>/reports/ppo-cost-v5/development/main_paired_cost/seed22/selected.pt"
+        },
+        {
+          "seed": 23,
+          "path": "<development-project>/reports/ppo-cost-v5/development/main_paired_cost/seed23/selected.pt"
+        },
+        {
+          "seed": 24,
+          "path": "<development-project>/reports/ppo-cost-v5/development/main_paired_cost/seed24/selected.pt"
+        }
+      ],
+      "calibration": {
+        "duration_penalty": 4.0,
+        "dose_penalty": 4.0,
+        "stop_bonus": 0.5
+      }
+    },
+    "main_training": {
+      "records": [
+        {
+          "seed": 20,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_temperature/seed20/selected.pt",
+          "family": "extended_temperature",
+          "selected_at_transitions": 3000409,
+          "tuning_return": -0.33526862130548174
+        },
+        {
+          "seed": 21,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed21/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2750693,
+          "tuning_return": -0.31545230619887044
+        },
+        {
+          "seed": 22,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed22/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 3000696,
+          "tuning_return": -0.31486050932387044
+        },
+        {
+          "seed": 23,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed23/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2500610,
+          "tuning_return": -0.31567496244887044
+        },
+        {
+          "seed": 24,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed24/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2500697,
+          "tuning_return": -0.3152296499488704
+        }
+      ],
+      "calibration": {
+        "duration_penalty": 4.0,
+        "dose_penalty": 4.0,
+        "stop_bonus": 0.5
+      }
+    },
+    "main_calibrated": {
+      "records": [
+        {
+          "seed": 20,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_temperature/seed20/selected.pt",
+          "family": "extended_temperature",
+          "selected_at_transitions": 3000409,
+          "tuning_return": -0.33526862130548174
+        },
+        {
+          "seed": 21,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed21/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2750693,
+          "tuning_return": -0.31545230619887044
+        },
+        {
+          "seed": 22,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed22/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 3000696,
+          "tuning_return": -0.31486050932387044
+        },
+        {
+          "seed": 23,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed23/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2500610,
+          "tuning_return": -0.31567496244887044
+        },
+        {
+          "seed": 24,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed24/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2500697,
+          "tuning_return": -0.3152296499488704
+        }
+      ],
+      "calibration": {
+        "duration_penalty": 0.0,
+        "dose_penalty": 16.0,
+        "stop_bonus": 0.0
+      }
+    },
+    "self_curriculum": {
+      "records": [
+        {
+          "seed": 20,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/self_selector/seed20/selected.pt",
+          "family": "self_selector",
+          "selected_at_transitions": 1500006,
+          "tuning_return": -0.33526862130548174
+        },
+        {
+          "seed": 21,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/self_selector/seed21/selected.pt",
+          "family": "self_selector",
+          "selected_at_transitions": 250129,
+          "tuning_return": -0.31545230619887044
+        },
+        {
+          "seed": 22,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed22/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 3000696,
+          "tuning_return": -0.31486050932387044
+        },
+        {
+          "seed": 23,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed23/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2500610,
+          "tuning_return": -0.31567496244887044
+        },
+        {
+          "seed": 24,
+          "path": "<development-project>/reports/ppo-efficiency-v6/development/extended_exploration/seed24/selected.pt",
+          "family": "extended_exploration",
+          "selected_at_transitions": 2500697,
+          "tuning_return": -0.3152296499488704
+        }
+      ],
+      "calibration": {
+        "duration_penalty": 2.0,
+        "dose_penalty": 0.0,
+        "stop_bonus": 0.5
+      }
+    }
+  },
+  "rule": "rank original mean tuning return; promote first candidate passing confirmation point gates; otherwise retain previous efficient PPO",
+  "confirmation_gates": {
+    "minimum_return_improvement_vs_previous": 0.0,
+    "minimum_cost_reduction_vs_previous": 0.05,
+    "maximum_mse_increase_vs_imitation": 0.0001
+  },
+  "all_five_seeds_retained": true,
+  "extra_optimization_compute_and_per_seed_selection_disclosed": true,
+  "fresh_test_generated": false
+}

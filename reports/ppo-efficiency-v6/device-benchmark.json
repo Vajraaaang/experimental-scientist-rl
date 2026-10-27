@@ -1,0 +1,56 @@
+{
+  "scope": "complete256-episode cached public-calibrated PPO rollout,host packing,paired returns,4 update epochs,32-episode greedy evaluation,checkpoint roundtrip",
+  "private_cache_setup_seconds": 0.7890779169974849,
+  "concurrent_cpu_training": true,
+  "mps_fallback_environment": "unset",
+  "devices": {
+    "cpu": {
+      "available": true,
+      "measurements": [
+        {
+          "seconds": 0.19471037498442456,
+          "transitions": 807,
+          "transitions_per_second": 4144.617358292049,
+          "initial_logp_error": 9.5367431640625e-07
+        },
+        {
+          "seconds": 0.13900033402023837,
+          "transitions": 787,
+          "transitions_per_second": 5661.856898023088,
+          "initial_logp_error": 9.5367431640625e-07
+        },
+        {
+          "seconds": 0.12104962498415262,
+          "transitions": 783,
+          "transitions_per_second": 6468.421526316232,
+          "initial_logp_error": 1.430511474609375e-06
+        }
+      ],
+      "median_transitions_per_second": 5661.856898023088
+    },
+    "mps": {
+      "available": true,
+      "measurements": [
+        {
+          "seconds": 1.1696911670151167,
+          "transitions": 779,
+          "transitions_per_second": 665.9877598185988,
+          "initial_logp_error": 0.0
+        },
+        {
+          "seconds": 0.44334837497444823,
+          "transitions": 788,
+          "transitions_per_second": 1777.3833050485755,
+          "initial_logp_error": 0.0
+        },
+        {
+          "seconds": 1.1304010419989936,
+          "transitions": 789,
+          "transitions_per_second": 697.9823714641467,
+          "initial_logp_error": 0.0
+        }
+      ],
+      "median_transitions_per_second": 697.9823714641467
+    }
+  }
+}

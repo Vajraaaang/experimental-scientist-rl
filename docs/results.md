@@ -22,13 +22,14 @@
 | `reports/unfiltered-v3/locked-test/` | First frozen 512-mechanism test, preserving the original PPO collapse and imitation comparison |
 | `reports/ppo-v4/` | Reward-only curriculum, five-seed training, failed controls, GPU profiles and fresh 1,024-mechanism frozen comparison |
 | `reports/ppo-cost-v5/` | Development cost diagnosis/calibration, paired-return controls and another 2,048-mechanism frozen comparison |
+| `reports/ppo-efficiency-v6/` | 50M completed new interactions, another 4,096-mechanism frozen test; PPO improves over its previous version but full efficiency parity with imitation remains unestablished |
 | `reports/compute/benchmark.json` | Complete CPU/MPS workload measurements on the actual Mac |
 
 The original external audit scripts and seeds were absent from the supplied specification. `generous-audit.json` is explicitly an independent reconstruction, not an exact reproduction of its original rows.
 
 ## Statistical and scientific limits
 
-The validation mechanisms have independent continuous gain/rate values, but familiar topology support. Locked continuous-parameter evaluation is completed in three successive studies. Withheld structures, parameter-range extrapolation, culture variation and simulator misspecification remain unqualified. A per-model mechanism bootstrap does not measure uncertainty across training seeds. Three seeds in the initial study and five in each follow-up do not establish universal training reliability. Follow-up intervals resample both seeds and paired mechanisms.
+The validation mechanisms have independent continuous gain/rate values, but familiar topology support. Locked continuous-parameter evaluation is completed in four successive studies. Withheld structures, parameter-range extrapolation, culture variation and simulator misspecification remain unqualified. A per-model mechanism bootstrap does not measure uncertainty across training seeds. Three seeds in the initial study and five in each follow-up do not establish universal training reliability. Follow-up intervals resample both seeds and paired mechanisms.
 
 The private informed reference has privileged mechanism access and no variable assay cost. Its condition differs from attainable methods. Unreachable targets remain in the revised study's main results; a success rate below 100% can reflect task reachability rather than agent error.
 
@@ -47,3 +48,9 @@ Measured records originated in the development environment before publication-on
 The development-selected paired-return PPO plus public-price calibration spends 8.2% less than original curriculum PPO on the latest test. The cost interval is positive and the declared MSE noninferiority criterion passes. The net-return interval crosses zero, so the full utility-inclusive screen fails. Imitation remains cheaper. Original prices, raw MSE and strong baselines are unchanged. See [the complete cost report](ppo_cost_efficiency.md) for margins, intervals, controls and limitations.
 
 The raw latest record is gzip-compressed to avoid an oversized Git blob. The report renderer accepts it directly. Checkpoint binaries and source archives are excluded from this public snapshot; their hashes and training configuration are retained. Original freeze hashes describe the measured development snapshot before publication-only redaction/portability edits. The previous publication manifest is historical; the update manifest records the current mapping.
+
+## V6 continuation
+
+The latest [locked comparison](ppo_efficiency_v6.md) improves PPO cost, target MSE and return over the previous efficient PPO with favorable paired intervals. The remaining cost premium over unchanged imitation is 0.1586 units, 95% interval [0.1050, 0.2101]. The declared quality margin passes, while cost/return bounds prevent an efficiency-gap closure claim. All five seeds and the original baselines remain retained. This uses more optimization and per-seed development selection; it is not an equal-compute PPO-versus-imitation experiment.
+
+V6 raw shards and final rows are atomic, lossless gzip packets. Original hashes remain development provenance; the v6 publication manifest records redacted published hashes. Checkpoint binaries remain excluded. The curated final report clarifies fixed-design versus self-policy exploratory curricula without changing numerical outputs.

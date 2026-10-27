@@ -1,0 +1,90 @@
+{
+  "controls": {
+    "calibrated_restart": {
+      "batch": 256,
+      "epochs": 2,
+      "clip": 0.1,
+      "entropy": 0.0001,
+      "learning_rate": 0.0001,
+      "normalize_advantage": false,
+      "center_advantage": false,
+      "value_coef": 0.1,
+      "target_kl": 0.01,
+      "evaluation_every": 100000,
+      "episode_namespace": 71,
+      "paired_rollouts": 4
+    },
+    "strong_updates": {
+      "batch": 256,
+      "epochs": 4,
+      "clip": 0.1,
+      "entropy": 0.0001,
+      "learning_rate": 0.0005,
+      "normalize_advantage": false,
+      "center_advantage": false,
+      "value_coef": 0.1,
+      "target_kl": 0.01,
+      "evaluation_every": 100000,
+      "episode_namespace": 71,
+      "paired_rollouts": 4
+    },
+    "strong_exploration": {
+      "batch": 256,
+      "epochs": 4,
+      "clip": 0.1,
+      "entropy": 0.01,
+      "learning_rate": 0.0005,
+      "normalize_advantage": false,
+      "center_advantage": false,
+      "value_coef": 0.1,
+      "target_kl": 0.01,
+      "evaluation_every": 100000,
+      "episode_namespace": 71,
+      "paired_rollouts": 4,
+      "entropy_final": 0.001,
+      "entropy_anneal_fraction": 0.5
+    },
+    "gae_exploration": {
+      "batch": 256,
+      "epochs": 4,
+      "clip": 0.1,
+      "entropy": 0.01,
+      "learning_rate": 0.0005,
+      "normalize_advantage": false,
+      "center_advantage": true,
+      "value_coef": 0.1,
+      "target_kl": 0.01,
+      "evaluation_every": 100000,
+      "episode_namespace": 71,
+      "paired_rollouts": 1,
+      "entropy_final": 0.001,
+      "entropy_anneal_fraction": 0.5
+    }
+  },
+  "pilot_seeds": [
+    20,
+    21
+  ],
+  "pilot_budget_per_run": 500000,
+  "main_seeds": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "main_budget_per_seed": 3000000,
+  "calibration": {
+    "duration_penalty": 4.0,
+    "dose_penalty": 4.0,
+    "stop_bonus": 0.5
+  },
+  "selection": "mean original tuning return; all five seeds retained; confirmation remains development",
+  "closure_margins": {
+    "cost_increase_upper": 0.1,
+    "mse_increase_upper": 0.0001,
+    "return_improvement_lower": -0.005
+  },
+  "no_imitation_labels_in_ppo": true,
+  "source_hash_at_start": "2e89d5512e73d6c7c05d7830e37c58ce515de04d01dbe6caf2759d329593561a"
+}

@@ -1,0 +1,49 @@
+{
+  "reason": "500k direct continuation controls barely change greedy actions; policy saturation motivates controlled temporary temperature",
+  "controls": {
+    "temperature_exploration": {
+      "batch": 256,
+      "epochs": 4,
+      "clip": 0.1,
+      "entropy": 0.01,
+      "learning_rate": 0.0005,
+      "normalize_advantage": false,
+      "center_advantage": false,
+      "value_coef": 0.1,
+      "target_kl": 0.01,
+      "evaluation_every": 100000,
+      "episode_namespace": 71,
+      "paired_rollouts": 4,
+      "entropy_final": 0.001,
+      "entropy_anneal_fraction": 0.5,
+      "temperature_start": 4.0,
+      "temperature_end_fraction": 0.7
+    },
+    "temperature_gae": {
+      "batch": 256,
+      "epochs": 4,
+      "clip": 0.1,
+      "entropy": 0.01,
+      "learning_rate": 0.0005,
+      "normalize_advantage": false,
+      "center_advantage": true,
+      "value_coef": 0.1,
+      "target_kl": 0.01,
+      "evaluation_every": 100000,
+      "episode_namespace": 71,
+      "paired_rollouts": 1,
+      "entropy_final": 0.001,
+      "entropy_anneal_fraction": 0.5,
+      "temperature_start": 4.0,
+      "temperature_end_fraction": 0.7
+    }
+  },
+  "seeds": [
+    20,
+    21
+  ],
+  "budget_per_run": 500000,
+  "greedy_deployment_temperature": 1.0,
+  "original_rewards_and_prices": true,
+  "fresh_test_generated": false
+}

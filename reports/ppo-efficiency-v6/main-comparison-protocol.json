@@ -1,0 +1,21 @@
+{
+  "decision": "Complete both extended continuation settings on all five seeds,rank family mean original tuning return. This resolves seed-dependent response without dropping a difficult seed. Cheap-selector joint continuation requires useful control-learning progress and is a separately labeled curriculum arm.",
+  "families": [
+    "extended_exploration",
+    "extended_temperature"
+  ],
+  "seeds": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "interactions_per_seed_per_family": 3000000,
+  "calibration": [
+    4.0,
+    4.0,
+    0.5
+  ],
+  "fresh_test_generated": false
+}

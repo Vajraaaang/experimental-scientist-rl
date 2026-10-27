@@ -1,0 +1,770 @@
+{
+  "methods": {
+    "prior": {
+      "aggregate_rmse": 0.07999999999999999,
+      "success_rate": 0.0,
+      "mean_return": -0.6399999999999999,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.0,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0013537341336444797
+    },
+    "fixed": {
+      "aggregate_rmse": 0.05520846933301875,
+      "success_rate": 0.612548828125,
+      "mean_return": -0.3933336414219872,
+      "mean_variable_cost": 6.400000000000001,
+      "mean_total_assay_cost": 9.400000000000002,
+      "mean_effort": 0.49072265625,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.002837379495190362
+    },
+    "fixed_quality": {
+      "aggregate_rmse": 0.055119634244350964,
+      "success_rate": 0.613525390625,
+      "mean_return": -0.4023584235481027,
+      "mean_variable_cost": 7.400000000000002,
+      "mean_total_assay_cost": 10.400000000000002,
+      "mean_effort": 0.49082031249999997,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.003309278917711822
+    },
+    "additive": {
+      "aggregate_rmse": 0.061592379626419384,
+      "success_rate": 0.482177734375,
+      "mean_return": -0.4577185681169962,
+      "mean_variable_cost": 5.799999999999998,
+      "mean_total_assay_cost": 8.799999999999999,
+      "mean_effort": 0.40712890625,
+      "mean_assays": 2.0,
+      "mean_online_seconds": 0.00304940670041276
+    },
+    "random": {
+      "aggregate_rmse": 0.06814014605307447,
+      "success_rate": 0.28271484375,
+      "mean_return": -0.5535157140853071,
+      "mean_variable_cost": 7.1693115234375,
+      "mean_total_assay_cost": 10.1693115234375,
+      "mean_effort": 0.35029296875000004,
+      "mean_assays": 3.169921875,
+      "mean_online_seconds": 0.0030851163039784524
+    },
+    "bo": {
+      "aggregate_rmse": 0.06124257528213583,
+      "success_rate": 0.483642578125,
+      "mean_return": -0.4453380077969325,
+      "mean_variable_cost": 5.092700195312499,
+      "mean_total_assay_cost": 8.0927001953125,
+      "mean_effort": 0.3869140625,
+      "mean_assays": 1.756103515625,
+      "mean_online_seconds": 0.0031984592267662038
+    },
+    "eig": {
+      "aggregate_rmse": 0.0548881666840447,
+      "success_rate": 0.617919921875,
+      "mean_return": -0.4029756740372975,
+      "mean_variable_cost": 7.698779296875002,
+      "mean_total_assay_cost": 10.698779296875,
+      "mean_effort": 0.49433593749999993,
+      "mean_assays": 3.0,
+      "mean_online_seconds": 0.07158751490915449
+    },
+    "voi": {
+      "aggregate_rmse": 0.04822780586547551,
+      "success_rate": 0.7431640625,
+      "mean_return": -0.3088496942191744,
+      "mean_variable_cost": 4.6506591796875,
+      "mean_total_assay_cost": 7.6506591796875,
+      "mean_effort": 0.5950195312500001,
+      "mean_assays": 2.01513671875,
+      "mean_online_seconds": 0.07170385042226712
+    },
+    "reference": {
+      "aggregate_rmse": 0.048142205237158384,
+      "success_rate": 0.74462890625,
+      "mean_return": -0.26155234875966804,
+      "mean_variable_cost": 0.0,
+      "mean_total_assay_cost": 3.0,
+      "mean_effort": 0.595703125,
+      "mean_assays": 0.0,
+      "mean_online_seconds": 0.0
+    },
+    "calibrated_imitation": {
+      "aggregate_rmse": 0.04858309167352785,
+      "success_rate": 0.740771484375,
+      "mean_return": -0.3120119042652162,
+      "mean_variable_cost": 4.6206787109375,
+      "mean_total_assay_cost": 7.620678710937499,
+      "mean_effort": 0.59546875,
+      "mean_assays": 2.010693359375,
+      "mean_online_seconds": 0.0023946520505290893
+    },
+    "curriculum_ppo": {
+      "aggregate_rmse": 0.048923467923064776,
+      "success_rate": 0.708203125,
+      "mean_return": -0.3226229834712898,
+      "mean_variable_cost": 5.4217724609374995,
+      "mean_total_assay_cost": 8.4217724609375,
+      "mean_effort": 0.58109375,
+      "mean_assays": 2.12744140625,
+      "mean_online_seconds": 0.0025712631976290367
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04859125744102652,
+      "success_rate": 0.740625,
+      "mean_return": -0.31210849090751147,
+      "mean_variable_cost": 4.62298828125,
+      "mean_total_assay_cost": 7.62298828125,
+      "mean_effort": 0.5953515625,
+      "mean_assays": 2.011572265625,
+      "mean_online_seconds": 0.002345641676666332
+    },
+    "imitation_ppo": {
+      "aggregate_rmse": 0.04857607170805476,
+      "success_rate": 0.740673828125,
+      "mean_return": -0.3120961402742329,
+      "mean_variable_cost": 4.637485351562499,
+      "mean_total_assay_cost": 7.637485351562499,
+      "mean_effort": 0.5951562499999999,
+      "mean_assays": 2.010546875,
+      "mean_online_seconds": 0.0023069032166972646
+    },
+    "selected_ppo": {
+      "aggregate_rmse": 0.04865092088617208,
+      "success_rate": 0.72158203125,
+      "mean_return": -0.3138388665572575,
+      "mean_variable_cost": 4.7815625,
+      "mean_total_assay_cost": 7.7815625,
+      "mean_effort": 0.586640625,
+      "mean_assays": 2.00068359375,
+      "mean_online_seconds": 0.0022940408997556005
+    },
+    "v5_calibrated_imitation": {
+      "aggregate_rmse": 0.04863759515162558,
+      "success_rate": 0.740380859375,
+      "mean_return": -0.3125033630883432,
+      "mean_variable_cost": 4.6160546875,
+      "mean_total_assay_cost": 7.616054687499999,
+      "mean_effort": 0.5956249999999998,
+      "mean_assays": 2.008642578125,
+      "mean_online_seconds": 0.002294424597019429
+    },
+    "v5_efficient_ppo": {
+      "aggregate_rmse": 0.04911886780730731,
+      "success_rate": 0.70478515625,
+      "mean_return": -0.319884969810923,
+      "mean_variable_cost": 4.969287109375,
+      "mean_total_assay_cost": 7.969287109375,
+      "mean_effort": 0.578515625,
+      "mean_assays": 2.042138671875,
+      "mean_online_seconds": 0.0023625720195695975
+    },
+    "v5_paired_ppo": {
+      "aggregate_rmse": 0.048913722334986524,
+      "success_rate": 0.708349609375,
+      "mean_return": -0.3202431138914159,
+      "mean_variable_cost": 5.1929296874999995,
+      "mean_total_assay_cost": 8.192929687500001,
+      "mean_effort": 0.581171875,
+      "mean_assays": 2.066455078125,
+      "mean_online_seconds": 0.0024433893067737243
+    },
+    "v6_trained_ppo": {
+      "aggregate_rmse": 0.048667823037537576,
+      "success_rate": 0.721337890625,
+      "mean_return": -0.3140060905463074,
+      "mean_variable_cost": 4.782226562499999,
+      "mean_total_assay_cost": 7.7822265625,
+      "mean_effort": 0.5865625,
+      "mean_assays": 2.001171875,
+      "mean_online_seconds": 0.002291624969342365
+    }
+  },
+  "shared_final_estimator": {
+    "calibrated_imitation": {
+      "aggregate_rmse": 0.04841339057933106,
+      "success_rate": 0.74091796875,
+      "mean_return": -0.3103150820980612,
+      "mean_variable_cost": 4.6206787109375,
+      "mean_total_assay_cost": 7.620678710937499,
+      "mean_effort": 0.5944531249999999,
+      "mean_assays": 2.010693359375,
+      "mean_online_seconds": 0.0023946520505290893
+    },
+    "curriculum_ppo": {
+      "aggregate_rmse": 0.048147619916628845,
+      "success_rate": 0.74453125,
+      "mean_return": -0.31581830497299046,
+      "mean_variable_cost": 5.4217724609374995,
+      "mean_total_assay_cost": 8.4217724609375,
+      "mean_effort": 0.595625,
+      "mean_assays": 2.12744140625,
+      "mean_online_seconds": 0.0025712631976290367
+    },
+    "imitation": {
+      "aggregate_rmse": 0.048398243550138095,
+      "success_rate": 0.741015625,
+      "mean_return": -0.3101915369363483,
+      "mean_variable_cost": 4.62298828125,
+      "mean_total_assay_cost": 7.62298828125,
+      "mean_effort": 0.5944531249999999,
+      "mean_assays": 2.011572265625,
+      "mean_online_seconds": 0.002345641676666332
+    },
+    "imitation_ppo": {
+      "aggregate_rmse": 0.04840985038857849,
+      "success_rate": 0.74111328125,
+      "mean_return": -0.31045570716758036,
+      "mean_variable_cost": 4.637485351562499,
+      "mean_total_assay_cost": 7.637485351562499,
+      "mean_effort": 0.5945898437499999,
+      "mean_assays": 2.010546875,
+      "mean_online_seconds": 0.0023069032166972646
+    },
+    "selected_ppo": {
+      "aggregate_rmse": 0.0481538048396948,
+      "success_rate": 0.74443359375,
+      "mean_return": -0.3094767436164415,
+      "mean_variable_cost": 4.7815625,
+      "mean_total_assay_cost": 7.7815625,
+      "mean_effort": 0.5956445312499999,
+      "mean_assays": 2.00068359375,
+      "mean_online_seconds": 0.0022940408997556005
+    },
+    "v5_calibrated_imitation": {
+      "aggregate_rmse": 0.048461022986307854,
+      "success_rate": 0.740185546875,
+      "mean_return": -0.31070098113794586,
+      "mean_variable_cost": 4.6160546875,
+      "mean_total_assay_cost": 7.616054687499999,
+      "mean_effort": 0.5938671875,
+      "mean_assays": 2.008642578125,
+      "mean_online_seconds": 0.002294424597019429
+    },
+    "v5_efficient_ppo": {
+      "aggregate_rmse": 0.048336544655295424,
+      "success_rate": 0.7412109375,
+      "mean_return": -0.31298346351508677,
+      "mean_variable_cost": 4.969287109375,
+      "mean_total_assay_cost": 7.969287109375,
+      "mean_effort": 0.59296875,
+      "mean_assays": 2.042138671875,
+      "mean_online_seconds": 0.0023625720195695975
+    },
+    "v5_paired_ppo": {
+      "aggregate_rmse": 0.048142205237158384,
+      "success_rate": 0.74462890625,
+      "mean_return": -0.313481645634668,
+      "mean_variable_cost": 5.1929296874999995,
+      "mean_total_assay_cost": 8.192929687500001,
+      "mean_effort": 0.595703125,
+      "mean_assays": 2.066455078125,
+      "mean_online_seconds": 0.0024433893067737243
+    },
+    "v6_trained_ppo": {
+      "aggregate_rmse": 0.04815109121896799,
+      "success_rate": 0.744482421875,
+      "mean_return": -0.3094592038702377,
+      "mean_variable_cost": 4.782226562499999,
+      "mean_total_assay_cost": 7.7822265625,
+      "mean_effort": 0.59568359375,
+      "mean_assays": 2.001171875,
+      "mean_online_seconds": 0.002291624969342365
+    }
+  },
+  "stochastic": {
+    "calibrated_imitation": {
+      "aggregate_rmse": 0.04891399094917193,
+      "success_rate": 0.7373046875,
+      "mean_return": -0.3153603901200674,
+      "mean_variable_cost": 4.63408203125,
+      "mean_total_assay_cost": 7.634082031249998,
+      "mean_effort": 0.595234375,
+      "mean_assays": 2.010498046875,
+      "mean_online_seconds": 0.002584706323807495
+    },
+    "imitation": {
+      "aggregate_rmse": 0.04889488958473573,
+      "success_rate": 0.73740234375,
+      "mean_return": -0.3152498313440998,
+      "mean_variable_cost": 4.642099609375,
+      "mean_total_assay_cost": 7.642099609374999,
+      "mean_effort": 0.5951562499999999,
+      "mean_assays": 2.011767578125,
+      "mean_online_seconds": 0.0023070143273088207
+    },
+    "selected_ppo": {
+      "aggregate_rmse": 0.04891116212577635,
+      "success_rate": 0.718505859375,
+      "mean_return": -0.317339113596273,
+      "mean_variable_cost": 4.8839404296875,
+      "mean_total_assay_cost": 7.883940429687499,
+      "mean_effort": 0.5853906249999999,
+      "mean_assays": 2.012646484375,
+      "mean_online_seconds": 0.0023344567260267014
+    }
+  },
+  "differences": {
+    "selected_vs_imitation": {
+      "cost_increase": {
+        "mean": 0.15857421875000005,
+        "ci95": [
+          0.10501428222656257,
+          0.2100749511718751
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": 5.8018033724605285e-06,
+        "ci95": [
+          -4.916533361057713e-05,
+          9.511476775131882e-05
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": -0.0017303756497460416,
+        "ci95": [
+          -0.009945576456604974,
+          0.003364161225235835
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "selected_vs_calibrated_imitation": {
+      "cost_increase": {
+        "mean": 0.16088378906250006,
+        "ci95": [
+          0.10742321777343758,
+          0.21248632812500004
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": 6.5953065141637305e-06,
+        "ci95": [
+          -4.7570607958077084e-05,
+          9.592057207330194e-05
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": -0.001826962292041362,
+        "ci95": [
+          -0.009995209311059147,
+          0.003244249167521308
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "selected_vs_v5_calibrated_imitation": {
+      "cost_increase": {
+        "mean": 0.16550781250000007,
+        "ci95": [
+          0.11220458984375012,
+          0.2168732910156251
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": 1.2964409391435242e-06,
+        "ci95": [
+          -5.262236986395514e-05,
+          8.79749536473408e-05
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": -0.001335503468914341,
+        "ci95": [
+          -0.0093440613059512,
+          0.003649877212812359
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "selected_vs_imitation_ppo": {
+      "cost_increase": {
+        "mean": 0.14407714843750002,
+        "ci95": [
+          0.08960668945312504,
+          0.1979464111328126
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": 7.2773604864970195e-06,
+        "ci95": [
+          -4.6872491075535184e-05,
+          9.61333248791702e-05
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": -0.0017427262830246911,
+        "ci95": [
+          -0.009953238650629546,
+          0.0033526363948927227
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "selected_vs_v5_efficient_ppo": {
+      "cost_increase": {
+        "mean": -0.18772460937500002,
+        "ci95": [
+          -0.3505405273437499,
+          -0.035533569335937494
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": -4.575107159915501e-05,
+        "ci95": [
+          -9.855993013293168e-05,
+          -5.590871785502018e-07
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": 0.006046103253665497,
+        "ci95": [
+          0.001764695535563032,
+          0.010361782800091264
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "selected_vs_curriculum_ppo": {
+      "cost_increase": {
+        "mean": -0.6402099609375,
+        "ci95": [
+          -0.8952646484375001,
+          -0.373826416015625
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "mse_increase": {
+        "mean": -2.659361054657253e-05,
+        "ci95": [
+          -8.423114364477147e-05,
+          5.4882540220824204e-06
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      },
+      "return_improvement": {
+        "mean": 0.008784116914032242,
+        "ci95": [
+          0.005617426176703806,
+          0.012017783815381837
+        ],
+        "training_seeds": 5,
+        "mechanisms": 4096,
+        "unit": "paired_training_seed_and_mechanism_bootstrap"
+      }
+    },
+    "selected_vs_fixed_return": {
+      "mean": 0.07949477486472964,
+      "ci95": [
+        0.06969880893545573,
+        0.08781349880769608
+      ],
+      "training_seeds": 5,
+      "mechanisms": 4096,
+      "unit": "paired_training_seed_and_mechanism_bootstrap"
+    }
+  },
+  "gap_closure_components": {
+    "imitation": {
+      "cost": false,
+      "quality": true,
+      "return": false
+    },
+    "calibrated_imitation": {
+      "cost": false,
+      "quality": true,
+      "return": false
+    }
+  },
+  "efficiency_gap_closed": false,
+  "compute": {
+    "physical_interactions": 50011727,
+    "sampled_policy_decisions": 46005942,
+    "training_validation_seconds_sum": 7645.910011206113,
+    "runs": {
+      "development/calibrated_restart/seed20": {
+        "transitions": 500132,
+        "policy_decisions": 500132,
+        "training_and_validation_seconds": 63.90545583300991,
+        "selected_at_transitions": 0,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/calibrated_restart/seed21": {
+        "transitions": 500199,
+        "policy_decisions": 500199,
+        "training_and_validation_seconds": 64.08857879205607,
+        "selected_at_transitions": 0,
+        "maximum_initial_logp_error": 2.384185791015625e-06
+      },
+      "development/cheap_joint/seed20": {
+        "transitions": 3000769,
+        "policy_decisions": 3000769,
+        "training_and_validation_seconds": 431.5236005000188,
+        "selected_at_transitions": 2000050,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/cheap_joint/seed21": {
+        "transitions": 3000624,
+        "policy_decisions": 3000624,
+        "training_and_validation_seconds": 431.39169066702016,
+        "selected_at_transitions": 2750283,
+        "maximum_initial_logp_error": 4.76837158203125e-06
+      },
+      "development/cheap_selector/seed20": {
+        "transitions": 1500696,
+        "policy_decisions": 499968,
+        "training_and_validation_seconds": 222.36327354202513,
+        "selected_at_transitions": 1500696,
+        "maximum_initial_logp_error": 0.0
+      },
+      "development/cheap_selector/seed21": {
+        "transitions": 1500544,
+        "policy_decisions": 499968,
+        "training_and_validation_seconds": 222.09318104200065,
+        "selected_at_transitions": 200396,
+        "maximum_initial_logp_error": 0.0
+      },
+      "development/cost_scale/seed20": {
+        "transitions": 1000404,
+        "policy_decisions": 1000404,
+        "training_and_validation_seconds": 147.085951999994,
+        "selected_at_transitions": 1000404,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/cost_scale/seed21": {
+        "transitions": 1000651,
+        "policy_decisions": 1000651,
+        "training_and_validation_seconds": 146.7959105410264,
+        "selected_at_transitions": 0,
+        "maximum_initial_logp_error": 2.384185791015625e-06
+      },
+      "development/extended_exploration/seed20": {
+        "transitions": 3000159,
+        "policy_decisions": 3000159,
+        "training_and_validation_seconds": 428.8340237920056,
+        "selected_at_transitions": 2750100,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/extended_exploration/seed21": {
+        "transitions": 3000023,
+        "policy_decisions": 3000023,
+        "training_and_validation_seconds": 419.44994558295,
+        "selected_at_transitions": 2750693,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/extended_exploration/seed22": {
+        "transitions": 3000696,
+        "policy_decisions": 3000696,
+        "training_and_validation_seconds": 439.30543395801215,
+        "selected_at_transitions": 3000696,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/extended_exploration/seed23": {
+        "transitions": 3000023,
+        "policy_decisions": 3000023,
+        "training_and_validation_seconds": 437.874193250027,
+        "selected_at_transitions": 2500610,
+        "maximum_initial_logp_error": 4.76837158203125e-06
+      },
+      "development/extended_exploration/seed24": {
+        "transitions": 3000262,
+        "policy_decisions": 3000262,
+        "training_and_validation_seconds": 438.1940824579797,
+        "selected_at_transitions": 2500697,
+        "maximum_initial_logp_error": 5.7220458984375e-06
+      },
+      "development/extended_temperature/seed20": {
+        "transitions": 3000409,
+        "policy_decisions": 3000409,
+        "training_and_validation_seconds": 419.05505766597344,
+        "selected_at_transitions": 3000409,
+        "maximum_initial_logp_error": 2.86102294921875e-06
+      },
+      "development/extended_temperature/seed21": {
+        "transitions": 3000582,
+        "policy_decisions": 3000582,
+        "training_and_validation_seconds": 416.1388692080509,
+        "selected_at_transitions": 3000582,
+        "maximum_initial_logp_error": 5.7220458984375e-06
+      },
+      "development/extended_temperature/seed22": {
+        "transitions": 3000693,
+        "policy_decisions": 3000693,
+        "training_and_validation_seconds": 437.83914687501965,
+        "selected_at_transitions": 2500760,
+        "maximum_initial_logp_error": 7.62939453125e-06
+      },
+      "development/extended_temperature/seed23": {
+        "transitions": 3000419,
+        "policy_decisions": 3000419,
+        "training_and_validation_seconds": 440.2299737079884,
+        "selected_at_transitions": 1750585,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/extended_temperature/seed24": {
+        "transitions": 3000499,
+        "policy_decisions": 3000499,
+        "training_and_validation_seconds": 437.47219587501604,
+        "selected_at_transitions": 2250737,
+        "maximum_initial_logp_error": 3.814697265625e-06
+      },
+      "development/gae_exploration/seed20": {
+        "transitions": 500319,
+        "policy_decisions": 500319,
+        "training_and_validation_seconds": 77.58230083400849,
+        "selected_at_transitions": 500319,
+        "maximum_initial_logp_error": 3.337860107421875e-06
+      },
+      "development/gae_exploration/seed21": {
+        "transitions": 500557,
+        "policy_decisions": 500557,
+        "training_and_validation_seconds": 75.97542449994944,
+        "selected_at_transitions": 400163,
+        "maximum_initial_logp_error": 2.384185791015625e-06
+      },
+      "development/self_selector/seed20": {
+        "transitions": 1500006,
+        "policy_decisions": 499200,
+        "training_and_validation_seconds": 442.04647579201264,
+        "selected_at_transitions": 1500006,
+        "maximum_initial_logp_error": 0.0
+      },
+      "development/self_selector/seed21": {
+        "transitions": 1500315,
+        "policy_decisions": 496640,
+        "training_and_validation_seconds": 441.1421812920016,
+        "selected_at_transitions": 250129,
+        "maximum_initial_logp_error": 0.0
+      },
+      "development/strong_exploration/seed20": {
+        "transitions": 500330,
+        "policy_decisions": 500330,
+        "training_and_validation_seconds": 69.38530991598964,
+        "selected_at_transitions": 400486,
+        "maximum_initial_logp_error": 4.291534423828125e-06
+      },
+      "development/strong_exploration/seed21": {
+        "transitions": 500254,
+        "policy_decisions": 500254,
+        "training_and_validation_seconds": 70.23382116702851,
+        "selected_at_transitions": 300203,
+        "maximum_initial_logp_error": 2.86102294921875e-06
+      },
+      "development/strong_updates/seed20": {
+        "transitions": 500328,
+        "policy_decisions": 500328,
+        "training_and_validation_seconds": 69.69443004200002,
+        "selected_at_transitions": 0,
+        "maximum_initial_logp_error": 2.86102294921875e-06
+      },
+      "development/strong_updates/seed21": {
+        "transitions": 500553,
+        "policy_decisions": 500553,
+        "training_and_validation_seconds": 69.8096005829866,
+        "selected_at_transitions": 300539,
+        "maximum_initial_logp_error": 1.9073486328125e-06
+      },
+      "development/temperature_exploration/seed20": {
+        "transitions": 500365,
+        "policy_decisions": 500365,
+        "training_and_validation_seconds": 67.84284058300545,
+        "selected_at_transitions": 0,
+        "maximum_initial_logp_error": 3.337860107421875e-06
+      },
+      "development/temperature_exploration/seed21": {
+        "transitions": 500293,
+        "policy_decisions": 500293,
+        "training_and_validation_seconds": 68.1015784580377,
+        "selected_at_transitions": 0,
+        "maximum_initial_logp_error": 2.86102294921875e-06
+      },
+      "development/temperature_gae/seed20": {
+        "transitions": 500098,
+        "policy_decisions": 500098,
+        "training_and_validation_seconds": 75.19644829095341,
+        "selected_at_transitions": 400286,
+        "maximum_initial_logp_error": 2.86102294921875e-06
+      },
+      "development/temperature_gae/seed21": {
+        "transitions": 500525,
+        "policy_decisions": 500525,
+        "training_and_validation_seconds": 75.25903445796575,
+        "selected_at_transitions": 0,
+        "maximum_initial_logp_error": 1.9073486328125e-06
+      }
+    },
+    "interrupted_runs": {
+      "controls": {
+        "20": {
+          "reason": "disk-space exhaustion while persisting next validation boundary",
+          "last_persisted_interactions": 750556,
+          "interaction_upper_bound": 1001836,
+          "excluded_from_promotion": true,
+          "incomplete_run": true
+        },
+        "21": {
+          "reason": "disk-space exhaustion while persisting next validation boundary",
+          "last_persisted_interactions": 750296,
+          "interaction_upper_bound": 1001576,
+          "excluded_from_promotion": true,
+          "incomplete_run": true
+        }
+      },
+      "startup_retry": "extended_exploration seed20 failed during manifest initialization before any interaction; retry completed",
+      "disposable_project_caches_removed": [
+        "experimental-scientist-install-check",
+        "experimental-scientist-uv-cache"
+      ],
+      "all_prior_studies_preserved": true
+    },
+    "interrupted_interactions_lower": 1500852,
+    "interrupted_interactions_upper": 2003412
+  },
+  "evaluation_seconds_sum": 1695.2579091229127,
+  "selection": "Development selected `main_calibrated` with deployment calibration {'duration_penalty': 0.0, 'dose_penalty': 16.0, 'stop_bonus': 0.0}. All five seeds remain retained. The main continuation compares two three-million-interaction settings per seed; each seed's checkpoint/setting is selected on original tuning return. Additional bounded pilots and any self-curriculum restarts are explicitly counted. This is development-selected continuation with more compute, not an equal-compute algorithm comparison. The selected paths and calibration are fully recorded; public calibration is distinguished from gradient learning."
+}

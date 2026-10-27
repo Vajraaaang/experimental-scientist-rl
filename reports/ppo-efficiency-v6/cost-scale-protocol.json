@@ -1,0 +1,29 @@
+{
+  "reason": "raw within-task advantages have small cost-driven variance; test bounded normalization after competence,not the failed cold-start use of normalized PPO",
+  "settings": {
+    "batch": 256,
+    "epochs": 4,
+    "clip": 0.1,
+    "entropy": 0.01,
+    "learning_rate": 0.0003,
+    "normalize_advantage": true,
+    "center_advantage": false,
+    "value_coef": 0.1,
+    "target_kl": 0.01,
+    "evaluation_every": 200000,
+    "episode_namespace": 76,
+    "paired_rollouts": 4,
+    "entropy_final": 0.001,
+    "entropy_anneal_fraction": 0.5,
+    "advantage_std_floor": 0.02,
+    "temperature_start": 2.0,
+    "temperature_end_fraction": 0.5
+  },
+  "seeds": [
+    20,
+    21
+  ],
+  "pilot_interactions": 1000000,
+  "normalization": "no recentering; divide by max(batch advantage SD,0.02); explicit normalized-unit entropy",
+  "fresh_test_generated": false
+}

@@ -30,3 +30,13 @@ def test_locked_runner_refuses_compressed_completed_results(tmp_path,monkeypatch
     monkeypatch.setattr(module,'OUT',tmp_path.resolve())
     with pytest.raises(SystemExit,match='refusing rerun'):
         module.main()
+
+
+def test_v6_published_evidence_retains_the_remaining_efficiency_gap():
+    with gzip.open(ROOT/'reports/ppo-efficiency-v6/fresh-locked/results.json.gz','rt') as handle:
+        data=json.load(handle)
+    summary=json.loads((ROOT/'reports/ppo-efficiency-v6/summary.json').read_text())
+    assert data['freeze']['mechanisms']==4096 and len(data['neural'])==45
+    assert data['differences']==summary['differences']
+    assert data['efficiency_gap_closed'] is False
+    assert data['gap_closure_components']['imitation']=={'cost':False,'quality':True,'return':False}

@@ -1,0 +1,24 @@
+{
+  "controls": {
+    "20": {
+      "reason": "disk-space exhaustion while persisting next validation boundary",
+      "last_persisted_interactions": 750556,
+      "interaction_upper_bound": 1001836,
+      "excluded_from_promotion": true,
+      "incomplete_run": true
+    },
+    "21": {
+      "reason": "disk-space exhaustion while persisting next validation boundary",
+      "last_persisted_interactions": 750296,
+      "interaction_upper_bound": 1001576,
+      "excluded_from_promotion": true,
+      "incomplete_run": true
+    }
+  },
+  "startup_retry": "extended_exploration seed20 failed during manifest initialization before any interaction; retry completed",
+  "disposable_project_caches_removed": [
+    "experimental-scientist-install-check",
+    "experimental-scientist-uv-cache"
+  ],
+  "all_prior_studies_preserved": true
+}

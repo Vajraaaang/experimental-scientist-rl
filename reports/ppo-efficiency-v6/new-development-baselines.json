@@ -1,0 +1,514 @@
+{
+  "trained": {
+    "tuning": {
+      "mean_return": -0.3257937191540764,
+      "mean_variable_cost": 4.9608984375,
+      "mean_assays": 2.038671875,
+      "aggregate_rmse": 0.049769504697060866,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1545,
+          "policy_decisions": 1545,
+          "mean_return": -0.34811879556533687,
+          "mean_assays": 2.017578125,
+          "mean_variable_cost": 4.8333984375,
+          "aggregate_rmse": 0.05233788648678287,
+          "initial_experiment_probability": 0.999703387147747,
+          "seconds": 0.09795454196864739
+        },
+        {
+          "episodes": 512,
+          "transitions": 1531,
+          "policy_decisions": 1531,
+          "mean_return": -0.32005191557387047,
+          "mean_assays": 1.990234375,
+          "mean_variable_cost": 5.219140625,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9997970862314105,
+          "seconds": 0.09629587503150105
+        },
+        {
+          "episodes": 512,
+          "transitions": 1595,
+          "policy_decisions": 1595,
+          "mean_return": -0.3277467878584336,
+          "mean_assays": 2.115234375,
+          "mean_variable_cost": 5.0189453125,
+          "aggregate_rmse": 0.04988842147567245,
+          "initial_experiment_probability": 0.9979752330109477,
+          "seconds": 0.0981603330001235
+        },
+        {
+          "episodes": 512,
+          "transitions": 1540,
+          "policy_decisions": 1540,
+          "mean_return": -0.31600894682387043,
+          "mean_assays": 2.0078125,
+          "mean_variable_cost": 4.81484375,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9995043973904103,
+          "seconds": 0.09449854103149846
+        },
+        {
+          "episodes": 512,
+          "transitions": 1568,
+          "policy_decisions": 1568,
+          "mean_return": -0.3170421499488704,
+          "mean_assays": 2.0625,
+          "mean_variable_cost": 4.918164062500001,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9996527730254456,
+          "seconds": 0.09447791695129126
+        }
+      ]
+    },
+    "confirmation": {
+      "mean_return": -0.3079695122288301,
+      "mean_variable_cost": 4.9154296875,
+      "mean_assays": 2.013671875,
+      "aggregate_rmse": 0.04785177926199089,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1529,
+          "policy_decisions": 1529,
+          "mean_return": -0.3325617857418084,
+          "mean_assays": 1.986328125,
+          "mean_variable_cost": 4.7740234375,
+          "aggregate_rmse": 0.050776900640626774,
+          "initial_experiment_probability": 0.9996991257648915,
+          "seconds": 0.09426004195120186
+        },
+        {
+          "episodes": 512,
+          "transitions": 1527,
+          "policy_decisions": 1527,
+          "mean_return": -0.30247127671042384,
+          "mean_assays": 1.982421875,
+          "mean_variable_cost": 5.21484375,
+          "aggregate_rmse": 0.04686360146322771,
+          "initial_experiment_probability": 0.9997955426806584,
+          "seconds": 0.09421950002433732
+        },
+        {
+          "episodes": 512,
+          "transitions": 1569,
+          "policy_decisions": 1569,
+          "mean_return": -0.30751061714607075,
+          "mean_assays": 2.064453125,
+          "mean_variable_cost": 4.9224609375,
+          "aggregate_rmse": 0.04777110871343377,
+          "initial_experiment_probability": 0.9979745047166944,
+          "seconds": 0.09709345799637958
+        },
+        {
+          "episodes": 512,
+          "transitions": 1517,
+          "policy_decisions": 1517,
+          "mean_return": -0.2976177610854239,
+          "mean_assays": 1.962890625,
+          "mean_variable_cost": 4.7294921875,
+          "aggregate_rmse": 0.04686360146322771,
+          "initial_experiment_probability": 0.9995039917994291,
+          "seconds": 0.09427879203576595
+        },
+        {
+          "episodes": 512,
+          "transitions": 1573,
+          "policy_decisions": 1573,
+          "mean_return": -0.29968612046042387,
+          "mean_assays": 2.072265625,
+          "mean_variable_cost": 4.936328124999999,
+          "aggregate_rmse": 0.04686360146322771,
+          "initial_experiment_probability": 0.9996523543959484,
+          "seconds": 0.09909804101334885
+        }
+      ]
+    }
+  },
+  "imitation": {
+    "tuning": {
+      "mean_return": -0.3148880317660027,
+      "mean_variable_cost": 4.630781249999999,
+      "mean_assays": 2.016015625,
+      "aggregate_rmse": 0.048914999669426834,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.3141437124488704,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.6283203125,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999757166951895,
+          "seconds": 0.09733716602204368
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.3161246810130178,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.631054687499999,
+          "aggregate_rmse": 0.04903459331309049,
+          "initial_experiment_probability": 0.9999891620827839,
+          "seconds": 0.09849937498802319
+        },
+        {
+          "episodes": 512,
+          "transitions": 1545,
+          "policy_decisions": 1545,
+          "mean_return": -0.3141944936988704,
+          "mean_assays": 2.017578125,
+          "mean_variable_cost": 4.6333984374999995,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999895121436566,
+          "seconds": 0.09394787502242252
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.31580230922038444,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.629687499999999,
+          "aggregate_rmse": 0.04901107621960413,
+          "initial_experiment_probability": 0.9999598113354295,
+          "seconds": 0.09985937498277053
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.31417496244887044,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.6314453124999995,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999986961483955,
+          "seconds": 0.09561154199764132
+        }
+      ]
+    },
+    "confirmation": {
+      "mean_return": -0.2985341439799673,
+      "mean_variable_cost": 4.592578124999998,
+      "mean_assays": 1.99453125,
+      "aggregate_rmse": 0.04709852574443995,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.2987052410803291,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.589648437499999,
+          "aggregate_rmse": 0.0471115040839633,
+          "initial_experiment_probability": 0.9999766376568004,
+          "seconds": 0.09463283402146772
+        },
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.2977193074331821,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.591992187499999,
+          "aggregate_rmse": 0.04702087414735949,
+          "initial_experiment_probability": 0.9999890773324296,
+          "seconds": 0.0947357090190053
+        },
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.30223722786771945,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.592578124999999,
+          "aggregate_rmse": 0.047473565972835814,
+          "initial_experiment_probability": 0.9999894882785156,
+          "seconds": 0.09439079195726663
+        },
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.2977134480581821,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.591406249999999,
+          "aggregate_rmse": 0.04702087414735949,
+          "initial_experiment_probability": 0.9999596381094307,
+          "seconds": 0.09142595797311515
+        },
+        {
+          "episodes": 512,
+          "transitions": 1534,
+          "policy_decisions": 1534,
+          "mean_return": -0.2962954954604239,
+          "mean_assays": 1.99609375,
+          "mean_variable_cost": 4.597265625,
+          "aggregate_rmse": 0.04686360146322771,
+          "initial_experiment_probability": 0.9999987286282703,
+          "seconds": 0.09081729198805988
+        }
+      ]
+    }
+  },
+  "calibrated_imitation": {
+    "tuning": {
+      "mean_return": -0.3151655908145631,
+      "mean_variable_cost": 4.628632812499999,
+      "mean_assays": 2.015625,
+      "aggregate_rmse": 0.04894555778511091,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.31414175932387045,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.628124999999999,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9998773264233023,
+          "seconds": 0.09414604201447219
+        },
+        {
+          "episodes": 512,
+          "transitions": 1543,
+          "policy_decisions": 1543,
+          "mean_return": -0.3175652106308197,
+          "mean_assays": 2.013671875,
+          "mean_variable_cost": 4.6255859375,
+          "aggregate_rmse": 0.049186822549928934,
+          "initial_experiment_probability": 0.9999449754832312,
+          "seconds": 0.0922074579866603
+        },
+        {
+          "episodes": 512,
+          "transitions": 1545,
+          "policy_decisions": 1545,
+          "mean_return": -0.3141808218238704,
+          "mean_assays": 2.017578125,
+          "mean_variable_cost": 4.632031249999999,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999469432514161,
+          "seconds": 0.09559837501728907
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.3157866842203845,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.628124999999999,
+          "aggregate_rmse": 0.04901107621960413,
+          "initial_experiment_probability": 0.9997981376945972,
+          "seconds": 0.09239412500755861
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.3141534780738704,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.629296875,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999927162425593,
+          "seconds": 0.09230762498918921
+        }
+      ]
+    },
+    "confirmation": {
+      "mean_return": -0.30007739080451323,
+      "mean_variable_cost": 4.5816406249999995,
+      "mean_assays": 1.989453125,
+      "aggregate_rmse": 0.04727529582715619,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1531,
+          "policy_decisions": 1531,
+          "mean_return": -0.2986329754553291,
+          "mean_assays": 1.990234375,
+          "mean_variable_cost": 4.582421875,
+          "aggregate_rmse": 0.0471115040839633,
+          "initial_experiment_probability": 0.9998819982865825,
+          "seconds": 0.09003962500719354
+        },
+        {
+          "episodes": 512,
+          "transitions": 1531,
+          "policy_decisions": 1531,
+          "mean_return": -0.2991426524294334,
+          "mean_assays": 1.990234375,
+          "mean_variable_cost": 4.583203125,
+          "aggregate_rmse": 0.04718129885658442,
+          "initial_experiment_probability": 0.9999446070287377,
+          "seconds": 0.09520974999759346
+        },
+        {
+          "episodes": 512,
+          "transitions": 1529,
+          "policy_decisions": 1529,
+          "mean_return": -0.30443230098716506,
+          "mean_assays": 1.986328125,
+          "mean_variable_cost": 4.575976562499999,
+          "aggregate_rmse": 0.04772977690731071,
+          "initial_experiment_probability": 0.9999468285823241,
+          "seconds": 0.09412633301690221
+        },
+        {
+          "episodes": 512,
+          "transitions": 1531,
+          "policy_decisions": 1531,
+          "mean_return": -0.29904242212584353,
+          "mean_assays": 1.990234375,
+          "mean_variable_cost": 4.582421875,
+          "aggregate_rmse": 0.047171503937848275,
+          "initial_experiment_probability": 0.9997973004356027,
+          "seconds": 0.09490995801752433
+        },
+        {
+          "episodes": 512,
+          "transitions": 1531,
+          "policy_decisions": 1531,
+          "mean_return": -0.2991366030247949,
+          "mean_assays": 1.990234375,
+          "mean_variable_cost": 4.5841796875,
+          "aggregate_rmse": 0.04717962284183659,
+          "initial_experiment_probability": 0.9999928531469777,
+          "seconds": 0.09410770802060142
+        }
+      ]
+    }
+  },
+  "imitation_ppo": {
+    "tuning": {
+      "mean_return": -0.31472545303669985,
+      "mean_variable_cost": 4.647421875,
+      "mean_assays": 2.016015625,
+      "aggregate_rmse": 0.04888135987129449,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.3141437124488704,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.6283203125,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999754743184894,
+          "seconds": 0.09567787504056469
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.31612663413801784,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.63125,
+          "aggregate_rmse": 0.04903459331309049,
+          "initial_experiment_probability": 0.9999890491599217,
+          "seconds": 0.0949440419790335
+        },
+        {
+          "episodes": 512,
+          "transitions": 1545,
+          "policy_decisions": 1545,
+          "mean_return": -0.31427652494887043,
+          "mean_assays": 2.017578125,
+          "mean_variable_cost": 4.641601562499999,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999862210825086,
+          "seconds": 0.09618087497074157
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.3143956655738704,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.653515625,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9998816987499595,
+          "seconds": 0.09339454199653119
+        },
+        {
+          "episodes": 512,
+          "transitions": 1544,
+          "policy_decisions": 1544,
+          "mean_return": -0.3146847280738704,
+          "mean_assays": 2.015625,
+          "mean_variable_cost": 4.682421874999999,
+          "aggregate_rmse": 0.04884297639618929,
+          "initial_experiment_probability": 0.9999955084640533,
+          "seconds": 0.09607349999714643
+        }
+      ]
+    },
+    "confirmation": {
+      "mean_return": -0.2988651619270536,
+      "mean_variable_cost": 4.6089453124999995,
+      "mean_assays": 1.99453125,
+      "aggregate_rmse": 0.047119604073257396,
+      "seeds": [
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.2987052410803291,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.589648437499999,
+          "aggregate_rmse": 0.0471115040839633,
+          "initial_experiment_probability": 0.9999764045933262,
+          "seconds": 0.09452250000322238
+        },
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.2977193074331821,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.591992187499999,
+          "aggregate_rmse": 0.04702087414735949,
+          "initial_experiment_probability": 0.9999889606842771,
+          "seconds": 0.09375
+        },
+        {
+          "episodes": 512,
+          "transitions": 1534,
+          "policy_decisions": 1534,
+          "mean_return": -0.30170288063039263,
+          "mean_assays": 1.99609375,
+          "mean_variable_cost": 4.6031249999999995,
+          "aggregate_rmse": 0.04742260859868346,
+          "initial_experiment_probability": 0.9999861675314605,
+          "seconds": 0.09299666702281684
+        },
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.29793219805818205,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.61328125,
+          "aggregate_rmse": 0.04702087414735949,
+          "initial_experiment_probability": 0.9998806171352044,
+          "seconds": 0.09163508302299306
+        },
+        {
+          "episodes": 512,
+          "transitions": 1533,
+          "policy_decisions": 1533,
+          "mean_return": -0.29826618243318204,
+          "mean_assays": 1.994140625,
+          "mean_variable_cost": 4.646679687500001,
+          "aggregate_rmse": 0.04702087414735949,
+          "initial_experiment_probability": 0.9999955688836053,
+          "seconds": 0.0912233330309391
+        }
+      ]
+    }
+  }
+}

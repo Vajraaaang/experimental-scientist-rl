@@ -1,0 +1,30 @@
+{
+  "reason": "persistent saturated terminal ranking motivates one last bounded restart control on the same public,paid cheap-assay histories; no new architecture or oracle labels",
+  "settings": {
+    "batch": 256,
+    "epochs": 4,
+    "clip": 0.1,
+    "entropy": 0.003,
+    "entropy_final": 0.0003,
+    "learning_rate": 0.0005,
+    "normalize_advantage": true,
+    "advantage_std_floor": 0.02,
+    "center_advantage": false,
+    "value_coef": 0.1,
+    "target_kl": 0.01,
+    "evaluation_every": 250000,
+    "episode_namespace": 78,
+    "paired_rollouts": 4,
+    "self_selector": true,
+    "temperature_start": 1.0,
+    "temperature_end_fraction": 0.8,
+    "reset_commitment_rankings": true
+  },
+  "pilot_seeds": [
+    20,
+    21
+  ],
+  "interactions_per_seed": 1500000,
+  "final_control_before_selection": true,
+  "fresh_test_generated": false
+}

@@ -1,0 +1,36 @@
+{
+  "grids": {
+    "duration_penalty": [
+      0.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      12.0,
+      16.0,
+      24.0,
+      32.0
+    ],
+    "dose_penalty": [
+      0.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0
+    ],
+    "stop_bonus": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ]
+  },
+  "passes": 2,
+  "criterion": "original mean tuning return; raw-MSE increase<=0.0001 vs initial policy",
+  "symmetric_search_offered_to_imitation": true,
+  "justification": "v5 duration coefficient hit upper grid boundary4",
+  "fresh_locked_generated": false
+}

@@ -4,9 +4,24 @@
 
 A standalone Python research project in which an agent purchases experiments on a hidden synthetic regulatory system, then chooses a final intervention. It asks whether experiments help, whether adapting them helps, and whether PPO adds value beyond imitation learning.
 
-The project includes actual PPO training code and measured runs. It is a **synthetic research release** with three completed locked continuous-parameter tests. Reward-only PPO now learns useful adaptive experiments and beats a strong fixed design. Strong imitation remains more cost-effective; PPO-specific added value over imitation is not established. Structural generalization and real biology remain unqualified.
+The project includes actual PPO training code and measured runs. It is a **synthetic research release** with four completed locked continuous-parameter tests. Reward-only PPO now learns useful adaptive experiments and beats a strong fixed design. Strong imitation remains more cost-effective; PPO-specific added value over imitation is not established. Structural generalization and real biology remain unqualified.
 
-![Fresh test cost decomposition and final quality](reports/ppo-cost-v5/figures/fresh-efficiency.png)
+![Fresh test cost decomposition and final quality](reports/ppo-efficiency-v6/figures/fresh-efficiency.png)
+
+## Latest: stronger PPO, a remaining imitation gap
+
+Another **4,096 fresh locked mechanisms**, all **five retained seeds**, and **50,011,727 completed new training interactions** show useful progress. The architecture, reward, fees and strong baselines remain unchanged.
+
+| Method | Final target RMSE | Variable assay cost | Mean return |
+|---|---:|---:|---:|
+| Previous efficient PPO | 0.04912 | 4.969 | -0.31988 |
+| Updated PPO | 0.04865 | 4.782 | -0.31384 |
+| Strong imitation | 0.04859 | 4.623 | -0.31211 |
+| Equally calibrated imitation | 0.04858 | 4.621 | -0.31201 |
+
+Versus the previous efficient PPO, spending falls **3.8%**, target MSE decreases, and return improves; all three hierarchical 95% intervals favor the update. The point estimate closes **54.2% of the previous cost gap**. It still spends **3.4% more than imitation**. Quality meets the declared noninferiority margin, but the cost and return criteria fail the full closure screen. No PPO advantage over imitation is established.
+
+Read [the complete v6 report](docs/ppo_efficiency_v6.md), [raw summary](reports/ppo-efficiency-v6/summary.json), and [frozen protocol](reports/ppo-efficiency-v6/fresh-locked/freeze.json). The test was not used to retune anything. Two final restart pilots were interrupted by disk exhaustion and excluded from promotion; their incomplete compute is separately bounded in the report. All earlier findings below remain historical evidence.
 
 ## What is implemented
 
@@ -88,7 +103,7 @@ PROJECT="$PWD"
   --output "$PROJECT/runs/reproduced-v3"
 ```
 
-The later study workflows are `scripts/ppo_followup.py`, `scripts/ppo_v4_main.py`, `scripts/ppo_cost_study.py` and `scripts/ppo_cost_select.py`. Read the reports and scripts before launching them. Their defaults point to recorded study directories: use a separate project/output copy for new training. Never select methods using saved locked outcomes. The locked runners refuse to overwrite completed results. Pretrained weights are excluded, so report rendering is available from the evidence but trained-policy reruns require reproducing training.
+The later study workflows are `scripts/ppo_followup.py`, `scripts/ppo_v4_main.py`, `scripts/ppo_cost_study.py` and `scripts/ppo_cost_select.py`. Read the reports and scripts before launching them. The v6 continuation is `scripts/ppo_efficiency_v6.py`, selection is `scripts/ppo_v6_select.py`, and the frozen sharded evaluator is `scripts/ppo_v6_locked.py`. Their defaults point to recorded study directories: use a separate project/output copy for new training. Never select methods using saved locked outcomes. The locked runners refuse to overwrite completed results. Pretrained weights are excluded, so report rendering is available from the evidence but trained-policy reruns require reproducing training.
 
 The latest 73 MiB raw cost-test JSON is stored losslessly as `reports/ppo-cost-v5/fresh-locked/results.json.gz`; Python `gzip.open` reads it directly. `scripts/report_ppo_cost.py` supports this compressed record without retraining. Earlier locked records retain ordinary JSON. Machine paths were redacted; original hashes refer to the original development artifacts.
 
@@ -102,6 +117,7 @@ The larger commands can take considerably longer than the smoke check. Checkpoin
 - [Build specification](autonomous_scientist_build_spec.md)
 - [Original publication manifest](docs/publication-manifest.json)
 - [Completed-study update manifest](docs/publication-update-2026-10-26.json)
+- [V6 publication manifest](docs/publication-update-v6.json)
 
 The public snapshot excludes credentials, virtual environments, checkpoints, live training outputs, and a private document handoff link. It was prepared separately from the active development checkout. Original development hashes are retained in the evidence; publication-only changes and redactions are documented in the manifest.
 

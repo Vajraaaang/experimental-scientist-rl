@@ -1,0 +1,32 @@
+{
+  "reason": "cheap-dose selector controls improved conditional reward but need a new joint release; free-policy results from selector-only training are not scientific successes",
+  "settings": {
+    "batch": 256,
+    "epochs": 4,
+    "clip": 0.1,
+    "entropy": 0.01,
+    "learning_rate": 0.0005,
+    "normalize_advantage": false,
+    "center_advantage": false,
+    "value_coef": 0.1,
+    "target_kl": 0.01,
+    "evaluation_every": 250000,
+    "episode_namespace": 75,
+    "paired_rollouts": 4,
+    "entropy_final": 0.001,
+    "entropy_anneal_fraction": 0.5,
+    "temperature_start": 2.0,
+    "temperature_end_fraction": 0.5,
+    "release_curriculum": true,
+    "release_end_fraction": 0.3
+  },
+  "seeds": [
+    20,
+    21
+  ],
+  "interactions_per_run": 3000000,
+  "checkpoint_eligibility": "only after public release biases vanish and>=40% of budget",
+  "continuation_initial": "best cheap-selector tuning-control checkpoint",
+  "no_teacher_labels": true,
+  "fresh_test_generated": false
+}
