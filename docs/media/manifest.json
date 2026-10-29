@@ -1,0 +1,41 @@
+{
+  "purpose": "Conceptual experiment-selection animation,not a recorded scientific run",
+  "copy": "A scientific agent that learns what to test next.",
+  "artwork": "built-in image_gen",
+  "motion": "native CoreGraphics/ImageIO/AVFoundation",
+  "gif": {
+    "size": [
+      900,
+      472
+    ],
+    "frames": 90,
+    "duration_ms": 6300,
+    "unique_frames": 79,
+    "loop": "forever"
+  },
+  "files": {
+    "experimental-scientist.gif": {
+      "bytes": 110898,
+      "sha256": "814c2f7ce5d1861d70ae6a5b9072d3e962cff32f30a71803c8594304bd83ea00"
+    },
+    "experimental-scientist.mp4": {
+      "bytes": 1318472,
+      "sha256": "0d37e88b75e9b7dd679358b759676ad41261ba78edd0b0a9e368901035a0885e"
+    },
+    "experimental-scientist.png": {
+      "bytes": 1125800,
+      "sha256": "e59a3ade903dd8956eccc817f0ac5f9fe8e11c11b71178c4665483b1ce73a4e0"
+    }
+  },
+  "all_readme_links_valid": true,
+  "scientific_results_unchanged": true,
+  "mp4": {
+    "codec": "H.264",
+    "width": 1200,
+    "height": 630,
+    "seconds": 6,
+    "fps": 30,
+    "decoded_frames_change": true,
+    "mean_pixel_error_vs_rendered_frame": 1.4296419620513916
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-29",
+  "scope": "plain-language README and animated project cover",
+  "base_commit": "95946519b867e11a14f008edd2bf0ecdb026ea06",
+  "scientific_source_results_and_frozen_baselines_unchanged": true,
+  "readme_sha256": "b107ed11f828839f145c9c8f9c54c6a452cece726f08c61cc97fca7512b79b83",
+  "media_manifest": "docs/media/manifest.json",
+  "validation": {
+    "readme_links": "passed",
+    "replay_command": "passed",
+    "gif": "90frames,79unique,6.3seconds,infinite loop",
+    "mp4": "H.264,1200x630,30fps,6seconds;different decoded frames verified",
+    "tests": {
+      "passed": 85,
+      "skipped": 5,
+      "failed": 0,
+      "seconds": 10.94
+    },
+    "skipped_tests": "MPS-dependent checks unavailable in the sandbox",
+    "review": "budget/setup cost and no-intervention action clarified"
+  }
+}
