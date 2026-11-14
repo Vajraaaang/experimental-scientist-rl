@@ -80,7 +80,7 @@ errors, case-insensitive headers, usage overflow, drift, cap exhaustion, sanitiz
 metadata, candidate ordering and trace correlation. The fixture study tests the
 same controller/replay machinery with the actual frozen RL checkpoints.
 
-The user-run `hosted-20261113-204144` pilot supplies limited authenticated evidence:
+The [hosted pilot](../reports/jev-rl-m1/hosted-20261113-204144) supplies limited evidence:
 11 successful calls, 11 distinct provider request IDs, resolved `jev-1.14.0`,
 77,860 input and 11,811 output tokens, and approximately 2.685 seconds of measured
 transport time. Credential-free replay verifies all 15 pilot episodes. Its six
@@ -90,12 +90,9 @@ The current rate, rechecked on the official model page, is $0.042 per million in
 tokens and no output-token charge; the pilot's calculated input cost is $0.00327012.
 [Models and pricing](https://docs.typesafe.ai/models).
 
-The M2 fixture verifies and replays 75 episodes across all five selected PPO seeds,
-including the narrower Jev roles and the unchanged v6 incumbent. It used no hosted
-calls. The separate PPO confirmation replays 5,632 episodes and does not establish
-a statistically supported return gain over v6. New M2 hosted efficacy remains
-unmeasured; larger allowance and a fresh process/hidden-prompt key are required.
-No credential is saved in artifacts or source files.
+The M2 hosted study completed 600 paired cases with pinned Jev, including the
+narrower roles and matched controls. None of its three registered benefit criteria
+passed. [Hosted analysis](../reports/jev-rl-m2/hosted-analysis-01/REPORT.md)
 
 The journal proves internal ordering and detects altered records; it is not an
 independent timestamp attestation. The configured network timeout is a socket/

@@ -25,16 +25,19 @@ The hidden, chance and public-forecast controls retain the required forecast req
 
 ## What was fixed before evaluation
 
-| Git commit time in Pacific time | Evidence fixed |
+| Registration | Evidence fixed |
 |---|---|
-| Nov 13, 21:55 | Resource caps, architecture and update grid, selection rules and development splits. [Protocol commit](https://github.com/Vajraaaang/experimental-scientist-rl/commit/9043afc0721f5613c0c13c607e7189751cc08e81) |
-| Nov 14, 00:26 | Thirty-five checkpoint identities before constructing the confirmation set. [Checkpoint freeze](https://github.com/Vajraaaang/experimental-scientist-rl/commit/cdda216e319f63beda8a09bdc1d8f9af9916c20f) |
-| Nov 14, 02:02 | Hosted plan and analyzer hashes, paired outcomes, thresholds and interval method. [Analysis registration](https://github.com/Vajraaaang/experimental-scientist-rl/blob/5145460218f7a7e071f87ca259804d1d0fc3bf98/docs/jev_rl_m2_analysis_registration.json) |
-| Nov 14, 10:36 | First recorded request in the approved run. [Run results and receipts](../reports/jev-rl-m2/hosted-study-01/results.json) |
+| Before PPO training | Resource caps, model and update grid, selection rules, and development splits. [Protocol commit](https://github.com/Vajraaaang/experimental-scientist-rl/commit/9043afc0721f5613c0c13c607e7189751cc08e81) |
+| Before confirmation | Thirty-five checkpoint identities. [Checkpoint freeze](https://github.com/Vajraaaang/experimental-scientist-rl/commit/cdda216e319f63beda8a09bdc1d8f9af9916c20f) |
+| Before hosted evaluation | Plan and analyzer hashes, paired outcomes, thresholds, and interval method. [Analysis registration](https://github.com/Vajraaaang/experimental-scientist-rl/blob/5145460218f7a7e071f87ca259804d1d0fc3bf98/docs/jev_rl_m2_analysis_registration.json) |
 
 All learned role comparisons use matched seed–mechanism cells. Seed-independent baselines use one observation per mechanism. The paired bootstrap resamples training seeds and mechanisms independently for return and MSE, and resamples full six-event mechanism clusters for the Brier contrast. We use 10,000 draws and report paired 95% intervals and three-family Bonferroni-adjusted 98.333% intervals. The registered return gate requires a positive adjusted lower bound and an adjusted upper MSE change of at most 0.0001. The forecast gate requires complete coverage and a negative adjusted Brier change upper bound. [Analysis contract](jev_rl_m2_analysis_registration.json) · [Raw per-case records](../reports/jev-rl-m2/hosted-study-01/episodes)
 
 ## Results
+
+![Paired Jev effects on return, target MSE, and Brier error. Both return intervals cross zero, and the Brier error interval favors the Bayesian posterior.](../reports/jev-rl-m2/figures/paired-effects.png)
+
+Return and MSE contrasts use 40 matched seed–mechanism cells each. The Brier contrast uses 48 events clustered into eight mechanisms. The MSE panel multiplies values by 1,000. [Figure values](../reports/jev-rl-m2/figures/figure-data.json)
 
 | Registered contrast | Effect | Paired 95% interval | Adjusted 98.333% interval | Benefit gate |
 |---|---:|---:|---:|---|
@@ -63,6 +66,10 @@ All learned role comparisons use matched seed–mechanism cells. Seed-independen
 
 The complete table includes 23 methods and all 600 cases. API dollars measure input-token spend and are separate from the virtual assay units in the reward. [Complete paired analysis](../reports/jev-rl-m2/hosted-analysis-01/REPORT.md)
 
+![Mean return and estimated API dollars per episode for PPO, imitation, Bayesian planning, and three Jev-assisted policies.](../reports/jev-rl-m2/figures/return-and-spend.png)
+
+The spend comparison uses 40 episodes per Jev-assisted policy. Bayesian VOI runs once per mechanism, for eight episodes. The plot shows mean return and estimated input-token dollars per episode.
+
 ### Where the policies differed
 
 - Forecast-only and rerank shadow reproduced all 40 PPO action sequences. Reranking changed four sequences and two final decisions. It improved return in two cells and reduced return in two. Its mean return was 0.02572 lower than the shadow, with a descriptive 95% interval of [−0.08896, +0.00015].
@@ -70,11 +77,15 @@ The complete table includes 23 methods and all 600 cases. API dollars measure in
 - On the fixed probe, Jev scored 0.26511, the Bayesian posterior scored 0.22480, and the prior scored 0.22488. Chance was 0.25000. All 48 forecasts were scored. Jev’s Brier difference versus posterior favored Jev on two of the eight mechanism clusters. All 48 Jev probabilities fell in two fixed bins, [0.4, 0.5) and [0.5, 0.6). This is a descriptive reliability check with eight clusters.
 - Forty-case mean reset-inclusive time was 0.011 s for PPO, 0.573 s for forecast-only, 1.528 s for rerank and 1.869 s for arbitration. Recorded time includes reference computation and synchronous journals along with the relevant model calls. Three of eight Jev-only cases committed immediately. Detailed stop, latency and coverage counts are available per role.
 
+![Brier loss differences for all 48 matched fixed-probe events. Rows encode eight synthetic mechanisms, and each assay contributes two variable measurements.](../reports/jev-rl-m2/figures/forecast-error.png)
+
+Each cell is Jev minus posterior Brier loss for the same measured event. Negative values favor Jev. Positive values favor the posterior.
+
 The study used 1,586 successful calls to `jev-1.14.0`, 1,586 distinct provider request IDs, 11,466,303 input tokens and 952,218 output tokens. Estimated input spend was $0.481585 at $0.042 per million tokens. The dispatch and evaluation loop took 561.79 seconds, including 387.15 seconds in recorded API transport. There were zero failed or skipped cases. [Analysis summary](../reports/jev-rl-m2/hosted-analysis-01/summary.json) · [Forecast bins and usage receipts](../reports/jev-rl-m2/hosted-study-01/results.json) · [TypeSafe pricing](https://help.typesafe.ai/articles/5187202169-how-much-does-jev-cost)
 
 ## PPO and compute
 
-The preceding M3 Max race completed 42 runs and 49.65 million training transitions in 49.4 minutes. The race allowed 60 million training transitions and one hour of orchestration. Each training worker used one CPU thread and the race allowed four concurrent workers. For the sustained GRU64 workload at batch 1,024, CPU, native MPS, and CPU rollout with MPS update processed 8,522, 6,081 and 7,343 training transitions per whole-run second, respectively. GRU128 led the two-seed screen at 240 seconds. GRU512 led that screen at approximately two million interactions. The selected continuation used batch 512, learning rate 0.0003 and two update epochs. On 128 fresh development mechanisms, selected PPO minus v6 return was +0.00630, with paired 95% interval [−0.00170, +0.02062]. [Hardware and PPO results](../reports/jev-rl-m2/REPORT.md) · [Equal-time and equal-interaction tables](../reports/jev-rl-m2/summary-01/COMPARISONS.md)
+The PPO study completed 42 runs and 49.65 million training transitions in 49.4 minutes. GRU128 led the two-seed screen at 240 seconds. GRU512 led at approximately two million interactions. The selected continuation used batch 512, learning rate 0.0003, and two update epochs. On 128 fresh development mechanisms, selected PPO minus v6 return was +0.00630, with a paired 95% interval of [−0.00170, +0.02062]. [Compute budgets and PPO results](../reports/jev-rl-m2/REPORT.md) · [Equal-time and equal-interaction tables](../reports/jev-rl-m2/summary-01/COMPARISONS.md)
 
 ## Limits and reuse
 
@@ -82,4 +93,4 @@ Eight mechanism clusters give a narrow view of Jev’s behavior. One mechanism a
 
 The evaluated systems are abstract and synthetic. The next final split remains unopened after the development gates failed. The public artifact supports independent replay of the recorded experiment and estimates. Inference with the original checkpoints, fresh provider responses and training reproduction are separate levels of verification. The repository currently has no explicit reuse license. [Reproduction guide](m2-reproduction.md) · [Policy card](m2-policy-card.md) · [Evidence card](m2-evidence-card.md)
 
-For related work and the decisions it informed, see the [primary-source review](jev_rl_m2_sources_and_design.md). The artifact documentation follows [Hugging Face’s model release guidance](https://huggingface.co/docs/hub/model-release-checklist), [its dataset card guidance](https://huggingface.co/docs/hub/datasets-cards), and the replay precedent in [TypeSafe’s autoresearch example](https://docs.typesafe.ai/cookbooks/autoresearch_feature_discovery).
+See the related work and the study decisions it informed. [Sources and design rationale](jev_rl_m2_sources_and_design.md)

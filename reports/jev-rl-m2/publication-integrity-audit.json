@@ -1,15 +1,22 @@
 {
-  "api_payload_objects_compared": 8309,
-  "boolean_values_compared": 282015,
-  "changed_receipt_inputs_after_numeric_audit": [
-    "reports/jev-rl-m2/hosted-recorded-action-tasks.json",
-    "scripts/export_jev_m2_public.py",
-    "scripts/replay_jev_m2_recorded_actions.py"
+  "base_release_commit": "24526c99097ebc845815bfd5e1b7f06e623d372e",
+  "changed_export_entries": [
+    "reports/jev-rl-m1/baseline-checks/hardware.json",
+    "reports/jev-rl-m1/fixture-04/manifest.json",
+    "reports/jev-rl-m1/fixture-04/results.json",
+    "reports/jev-rl-m1/fixture-04/source_snapshot/autonomous_scientist_build_spec.md",
+    "reports/jev-rl-m1/fixture-04/source_snapshot/scripts/package_report.py",
+    "reports/jev-rl-m1/fixture-04/source_snapshot/scripts/report_ppo_v4.py",
+    "reports/jev-rl-m1/hosted-20261113-204144/manifest.json",
+    "reports/jev-rl-m1/hosted-20261113-204144/results.json",
+    "reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/autonomous_scientist_build_spec.md",
+    "reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/scripts/package_report.py",
+    "reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/scripts/report_ppo_v4.py",
+    "reports/jev-rl-m2/hosted-pilot-review.json",
+    "scripts/export_jev_m2_public.py"
   ],
-  "checked_at_utc": "2026-11-14T19:33:51+00:00",
-  "checkpoint_files_accessed": false,
-  "credentials_accessed": false,
-  "files_checked": 2385,
+  "checked_at_utc": "2026-11-14T21:17:11+00:00",
+  "files_verified": 2373,
   "hosted_binding": {
     "analysis_contract_sha256": "d3441d56620e4e6ac2114c58765bdaa33db97728d5458b0a7f7bffaba00f7602",
     "analysis_source_sha256": "c19339d7c1cb2a144124ee5e7e49387fb3638aa05935a1189e4ab8e1d4826c41",
@@ -17,15 +24,15 @@
     "public_plan_sha256": "f154247b76747b664d1dbc3b1587bdb2d594537264584c589cc9a547fd9fef55",
     "registration": "docs/jev_rl_m2_analysis_registration.json"
   },
-  "json_files_checked": 1996,
-  "new_hosted_calls": 0,
-  "numeric_scalars_compared": 11615254,
   "passed": true,
-  "previous_integrity_audit_sha256": "868857e7e329d71dd5543c5c2f280b8a3ecc60e301a768a4c40f2747be2c1f12",
+  "previous_integrity_audit_sha256": "83bbccdd9e6d0726ba0245309372635a8c6a7e67084fbf8735f4e3f879f82206",
+  "prior_numeric_audit": {
+    "api_payload_objects_compared": 8309,
+    "boolean_values_compared": 282015,
+    "numeric_scalars_compared": 11615254
+  },
   "problems": [],
-  "publication_export_sha256": "f98c12a19a33c1115fbe60b987e8416e80976b1054124c8e7a5f497dfad1dace",
-  "python_source_files_byte_identical": 258,
-  "schema": "jev-m2-publication-integrity-audit-v2",
-  "scope": "Full original/public receipt inventory compared. Numeric/boolean values, sequence positions and canonical API payloads are preserved. Python source bytes match their originals.",
-  "unchanged_numeric_comparison_from_revision": "da67fa17590e1f17e571e1de0e352143b7bd9841"
+  "publication_export_sha256": "b352da18dd323c53044d7c2434ed131e32b7c89baa79ef5090be9410bec8a9c1",
+  "schema": "jev-m2-publication-integrity-audit-v3",
+  "scope": "Compared the latest publication against the prior verified release. Documentary source changes rebind only public M1 manifest hashes. Numeric results, API payloads, and study journals are preserved."
 }

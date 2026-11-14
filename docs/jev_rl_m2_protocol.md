@@ -120,14 +120,10 @@ in prior exposure is labeled and separated from the original prompt.
   that probe. Same public history/threshold is used for Jev, posterior/prior,
   chance and public-history heuristic forecasts.
 
-The original authenticated pilot used11 calls,77,860 input tokens and no reported
-failures. It was one mechanism/seed20, with six probe events: insufficient for
-calibration or comparative efficacy. Its receipts and source snapshot are frozen.
-The current process has no key. The existing maximum32-call/.10 estimated-cost
-authorization remains; do not silently multiply it by looping new runs. If the
-complete paired design exceeds available calls, prepare its exact bounded Terminal
-command and request the extra allowance while continuing local work. No key is
-read from files, prior chats, browser state or logs.
+The first hosted pilot used 11 calls and 77,860 input tokens with no reported
+failures. It covered one mechanism, PPO seed 20, and six probe events. Those
+observations support an engineering check. The M2 hosted evaluation has separate
+registered limits and paired analyses. [Pilot receipts](../reports/jev-rl-m1/hosted-20261113-204144) · [M2 hosted protocol](jev_rl_m2_hosted_protocol.md)
 
 ## Hypotheses, uncertainty and conclusions
 

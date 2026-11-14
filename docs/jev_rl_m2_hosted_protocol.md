@@ -1,8 +1,7 @@
 # M2 hosted roles and execution boundary
 
-This annex defines the candidate episode implementation before new hosted data.
-It complements the publicly frozen M2 protocol without altering the running PPO
-race, its selection rules or its datasets.
+This protocol defines the hosted evaluation roles, failure handling, and dispatch
+limits. [Registered analysis](jev_rl_m2_analysis_registration.json)
 
 ## Fixed roles
 
@@ -59,20 +58,9 @@ shadow reranking. A full five-PPO-seed cohort reuses the seed-independent
 Jev-only/probe cases; it needs at most347 calls per mechanism. Eight mechanisms
 therefore require at most2776 attempts. These are upper bounds, not expected cost.
 
-**These larger bounds are proposals, not authorization.** Existing authorization
-remains32 calls/.10 estimated USD, of which the original pilot used11 calls.
-Preparing a manifest or running fixtures is offline. A live command must state
-the bounded plan explicitly and must not run without the user authorizing any
-larger allowance and supplying a fresh key through environment/hidden prompt.
-
-The next runnable options are a one-mechanism/seed20 engineering pilot capped at
-80 calls/.10 estimated USD, or an eight-mechanism/five-seed development study capped
-at2800 calls/1.00 estimated USD. The larger study starts with the complete first
-paired case; source/prompt/model drift or inadequate receipt validation prevents
-further dispatch. All attempted or skipped cases remain accounted for. A small
-pilot is not an efficacy or calibration result, and eight mechanisms still limit
-generalization and calibration inference.
-
-No credentials are persisted, and no new hosted call has been made by this annex.
-The exact Terminal command is supplied only after its code, plan and checkpoint
-bindings are concrete and locally verified.
+The engineering plan caps attempts at 80 and estimated input cost at $0.10.
+The eight-mechanism development study caps attempts at 2,800 and estimated input
+cost at $1. The larger study starts with the first complete paired case. Source,
+prompt, or model drift and invalid receipts stop further dispatch. The results
+retain all attempted and skipped cases. The eight-mechanism design limits
+generalization and calibration inference. [Registered plans](jev_rl_m2_analysis_registration.json) · [Hosted results](m2-research-note.md)

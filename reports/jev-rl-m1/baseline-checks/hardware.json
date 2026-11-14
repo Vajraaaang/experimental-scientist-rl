@@ -1,6 +1,5 @@
 {
   "architecture": "arm64",
-  "chip": "Apple M3 Max",
   "dependencies": {
     "PyYAML": "6.0.3",
     "numpy": "2.5.4",
@@ -8,7 +7,6 @@
     "scipy": "1.18.1",
     "torch": "2.14.1"
   },
-  "hardware_model": "Mac15,11",
   "learning_dtype": "PyTorch float32",
   "logical_cpus": 14,
   "macos": "ProductName:\t\tmacOS\nProductVersion:\t\t26.3.1\nProductVersionExtra:\t(a)\nBuildVersion:\t\t25D771280a",

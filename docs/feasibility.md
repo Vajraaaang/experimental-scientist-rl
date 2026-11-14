@@ -65,7 +65,7 @@ Replaying the GRU imitation policy's purchased assays with the common posterior 
 
 ## Actual compute
 
-The machine is an Apple M3 Max with 36 GiB RAM, 14 CPU cores, macOS 26.3.1(a), native arm64 Python 3.12.1 and PyTorch 2.14.1. Both CPU and native MPS work. Scientific float64 stays on CPU; policies use float32. MPS CPU fallback is unset.
+The benchmark ran on arm64 macOS with CPU and native MPS. Reference calculations use float64 on CPU, and policies use float32. MPS CPU fallback was disabled. [Benchmark and runtime metadata](../reports/compute-final/benchmark.json)
 
 Complete 24-episode rollout/update/evaluation/checkpoint workloads have median 0.06828s on CPU and 0.43939s on MPS. Automatic selection chooses CPU. Peak benchmark process RSS is 0.482 GiB. This is process RSS, not whole-machine memory use.
 
