@@ -1,6 +1,6 @@
 # M2: bounded M3 Max PPO study and Jev capability implementation
 
-2026-11-14. This is a development report. New M2 hosted results are pending.
+2026-11-14. This development report covers the Mac training race, PPO confirmation, and the completed hosted comparison. [Research note](../../docs/m2-research-note.md)
 
 CPU was the fastest measured backend for this complete PPO workload. The bounded
 42-run search selected a scratch-trained GRU512 with batch 512, learning rate 0.0003
@@ -8,8 +8,8 @@ and two update epochs. Five-seed confirmation did **not** establish a return gai
 over v6, and strong imitation and the Bayesian VOI planner remained cheaper with
 higher mean return. The Jev client, three distinct Jev roles, matched controls,
 failure accounting and credential-free replay are implemented. Their larger hosted
-comparison has a frozen analysis contract but requires the proposed allowance and
-a fresh process credential. The new final split remains unopened.
+comparison completed 600 cases with 1,586 successful Jev calls. The three hosted
+benefit gates failed. The new final split remains unopened.
 
 ## What was preserved and frozen
 
@@ -142,7 +142,7 @@ Model drift, invalid probabilities, oversized requests, unsafe usage values and
 budget exhaustion fail closed. Unknown usage retains a reservation; failures and
 missing forecasts remain visible. Automatic retries are disabled.
 
-No native Jev telemetry backend or W 3 C propagation contract was found in reviewed
+No native Jev telemetry backend or W3C propagation contract was found in reviewed
 official docs/source. Local journals do not expose provider internals or supply an
 independent timestamp attestation. No extra telemetry service receives packets.
 Choice confidence is preserved separately from Noul outcome probabilities.
@@ -173,6 +173,26 @@ official-domain searches found no verified public Jev deployment at OpenAI,
 Anthropic, DeepMind or Google Research. That is a bounded search result, not proof
 of non-use. Other typed models and developer affiliations are not Jev adoption.
 
+### Hosted development results
+
+The full eight-mechanism study used all five PPO seeds and completed all 600 cases
+with zero failed or skipped episodes. All 1,586 call receipts reported HTTP 200,
+resolved model `jev-1.14.0`, and complete usage. The study used 11,466,303 input
+tokens and 952,218 output tokens. Estimated input spend was $0.481585. The measured
+run took 561.79 seconds before the final replay, with 387.15 seconds of API transport.
+
+| Registered comparison | Effect | Adjusted 98.333% interval |
+|---|---:|---:|
+| Full arbitration minus PPO, return | −0.04638 | [−0.14957, +0.00618] |
+| Rerank minus full arbitration, return | +0.02066 | [−0.09145, +0.14744] |
+| Jev minus Bayesian posterior, Brier error | +0.04030 | [+0.00444, +0.07652] |
+
+All three gates failed. Brier error was 0.26511 for Jev and 0.22480 for the
+posterior across 48 matched events and eight mechanism clusters. Reranking used
+$0.03788 estimated input spend versus $0.08660 for arbitration. Its mean return
+was lower than standalone PPO's. Forecast-only Jev left all 40 PPO action sequences
+unchanged. [All role results, MSE intervals, and spending](hosted-analysis-01/REPORT.md)
+
 ## Reproduction and remaining work
 
 The export preserves numerical values and API payloads while normalizing known
@@ -183,33 +203,26 @@ credentials. Replay validates recorded actions/advice and outcomes; without weig
 it cannot independently establish the advice's neural origin or reproduce exact
 training. Frozen execution snapshots preserve original runtime source bytes.
 
-From a configured clone, these commands replay existing data without hosted calls:
+From a configured clone, these commands replay existing data without hosted calls.
+The first command validates the public export and reruns every published analysis.
 
 ```bash
 PROJECT="$PWD"
+env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_jev_m2_public.py" --destination "$PROJECT" --verify-published
 "$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/scripts/jev_rl_study.py" verify --run "$PROJECT/reports/jev-rl-m1/hosted-20261113-204144"
 "$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m2/candidate-fixture-02/source_snapshot/scripts/jev_m2_study.py" verify --run "$PROJECT/reports/jev-rl-m2/candidate-fixture-02"
+"$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m2/hosted-study-01/source_snapshot/scripts/jev_m2_study.py" verify --run "$PROJECT/reports/jev-rl-m2/hosted-study-01"
 "$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m2/confirmation-01/source_snapshot/scripts/ppo_m2_confirm.py" replay --output "$PROJECT/reports/jev-rl-m2/confirmation-01"
 "$PROJECT/.venv/bin/python" "$PROJECT/scripts/summarize_ppo_m2.py" --root "$PROJECT" --output "$PROJECT/runs/m2-report-reproduction"
 ```
 
 The [prospective analysis registration](../../docs/jev_rl_m2_analysis_registration.json)
 binds the analyzer, contract and concrete hosted-plan hashes before new M2 dispatch.
-The full proposal has 8 mechanisms, all five seeds,600 cases, at most 2,776 required
-attempts within a 2,800-call/$1 estimated input-cost cap and a 1,200-second dispatch
-window. The smaller engineering proposal has 23 cases and at most 79 attempts within
-80 calls/$0.10. Neither prepared proposal increases the existing 32-call/$0.10
-authorization, of which 11 calls were used. A running socket operation can outlast
-the dispatch window; its latency remains recorded. Byte/token/cost limits may end
-the study before the call limit. Missing outcomes block comparisons.
+The approved full plan had a 2,800-call and $1 estimated input cost cap, and a
+1,200-second dispatch window. The measured run stayed within those limits. The
+original and public plan hashes are bound in the export receipt. [Public plan](hosted-study-01/plan.json)
 
-Fresh verification passed 473 tests in the development checkout and 477 tests in
-the public checkout. Public snapshot replay passed all 100 M1 fixture, 15 M1 hosted,
-75 M2 fixture and 5,632 confirmation episodes. The copied analyzer reproduced its
-fixture summary and report exactly. Final preservation checks found all 695 original
-files and all 1,268 M1 evidence files unchanged. Public CI status is reported separately
-from these local results.
-
-New hosted execution, prospective analysis and its GitHub results update remain
-pending. The final split stays closed because the local gain screens failed and
-no new M2 hosted benefit has been demonstrated.
+The public export replays 100 M1 fixture, 15 M1 hosted, 75 M2 fixture, 5,632
+confirmation, and 600 M2 hosted episodes. It reproduces both M2 analysis summaries
+and reports. The final split stays closed after the local and hosted benefit gates
+failed. [Reproduction guide](../../docs/m2-reproduction.md) · [Export receipt](publication-export.json)

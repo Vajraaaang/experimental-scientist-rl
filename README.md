@@ -1,18 +1,36 @@
 # Experimental Scientist RL
 
-**A scientific agent that learns what to test next.**
+Experimental Scientist RL is a benchmark for **choosing measurements under a budget**. A controller selects up to four assays, observes noisy readings from a hidden synthetic system and commits to one of nine final actions. The evaluator measures target error, assay cost and intervention effort. The benchmark compares PPO with fixed designs, imitation learning, Bayesian planning and typed decisions from TypeSafe Jev. [Simulator and scoring protocol](docs/protocol.md)
 
-**New development study:** [M3 Max PPO comparison and Jev integration](reports/jev-rl-m2/REPORT.md) — bounded training, request-level tracing, prospective forecasts, constrained reranking, and credential-free replay. The new PPO gain screens failed; the larger Jev hosted comparison remains pending.
+The **M2 development study** compared full Jev arbitration, reranking three legal PPO proposals, and forecasting without changing PPO's choices. All 600 planned cases completed across eight mechanisms and five PPO training seeds. All three registered benefit gates failed. The intervals below are clustered paired bootstrap intervals. [Research note](docs/m2-research-note.md) · [Prospective analysis registration](docs/jev_rl_m2_analysis_registration.json)
+
+| Question | Measured result |
+|---|---|
+| Did full Jev arbitration improve PPO return? | Mean return difference **−0.04638**, adjusted 98.333% CI **[−0.14957, +0.00618]**. |
+| Did a smaller proposal menu help? | Reranking used **56.3% less estimated API spend** than full arbitration. Its return difference was **+0.02066**, adjusted CI **[−0.09145, +0.14744]**, and its mean return remained below PPO's. |
+| Did Jev improve forecasts of the same purchased measurements? | Across **48 matched events**, Brier error was **0.26511** for Jev and **0.22480** for the Bayesian posterior. The difference was **+0.04030**, adjusted CI **[+0.00444, +0.07652]**. Lower is better. |
+| What did the local PPO search establish? | CPU led the measured full loop on the M3 Max. On 128 development mechanisms, return for the selected 512-unit GRU minus v6 was **+0.00630**, paired 95% CI **[−0.00170, +0.02062]**. |
+
+[Hosted analysis](reports/jev-rl-m2/hosted-analysis-01/REPORT.md) · [Per-case traces](reports/jev-rl-m2/hosted-study-01/episodes) · [Compute and PPO results](reports/jev-rl-m2/REPORT.md) · [Policy card](docs/m2-policy-card.md) · [Evidence card](docs/m2-evidence-card.md)
+
+## Replay the study
+
+In a checkout containing the M2 evidence, run the following from the repository root with Python 3.12:
+
+```bash
+PROJECT="$(pwd -P)"
+python3.12 "$PROJECT/scripts/bootstrap.py"
+env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_jev_m2_public.py" \
+  --destination "$PROJECT" --verify-published
+```
+
+Replay runs on CPU without an API key or checkpoints. It reconstructs the recorded decisions and reproduces the paired analyses. The original learned weights are held locally, and the repository currently specifies no reuse license. Evidence covers the declared simulator families. The final split remains unopened. [Full reproduction guide](docs/m2-reproduction.md) · [Artifact hashes and checks](reports/jev-rl-m2/publication-export.json)
+
+## Episode walkthrough
 
 ![Conceptual animation of a scientific agent choosing an experiment](docs/media/experimental-scientist.gif)
 
 <sub>Conceptual workflow. [Watch the MP4](docs/media/experimental-scientist.mp4) · [Download the still cover](docs/media/experimental-scientist.png)</sub>
-
-Imagine a virtual laboratory with a biological network whose wiring you cannot see. You want two outputs to reach their target values. You can run experiments to learn how the system behaves, but every experiment uses part of a limited budget.
-
-This project trains a small reinforcement-learning agent to decide **which experiment to run, what to do after seeing its result, and when to stop testing and choose a final intervention**. All experiments take place in a numerical simulator.
-
-## What happens in one episode?
 
 1. **Get the goal.** The agent receives target values, baseline measurements, available actions, prices, and a budget.
 2. **Choose a test.** It selects a control to suppress (or a no-intervention control), a dose, a response duration, and which pair of variables to measure.
@@ -51,7 +69,7 @@ The agent must learn both **how to gather useful evidence** and **how to turn th
 
 The historical v4–v6 learned comparisons use the same 64-unit recurrent neural architecture. Training budgets differ and are reported. Public-price logit calibration is reported separately from PPO gradient learning. The newer M2 development study also tests larger policies and explicitly reports the capacity difference from imitation.
 
-## What did the experiments show?
+## Earlier locked evaluations
 
 - **Strong fixed designs matter.** The original feasibility-conditioned task was already solved by a fixed schedule. That result is preserved.
 - **Adaptive experiments can help.** A documented development revision retains unreachable targets. On fresh tests of that task, useful adaptive PPO policies beat the preserved strong fixed design.
@@ -74,15 +92,15 @@ These are **synthetic-system results within familiar mechanism families**. They 
 
 Read [the complete measured report](docs/ppo_efficiency_v6.md) for confidence intervals, failed controls, compute accounting, and limitations. [The results guide](docs/results.md) keeps the earlier studies and negative findings separate.
 
-## New M2 development evidence
+## M2 compute and hosted accounting
 
 The M3 Max study completed 42 bounded training runs in 49.4 minutes, using 49.65 million new training transitions. CPU beat native MPS and a CPU/MPS split for the measured full loop. GRU128 led the short 240-second architecture screen; GRU512 led at approximately two million interactions and was selected for the five-seed continuation comparison.
 
-On 128 fresh development mechanisms, selected PPO's mean return gain over v6 was +0.00630, with a paired 95% interval of [−0.00170, +0.02062]. All prespecified gain screens failed. Strong imitation and Bayesian VOI retained lower assay cost and higher mean return. These are separate development results; their absolute errors should not be compared with the historical v6 table as an improvement.
+Strong imitation and Bayesian value-of-information planning retained lower assay cost and higher mean return in the PPO development confirmation. The earlier locked evaluation and the M2 confirmation use different mechanism samples. [Comparable results within each study](docs/results.md)
 
-Jev now has bounded typed requests, provider request IDs, local call spans, full probabilities, pinned model validation, usage accounting and replayable forecast/action traces. The integration supports full arbitration, prediction-only forecasts and constrained PPO-proposal reranking with matched controls. The authenticated pilot had 11 successful calls; its six common-probe events did not demonstrate forecast benefit. The 75-episode M2 fixture used no hosted calls, and a larger hosted study remains pending explicit allowance and a fresh credential.
+The M2 hosted comparison used 1,586 successful calls to pinned `jev-1.14.0` for an estimated $0.48. Forecast-only Jev reproduced all 40 PPO action sequences. The 23-condition analysis includes all measured controls, observation counts, stops, failures, usage and latency. [Hosted results](reports/jev-rl-m2/hosted-analysis-01/REPORT.md)
 
-See the [capability audit](docs/jev_capabilities_audit.md), [full M2 report](reports/jev-rl-m2/REPORT.md), and [reproduction tables](reports/jev-rl-m2/summary-01/COMPARISONS.md). Replay works without checkpoints or API credentials. The new final split remains unopened.
+The recorded evidence includes provider request IDs, local spans, forecasts and legal choices. The original local checkpoints reproduced all 1,497 logged policy distributions exactly. [Capability audit](docs/jev_capabilities_audit.md) · [Checkpoint verification](reports/jev-rl-m2/hosted-checkpoint-advice-audit.json) · [PPO tables](reports/jev-rl-m2/summary-01/COMPARISONS.md)
 
 ## Run a small demonstration
 
@@ -115,6 +133,9 @@ The packet separates purchased observations/actions from post-episode evaluation
 | [Scientific protocol](docs/protocol.md) | Dynamics, actions, budgets, noise, and information boundaries |
 | [Development revisions](docs/revisions.md) | Why the initial fixed-design success was preserved and how the task was revised |
 | [Results guide](docs/results.md) | Which claims each study supports and what remains uncertain |
+| [M2 research note](docs/m2-research-note.md) | Hosted results, protocol chronology, uncertainty and limitations |
+| [Reproduction guide](docs/m2-reproduction.md) | Exact CPU replay and report regeneration commands |
+| [M2 policy card](docs/m2-policy-card.md) and [evidence card](docs/m2-evidence-card.md) | Intended use, provenance, split boundaries, schemas and reuse scope |
 | [PPO collapse investigation](docs/ppo_followup.md) | Why early training stopped buying experiments and how the curriculum helped |
 | [Latest efficiency report](docs/ppo_efficiency_v6.md) | The new locked comparison, uncertainty, and remaining imitation gap |
 | [Source package](src/experimentlab) | Simulator, environment, inference, baselines, and learning code |
@@ -132,10 +153,12 @@ PROJECT="$PWD"
 
 The generic CLI retains the original pilot's gates. Later revised studies use the workflows under `scripts/`, including `ppo_efficiency_v6.py`, `ppo_v6_select.py`, and `ppo_v6_locked.py`. Read their protocols before launching larger runs. Use a separate project/output copy: the default research paths contain recorded evidence, and completed locked results refuse overwrite. Never use saved test outcomes to select a new method.
 
-Pretrained weights and demonstration binaries are excluded from this public release. Their hashes, configurations, training curves, and numerical results are retained. Reproducing trained-policy evaluation requires reproducing training. Gzip-compressed raw records preserve the numerical evidence without oversized Git blobs.
+The public release contains checkpoint hashes, configurations, training curves, and the recorded outcomes. Neural inference can be checked with the original checkpoints. Gzip-compressed raw records preserve the numerical evidence without oversized Git blobs. [Verification scope](docs/m2-reproduction.md)
 
 The reference calculations use NumPy/SciPy float64 on CPU; the neural models use PyTorch float32. Native CPU and Apple MPS paths have been measured. Current complete workloads favor CPU at this model size; benchmarks and their scopes are reported alongside the studies.
 
 [Build specification](autonomous_scientist_build_spec.md) · [Original publication manifest](docs/publication-manifest.json) · [V3–V5 update manifest](docs/publication-update-2026-10-26.json) · [V6 publication manifest](docs/publication-update-v6.json) · [Documentation and cover update](docs/documentation-update-2026-10-29.json)
 
 Original development hashes are provenance for the measured artifacts. Publication redactions and portability edits are recorded separately. The cover animation illustrates experiment selection; recorded results come from the simulator and frozen evaluation files.
+
+Use the repository citation and the commit containing the evidence you use. The repository currently specifies no reuse license. [Citation metadata](CITATION.cff)

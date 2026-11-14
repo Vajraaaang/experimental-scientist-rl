@@ -4,6 +4,7 @@ import importlib
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
 import sys
 
 import pytest
@@ -244,3 +245,249 @@ def test_corrupt_original_manifest_is_not_resigned_as_a_valid_derivative(tmp_pat
     with pytest.raises(ValueError, match='original.*hash'):
         e.export_paths(source, target, paths, apply=True)
     assert not target.exists()
+
+
+HOSTED = 'reports/jev-rl-m2/hosted-study-01'
+HOSTED_ANALYSIS = 'reports/jev-rl-m2/hosted-analysis-01'
+HOSTED_PLAN = 'reports/jev-rl-m2/hosted-plan-study-01.json'
+REGISTRATION = 'docs/jev_rl_m2_analysis_registration.json'
+
+
+def hosted_bundle(source):
+    """Small synthetic sealed records; no real outcomes, models, or network."""
+    e = exporter()
+    script = source / HOSTED / 'source_snapshot/scripts/jev_m2_study.py'
+    script.parent.mkdir(parents=True)
+    verification = {'verified': True, 'verified_episodes': 2, 'failed_episodes': 1,
+                    'not_run_episodes': 1, 'mode': 'hosted', 'hosted_calls': 0}
+    script.write_text('import json\nprint(json.dumps(' + repr(verification) + '))\n')
+    sources = {'scripts/jev_m2_study.py': e.sha256(script.read_bytes())}
+    models = {'ppo-seed20': {'path': str(source / 'reports/model.pt'), 'sha256': 'a' * 64}}
+    plan = {'kind': 'study-plan', 'schema_version': 4, 'models': models, 'registered_inputs': {},
+            'sources': sources, 'cases': [{'case_id': name} for name in ('complete', 'failed', 'skipped')]}
+    staged = save(source, HOSTED_PLAN, plan)
+    save(source, HOSTED + '/plan.json', plan)
+    manifest = {**plan, 'kind': 'study-manifest', 'mode': 'hosted', 'plan_sha256': e.sha256(staged.read_bytes()),
+        'admission': {'plan_content_sha256': e.digest(plan), 'models_sha256': e.digest(models),
+                      'registered_inputs_sha256': e.digest({}), 'runtime_sources_sha256': e.digest(sources)}}
+    m = save(source, HOSTED + '/manifest.json', manifest)
+    rows = []
+    for name, status in [('complete', 'completed'), ('failed', 'failed'), ('skipped', 'not_run_gate_failure')]:
+        journal = None if name == 'skipped' else 'episodes/' + name + '.jsonl'
+        if journal:
+            path = source / HOSTED / journal
+            path.parent.mkdir(exist_ok=True)
+            path.write_bytes(journal_bytes(e, [{'kind': 'start', 'policy_metadata': models['ppo-seed20']},
+                                              {'kind': 'api_request', 'request': {'threshold': 0.12345678901234567}}]))
+        row = {'case_id': name, 'journal': journal, 'journal_sha256': e.sha256(path.read_bytes()) if journal else None,
+               'result': {'status': status, 'score': None if name == 'skipped' else 0.12345678901234567}}
+        save(source, HOSTED + '/episodes/' + name + '.json', row)
+        rows.append(row)
+    trace = save(source, HOSTED + '/trace-index.json', {})
+    result = save(source, HOSTED + '/results.json', {'manifest_sha256': e.sha256(m.read_bytes()), 'cases': rows,
+        'trace_index_sha256': e.sha256(trace.read_bytes()), 'stop_reason': 'not_run_gate_failure'})
+    save(source, HOSTED + '/verification.json', verification)
+    analyzer = source / 'scripts/analyze_jev_m2.py'
+    analyzer.parent.mkdir()
+    analyzer.write_text('# Registered synthetic analyzer\n')
+    contract = {'scope': 'synthetic test only'}
+    registration = {'schema': 'jev-m2-prospective-analysis-registration-v1',
+        'analysis_source': 'scripts/analyze_jev_m2.py', 'analysis_source_sha256': e.sha256(analyzer.read_bytes()),
+        'analysis_contract_sha256': e.digest(contract), 'contract': contract,
+        'plans': [{'path': HOSTED_PLAN, 'sha256': e.sha256(staged.read_bytes())}]}
+    save(source, REGISTRATION, registration)
+    inputs = {name: e.sha256((source / HOSTED / name).read_bytes())
+              for name in ('manifest.json', 'plan.json', 'results.json', 'trace-index.json', 'episodes/complete.jsonl', 'episodes/failed.jsonl')}
+    summary = {'schema': 'jev-m2-analysis-v1', 'mode': 'hosted', 'fixture_mode': False,
+        'analysis_contract': contract, 'scientific_benefit': False, 'provenance': {
+            'run': str(source / HOSTED), 'analysis_source': str(analyzer),
+            'analysis_source_sha256': registration['analysis_source_sha256'], 'analysis_contract_sha256': e.digest(contract),
+            'manifest_sha256': e.sha256(m.read_bytes()), 'results_sha256': e.sha256(result.read_bytes()),
+            'input_sha256': inputs, 'study_source_sha256': sources, 'checkpoint_metadata_only': models,
+            'verification': {**verification, 'verifier_source': str(script), 'verifier_sha256': sources['scripts/jev_m2_study.py'],
+                             'verified_input_sha256': {k: v for k, v in inputs.items() if '/' not in k}}}}
+    save(source, HOSTED_ANALYSIS + '/summary.json', summary)
+    (source / HOSTED_ANALYSIS / 'REPORT.md').write_text('Synthetic only: one completed, one failed, one skipped.\n')
+    return sorted(str(p.relative_to(source)) for p in source.rglob('*') if p.is_file())
+
+
+def test_optional_discovery_never_reads_an_incomplete_live_bundle(tmp_path, monkeypatch):
+    e = exporter()
+    for name in ('SOURCE_FILES', 'REPORT_FILES', 'REPORT_DIRS'):
+        monkeypatch.setattr(e, name, ())
+    live = tmp_path / HOSTED / 'episodes/live.jsonl'
+    live.parent.mkdir(parents=True)
+    live.write_bytes(b'not a complete journal\xff')
+    assert e.default_paths(tmp_path) == []
+    with pytest.raises(ValueError, match='incomplete hosted'):
+        e.export_paths(tmp_path, tmp_path.parent / 'publication', [str(live.relative_to(tmp_path))])
+
+
+def test_sealed_hosted_binding_survives_public_path_rebinding(tmp_path, monkeypatch):
+    e = exporter()
+    source, target = tmp_path / 'source', tmp_path / 'public'
+    paths = hosted_bundle(source)
+    for name in ('SOURCE_FILES', 'REPORT_FILES', 'REPORT_DIRS'):
+        monkeypatch.setattr(e, name, ())
+    assert set(paths) <= set(e.default_paths(source))
+    receipt = e.export_paths(source, target, paths, apply=True)
+    original_hash = e.sha256((source / HOSTED_PLAN).read_bytes())
+    public_hash = e.sha256((target / HOSTED_PLAN).read_bytes())
+    assert public_hash != original_hash
+    assert public_hash == e.sha256((target / HOSTED / 'plan.json').read_bytes())
+    manifest = json.loads((target / HOSTED / 'manifest.json').read_text())
+    plan = json.loads((target / HOSTED / 'plan.json').read_text())
+    assert manifest['plan_sha256'] == public_hash
+    assert manifest['admission']['plan_content_sha256'] == e.digest(plan)
+    assert json.loads((target / REGISTRATION).read_text())['plans'][0]['sha256'] == original_hash
+    mapping = next(row for row in receipt['files'] if row['path'] == HOSTED_PLAN)
+    assert (mapping['original_sha256'], mapping['public_sha256']) == (original_hash, public_hash)
+    summary = json.loads((target / HOSTED_ANALYSIS / 'summary.json').read_text())
+    assert summary['provenance']['manifest_sha256'] == e.sha256((target / HOSTED / 'manifest.json').read_bytes())
+    assert summary['provenance']['checkpoint_metadata_only'] == plan['models']
+    assert not summary['scientific_benefit']
+    assert json.loads((source / HOSTED / 'results.json').read_text())['cases'][2]['result'] == json.loads((target / HOSTED / 'results.json').read_text())['cases'][2]['result']
+
+
+@pytest.mark.parametrize('corruption', ['partial_analysis', 'journal', 'staged_plan', 'registered_contract', 'registered_analyzer', 'unverified_seal'])
+def test_corrupted_or_partial_hosted_pair_cannot_be_exported(tmp_path, corruption):
+    e = exporter()
+    source, target = tmp_path / 'source', tmp_path / 'public'
+    paths = hosted_bundle(source)
+    if corruption == 'partial_analysis':
+        paths.remove(HOSTED_ANALYSIS + '/REPORT.md')
+    elif corruption == 'journal':
+        (source / HOSTED / 'episodes/failed.jsonl').write_text('{}\n')
+    elif corruption == 'staged_plan':
+        save(source, HOSTED_PLAN, {'unregistered': True})
+    elif corruption == 'unverified_seal':
+        save(source, HOSTED + '/verification.json', {'verified': False})
+    else:
+        registration = json.loads((source / REGISTRATION).read_text())
+        registration['analysis_contract_sha256' if corruption == 'registered_contract' else 'analysis_source_sha256'] = 'f' * 64
+        save(source, REGISTRATION, registration)
+    with pytest.raises(ValueError):
+        e.export_paths(source, target, paths, apply=True)
+    assert not target.exists()
+
+
+def minimal_publication(target):
+    e = exporter()
+    records = []
+    for run, script, count in [('reports/jev-rl-m1/fixture-04', 'jev_rl_study.py', 100),
+                                ('reports/jev-rl-m1/hosted-20261113-204144', 'jev_rl_study.py', 15),
+                                ('reports/jev-rl-m2/candidate-fixture-02', 'jev_m2_study.py', 75),
+                                ('reports/jev-rl-m2/confirmation-01', 'ppo_m2_confirm.py', 5632)]:
+        name = run + '/source_snapshot/scripts/' + script
+        path = target / name
+        path.parent.mkdir(parents=True)
+        path.write_text('print(' + repr(json.dumps({'verified_episodes': count})) + ')\n')
+        records.append({'path': name, 'original_sha256': e.sha256(path.read_bytes()), 'public_sha256': e.sha256(path.read_bytes())})
+    save(target, e.RECEIPT, {'schema': e.SCHEMA, 'files': records})
+    return records
+
+
+def test_verify_published_cli_checks_hashes_without_rewriting_or_discovering_unlisted_hosted_data(tmp_path):
+    e = exporter()
+    records = minimal_publication(tmp_path)
+    trap = tmp_path / HOSTED / 'source_snapshot/scripts/jev_m2_study.py'
+    trap.parent.mkdir(parents=True)
+    trap.write_text('raise AssertionError("unlisted hosted data was executed")\n')
+    before = {str(p.relative_to(tmp_path)): p.read_bytes() for p in tmp_path.rglob('*') if p.is_file()}
+    command = [sys.executable, '-B', e.__file__, '--verify-published', '--destination', str(tmp_path)]
+    result = subprocess.run(command, capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr
+    checked = json.loads(result.stdout)
+    assert checked['status'] == 'passed' and checked['files_verified'] == len(records)
+    assert {str(p.relative_to(tmp_path)): p.read_bytes() for p in tmp_path.rglob('*') if p.is_file()} == before
+    (tmp_path / records[0]['path']).write_text('raise AssertionError("must not execute corrupt source")\n')
+    result = subprocess.run(command, capture_output=True, text=True)
+    assert result.returncode != 0
+    assert 'hash' in result.stdout.lower()
+
+
+def published_hosted_bundle(tmp_path):
+    e = exporter()
+    source, target = tmp_path / 'source', tmp_path / 'public'
+    receipt = e.export_paths(source, target, hosted_bundle(source), apply=True)
+    base_records = minimal_publication(target)
+    receipt['files'].extend(base_records)
+    save(target, e.RECEIPT, receipt)
+    return target
+
+
+@pytest.mark.parametrize('analysis_mismatch', [False, True])
+def test_published_hosted_replay_preserves_failed_skipped_outcomes_and_reproduces_analysis(tmp_path, monkeypatch, analysis_mismatch):
+    e = exporter()
+    target = published_hosted_bundle(tmp_path)
+    before = {str(p.relative_to(target)): p.read_bytes() for p in target.rglob('*') if p.is_file()}
+    real_run = subprocess.run
+    invocations = []
+
+    def analyze_fixture(argv, **kwargs):
+        invocations.append(argv)
+        if Path(argv[2]).name != 'analyze_jev_m2.py':
+            return real_run(argv, **kwargs)
+        # Stub only the registered analysis boundary; snapshot subprocesses run.
+        output = Path(argv[argv.index('--output') + 1])
+        output.mkdir()
+        summary = json.loads((target / HOSTED_ANALYSIS / 'summary.json').read_text())
+        if analysis_mismatch:
+            summary['scientific_benefit'] = True
+        save(output, 'summary.json', summary)
+        (output / 'REPORT.md').write_bytes((target / HOSTED_ANALYSIS / 'REPORT.md').read_bytes())
+        return subprocess.CompletedProcess(argv, 0, '{}', '')
+
+    monkeypatch.setattr(e.subprocess, 'run', analyze_fixture)
+    verified = e.verify_published(target)
+    assert verified['hosted_pair_included']
+    assert verified['status'] == ('failed' if analysis_mismatch else 'passed')
+    hosted = next(run for run in verified['runs'] if run['name'] == 'm2_hosted')
+    assert hosted['passed'] and hosted['observed_episodes'] == 2
+    assert hosted['scientific_outcomes']['status_counts'] == {'completed': 1, 'failed': 1, 'not_run_gate_failure': 1}
+    assert next(run for run in verified['runs'] if run['name'] == 'm2_hosted_analysis')['passed'] is not analysis_mismatch
+    assert all('run' not in argv[3:4] for argv in invocations)
+    assert {str(p.relative_to(target)): p.read_bytes() for p in target.rglob('*') if p.is_file()} == before
+
+
+@pytest.mark.parametrize('corruption', ['original_plan_hash', 'partial_receipt'])
+def test_public_hosted_registration_and_pair_are_checked_before_execution(tmp_path, monkeypatch, corruption):
+    e = exporter()
+    target = published_hosted_bundle(tmp_path)
+    receipt = json.loads((target / e.RECEIPT).read_text())
+    if corruption == 'original_plan_hash':
+        next(row for row in receipt['files'] if row['path'] == HOSTED_PLAN)['original_sha256'] = 'f' * 64
+    else:
+        receipt['files'] = [row for row in receipt['files'] if row['path'] != HOSTED_ANALYSIS + '/REPORT.md']
+    save(target, e.RECEIPT, receipt)
+
+    def must_not_run(*args, **kwargs):
+        pytest.fail('corrupt public binding reached subprocess execution')
+
+    monkeypatch.setattr(e.subprocess, 'run', must_not_run)
+    with pytest.raises(ValueError, match='registered plan|incomplete hosted'):
+        e.verify_published(target)
+
+
+@pytest.mark.parametrize('write_option', ['--apply', '--replace-owned', '--verify'])
+def test_read_only_cli_rejects_export_options(tmp_path, write_option):
+    e = exporter()
+    result = subprocess.run([sys.executable, '-B', e.__file__, '--verify-published', '--destination', str(tmp_path), write_option],
+                            capture_output=True, text=True)
+    assert result.returncode == 2
+    assert 'cannot be combined' in result.stderr
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_failed_verifier_diagnostics_do_not_echo_response_content(tmp_path):
+    e = exporter()
+    records = minimal_publication(tmp_path)
+    message = 'PRIVATE_RESPONSE_SENTINEL'
+    path = tmp_path / records[0]['path']
+    path.write_text('import sys\nprint(' + repr(message) + ')\nprint(' + repr(message) + ', file=sys.stderr)\nraise SystemExit(1)\n')
+    records[0]['original_sha256'] = records[0]['public_sha256'] = e.sha256(path.read_bytes())
+    save(tmp_path, e.RECEIPT, {'schema': e.SCHEMA, 'files': records})
+    result = e.verify_published(tmp_path)
+    assert result['status'] == 'failed'
+    assert message not in json.dumps(result)
+    assert result['runs'][0]['diagnostics']['stdout_sha256'] == e.sha256((message + '\n').encode())

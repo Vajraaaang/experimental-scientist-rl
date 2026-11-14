@@ -28,3 +28,13 @@ jobs:
           python -m pytest "$GITHUB_WORKSPACE/tests" -c "$GITHUB_WORKSPACE/pyproject.toml"
           experimentlab validate-science --suite diagnostic --output "$RUNNER_TEMP/science-validation"
           experimentlab doctor --output "$RUNNER_TEMP/machine-inspection"
+      - name: Replay the published research evidence
+        run: |
+          env -u TYPESAFE_API_KEY python -B "$GITHUB_WORKSPACE/scripts/export_jev_m2_public.py" \
+            --destination "$GITHUB_WORKSPACE" --verify-published
+      - name: Regenerate the PPO comparison tables
+        run: |
+          python -B "$GITHUB_WORKSPACE/scripts/summarize_ppo_m2.py" \
+            --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/ppo-m2-summary"
+          cmp "$RUNNER_TEMP/ppo-m2-summary/COMPARISONS.md" "$GITHUB_WORKSPACE/reports/jev-rl-m2/summary-01/COMPARISONS.md"
+          cmp "$RUNNER_TEMP/ppo-m2-summary/summary.json" "$GITHUB_WORKSPACE/reports/jev-rl-m2/summary-01/summary.json"

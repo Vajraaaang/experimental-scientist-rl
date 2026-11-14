@@ -6,6 +6,7 @@ Execution-provenance hashes remain original; only publication replay bindings
 are regenerated. The receipt maps every original file hash to its public hash.
 """
 import argparse
+from collections import Counter
 from datetime import datetime, timezone
 import gzip
 import hashlib
@@ -21,6 +22,19 @@ from urllib.parse import parse_qsl, urlsplit
 
 RECEIPT = 'reports/jev-rl-m2/publication-export.json'
 SCHEMA = 'jev-m2-publication-export-v1'
+HOSTED_RUN = 'reports/jev-rl-m2/hosted-study-01'
+HOSTED_ANALYSIS = 'reports/jev-rl-m2/hosted-analysis-01'
+HOSTED_PLAN = 'reports/jev-rl-m2/hosted-plan-study-01.json'
+REGISTRATION = 'docs/jev_rl_m2_analysis_registration.json'
+ANALYZER = 'scripts/analyze_jev_m2.py'
+STUDY_RUNS = ('reports/jev-rl-m1/fixture-04', 'reports/jev-rl-m1/hosted-20261113-204144',
+              'reports/jev-rl-m2/candidate-fixture-02', HOSTED_RUN)
+ANALYSIS_PAIRS = (('reports/jev-rl-m2/candidate-fixture-02', 'reports/jev-rl-m2/candidate-analysis-fixture-02'),
+                  (HOSTED_RUN, HOSTED_ANALYSIS))
+HOSTED_REQUIRED = tuple(HOSTED_RUN + '/' + name for name in (
+    'manifest.json', 'plan.json', 'results.json', 'trace-index.json', 'verification.json',
+    'source_snapshot/scripts/jev_m2_study.py')) + (
+    HOSTED_ANALYSIS + '/summary.json', HOSTED_ANALYSIS + '/REPORT.md', HOSTED_PLAN, REGISTRATION, ANALYZER)
 PATH_FIELDS = {'path', 'initial_checkpoint_record', 'output_dir', 'manifest',
                'selected_checkpoint', 'record_path', 'result_path', 'log_path', 'result', 'python',
                'run', 'analysis_source', 'verifier_source'}
@@ -90,6 +104,46 @@ def allowed_file(path):
     path = Path(path)
     return not (any(p in {'.git', '__pycache__', '.venv'} or p.startswith('.env') for p in path.parts)
                 or path.suffix.lower() in {'.pt', '.pth', '.ckpt', '.pyc', '.zip'})
+
+
+def hosted_selected(paths):
+    """A staged plan alone is not a study; an explicit partial pair is rejected."""
+    names = set(paths)
+    present = any(name.startswith((HOSTED_RUN + '/', HOSTED_ANALYSIS + '/')) for name in names)
+    if present and not set(HOSTED_REQUIRED) <= names:
+        raise ValueError('incomplete hosted study/analysis publication pair')
+    return present
+
+
+def validate_hosted_registration(root, original_hashes, public_hashes):
+    """Registration names original plan bytes, even when public paths change."""
+    registration = json.loads((root / REGISTRATION).read_bytes())
+    analysis = json.loads((root / HOSTED_ANALYSIS / 'summary.json').read_bytes())
+    manifest = json.loads((root / HOSTED_RUN / 'manifest.json').read_bytes())
+    seal = json.loads((root / HOSTED_RUN / 'verification.json').read_bytes())
+    plans = [plan for plan in registration['plans'] if plan['path'] == HOSTED_PLAN]
+    if (registration.get('schema') != 'jev-m2-prospective-analysis-registration-v1' or len(plans) != 1
+            or original_hashes[HOSTED_PLAN] != plans[0]['sha256']
+            or original_hashes[HOSTED_RUN + '/plan.json'] != plans[0]['sha256']
+            or public_hashes[HOSTED_PLAN] != public_hashes[HOSTED_RUN + '/plan.json']):
+        raise ValueError('hosted staged plan differs from original registered plan hash')
+    provenance = analysis['provenance']
+    if (original_hashes[REGISTRATION] != public_hashes[REGISTRATION]
+            or registration['analysis_source'] != ANALYZER
+            or (root / provenance['analysis_source']).resolve() != root / ANALYZER
+            or public_hashes[ANALYZER] != registration['analysis_source_sha256']
+            or provenance['analysis_source_sha256'] != registration['analysis_source_sha256']
+            or digest(registration['contract']) != registration['analysis_contract_sha256']
+            or digest(analysis['analysis_contract']) != registration['analysis_contract_sha256']
+            or provenance['analysis_contract_sha256'] != registration['analysis_contract_sha256']):
+        raise ValueError('hosted registered analyzer or analysis contract hash mismatch')
+    if (manifest.get('mode') != 'hosted' or analysis.get('mode') != 'hosted'
+            or analysis.get('fixture_mode') is not False or seal.get('verified') is not True):
+        raise ValueError('hosted bundle lacks sealed hosted-mode replay evidence')
+    return {'registration': REGISTRATION, 'original_registered_plan_sha256': plans[0]['sha256'],
+            'public_plan_sha256': public_hashes[HOSTED_PLAN],
+            'analysis_source_sha256': registration['analysis_source_sha256'],
+            'analysis_contract_sha256': registration['analysis_contract_sha256']}
 
 
 def private_url(text, *, source_fixture=False):
@@ -237,8 +291,7 @@ def validate_original_bindings(source, original):
         if original.get(name, {}).get('sha256') != expected:
             raise ValueError('original artifact hash mismatch: ' + name)
 
-    for base in ('reports/jev-rl-m1/fixture-04', 'reports/jev-rl-m1/hosted-20261113-204144',
-                 'reports/jev-rl-m2/candidate-fixture-02'):
+    for base in STUDY_RUNS:
         manifest_name = base + '/manifest.json'
         if manifest_name not in original:
             continue
@@ -283,15 +336,16 @@ def validate_original_bindings(source, original):
                 require(base + '/task-manifest.json.gz', manifest['task_manifest_sha256'])
             for name, expected in result['artifacts'].items():
                 require(base + '/' + name, expected)
-    analysis_name = 'reports/jev-rl-m2/candidate-analysis-fixture-02/summary.json'
-    if analysis_name in original:
+    for run, analysis_folder in ANALYSIS_PAIRS:
+        analysis_name = analysis_folder + '/summary.json'
+        if analysis_name not in original:
+            continue
         analysis = load(analysis_name)
         if analysis['schema'] != 'jev-m2-analysis-v1':
             raise ValueError('unsupported analysis publication schema')
         provenance = analysis['provenance']
-        run = 'reports/jev-rl-m2/candidate-fixture-02'
         if (source / provenance['run']).resolve() != source / run:
-            raise ValueError('original analysis does not bind the selected fixture')
+            raise ValueError('original analysis does not bind the selected study')
         require('scripts/analyze_jev_m2.py', provenance['analysis_source_sha256'])
         require(run + '/manifest.json', provenance['manifest_sha256'])
         require(run + '/results.json', provenance['results_sha256'])
@@ -305,6 +359,9 @@ def validate_original_bindings(source, original):
         if (provenance['study_source_sha256'] != manifest['sources'] or
                 provenance['checkpoint_metadata_only'] != manifest['models']):
             raise ValueError('original analysis source/model metadata mismatch')
+    if hosted_selected(original):
+        hashes = {name: record['sha256'] for name, record in original.items()}
+        validate_hosted_registration(source, hashes, hashes)
 
 
 def rebind_bundles(files, transformations):
@@ -317,8 +374,7 @@ def rebind_bundles(files, transformations):
             files[name] = json_bytes(value)
             transformations[name].append(reason)
 
-    for base in ('reports/jev-rl-m1/fixture-04', 'reports/jev-rl-m1/hosted-20261113-204144',
-                 'reports/jev-rl-m2/candidate-fixture-02'):
+    for base in STUDY_RUNS:
         manifest_name, result_name = base + '/manifest.json', base + '/results.json'
         if manifest_name not in files:
             continue
@@ -369,11 +425,12 @@ def rebind_bundles(files, transformations):
                 result['artifacts'][artifact] = sha256(files[base + '/' + artifact])
             save(result_name, result, 'rebind_public_run_manifest_and_artifacts')
 
-    analysis_name = 'reports/jev-rl-m2/candidate-analysis-fixture-02/summary.json'
-    if analysis_name in files:
+    for run, analysis_folder in ANALYSIS_PAIRS:
+        analysis_name = analysis_folder + '/summary.json'
+        if analysis_name not in files:
+            continue
         analysis = load(analysis_name)
         provenance = analysis['provenance']
-        run = 'reports/jev-rl-m2/candidate-fixture-02'
         for name in provenance['input_sha256']:
             provenance['input_sha256'][name] = sha256(files[run + '/' + name])
         for name in provenance['verification']['verified_input_sha256']:
@@ -383,7 +440,7 @@ def rebind_bundles(files, transformations):
         manifest = load(run + '/manifest.json')
         provenance['study_source_sha256'] = manifest['sources']
         provenance['checkpoint_metadata_only'] = manifest['models']
-        save(analysis_name, analysis, 'rebind_fixture_analysis_to_public_inputs')
+        save(analysis_name, analysis, 'rebind_analysis_to_public_inputs')
 
 
 def default_paths(source):
@@ -393,16 +450,39 @@ def default_paths(source):
         if not folder.is_dir():
             raise FileNotFoundError('required evidence directory missing: ' + directory)
         paths.update(str(p.relative_to(source)) for p in folder.rglob('*') if p.is_file() or p.is_symlink())
+    # Existence checks only: never open an unfinished run's journals/responses.
+    if all((source / name).is_file() for name in HOSTED_REQUIRED):
+        paths.update(HOSTED_REQUIRED)
+        for directory in (HOSTED_RUN, HOSTED_ANALYSIS):
+            paths.update(str(p.relative_to(source)) for p in (source / directory).rglob('*') if p.is_file() or p.is_symlink())
     return sorted(paths)
 
 
-def snapshot_replays(target):
-    cases = (
+def diagnostic_hashes(completed):
+    """Record failure diagnostics without copying possible provider response text."""
+    return {key: value for name in ('stdout', 'stderr')
+            for key, value in ((name + '_sha256', sha256(getattr(completed, name).encode())),
+                               (name + '_bytes', len(getattr(completed, name).encode())))}
+
+
+def snapshot_replays(target, included_paths):
+    included_paths = set(included_paths)
+    cases = [
         ('m1_fixture', 'reports/jev-rl-m1/fixture-04', 'jev_rl_study.py', 'verify', '--run', 100),
         ('m1_hosted', 'reports/jev-rl-m1/hosted-20261113-204144', 'jev_rl_study.py', 'verify', '--run', 15),
         ('m2_candidate', 'reports/jev-rl-m2/candidate-fixture-02', 'jev_m2_study.py', 'verify', '--run', 75),
         ('m2_confirmation', 'reports/jev-rl-m2/confirmation-01', 'ppo_m2_confirm.py', 'replay', '--output', 5632),
-    )
+    ]
+    outcomes = None
+    if hosted_selected(included_paths):
+        results = json.loads((target / HOSTED_RUN / 'results.json').read_bytes())
+        statuses = Counter(row['result']['status'] for row in results['cases'])
+        skipped = sum(count for status, count in statuses.items() if status.startswith('not_run_'))
+        outcomes = {'status_counts': dict(statuses), 'recorded_stop_reason': results['stop_reason'],
+                    'interpretation': 'Replay integrity only; failed and skipped scientific outcomes remain failed or skipped.'}
+        cases.append(('m2_hosted', HOSTED_RUN, 'jev_m2_study.py', 'verify', '--run', len(results['cases']) - skipped))
+    if any(run + '/source_snapshot/scripts/' + script not in included_paths for _, run, script, _, _, _ in cases):
+        raise ValueError('snapshot verifier is missing from the publication receipt')
     environment = {'PATH': os.defpath, 'LANG': 'en_US.UTF-8', 'PYTHONDONTWRITEBYTECODE': '1',
                    'PYTHONNOUSERSITE': '1', 'OMP_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1',
                    'OPENBLAS_NUM_THREADS': '1', 'VECLIB_MAXIMUM_THREADS': '1'}
@@ -419,19 +499,32 @@ def snapshot_replays(target):
         except ValueError:
             result = None
         actual = result.get('verified_episodes', result.get('episodes_replayed')) if isinstance(result, dict) else None
+        if type(actual) is not int:
+            actual = None
+        passed = completed.returncode == 0 and actual == count
+        if run == HOSTED_RUN:
+            passed = (passed and result.get('verified') is True and result.get('mode') == 'hosted'
+                      and result.get('not_run_episodes') == skipped and result.get('failed_episodes') == statuses['failed'])
         verification.append({'name': label, 'command': ['python', '-B', relative_script, command, flag, run],
             'exit_code': completed.returncode, 'expected_episodes': count, 'observed_episodes': actual,
-            'passed': completed.returncode == 0 and actual == count,
-            'wall_seconds': time.monotonic() - started, 'result': result, 'stderr': errors,
-            'stdout': output if result is None else None})
-        print(label + ': ' + ('passed' if verification[-1]['passed'] else 'FAILED'), flush=True)
-    analysis_folder = target / 'reports/jev-rl-m2/candidate-analysis-fixture-02'
-    if analysis_folder.exists():
-        run = 'reports/jev-rl-m2/candidate-fixture-02'
+            'passed': passed,
+            'wall_seconds': time.monotonic() - started, 'result': result if passed else None,
+            'stderr': 'Diagnostics withheld; hashes recorded.' if errors else '', 'stdout': None})
+        if not passed or errors:
+            verification[-1]['diagnostics'] = diagnostic_hashes(completed)
+        if run == HOSTED_RUN:
+            verification[-1]['scientific_outcomes'] = outcomes
+        print(label + ': ' + ('integrity verified' if passed else 'verification FAILED'), file=sys.stderr, flush=True)
+    for run, folder in ANALYSIS_PAIRS:
+        if folder + '/summary.json' not in included_paths:
+            continue
+        if ANALYZER not in included_paths or folder + '/REPORT.md' not in included_paths:
+            raise ValueError('analysis source/report is missing from the publication receipt')
+        analysis_folder = target / folder
         started = time.monotonic()
         with tempfile.TemporaryDirectory(prefix='jev-public-analysis-') as temporary:
             generated = Path(temporary) / 'analysis'
-            argv = [sys.executable, '-B', str(target / 'scripts/analyze_jev_m2.py'),
+            argv = [sys.executable, '-B', str(target / ANALYZER),
                     '--run', str(target / run), '--output', str(generated)]
             completed = subprocess.run(argv, cwd=target, env=environment, capture_output=True, text=True, timeout=900)
             comparisons = {'summary_identical': False, 'report_identical': False}
@@ -442,18 +535,62 @@ def snapshot_replays(target):
                                'analysis_contract_sha256': summary['provenance']['analysis_contract_sha256'],
                                'mode': summary['mode']}
             errors = completed.stderr.replace(str(target), '<PUBLIC_PROJECT>').replace(temporary, '<ANALYSIS_RECHECK>')
-            verification.append({'name': 'm2_fixture_analysis', 'command': ['python', '-B', 'scripts/analyze_jev_m2.py',
+            label = 'm2_hosted_analysis' if run == HOSTED_RUN else 'm2_fixture_analysis'
+            verification.append({'name': label, 'command': ['python', '-B', ANALYZER,
                 '--run', run, '--output', '<TEMPORARY_ANALYSIS>'], 'exit_code': completed.returncode,
                 'passed': completed.returncode == 0 and comparisons['summary_identical'] and comparisons['report_identical'],
-                'wall_seconds': time.monotonic() - started, 'result': comparisons, 'stderr': errors})
-            print('m2_fixture_analysis: ' + ('passed' if verification[-1]['passed'] else 'FAILED'), flush=True)
+                'wall_seconds': time.monotonic() - started, 'result': comparisons,
+                'stderr': 'Diagnostics withheld; hashes recorded.' if errors else ''})
+            if completed.returncode or errors:
+                verification[-1]['diagnostics'] = diagnostic_hashes(completed)
+            print(label + ': ' + ('reproduced' if verification[-1]['passed'] else 'verification FAILED'), file=sys.stderr, flush=True)
     return verification
+
+
+def verify_published(target):
+    """Read-only verification of receipt-listed files and copied replay sources."""
+    target = Path(target).resolve()
+    receipt_path = target / RECEIPT
+    raw = receipt_path.read_bytes()
+    receipt = json.loads(raw)
+    if receipt.get('schema') != SCHEMA:
+        raise ValueError('unsupported publication receipt schema')
+    records = {}
+    for record in receipt['files']:
+        name = record['path']
+        relative = Path(name)
+        path = target / relative
+        if (not name or relative.is_absolute() or '..' in relative.parts or name in records
+                or not allowed_file(relative) or not path.resolve().is_relative_to(target)
+                or path.is_symlink() or any(parent.is_symlink() for parent in path.parents if parent.is_relative_to(target))):
+            raise ValueError('unsafe, forbidden, or duplicated publication receipt path')
+        if any(not re.fullmatch('[0-9a-f]{64}', record.get(field, '')) for field in ('original_sha256', 'public_sha256')):
+            raise ValueError('invalid publication receipt hash')
+        if sha256(path.read_bytes()) != record['public_sha256']:
+            raise ValueError('publication file hash mismatch: ' + name)
+        records[name] = record
+    hosted = hosted_selected(records)
+    if hosted:
+        validate_hosted_registration(target, {name: row['original_sha256'] for name, row in records.items()},
+                                     {name: row['public_sha256'] for name, row in records.items()})
+    runs = snapshot_replays(target, records)
+    if receipt_path.read_bytes() != raw:
+        raise ValueError('publication receipt changed during read-only verification')
+    for name, record in records.items():
+        if sha256((target / name).read_bytes()) != record['public_sha256']:
+            raise ValueError('publication file changed during read-only verification: ' + name)
+    return {'status': 'passed' if all(run['passed'] for run in runs) else 'failed',
+            'files_verified': len(records), 'hosted_pair_included': hosted,
+            'scope': 'Artifact integrity and exact stored-evidence replay; no assertion that failed/skipped outcomes succeeded.',
+            'credentials_excluded_from_environment': True, 'source': 'receipt-listed copied source_snapshot scripts', 'runs': runs}
 
 
 def export_paths(source, target, paths, *, apply=False, replace_owned=False, verify=False):
     source, target = Path(source).resolve(), Path(target).resolve()
     if source == target or target.is_relative_to(source) or source.is_relative_to(target):
         raise ValueError('source and destination must be separate trees')
+    paths = tuple(paths)
+    hosted = hosted_selected(paths)  # Reject explicit partial selections before reading any payload.
     original, files, transformations, excluded = {}, {}, {}, []
     for name in sorted(set(paths)):
         relative = Path(name)
@@ -473,6 +610,8 @@ def export_paths(source, target, paths, *, apply=False, replace_owned=False, ver
             raise ValueError(name + ': ' + str(error)) from None
     validate_original_bindings(source, original)
     rebind_bundles(files, transformations)
+    hosted_binding = validate_hosted_registration(source, {name: row['sha256'] for name, row in original.items()},
+        {name: sha256(value) for name, value in files.items()}) if hosted else None
     receipt_path = target / RECEIPT
     previous = json.loads(receipt_path.read_text()) if receipt_path.exists() else None
     if previous is not None and previous.get('schema') != SCHEMA:
@@ -506,11 +645,12 @@ def export_paths(source, target, paths, *, apply=False, replace_owned=False, ver
         'scientific_values_actions_observations_preserved': True,
         'api_request_response_payloads_canonically_unchanged': True,
         'runtime_snapshot_code_unchanged': True, 'credentials_used': False, 'checkpoints_exported': False,
+        'hosted_registration_binding': hosted_binding,
         'hash_binding_semantics': {
             'rebound': ['public source snapshot inventory after private handoff line removal',
                         'public plan/admission/manifest/journal/result bindings',
                         'public confirmation selected-record digest, freeze seal and run manifest',
-                        'fixture-only analysis provenance bound to public candidate inputs'],
+                        'analysis provenance bound to the matching public fixture or sealed hosted inputs'],
             'original_execution_provenance': ['checkpoint hashes', 'historical manifest and exclusion hashes',
                 'source_sha256 and race_inputs recorded at execution', 'm2_provenance.result_sha256',
                 'original_spec_sha256 and original_spec.sha256', 'original registry/schedule input hashes'],
@@ -547,9 +687,7 @@ def export_paths(source, target, paths, *, apply=False, replace_owned=False, ver
     receipt_path.parent.mkdir(parents=True, exist_ok=True)
     receipt_path.write_bytes(json_bytes(receipt))
     if verify:
-        runs = snapshot_replays(target)
-        receipt['verification'] = {'status': 'passed' if all(x['passed'] for x in runs) else 'failed',
-            'credentials_excluded_from_environment': True, 'source': 'copied source_snapshot scripts', 'runs': runs}
+        receipt['verification'] = verify_published(target)
         receipt_path.write_bytes(json_bytes(receipt))
     return receipt
 
@@ -560,8 +698,18 @@ def main(argv=None):
     parser.add_argument('--destination', type=Path, required=True)
     parser.add_argument('--apply', action='store_true', help='Write the reviewed derivative; otherwise inventory only.')
     parser.add_argument('--replace-owned', action='store_true', help='Update only unchanged files owned by an earlier export.')
-    parser.add_argument('--verify', action='store_true', help='Run all four copied snapshot verifiers after export.')
+    parser.add_argument('--verify', action='store_true', help='Verify copied snapshots and analyses after export, including a sealed hosted pair.')
+    parser.add_argument('--verify-published', action='store_true', help='Read-only: verify a published receipt, snapshots and analyses; never export.')
     args = parser.parse_args(argv)
+    if args.verify_published:
+        if args.apply or args.replace_owned or args.verify:
+            parser.error('--verify-published cannot be combined with export/write options')
+        try:
+            result = verify_published(args.destination)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            result = {'status': 'failed', 'error': str(error)}
+        print(json.dumps(result, indent=2))
+        return 0 if result['status'] == 'passed' else 1
     if args.verify and not args.apply:
         parser.error('--verify requires --apply')
     receipt = export_paths(args.source, args.destination, default_paths(args.source.resolve()),

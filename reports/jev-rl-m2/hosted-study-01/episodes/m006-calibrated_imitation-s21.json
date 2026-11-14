@@ -1,0 +1,87 @@
+{
+  "api_receipts": [],
+  "case_id": "m006-calibrated_imitation-s21",
+  "journal": "episodes/m006-calibrated_imitation-s21.jsonl",
+  "journal_sha256": "99b0c21ca0a6aac1afa1c104f6cb2d661ce27a9a50266fe6e0fb6f9610741caa",
+  "method": "calibrated_imitation",
+  "result": {
+    "action_id": 38,
+    "actions": [
+      7,
+      38
+    ],
+    "assays": 1,
+    "decision_seconds": [
+      0.001230708003276959,
+      0.000878791994182393
+    ],
+    "effort": 0.8,
+    "end_to_end_seconds": 0.007776875019771978,
+    "failure": null,
+    "final_cultures": 128,
+    "final_mse": 0.0008848881248521872,
+    "forecast_coverage": {
+      "frozen_candidate_events": 144,
+      "jev_requested_events": 0,
+      "jev_validated_events": 0,
+      "probe_expected_events": null,
+      "purchased_events": 2,
+      "scored_jev_events": 0,
+      "scored_reference_events": 2
+    },
+    "forecasts": [
+      {
+        "action_id": 7,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.251378514395147,
+          "prior": 0.2513785143951535,
+          "public_heuristic": 0.25
+        },
+        "node": 6,
+        "observed_mean": 0.46349160686409135,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.5013766193144102,
+          "prior": 0.5013766193144167,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.4944705727017582
+      },
+      {
+        "action_id": 7,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.2839009411297082,
+          "prior": 0.28390094112970155,
+          "public_heuristic": 0.25
+        },
+        "node": 7,
+        "observed_mean": 0.5226280592453434,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.46717644465573016,
+          "prior": 0.4671764446557364,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5146109404659471
+      }
+    ],
+    "immediate_stop": false,
+    "method": "calibrated_imitation",
+    "observed_return": -0.15648881248521873,
+    "online_seconds": 0.007417500019073486,
+    "reference_forecast_seconds": [
+      0.001334542001131922,
+      0.0013027919922024012
+    ],
+    "return_": -0.15648881248521873,
+    "setup_cost": 3.0,
+    "status": "completed",
+    "timing_scope": "instrumented controller loop; includes forecast references and synchronous journal writes; end_to_end also includes reset",
+    "total_assay_cost": 5.8,
+    "variable_cost": 2.8
+  }
+}

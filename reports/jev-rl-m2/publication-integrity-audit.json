@@ -1,40 +1,25 @@
 {
-  "api_payload_objects_compared": 1965,
-  "checked_at_utc": "2026-11-14T10:08:46.380384+00:00",
+  "api_payload_objects_compared": 8309,
+  "boolean_values_compared": 282015,
+  "checked_at_utc": "2026-11-14T19:03:49+00:00",
   "checkpoint_files_accessed": false,
   "credentials_accessed": false,
-  "files_checked": 1151,
-  "json_files_checked": 789,
-  "key_hashes": {
-    "docs/jev_rl_m2_analysis_registration.json": "91c581c36e91e53ac7d22b3157c82d4473f84f1803537e1f4808d7e1f0f5f30e",
-    "integrations/jev_demo.py": "903bed7d7d8d2caf52291d6690f1161c1bca0df5cb5605c9c06a05817526464b",
-    "reports/jev-rl-m2/candidate-fixture-02/manifest.json": "6fc7ff357109e5d474d7e12f7ab0d87de77894b6f9f8c6983d7b5e858d16f395",
-    "reports/jev-rl-m2/confirmation-01/episodes.jsonl.gz": "e7ea0d44ef9a261134af84a172e9ca5b6091599f88a44666e4ae2abbbef6585f",
-    "scripts/analyze_jev_m2.py": "c19339d7c1cb2a144124ee5e7e49387fb3638aa05935a1189e4ab8e1d4826c41",
-    "scripts/export_jev_m2_public.py": "5963cba47cba3f01aca8bd6a30afd96ed7303a1501832fd15eb22ad040de1c00",
-    "tests/test_export_jev_m2_public.py": "7c1b848f7a7231ef1f96b459e6890ad3e69bff8f90a56d90b08a79c0bc84c239",
-    "tests/test_jev_candidates.py": "1a3c7c1dee8fd42568ee7519e424f31d5b2ac81c86bc2a852c3bf573bc804ab0",
-    "tests/test_jev_m2_study.py": "4fe4c54d29586970310055e93a7eb461109438e7f02907420f66feb88c74df0e"
+  "files_checked": 2383,
+  "hosted_binding": {
+    "analysis_contract_sha256": "d3441d56620e4e6ac2114c58765bdaa33db97728d5458b0a7f7bffaba00f7602",
+    "analysis_source_sha256": "c19339d7c1cb2a144124ee5e7e49387fb3638aa05935a1189e4ab8e1d4826c41",
+    "original_registered_plan_sha256": "b07f3cc2c74c6075c40b4129eda60c76cd5f273e7c4b78bea89c146f8fd3f893",
+    "public_plan_sha256": "f154247b76747b664d1dbc3b1587bdb2d594537264584c589cc9a547fd9fef55",
+    "registration": "docs/jev_rl_m2_analysis_registration.json"
   },
+  "json_files_checked": 1996,
   "new_hosted_calls": 0,
-  "numeric_payload_comparison_retention": "All JSON/JSONL original and public file hashes are unchanged from the full numeric/payload comparison; only the recorded top-level Python tests changed.",
-  "numeric_scalars_compared": 10164548,
+  "numeric_scalars_compared": 11615254,
   "passed": true,
-  "previous_integrity_audit_sha256": "b42d9ab493083b149690b1e606a56741760e4fe6d244fa88076592e93b548263",
-  "previous_numeric_payload_audit_sha256": "5edc9c67c38a9d31e0b015b83a58a8b76923930225c99c1322279f294b0cef34",
+  "previous_integrity_audit_sha256": "dd177f4fdd33187c5ccc78ae00b6caac04dce26dce9c51b940800f74671a0c51",
   "problems": [],
-  "publication_export_sha256": "08183d82dfbcc688c795b321c865e556176ff603c74948b503b25f6c5894291a",
-  "python_source_files_byte_identical": 237,
-  "schema": "jev-m2-publication-integrity-audit-v1",
-  "scope": "Every selected original/public file is compared against publication-export.json. All parsed JSON/JSONL numeric scalar values, types, and positions plus API payload canonical objects are compared. Existing unselected public history is outside this audit.",
-  "test_only_refresh": {
-    "existing_replay_verification_preserved": true,
-    "new_sha256": "1a3c7c1dee8fd42568ee7519e424f31d5b2ac81c86bc2a852c3bf573bc804ab0",
-    "path": "tests/test_jev_candidates.py",
-    "previous_export_receipt_sha256": "611e1d7452f375eed6213be0aa93365642e2ba3477715ac02d35c7819a2df2e6",
-    "previous_original_sha256": "99d00fb7541902201000cb7bc115dee06ad55b20193dfb5c8fb2452ae7e78563",
-    "previous_public_sha256": "99d00fb7541902201000cb7bc115dee06ad55b20193dfb5c8fb2452ae7e78563",
-    "reason": "Removed trailing whitespace at EOF only. Runtime, analysis, evidence, and test behavior are unchanged.",
-    "updated_at_utc": "2026-11-14T10:08:46.380384+00:00"
-  }
+  "publication_export_sha256": "513c50acb4e999d96286f16b1048042a833719e83be164608a116964fc49a264",
+  "python_source_files_byte_identical": 257,
+  "schema": "jev-m2-publication-integrity-audit-v2",
+  "scope": "Full original/public receipt inventory compared. Numeric/boolean values, sequence positions and canonical API payloads are preserved. Python source bytes match their originals."
 }

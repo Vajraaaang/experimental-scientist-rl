@@ -1,0 +1,1770 @@
+{
+  "api_receipts": [
+    {
+      "attempted": true,
+      "call_index": 251,
+      "candidate_order": {},
+      "estimated_usd": 0.000477372,
+      "finished_at_utc": "2026-11-14T18:37:38.031843Z",
+      "latency_seconds": 0.2254322910157498,
+      "proposed_request_bytes": 34515,
+      "question_order": [
+        "a0_x4",
+        "a0_x5",
+        "a10_x4",
+        "a10_x5",
+        "a11_x6",
+        "a11_x7",
+        "a12_x4",
+        "a12_x5",
+        "a13_x6",
+        "a13_x7",
+        "a14_x4",
+        "a14_x5",
+        "a15_x6",
+        "a15_x7",
+        "a16_x4",
+        "a16_x5",
+        "a17_x6",
+        "a17_x7",
+        "a18_x4",
+        "a18_x5",
+        "a19_x6",
+        "a19_x7",
+        "a1_x6",
+        "a1_x7",
+        "a20_x4",
+        "a20_x5",
+        "a21_x6",
+        "a21_x7",
+        "a22_x4",
+        "a22_x5",
+        "a23_x6",
+        "a23_x7",
+        "a24_x4",
+        "a24_x5",
+        "a25_x6",
+        "a25_x7",
+        "a26_x4",
+        "a26_x5",
+        "a27_x6",
+        "a27_x7",
+        "a28_x4",
+        "a28_x5",
+        "a29_x6",
+        "a29_x7",
+        "a2_x4",
+        "a2_x5",
+        "a30_x4",
+        "a30_x5",
+        "a31_x6",
+        "a31_x7",
+        "a32_x4",
+        "a32_x5",
+        "a33_x6",
+        "a33_x7",
+        "a34_x4",
+        "a34_x5",
+        "a35_x6",
+        "a35_x7",
+        "a3_x6",
+        "a3_x7",
+        "a4_x4",
+        "a4_x5",
+        "a5_x6",
+        "a5_x7",
+        "a6_x4",
+        "a6_x5",
+        "a7_x6",
+        "a7_x7",
+        "a8_x4",
+        "a8_x5",
+        "a9_x6",
+        "a9_x7"
+      ],
+      "request_bytes": 34515,
+      "request_sha256": "20ecf405f7cec3b4659d1b2a62c8cf59cdba5ca28bd7a895adb920dd4458551e",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 38611,
+      "response": {
+        "answers": {
+          "a0_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a0_x5": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a10_x4": {
+            "noul": 0.4,
+            "type": "noul"
+          },
+          "a10_x5": {
+            "noul": 0.43,
+            "type": "noul"
+          },
+          "a11_x6": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a11_x7": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a12_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a12_x5": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a13_x6": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a13_x7": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a14_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a14_x5": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a15_x6": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a15_x7": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a16_x4": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a16_x5": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a17_x6": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a17_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a18_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a18_x5": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a19_x6": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a19_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a1_x6": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a1_x7": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a20_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a20_x5": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a21_x6": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a21_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a22_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a22_x5": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a23_x6": {
+            "noul": 0.58,
+            "type": "noul"
+          },
+          "a23_x7": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a24_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a24_x5": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a25_x6": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a25_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a26_x4": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a26_x5": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a27_x6": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a27_x7": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a28_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a28_x5": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a29_x6": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a29_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a2_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a2_x5": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a30_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a30_x5": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a31_x6": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a31_x7": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a32_x4": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a32_x5": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a33_x6": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a33_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a34_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a34_x5": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a35_x6": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a35_x7": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a3_x6": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a3_x7": {
+            "noul": 0.57,
+            "type": "noul"
+          },
+          "a4_x4": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a4_x5": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a5_x6": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a5_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a6_x4": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a6_x5": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a7_x6": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a7_x7": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a8_x4": {
+            "noul": 0.43,
+            "type": "noul"
+          },
+          "a8_x5": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a9_x6": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a9_x7": {
+            "noul": 0.48,
+            "type": "noul"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 11366,
+          "output_tokens": 1424
+        }
+      },
+      "response_sha256": "8504c5926b1f65658b165bc9634cb189691761a10907024b60f3c10950760f29",
+      "span_id": "e58ad866d2684d25",
+      "started_at_utc": "2026-11-14T18:37:37.760026Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db59cd0f79b7ad5e1ff71b3583f5",
+        "response_body_complete": true,
+        "response_body_sha256": "cb6f25f613eb34a2444390ee739c149f2731259318cddb44240976d06c5cb83f",
+        "response_bytes": 2723
+      },
+      "usage": {
+        "input_tokens": 11366,
+        "output_tokens": 1424
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 252,
+      "candidate_order": {
+        "next_action": [
+          "action_0",
+          "action_1",
+          "action_10",
+          "action_11",
+          "action_12",
+          "action_13",
+          "action_14",
+          "action_15",
+          "action_16",
+          "action_17",
+          "action_18",
+          "action_19",
+          "action_2",
+          "action_20",
+          "action_21",
+          "action_22",
+          "action_23",
+          "action_24",
+          "action_25",
+          "action_26",
+          "action_27",
+          "action_28",
+          "action_29",
+          "action_3",
+          "action_30",
+          "action_31",
+          "action_32",
+          "action_33",
+          "action_34",
+          "action_35",
+          "action_36",
+          "action_37",
+          "action_38",
+          "action_39",
+          "action_4",
+          "action_40",
+          "action_41",
+          "action_42",
+          "action_43",
+          "action_44",
+          "action_5",
+          "action_6",
+          "action_7",
+          "action_8",
+          "action_9"
+        ]
+      },
+      "estimated_usd": 0.00031684800000000005,
+      "finished_at_utc": "2026-11-14T18:37:38.301111Z",
+      "latency_seconds": 0.18368366599315777,
+      "proposed_request_bytes": 12994,
+      "question_order": [
+        "next_action"
+      ],
+      "request_bytes": 12994,
+      "request_sha256": "076ef9ac7059e5fa0ff4ebd31bd183de633f4e858d3c2bc84fad947c33a514fd",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 17090,
+      "response": {
+        "answers": {
+          "next_action": {
+            "choice": "action_23",
+            "confidence": 0.28,
+            "probabilities": {
+              "action_0": 0.02,
+              "action_1": 0.02,
+              "action_10": 0.0,
+              "action_11": 0.02,
+              "action_12": 0.0,
+              "action_13": 0.0,
+              "action_14": 0.0,
+              "action_15": 0.01,
+              "action_16": 0.0,
+              "action_17": 0.0,
+              "action_18": 0.0,
+              "action_19": 0.02,
+              "action_2": 0.02,
+              "action_20": 0.0,
+              "action_21": 0.0,
+              "action_22": 0.0,
+              "action_23": 0.3,
+              "action_24": 0.0,
+              "action_25": 0.0,
+              "action_26": 0.01,
+              "action_27": 0.22,
+              "action_28": 0.0,
+              "action_29": 0.0,
+              "action_3": 0.12,
+              "action_30": 0.0,
+              "action_31": 0.02,
+              "action_32": 0.0,
+              "action_33": 0.0,
+              "action_34": 0.0,
+              "action_35": 0.03,
+              "action_36": 0.06,
+              "action_37": 0.01,
+              "action_38": 0.01,
+              "action_39": 0.0,
+              "action_4": 0.01,
+              "action_40": 0.0,
+              "action_41": 0.01,
+              "action_42": 0.02,
+              "action_43": 0.0,
+              "action_44": 0.0,
+              "action_5": 0.01,
+              "action_6": 0.01,
+              "action_7": 0.04,
+              "action_8": 0.0,
+              "action_9": 0.01
+            },
+            "type": "choice"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 7544,
+          "output_tokens": 461
+        }
+      },
+      "response_sha256": "19a585551d236cced3b0ef8a27107d19d140ffa84d2e3a288dd429d7e30ed118",
+      "span_id": "f8392b709bf2481c",
+      "started_at_utc": "2026-11-14T18:37:38.037803Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db59ce2d78f088f553e679fd4c11",
+        "response_body_complete": true,
+        "response_body_sha256": "dce09222bbd6bc93aa8f07d44047114d96dba122387b79edded1c087c13e595f",
+        "response_bytes": 904
+      },
+      "usage": {
+        "input_tokens": 7544,
+        "output_tokens": 461
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 253,
+      "candidate_order": {},
+      "estimated_usd": 0.000493626,
+      "finished_at_utc": "2026-11-14T18:37:38.707016Z",
+      "latency_seconds": 0.32077812499483116,
+      "proposed_request_bytes": 34980,
+      "question_order": [
+        "a0_x4",
+        "a0_x5",
+        "a10_x4",
+        "a10_x5",
+        "a11_x6",
+        "a11_x7",
+        "a12_x4",
+        "a12_x5",
+        "a13_x6",
+        "a13_x7",
+        "a14_x4",
+        "a14_x5",
+        "a15_x6",
+        "a15_x7",
+        "a16_x4",
+        "a16_x5",
+        "a17_x6",
+        "a17_x7",
+        "a18_x4",
+        "a18_x5",
+        "a19_x6",
+        "a19_x7",
+        "a1_x6",
+        "a1_x7",
+        "a20_x4",
+        "a20_x5",
+        "a21_x6",
+        "a21_x7",
+        "a22_x4",
+        "a22_x5",
+        "a23_x6",
+        "a23_x7",
+        "a24_x4",
+        "a24_x5",
+        "a25_x6",
+        "a25_x7",
+        "a26_x4",
+        "a26_x5",
+        "a27_x6",
+        "a27_x7",
+        "a28_x4",
+        "a28_x5",
+        "a29_x6",
+        "a29_x7",
+        "a2_x4",
+        "a2_x5",
+        "a30_x4",
+        "a30_x5",
+        "a31_x6",
+        "a31_x7",
+        "a32_x4",
+        "a32_x5",
+        "a33_x6",
+        "a33_x7",
+        "a34_x4",
+        "a34_x5",
+        "a35_x6",
+        "a35_x7",
+        "a3_x6",
+        "a3_x7",
+        "a4_x4",
+        "a4_x5",
+        "a5_x6",
+        "a5_x7",
+        "a6_x4",
+        "a6_x5",
+        "a7_x6",
+        "a7_x7",
+        "a8_x4",
+        "a8_x5",
+        "a9_x6",
+        "a9_x7"
+      ],
+      "request_bytes": 34980,
+      "request_sha256": "62e3c4289d24e0e6304ce299777e8879f7f47234b2762e2181aadd4533bd8ae9",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 39076,
+      "response": {
+        "answers": {
+          "a0_x4": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a0_x5": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a10_x4": {
+            "noul": 0.42,
+            "type": "noul"
+          },
+          "a10_x5": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a11_x6": {
+            "noul": 0.35,
+            "type": "noul"
+          },
+          "a11_x7": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a12_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a12_x5": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a13_x6": {
+            "noul": 0.43,
+            "type": "noul"
+          },
+          "a13_x7": {
+            "noul": 0.58,
+            "type": "noul"
+          },
+          "a14_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a14_x5": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a15_x6": {
+            "noul": 0.31,
+            "type": "noul"
+          },
+          "a15_x7": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a16_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a16_x5": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a17_x6": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a17_x7": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a18_x4": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a18_x5": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a19_x6": {
+            "noul": 0.36,
+            "type": "noul"
+          },
+          "a19_x7": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a1_x6": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a1_x7": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a20_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a20_x5": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a21_x6": {
+            "noul": 0.38,
+            "type": "noul"
+          },
+          "a21_x7": {
+            "noul": 0.59,
+            "type": "noul"
+          },
+          "a22_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a22_x5": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a23_x6": {
+            "noul": 0.15,
+            "type": "noul"
+          },
+          "a23_x7": {
+            "noul": 0.69,
+            "type": "noul"
+          },
+          "a24_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a24_x5": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a25_x6": {
+            "noul": 0.39,
+            "type": "noul"
+          },
+          "a25_x7": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a26_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a26_x5": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a27_x6": {
+            "noul": 0.28,
+            "type": "noul"
+          },
+          "a27_x7": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a28_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a28_x5": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a29_x6": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a29_x7": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a2_x4": {
+            "noul": 0.48,
+            "type": "noul"
+          },
+          "a2_x5": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a30_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a30_x5": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a31_x6": {
+            "noul": 0.32,
+            "type": "noul"
+          },
+          "a31_x7": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a32_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a32_x5": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a33_x6": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a33_x7": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a34_x4": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a34_x5": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a35_x6": {
+            "noul": 0.35,
+            "type": "noul"
+          },
+          "a35_x7": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a3_x6": {
+            "noul": 0.42,
+            "type": "noul"
+          },
+          "a3_x7": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a4_x4": {
+            "noul": 0.46,
+            "type": "noul"
+          },
+          "a4_x5": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a5_x6": {
+            "noul": 0.43,
+            "type": "noul"
+          },
+          "a5_x7": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a6_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a6_x5": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a7_x6": {
+            "noul": 0.34,
+            "type": "noul"
+          },
+          "a7_x7": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a8_x4": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a8_x5": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a9_x6": {
+            "noul": 0.4,
+            "type": "noul"
+          },
+          "a9_x7": {
+            "noul": 0.54,
+            "type": "noul"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 11753,
+          "output_tokens": 1424
+        }
+      },
+      "response_sha256": "5e12340fe586f9fd97279555bdd01d28b501bee12f55053ad05d6d24bc9ab1e0",
+      "span_id": "8da98c9694474d29",
+      "started_at_utc": "2026-11-14T18:37:38.316323Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db59cf547dbaa5ab9af03112836c",
+        "response_body_complete": true,
+        "response_body_sha256": "10c1bc7625210133791a3183ac4a9e1cc65f7701b1c6beffbdb6f24133b335e4",
+        "response_bytes": 2722
+      },
+      "usage": {
+        "input_tokens": 11753,
+        "output_tokens": 1424
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 254,
+      "candidate_order": {
+        "next_action": [
+          "action_0",
+          "action_1",
+          "action_10",
+          "action_11",
+          "action_12",
+          "action_13",
+          "action_14",
+          "action_15",
+          "action_16",
+          "action_17",
+          "action_18",
+          "action_19",
+          "action_2",
+          "action_20",
+          "action_21",
+          "action_22",
+          "action_23",
+          "action_24",
+          "action_25",
+          "action_26",
+          "action_27",
+          "action_28",
+          "action_29",
+          "action_3",
+          "action_30",
+          "action_31",
+          "action_32",
+          "action_33",
+          "action_34",
+          "action_35",
+          "action_36",
+          "action_37",
+          "action_38",
+          "action_39",
+          "action_4",
+          "action_40",
+          "action_41",
+          "action_42",
+          "action_43",
+          "action_44",
+          "action_5",
+          "action_6",
+          "action_7",
+          "action_8",
+          "action_9"
+        ]
+      },
+      "estimated_usd": 0.00033264000000000004,
+      "finished_at_utc": "2026-11-14T18:37:38.972668Z",
+      "latency_seconds": 0.17771537500084378,
+      "proposed_request_bytes": 13448,
+      "question_order": [
+        "next_action"
+      ],
+      "request_bytes": 13448,
+      "request_sha256": "6f2f070c6171dec69f96152ea14899bb6f2c4c67bb98adb6cd9d059e7ee8c1df",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 17544,
+      "response": {
+        "answers": {
+          "next_action": {
+            "choice": "action_16",
+            "confidence": 0.34,
+            "probabilities": {
+              "action_0": 0.02,
+              "action_1": 0.02,
+              "action_10": 0.01,
+              "action_11": 0.03,
+              "action_12": 0.01,
+              "action_13": 0.01,
+              "action_14": 0.01,
+              "action_15": 0.02,
+              "action_16": 0.35,
+              "action_17": 0.01,
+              "action_18": 0.01,
+              "action_19": 0.02,
+              "action_2": 0.01,
+              "action_20": 0.0,
+              "action_21": 0.01,
+              "action_22": 0.01,
+              "action_23": 0.02,
+              "action_24": 0.01,
+              "action_25": 0.01,
+              "action_26": 0.01,
+              "action_27": 0.01,
+              "action_28": 0.01,
+              "action_29": 0.0,
+              "action_3": 0.06,
+              "action_30": 0.0,
+              "action_31": 0.02,
+              "action_32": 0.01,
+              "action_33": 0.0,
+              "action_34": 0.0,
+              "action_35": 0.01,
+              "action_36": 0.1,
+              "action_37": 0.01,
+              "action_38": 0.02,
+              "action_39": 0.01,
+              "action_4": 0.01,
+              "action_40": 0.01,
+              "action_41": 0.01,
+              "action_42": 0.01,
+              "action_43": 0.01,
+              "action_44": 0.01,
+              "action_5": 0.01,
+              "action_6": 0.01,
+              "action_7": 0.04,
+              "action_8": 0.01,
+              "action_9": 0.01
+            },
+            "type": "choice"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 7920,
+          "output_tokens": 461
+        }
+      },
+      "response_sha256": "21466273543760c72572e0682dc3ac11c518438db51f76e5a553dabc0702cb75",
+      "span_id": "a2a62ccbfe82430d",
+      "started_at_utc": "2026-11-14T18:37:38.713024Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db59d0d476c3b31e01693e73a465",
+        "response_body_complete": true,
+        "response_body_sha256": "13c3be2c1db12105859e90c89f5ab40bb643028ba4a29e59f73e090cdc40270b",
+        "response_bytes": 922
+      },
+      "usage": {
+        "input_tokens": 7920,
+        "output_tokens": 461
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 255,
+      "candidate_order": {},
+      "estimated_usd": 0.00050967,
+      "finished_at_utc": "2026-11-14T18:37:39.347547Z",
+      "latency_seconds": 0.2953952079988085,
+      "proposed_request_bytes": 35440,
+      "question_order": [
+        "a0_x4",
+        "a0_x5",
+        "a10_x4",
+        "a10_x5",
+        "a11_x6",
+        "a11_x7",
+        "a12_x4",
+        "a12_x5",
+        "a13_x6",
+        "a13_x7",
+        "a14_x4",
+        "a14_x5",
+        "a15_x6",
+        "a15_x7",
+        "a16_x4",
+        "a16_x5",
+        "a17_x6",
+        "a17_x7",
+        "a18_x4",
+        "a18_x5",
+        "a19_x6",
+        "a19_x7",
+        "a1_x6",
+        "a1_x7",
+        "a20_x4",
+        "a20_x5",
+        "a21_x6",
+        "a21_x7",
+        "a22_x4",
+        "a22_x5",
+        "a23_x6",
+        "a23_x7",
+        "a24_x4",
+        "a24_x5",
+        "a25_x6",
+        "a25_x7",
+        "a26_x4",
+        "a26_x5",
+        "a27_x6",
+        "a27_x7",
+        "a28_x4",
+        "a28_x5",
+        "a29_x6",
+        "a29_x7",
+        "a2_x4",
+        "a2_x5",
+        "a30_x4",
+        "a30_x5",
+        "a31_x6",
+        "a31_x7",
+        "a32_x4",
+        "a32_x5",
+        "a33_x6",
+        "a33_x7",
+        "a34_x4",
+        "a34_x5",
+        "a35_x6",
+        "a35_x7",
+        "a3_x6",
+        "a3_x7",
+        "a4_x4",
+        "a4_x5",
+        "a5_x6",
+        "a5_x7",
+        "a6_x4",
+        "a6_x5",
+        "a7_x6",
+        "a7_x7",
+        "a8_x4",
+        "a8_x5",
+        "a9_x6",
+        "a9_x7"
+      ],
+      "request_bytes": 35440,
+      "request_sha256": "ae92b653bf4ba43cb1efc2d57557192097e0511bef3165211a3722de3ab1b5de",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 39536,
+      "response": {
+        "answers": {
+          "a0_x4": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a0_x5": {
+            "noul": 0.57,
+            "type": "noul"
+          },
+          "a10_x4": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a10_x5": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a11_x6": {
+            "noul": 0.38,
+            "type": "noul"
+          },
+          "a11_x7": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a12_x4": {
+            "noul": 0.6,
+            "type": "noul"
+          },
+          "a12_x5": {
+            "noul": 0.6,
+            "type": "noul"
+          },
+          "a13_x6": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a13_x7": {
+            "noul": 0.59,
+            "type": "noul"
+          },
+          "a14_x4": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a14_x5": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a15_x6": {
+            "noul": 0.32,
+            "type": "noul"
+          },
+          "a15_x7": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a16_x4": {
+            "noul": 0.92,
+            "type": "noul"
+          },
+          "a16_x5": {
+            "noul": 0.78,
+            "type": "noul"
+          },
+          "a17_x6": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a17_x7": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a18_x4": {
+            "noul": 0.69,
+            "type": "noul"
+          },
+          "a18_x5": {
+            "noul": 0.63,
+            "type": "noul"
+          },
+          "a19_x6": {
+            "noul": 0.34,
+            "type": "noul"
+          },
+          "a19_x7": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a1_x6": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a1_x7": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a20_x4": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a20_x5": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a21_x6": {
+            "noul": 0.4,
+            "type": "noul"
+          },
+          "a21_x7": {
+            "noul": 0.6,
+            "type": "noul"
+          },
+          "a22_x4": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a22_x5": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a23_x6": {
+            "noul": 0.14,
+            "type": "noul"
+          },
+          "a23_x7": {
+            "noul": 0.73,
+            "type": "noul"
+          },
+          "a24_x4": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a24_x5": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a25_x6": {
+            "noul": 0.41,
+            "type": "noul"
+          },
+          "a25_x7": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a26_x4": {
+            "noul": 0.49,
+            "type": "noul"
+          },
+          "a26_x5": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a27_x6": {
+            "noul": 0.26,
+            "type": "noul"
+          },
+          "a27_x7": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a28_x4": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a28_x5": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a29_x6": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a29_x7": {
+            "noul": 0.57,
+            "type": "noul"
+          },
+          "a2_x4": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a2_x5": {
+            "noul": 0.57,
+            "type": "noul"
+          },
+          "a30_x4": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a30_x5": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a31_x6": {
+            "noul": 0.32,
+            "type": "noul"
+          },
+          "a31_x7": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a32_x4": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a32_x5": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a33_x6": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a33_x7": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a34_x4": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a34_x5": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a35_x6": {
+            "noul": 0.37,
+            "type": "noul"
+          },
+          "a35_x7": {
+            "noul": 0.52,
+            "type": "noul"
+          },
+          "a3_x6": {
+            "noul": 0.37,
+            "type": "noul"
+          },
+          "a3_x7": {
+            "noul": 0.51,
+            "type": "noul"
+          },
+          "a4_x4": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a4_x5": {
+            "noul": 0.58,
+            "type": "noul"
+          },
+          "a5_x6": {
+            "noul": 0.45,
+            "type": "noul"
+          },
+          "a5_x7": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a6_x4": {
+            "noul": 0.54,
+            "type": "noul"
+          },
+          "a6_x5": {
+            "noul": 0.55,
+            "type": "noul"
+          },
+          "a7_x6": {
+            "noul": 0.34,
+            "type": "noul"
+          },
+          "a7_x7": {
+            "noul": 0.53,
+            "type": "noul"
+          },
+          "a8_x4": {
+            "noul": 0.63,
+            "type": "noul"
+          },
+          "a8_x5": {
+            "noul": 0.58,
+            "type": "noul"
+          },
+          "a9_x6": {
+            "noul": 0.44,
+            "type": "noul"
+          },
+          "a9_x7": {
+            "noul": 0.55,
+            "type": "noul"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 12135,
+          "output_tokens": 1424
+        }
+      },
+      "response_sha256": "d534b8e564f1c72e015e5be2143184b7a1ea7980e8f4a03216280b7c99dc1e7a",
+      "span_id": "55ededf88fc54a2d",
+      "started_at_utc": "2026-11-14T18:37:38.986636Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db59d2077e5cb13b567ee98ecc31",
+        "response_body_complete": true,
+        "response_body_sha256": "967a4d9e47c97ab3049142556f6dc584a3b7987a6178fd5be5b978aaaeca0e2a",
+        "response_bytes": 2725
+      },
+      "usage": {
+        "input_tokens": 12135,
+        "output_tokens": 1424
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 256,
+      "candidate_order": {
+        "next_action": [
+          "action_0",
+          "action_1",
+          "action_10",
+          "action_11",
+          "action_12",
+          "action_13",
+          "action_14",
+          "action_15",
+          "action_16",
+          "action_17",
+          "action_18",
+          "action_19",
+          "action_2",
+          "action_20",
+          "action_21",
+          "action_22",
+          "action_23",
+          "action_24",
+          "action_25",
+          "action_26",
+          "action_27",
+          "action_28",
+          "action_29",
+          "action_3",
+          "action_30",
+          "action_31",
+          "action_32",
+          "action_33",
+          "action_34",
+          "action_35",
+          "action_36",
+          "action_37",
+          "action_38",
+          "action_39",
+          "action_4",
+          "action_40",
+          "action_41",
+          "action_42",
+          "action_43",
+          "action_44",
+          "action_5",
+          "action_6",
+          "action_7",
+          "action_8",
+          "action_9"
+        ]
+      },
+      "estimated_usd": 0.000349272,
+      "finished_at_utc": "2026-11-14T18:37:39.703603Z",
+      "latency_seconds": 0.26433929201448336,
+      "proposed_request_bytes": 13922,
+      "question_order": [
+        "next_action"
+      ],
+      "request_bytes": 13922,
+      "request_sha256": "0a6e8d24a693ae5e90c2facc7d228473095d2418cde20c11b21009c95b163fb5",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 18018,
+      "response": {
+        "answers": {
+          "next_action": {
+            "choice": "action_40",
+            "confidence": 0.22,
+            "probabilities": {
+              "action_0": 0.03,
+              "action_1": 0.02,
+              "action_10": 0.02,
+              "action_11": 0.03,
+              "action_12": 0.02,
+              "action_13": 0.01,
+              "action_14": 0.01,
+              "action_15": 0.01,
+              "action_16": 0.03,
+              "action_17": 0.01,
+              "action_18": 0.01,
+              "action_19": 0.02,
+              "action_2": 0.01,
+              "action_20": 0.01,
+              "action_21": 0.01,
+              "action_22": 0.0,
+              "action_23": 0.01,
+              "action_24": 0.01,
+              "action_25": 0.01,
+              "action_26": 0.01,
+              "action_27": 0.01,
+              "action_28": 0.01,
+              "action_29": 0.01,
+              "action_3": 0.05,
+              "action_30": 0.01,
+              "action_31": 0.01,
+              "action_32": 0.01,
+              "action_33": 0.0,
+              "action_34": 0.01,
+              "action_35": 0.0,
+              "action_36": 0.15,
+              "action_37": 0.02,
+              "action_38": 0.02,
+              "action_39": 0.01,
+              "action_4": 0.02,
+              "action_40": 0.24,
+              "action_41": 0.02,
+              "action_42": 0.01,
+              "action_43": 0.01,
+              "action_44": 0.01,
+              "action_5": 0.01,
+              "action_6": 0.01,
+              "action_7": 0.03,
+              "action_8": 0.02,
+              "action_9": 0.01
+            },
+            "type": "choice"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 8316,
+          "output_tokens": 461
+        }
+      },
+      "response_sha256": "7e266f0ffba5b9b09702b71dd3614e6cad2c32f22eb573c75a1f92a046fcd5a1",
+      "span_id": "14c53377d7c046eb",
+      "started_at_utc": "2026-11-14T18:37:39.354817Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db59d38978c8a8bb228ac1119fe4",
+        "response_body_complete": true,
+        "response_body_sha256": "11d2d7c8ee4663a8e9caf78babcd99c61e3e796a6cf9d565f7877b906db585fd",
+        "response_bytes": 925
+      },
+      "usage": {
+        "input_tokens": 8316,
+        "output_tokens": 461
+      }
+    }
+  ],
+  "case_id": "m001-arbitration-s21",
+  "journal": "episodes/m001-arbitration-s21.jsonl",
+  "journal_sha256": "e1cc1e3d90152a61b6b7a7338f34a095dc597fa0d624a400912739108a86af3f",
+  "method": "arbitration",
+  "result": {
+    "action_id": 40,
+    "actions": [
+      23,
+      16,
+      40
+    ],
+    "api": {
+      "attempted_calls": 6,
+      "estimated_usd": 0.002479428,
+      "failures": {},
+      "input_tokens": 59034,
+      "known_estimated_usd": 0.002479428,
+      "latency_seconds": 1.4673439570178743,
+      "output_tokens": 5655,
+      "serialized_request_bytes": 145299,
+      "successful_calls": 6,
+      "unknown_usage_calls": 0
+    },
+    "assays": 2,
+    "effort": 0.8,
+    "failure": null,
+    "final_cultures": 128,
+    "final_mse": 0.001069621407766187,
+    "forecast_coverage": {
+      "frozen_candidate_events": 216,
+      "purchased_events": 4,
+      "requested_jev_events": 216,
+      "scored_jev_events": 4,
+      "scored_reference_events": 4,
+      "validated_jev_events": 216
+    },
+    "forecast_failures": [],
+    "forecasts": [
+      {
+        "action_id": 23,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.3364,
+          "posterior": 0.24976216131100776,
+          "prior": 0.2497621613110143,
+          "public_heuristic": 0.25
+        },
+        "node": 6,
+        "observed_mean": 0.47855193679453994,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.58,
+          "posterior": 0.499762104716842,
+          "prior": 0.49976210471684857,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5019932538107535
+      },
+      {
+        "action_id": 23,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.24009999999999998,
+          "posterior": 0.2510720657090267,
+          "prior": 0.25107206570902013,
+          "public_heuristic": 0.25
+        },
+        "node": 7,
+        "observed_mean": 0.5154022155054119,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.51,
+          "posterior": 0.49892908115813916,
+          "prior": 0.4989290811581457,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5049562592652044
+      },
+      {
+        "action_id": 16,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.2916,
+          "posterior": 0.25000015845249113,
+          "prior": 0.2500001123985842,
+          "public_heuristic": 0.25
+        },
+        "node": 4,
+        "observed_mean": 0.5500753359988473,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.46,
+          "posterior": 0.499999841547534,
+          "prior": 0.49999988760142844,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5030684115247382
+      },
+      {
+        "action_id": 16,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.28090000000000004,
+          "posterior": 0.06202599054882979,
+          "prior": 0.06202599054882874,
+          "public_heuristic": 0.25
+        },
+        "node": 5,
+        "observed_mean": 0.510317174249506,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.47,
+          "posterior": 0.7509498232306795,
+          "prior": 0.7509498232306816,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.4952094806950126
+      }
+    ],
+    "immediate_stop": false,
+    "method": "arbitration",
+    "observed_return": -0.19396214077661872,
+    "online_seconds": 1.9537197499885224,
+    "return_": -0.19396214077661872,
+    "setup_cost": 3.0,
+    "status": "completed",
+    "timing": {
+      "end_to_end_seconds": 1.9537182920030318,
+      "reference_seconds": 0.008877000043867156
+    },
+    "total_assay_cost": 7.7,
+    "variable_cost": 4.7
+  }
+}

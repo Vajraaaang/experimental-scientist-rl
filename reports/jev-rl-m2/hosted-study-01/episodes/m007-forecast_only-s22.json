@@ -1,0 +1,149 @@
+{
+  "api_receipts": [
+    {
+      "attempted": true,
+      "call_index": 1478,
+      "candidate_order": {},
+      "estimated_usd": 0.000135198,
+      "finished_at_utc": "2026-11-14T18:44:49.262639Z",
+      "latency_seconds": 0.16805037498124875,
+      "proposed_request_bytes": 5961,
+      "question_order": [
+        "a11_x6",
+        "a11_x7"
+      ],
+      "request_bytes": 5961,
+      "request_sha256": "6a6d3f9d30376b30e44b0a73092480bd69b7cf9d54ec8612e3ae2ce2aed57d78",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 10057,
+      "response": {
+        "answers": {
+          "a11_x6": {
+            "noul": 0.56,
+            "type": "noul"
+          },
+          "a11_x7": {
+            "noul": 0.41,
+            "type": "noul"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3219,
+          "output_tokens": 44
+        }
+      },
+      "response_sha256": "6236a119efec00520a405b4dd5f4b31346a6ba7532d98831dfc5ed4d33360416",
+      "span_id": "f550e94d28a942a0",
+      "started_at_utc": "2026-11-14T18:44:49.047638Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db6061be729b8bf7cbe0d740f01c",
+        "response_body_complete": true,
+        "response_body_sha256": "6e000c61253201b1acd34989d526fdce3a30963338a58a3e228df83fb128cefa",
+        "response_bytes": 157
+      },
+      "usage": {
+        "input_tokens": 3219,
+        "output_tokens": 44
+      }
+    }
+  ],
+  "case_id": "m007-forecast_only-s22",
+  "journal": "episodes/m007-forecast_only-s22.jsonl",
+  "journal_sha256": "1bf669aad3272491a4c03fb9e8f442dbfe2e006cdd9195bfc07bd92ad893dffb",
+  "method": "forecast_only",
+  "result": {
+    "action_id": 38,
+    "actions": [
+      11,
+      38
+    ],
+    "api": {
+      "attempted_calls": 1,
+      "estimated_usd": 0.000135198,
+      "failures": {},
+      "input_tokens": 3219,
+      "known_estimated_usd": 0.000135198,
+      "latency_seconds": 0.16805037498124875,
+      "output_tokens": 44,
+      "serialized_request_bytes": 5961,
+      "successful_calls": 1,
+      "unknown_usage_calls": 0
+    },
+    "assays": 1,
+    "effort": 0.8,
+    "failure": null,
+    "final_cultures": 128,
+    "final_mse": 0.0008986228573956751,
+    "forecast_coverage": {
+      "frozen_candidate_events": 2,
+      "purchased_events": 2,
+      "requested_jev_events": 2,
+      "scored_jev_events": 2,
+      "scored_reference_events": 2,
+      "validated_jev_events": 2
+    },
+    "forecast_failures": [],
+    "forecasts": [
+      {
+        "action_id": 11,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.19359999999999997,
+          "posterior": 0.2499999959414965,
+          "prior": 0.24999999594148994,
+          "public_heuristic": 0.25
+        },
+        "node": 6,
+        "observed_mean": 0.5617264778955129,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.56,
+          "posterior": 0.5000000040585035,
+          "prior": 0.5000000040585101,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.49179975141885085
+      },
+      {
+        "action_id": 11,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.16809999999999997,
+          "posterior": 0.2500000021982497,
+          "prior": 0.25000000219825624,
+          "public_heuristic": 0.25
+        },
+        "node": 7,
+        "observed_mean": 0.44703962251756024,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.41,
+          "posterior": 0.5000000021982497,
+          "prior": 0.5000000021982562,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.4925567469843428
+      }
+    ],
+    "immediate_stop": false,
+    "method": "forecast_only",
+    "observed_return": -0.15886228573956754,
+    "online_seconds": 0.22955475002527237,
+    "return_": -0.15886228573956754,
+    "setup_cost": 3.0,
+    "status": "completed",
+    "timing": {
+      "end_to_end_seconds": 0.22955450002336875,
+      "reference_seconds": 0.00460012600524351
+    },
+    "total_assay_cost": 5.9,
+    "variable_cost": 2.9
+  }
+}

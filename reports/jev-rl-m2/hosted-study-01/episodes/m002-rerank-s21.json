@@ -1,0 +1,569 @@
+{
+  "api_receipts": [
+    {
+      "attempted": true,
+      "call_index": 462,
+      "candidate_order": {
+        "next_action": [
+          "action_23",
+          "action_27",
+          "action_36"
+        ]
+      },
+      "estimated_usd": 0.000194376,
+      "finished_at_utc": "2026-11-14T18:38:53.376056Z",
+      "latency_seconds": 0.2576352079922799,
+      "proposed_request_bytes": 7965,
+      "question_order": [
+        "next_action"
+      ],
+      "request_bytes": 7965,
+      "request_sha256": "12228db2acae07e43df92334dddd07e9329bdb13eb519bf4ddafe037cf92b541",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 12061,
+      "response": {
+        "answers": {
+          "next_action": {
+            "choice": "action_23",
+            "confidence": 0.61,
+            "probabilities": {
+              "action_23": 0.74,
+              "action_27": 0.15,
+              "action_36": 0.11
+            },
+            "type": "choice"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4628,
+          "output_tokens": 51
+        }
+      },
+      "response_sha256": "84d72b910346a4f6f54eb532e8784940d71681e529f052e4e3ea18bf1d0b7dd2",
+      "span_id": "b6276fae3979405f",
+      "started_at_utc": "2026-11-14T18:38:53.072754Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db5af3847fb0b0732dc74d003190",
+        "response_body_complete": true,
+        "response_body_sha256": "6ecdbe28f183f3934af10fb960fc1e7530510c2a2c440fca004bc9113a99aa87",
+        "response_bytes": 223
+      },
+      "usage": {
+        "input_tokens": 4628,
+        "output_tokens": 51
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 463,
+      "candidate_order": {},
+      "estimated_usd": 0.00013440000000000001,
+      "finished_at_utc": "2026-11-14T18:38:53.634314Z",
+      "latency_seconds": 0.16941933397902176,
+      "proposed_request_bytes": 5899,
+      "question_order": [
+        "a23_x6",
+        "a23_x7"
+      ],
+      "request_bytes": 5899,
+      "request_sha256": "0d0dd0871de636cbfe51a43854e8cdff6a29762fefd6d121cab5de80de672da8",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 9995,
+      "response": {
+        "answers": {
+          "a23_x6": {
+            "noul": 0.5,
+            "type": "noul"
+          },
+          "a23_x7": {
+            "noul": 0.49,
+            "type": "noul"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3200,
+          "output_tokens": 44
+        }
+      },
+      "response_sha256": "be6f3ed3179466e2deab764c0001758fb46db4e1683d290e71346ba306eda231",
+      "span_id": "d393dc5206b541f8",
+      "started_at_utc": "2026-11-14T18:38:53.378750Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db5af4907d09876f1a1d10a3f226",
+        "response_body_complete": true,
+        "response_body_sha256": "b86a0697e6a3cef0a9dfda0d779bcd650c7f23ca0ea5952a516af734b1375103",
+        "response_bytes": 156
+      },
+      "usage": {
+        "input_tokens": 3200,
+        "output_tokens": 44
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 464,
+      "candidate_order": {
+        "next_action": [
+          "action_12",
+          "action_16",
+          "action_42"
+        ]
+      },
+      "estimated_usd": 0.00021021,
+      "finished_at_utc": "2026-11-14T18:38:53.946219Z",
+      "latency_seconds": 0.23294924999936484,
+      "proposed_request_bytes": 8413,
+      "question_order": [
+        "next_action"
+      ],
+      "request_bytes": 8413,
+      "request_sha256": "da961109fdd13c380e6214a64c545c8a1ec523ba0cd9b83ec87b654027e09193",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 12509,
+      "response": {
+        "answers": {
+          "next_action": {
+            "choice": "action_16",
+            "confidence": 0.56,
+            "probabilities": {
+              "action_12": 0.17,
+              "action_16": 0.71,
+              "action_42": 0.12
+            },
+            "type": "choice"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 5005,
+          "output_tokens": 51
+        }
+      },
+      "response_sha256": "e9ddba7efe7bf652263ac2ec89a2296e8235f8725e3500cd6de72afad165ab0f",
+      "span_id": "ceaa0e9c9ed24f1c",
+      "started_at_utc": "2026-11-14T18:38:53.647683Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db5af5b57d19b712dabe900373ef",
+        "response_body_complete": true,
+        "response_body_sha256": "babcd7f5e370dd21d577b89902e802f45edfef6980177ea31ccb2d823dea6ef5",
+        "response_bytes": 223
+      },
+      "usage": {
+        "input_tokens": 5005,
+        "output_tokens": 51
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 465,
+      "candidate_order": {},
+      "estimated_usd": 0.00015061200000000003,
+      "finished_at_utc": "2026-11-14T18:38:54.216853Z",
+      "latency_seconds": 0.1888290409988258,
+      "proposed_request_bytes": 6363,
+      "question_order": [
+        "a16_x4",
+        "a16_x5"
+      ],
+      "request_bytes": 6363,
+      "request_sha256": "f0c542fdfda6940c318dcc893bdd67a2d0f42dee3f97331ab9e76a4833b84f4e",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 10459,
+      "response": {
+        "answers": {
+          "a16_x4": {
+            "noul": 0.47,
+            "type": "noul"
+          },
+          "a16_x5": {
+            "noul": 0.5,
+            "type": "noul"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3586,
+          "output_tokens": 44
+        }
+      },
+      "response_sha256": "1a724d66146ae885cdf80807253101533d3a9eb60457e49acbb078749c7296ea",
+      "span_id": "4c77b2c025034a95",
+      "started_at_utc": "2026-11-14T18:38:53.949283Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db5af6bd74cc8a89b4b6f69b3dae",
+        "response_body_complete": true,
+        "response_body_sha256": "f8585ddd17984c074817cd5a8e90870e15589fdb0ec9a5b99d7d1651c3cb9be1",
+        "response_bytes": 156
+      },
+      "usage": {
+        "input_tokens": 3586,
+        "output_tokens": 44
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 466,
+      "candidate_order": {
+        "next_action": [
+          "action_36",
+          "action_4",
+          "action_8"
+        ]
+      },
+      "estimated_usd": 0.00022617,
+      "finished_at_utc": "2026-11-14T18:38:54.519521Z",
+      "latency_seconds": 0.21164104199851863,
+      "proposed_request_bytes": 8878,
+      "question_order": [
+        "next_action"
+      ],
+      "request_bytes": 8878,
+      "request_sha256": "9149c50062862fbf566086233508fd596dfe0f0ced59357827f00aa1ec0a5f4b",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 12974,
+      "response": {
+        "answers": {
+          "next_action": {
+            "choice": "action_8",
+            "confidence": 0.19,
+            "probabilities": {
+              "action_36": 0.24,
+              "action_4": 0.3,
+              "action_8": 0.46
+            },
+            "type": "choice"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 5385,
+          "output_tokens": 48
+        }
+      },
+      "response_sha256": "bd6b023418e344492514acfa14f92c879530f598bc542d0fe3e39f8d2cf6cfd2",
+      "span_id": "6e1038fba7344dbb",
+      "started_at_utc": "2026-11-14T18:38:54.232108Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db5af7d274a6a02eefe9875aa88f",
+        "response_body_complete": true,
+        "response_body_sha256": "3452e5da3ddcb7b07eb7eab108b5c260c355d7cc8c8e3d3216e6c1f150192f01",
+        "response_bytes": 219
+      },
+      "usage": {
+        "input_tokens": 5385,
+        "output_tokens": 48
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 467,
+      "candidate_order": {},
+      "estimated_usd": 0.00016665600000000003,
+      "finished_at_utc": "2026-11-14T18:38:54.892929Z",
+      "latency_seconds": 0.2871390829968732,
+      "proposed_request_bytes": 6821,
+      "question_order": [
+        "a8_x4",
+        "a8_x5"
+      ],
+      "request_bytes": 6821,
+      "request_sha256": "0fff065c849c41bcbcb7ecba3daf7c2e100c0d3b1119266fffa73c9ee6bb6b6c",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 10917,
+      "response": {
+        "answers": {
+          "a8_x4": {
+            "noul": 0.37,
+            "type": "noul"
+          },
+          "a8_x5": {
+            "noul": 0.47,
+            "type": "noul"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3968,
+          "output_tokens": 42
+        }
+      },
+      "response_sha256": "c8140be8e3f7aae13b69f346d17815c10f5e680c7480f265b611585f6e4bad60",
+      "span_id": "1b8c049fd5174819",
+      "started_at_utc": "2026-11-14T18:38:54.522305Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db5af8f27157ae42787b5cde0dac",
+        "response_body_complete": true,
+        "response_body_sha256": "4ce7bbd98cc1ce3ea1c90ed6e3361a4f17a4dfcd314b299c5e7b2a2fcca14eec",
+        "response_bytes": 155
+      },
+      "usage": {
+        "input_tokens": 3968,
+        "output_tokens": 42
+      }
+    },
+    {
+      "attempted": true,
+      "call_index": 468,
+      "candidate_order": {
+        "next_action": [
+          "action_36",
+          "action_38",
+          "action_40"
+        ]
+      },
+      "estimated_usd": 0.000197484,
+      "finished_at_utc": "2026-11-14T18:38:55.233058Z",
+      "latency_seconds": 0.24909912497969344,
+      "proposed_request_bytes": 8083,
+      "question_order": [
+        "next_action"
+      ],
+      "request_bytes": 8083,
+      "request_sha256": "80b3332410c5fe3456ef52111cb0914baf4659c029d38f8b7547ca53eebf64f3",
+      "reservation_overrun": false,
+      "reserved_input_tokens": 12179,
+      "response": {
+        "answers": {
+          "next_action": {
+            "choice": "action_38",
+            "confidence": 0.34,
+            "probabilities": {
+              "action_36": 0.33,
+              "action_38": 0.56,
+              "action_40": 0.11
+            },
+            "type": "choice"
+          }
+        },
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4702,
+          "output_tokens": 51
+        }
+      },
+      "response_sha256": "280b84d9c7e08e06b88bbb73a1f775812fbf706071f496b659b4f40241ad0cb3",
+      "span_id": "5f0751ada17140c9",
+      "started_at_utc": "2026-11-14T18:38:54.908077Z",
+      "status": "success",
+      "trace_id": "cebe092b3c284b91977364ae6a5903e5",
+      "transport": {
+        "endpoint": "/v1/systemone",
+        "http_status": 200,
+        "provider_request_id": "req_01a1db5afa7779e899b4680d54ba4492",
+        "response_body_complete": true,
+        "response_body_sha256": "680058fdca6eac0037e635c94bc4b63415f8e51bf52fb4da3412d41ac70f2e2b",
+        "response_bytes": 223
+      },
+      "usage": {
+        "input_tokens": 4702,
+        "output_tokens": 51
+      }
+    }
+  ],
+  "case_id": "m002-rerank-s21",
+  "journal": "episodes/m002-rerank-s21.jsonl",
+  "journal_sha256": "6f11436b17fcdf1d8b08a0bfb03bcfcca725bf924417e5e7c2e375d184fbfbc6",
+  "method": "rerank",
+  "result": {
+    "action_id": 38,
+    "actions": [
+      23,
+      16,
+      8,
+      38
+    ],
+    "api": {
+      "attempted_calls": 7,
+      "estimated_usd": 0.0012799080000000002,
+      "failures": {},
+      "input_tokens": 30474,
+      "known_estimated_usd": 0.0012799080000000002,
+      "latency_seconds": 1.5967120829445776,
+      "output_tokens": 331,
+      "serialized_request_bytes": 52422,
+      "successful_calls": 7,
+      "unknown_usage_calls": 0
+    },
+    "assays": 3,
+    "effort": 0.8,
+    "failure": null,
+    "final_cultures": 128,
+    "final_mse": 0.0009361225214624213,
+    "forecast_coverage": {
+      "frozen_candidate_events": 6,
+      "purchased_events": 6,
+      "requested_jev_events": 6,
+      "scored_jev_events": 6,
+      "scored_reference_events": 6,
+      "validated_jev_events": 6
+    },
+    "forecast_failures": [],
+    "forecasts": [
+      {
+        "action_id": 23,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.25,
+          "posterior": 0.24996741670510386,
+          "prior": 0.24996741670511052,
+          "public_heuristic": 0.25
+        },
+        "node": 6,
+        "observed_mean": 0.4650142097151816,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.5,
+          "posterior": 0.49996741564336356,
+          "prior": 0.4999674156433702,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5003137405302105
+      },
+      {
+        "action_id": 23,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.2601,
+          "posterior": 0.24990565609607282,
+          "prior": 0.24990565609606616,
+          "public_heuristic": 0.25
+        },
+        "node": 7,
+        "observed_mean": 0.523356705389106,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.49,
+          "posterior": 0.5000943528063793,
+          "prior": 0.5000943528063859,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.49911438098415406
+      },
+      {
+        "action_id": 16,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.22089999999999999,
+          "posterior": 0.2500001363762762,
+          "prior": 0.25000017470569225,
+          "public_heuristic": 0.25
+        },
+        "node": 4,
+        "observed_mean": 0.4545116913155911,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.47,
+          "posterior": 0.5000001363762576,
+          "prior": 0.5000001747056617,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.4963137655265701
+      },
+      {
+        "action_id": 16,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.25,
+          "posterior": 0.1419277203058623,
+          "prior": 0.14192772030586165,
+          "public_heuristic": 0.25
+        },
+        "node": 5,
+        "observed_mean": 0.5005112379228871,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.5,
+          "posterior": 0.37673295622478037,
+          "prior": 0.37673295622477954,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5022208285308123
+      },
+      {
+        "action_id": 8,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.39690000000000003,
+          "posterior": 0.24999991372690233,
+          "prior": 0.24999982529436882,
+          "public_heuristic": 0.25
+        },
+        "node": 4,
+        "observed_mean": 0.5414610733641516,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.37,
+          "posterior": 0.5000000862731051,
+          "prior": 0.5000001747056617,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.4963137655265701
+      },
+      {
+        "action_id": 8,
+        "brier": {
+          "chance": 0.25,
+          "jev": 0.22089999999999999,
+          "posterior": 0.14192772030586173,
+          "prior": 0.14192772030586165,
+          "public_heuristic": 0.25
+        },
+        "node": 5,
+        "observed_mean": 0.48494994499232014,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "jev": 0.47,
+          "posterior": 0.37673295622477965,
+          "prior": 0.37673295622477954,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5022208285308123
+      }
+    ],
+    "immediate_stop": false,
+    "method": "rerank",
+    "observed_return": -0.19961225214624212,
+    "online_seconds": 2.1701264579896815,
+    "return_": -0.19961225214624212,
+    "setup_cost": 3.0,
+    "status": "completed",
+    "timing": {
+      "end_to_end_seconds": 2.170124875003239,
+      "reference_seconds": 0.013356458017369732
+    },
+    "total_assay_cost": 9.6,
+    "variable_cost": 6.6
+  }
+}
