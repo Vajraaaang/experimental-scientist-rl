@@ -1,0 +1,60 @@
+{
+  "source": "reports/jev-rl-m1/hosted-20261113-204144",
+  "replayed_episodes": 15,
+  "hosted_calls": 11,
+  "models": [
+    "jev-1.14.0"
+  ],
+  "http_statuses": [
+    200
+  ],
+  "provider_request_ids_recorded": 11,
+  "unique_provider_request_ids": 11,
+  "usage": {
+    "accounted_estimated_usd": 0.00327012,
+    "accounted_input_tokens": 77860,
+    "attempted_calls": 11,
+    "blocked_reason": null,
+    "estimated_usd": 0.00327012,
+    "failures": {},
+    "input_tokens": 77860,
+    "known_estimated_usd": 0.00327012,
+    "latency_seconds": 2.6852822490909602,
+    "output_tokens": 11811,
+    "reserved_estimated_usd": 0.0,
+    "reserved_input_tokens": 0,
+    "serialized_request_bytes": 192825,
+    "successful_calls": 11,
+    "unknown_usage_calls": 0,
+    "usage_complete": true
+  },
+  "forecast_probe": {
+    "chance": {
+      "n": 6,
+      "brier": 0.25
+    },
+    "jev": {
+      "n": 6,
+      "brier": 0.24938333333333332
+    },
+    "posterior": {
+      "n": 6,
+      "brier": 0.18234700806969376
+    },
+    "prior": {
+      "n": 6,
+      "brier": 0.18327985889086165
+    },
+    "public_heuristic": {
+      "n": 6,
+      "brier": 0.25
+    }
+  },
+  "limitations": [
+    "one development mechanism",
+    "seed20 only",
+    "six fixed-probe measurement events",
+    "not a comparative effectiveness or calibration conclusion"
+  ],
+  "process_key_available": false
+}

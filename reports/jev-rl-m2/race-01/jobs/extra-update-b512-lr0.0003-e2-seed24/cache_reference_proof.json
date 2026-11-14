@@ -1,0 +1,508 @@
+{
+  "absolute_tolerance": 1e-12,
+  "cases": 8,
+  "checkpoint": {
+    "bytes": 6575275,
+    "calibration": {
+      "dose_penalty": 0.0,
+      "duration_penalty": 0.0,
+      "stop_bonus": 0.0
+    },
+    "elapsed_seconds": 1.3080317499989178,
+    "joint_elapsed_seconds": 0.05076758298673667,
+    "joint_episode_offset": 298763,
+    "joint_episodes": 0,
+    "joint_namespace": 91303,
+    "joint_transitions": 0,
+    "path": "reports/jev-rl-m2/race-01/jobs/extra-update-b512-lr0.0003-e2-seed24/best_primary-joint-u0000000-0001.pt",
+    "phase": "joint",
+    "phase_episodes": 0,
+    "saved_elapsed_seconds": 1.3403498340048827,
+    "selector_episodes": 0,
+    "selector_transitions": 0,
+    "sha256": "7c645d851f4c0862bda20a6eacce11a3d738a1f25272e94739fa00df30636e3b",
+    "training_episodes": 0,
+    "training_policy_decisions": 0,
+    "training_transitions": 0,
+    "updates": 0,
+    "validation_episodes": 128,
+    "validation_policy_decisions": 388,
+    "validation_transitions": 388
+  },
+  "checkpoint_role": "best_eligible_primary",
+  "passed": true,
+  "rows": [
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 38,
+        "actions": [
+          27,
+          8,
+          38
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0011795584025190214,
+        "mechanism_hash": "e2c5c24090f56ecd1d1cbeb64242fa3fcfe92c04e902e38cb0e32047b0465c92",
+        "return": -0.20595584025190214,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.15795584025190215
+        ],
+        "setup_cost": 3.0,
+        "task_index": 0,
+        "task_seed": 991312000,
+        "variable_cost": 4.8
+      },
+      "native": {
+        "action_id": 38,
+        "actions": [
+          27,
+          8,
+          38
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0011795584025190214,
+        "mechanism_hash": "e2c5c24090f56ecd1d1cbeb64242fa3fcfe92c04e902e38cb0e32047b0465c92",
+        "return": -0.20595584025190214,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.15795584025190215
+        ],
+        "setup_cost": 3.0,
+        "task_index": 0,
+        "task_seed": 991312000,
+        "variable_cost": 4.8
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 0
+    },
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 44,
+        "actions": [
+          27,
+          32,
+          44
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0007961752822856088,
+        "mechanism_hash": "9ef5089bd8c628786aac11d1a37d366e0f500229b9c5fd31ca9aef97b6483bc5",
+        "return": -0.16761752822856088,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.1196175282285609
+        ],
+        "setup_cost": 3.0,
+        "task_index": 1,
+        "task_seed": 991312001,
+        "variable_cost": 4.8
+      },
+      "native": {
+        "action_id": 44,
+        "actions": [
+          27,
+          32,
+          44
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0007961752822856088,
+        "mechanism_hash": "9ef5089bd8c628786aac11d1a37d366e0f500229b9c5fd31ca9aef97b6483bc5",
+        "return": -0.16761752822856088,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.1196175282285609
+        ],
+        "setup_cost": 3.0,
+        "task_index": 1,
+        "task_seed": 991312001,
+        "variable_cost": 4.8
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 1
+    },
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 38,
+        "actions": [
+          27,
+          8,
+          38
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0010613203827366756,
+        "mechanism_hash": "5f489e31d0b4c466d3f9c7759b5602368958e4ebf24d0da10185113c05eef6f3",
+        "return": -0.19413203827366754,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.14613203827366755
+        ],
+        "setup_cost": 3.0,
+        "task_index": 2,
+        "task_seed": 991312002,
+        "variable_cost": 4.8
+      },
+      "native": {
+        "action_id": 38,
+        "actions": [
+          27,
+          8,
+          38
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0010613203827366756,
+        "mechanism_hash": "5f489e31d0b4c466d3f9c7759b5602368958e4ebf24d0da10185113c05eef6f3",
+        "return": -0.19413203827366754,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.14613203827366755
+        ],
+        "setup_cost": 3.0,
+        "task_index": 2,
+        "task_seed": 991312002,
+        "variable_cost": 4.8
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 2
+    },
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 42,
+        "actions": [
+          27,
+          42
+        ],
+        "assays": 1,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0008106349489370644,
+        "mechanism_hash": "eb49da60810c4ae0df6fad4cb7b5d0b6fbb9c69b86624c467c1f694ff7761874",
+        "return": -0.15006349489370646,
+        "rewards": [
+          -0.028999999999999998,
+          -0.12106349489370645
+        ],
+        "setup_cost": 3.0,
+        "task_index": 3,
+        "task_seed": 991312003,
+        "variable_cost": 2.9
+      },
+      "native": {
+        "action_id": 42,
+        "actions": [
+          27,
+          42
+        ],
+        "assays": 1,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0008106349489370644,
+        "mechanism_hash": "eb49da60810c4ae0df6fad4cb7b5d0b6fbb9c69b86624c467c1f694ff7761874",
+        "return": -0.15006349489370646,
+        "rewards": [
+          -0.028999999999999998,
+          -0.12106349489370645
+        ],
+        "setup_cost": 3.0,
+        "task_index": 3,
+        "task_seed": 991312003,
+        "variable_cost": 2.9
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 3
+    },
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 44,
+        "actions": [
+          27,
+          32,
+          44
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0011054215938917824,
+        "mechanism_hash": "356409b8a009cfccf4467ded277f6d65dfdc60789263794fa04444f02e6a4b8f",
+        "return": -0.19854215938917824,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.15054215938917825
+        ],
+        "setup_cost": 3.0,
+        "task_index": 4,
+        "task_seed": 991312004,
+        "variable_cost": 4.8
+      },
+      "native": {
+        "action_id": 44,
+        "actions": [
+          27,
+          32,
+          44
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0011054215938917824,
+        "mechanism_hash": "356409b8a009cfccf4467ded277f6d65dfdc60789263794fa04444f02e6a4b8f",
+        "return": -0.19854215938917824,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.15054215938917825
+        ],
+        "setup_cost": 3.0,
+        "task_index": 4,
+        "task_seed": 991312004,
+        "variable_cost": 4.8
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 4
+    },
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 40,
+        "actions": [
+          27,
+          8,
+          16,
+          40
+        ],
+        "assays": 3,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0008167885818706519,
+        "mechanism_hash": "6743fb229602c4c36e8ac6b905119fd439f21cef73b1922b3880dbf1340849d1",
+        "return": -0.1886788581870652,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.019,
+          -0.1216788581870652
+        ],
+        "setup_cost": 3.0,
+        "task_index": 5,
+        "task_seed": 991312005,
+        "variable_cost": 6.7
+      },
+      "native": {
+        "action_id": 40,
+        "actions": [
+          27,
+          8,
+          16,
+          40
+        ],
+        "assays": 3,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0008167885818706519,
+        "mechanism_hash": "6743fb229602c4c36e8ac6b905119fd439f21cef73b1922b3880dbf1340849d1",
+        "return": -0.1886788581870652,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.019,
+          -0.1216788581870652
+        ],
+        "setup_cost": 3.0,
+        "task_index": 5,
+        "task_seed": 991312005,
+        "variable_cost": 6.7
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 5
+    },
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 38,
+        "actions": [
+          27,
+          8,
+          38
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0006248136048240628,
+        "mechanism_hash": "e797623be67d2f42ae9c75a36efaff3768d78f4e3d55406d87b9d20e936b5465",
+        "return": -0.1504813604824063,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.10248136048240629
+        ],
+        "setup_cost": 3.0,
+        "task_index": 6,
+        "task_seed": 991312006,
+        "variable_cost": 4.8
+      },
+      "native": {
+        "action_id": 38,
+        "actions": [
+          27,
+          8,
+          38
+        ],
+        "assays": 2,
+        "effort": 0.8,
+        "final_cultures": 32,
+        "final_mse": 0.0006248136048240628,
+        "mechanism_hash": "e797623be67d2f42ae9c75a36efaff3768d78f4e3d55406d87b9d20e936b5465",
+        "return": -0.1504813604824063,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.10248136048240629
+        ],
+        "setup_cost": 3.0,
+        "task_index": 6,
+        "task_seed": 991312006,
+        "variable_cost": 4.8
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 6
+    },
+    {
+      "absolute_errors": {
+        "assays": 0,
+        "effort": 0.0,
+        "final_mse": 0.0,
+        "return": 0.0,
+        "variable_cost": 0.0
+      },
+      "actions_equal": true,
+      "cached": {
+        "action_id": 36,
+        "actions": [
+          27,
+          32,
+          36
+        ],
+        "assays": 2,
+        "effort": 0.0,
+        "final_cultures": 32,
+        "final_mse": 0.006399999999999994,
+        "mechanism_hash": "3725df99eabe8564f7419904694f9b21d1ffc03e97ce2d5425f6d8e2e7023703",
+        "return": -0.6879999999999995,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.6399999999999995
+        ],
+        "setup_cost": 3.0,
+        "task_index": 7,
+        "task_seed": 991312007,
+        "variable_cost": 4.8
+      },
+      "native": {
+        "action_id": 36,
+        "actions": [
+          27,
+          32,
+          36
+        ],
+        "assays": 2,
+        "effort": 0.0,
+        "final_cultures": 32,
+        "final_mse": 0.006399999999999994,
+        "mechanism_hash": "3725df99eabe8564f7419904694f9b21d1ffc03e97ce2d5425f6d8e2e7023703",
+        "return": -0.6879999999999995,
+        "rewards": [
+          -0.028999999999999998,
+          -0.019,
+          -0.6399999999999995
+        ],
+        "setup_cost": 3.0,
+        "task_index": 7,
+        "task_seed": 991312007,
+        "variable_cost": 4.8
+      },
+      "passed": true,
+      "rewards_equal": true,
+      "task_index": 7
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 **A scientific agent that learns what to test next.**
 
+**New development study:** [M3 Max PPO comparison and Jev integration](reports/jev-rl-m2/REPORT.md) — bounded training, request-level tracing, prospective forecasts, constrained reranking, and credential-free replay. The new PPO gain screens failed; the larger Jev hosted comparison remains pending.
+
 ![Conceptual animation of a scientific agent choosing an experiment](docs/media/experimental-scientist.gif)
 
 <sub>Conceptual workflow. [Watch the MP4](docs/media/experimental-scientist.mp4) · [Download the still cover](docs/media/experimental-scientist.png)</sub>
@@ -47,7 +49,7 @@ The agent must learn both **how to gather useful evidence** and **how to turn th
 | Imitation learning | Learns to reproduce the planner's decisions from public experiment histories |
 | PPO reinforcement learning | Learns from experiments and rewards, using a reward-only curriculum to develop interpretation and experiment-selection skills |
 
-The learned comparisons use the same 64-unit recurrent neural architecture. Training budgets differ and are reported. Public-price logit calibration is reported separately from PPO gradient learning.
+The historical v4–v6 learned comparisons use the same 64-unit recurrent neural architecture. Training budgets differ and are reported. Public-price logit calibration is reported separately from PPO gradient learning. The newer M2 development study also tests larger policies and explicitly reports the capacity difference from imitation.
 
 ## What did the experiments show?
 
@@ -55,7 +57,7 @@ The learned comparisons use the same 64-unit recurrent neural architecture. Trai
 - **Adaptive experiments can help.** A documented development revision retains unreachable targets. On fresh tests of that task, useful adaptive PPO policies beat the preserved strong fixed design.
 - **PPO has improved, but imitation remains cheaper.** More training reduced PPO's spending and target error and improved its return. A PPO advantage over strong imitation has not been established.
 
-The latest frozen comparison uses **4,096 new mechanisms and all five retained training seeds**:
+The historical v6 frozen comparison uses **4,096 new mechanisms and all five retained training seeds**:
 
 | Method | Final target error (RMSE ↓) | Experimental cost ↓ |
 |---|---:|---:|
@@ -71,6 +73,16 @@ Updated PPO spends **3.8% less than its previous version**, with favorable paire
 These are **synthetic-system results within familiar mechanism families**. They do not establish wet-lab usefulness, structural generalization, or therapeutic efficacy. Training/development and final tests are separated; methods are frozen before final scoring.
 
 Read [the complete measured report](docs/ppo_efficiency_v6.md) for confidence intervals, failed controls, compute accounting, and limitations. [The results guide](docs/results.md) keeps the earlier studies and negative findings separate.
+
+## New M2 development evidence
+
+The M3 Max study completed 42 bounded training runs in 49.4 minutes, using 49.65 million new training transitions. CPU beat native MPS and a CPU/MPS split for the measured full loop. GRU128 led the short 240-second architecture screen; GRU512 led at approximately two million interactions and was selected for the five-seed continuation comparison.
+
+On 128 fresh development mechanisms, selected PPO's mean return gain over v6 was +0.00630, with a paired 95% interval of [−0.00170, +0.02062]. All prespecified gain screens failed. Strong imitation and Bayesian VOI retained lower assay cost and higher mean return. These are separate development results; their absolute errors should not be compared with the historical v6 table as an improvement.
+
+Jev now has bounded typed requests, provider request IDs, local call spans, full probabilities, pinned model validation, usage accounting and replayable forecast/action traces. The integration supports full arbitration, prediction-only forecasts and constrained PPO-proposal reranking with matched controls. The authenticated pilot had 11 successful calls; its six common-probe events did not demonstrate forecast benefit. The 75-episode M2 fixture used no hosted calls, and a larger hosted study remains pending explicit allowance and a fresh credential.
+
+See the [capability audit](docs/jev_capabilities_audit.md), [full M2 report](reports/jev-rl-m2/REPORT.md), and [reproduction tables](reports/jev-rl-m2/summary-01/COMPARISONS.md). Replay works without checkpoints or API credentials. The new final split remains unopened.
 
 ## Run a small demonstration
 

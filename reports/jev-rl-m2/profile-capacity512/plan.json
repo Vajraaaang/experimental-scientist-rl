@@ -1,0 +1,62 @@
+{
+  "scope": "pre-training hardware capacity extension",
+  "prior_transitions": 2945357,
+  "global_transition_cap": 3000000,
+  "maximum_additional_transitions": 50688,
+  "configs": [
+    {
+      "kind": "history",
+      "backend": "cpu",
+      "hidden": 512,
+      "batch": 512,
+      "cycles": 4,
+      "seconds": 20,
+      "transition_cap": 8500
+    },
+    {
+      "kind": "history",
+      "backend": "mps",
+      "hidden": 512,
+      "batch": 512,
+      "cycles": 4,
+      "seconds": 20,
+      "transition_cap": 8500
+    },
+    {
+      "kind": "history",
+      "backend": "split",
+      "hidden": 512,
+      "batch": 512,
+      "cycles": 4,
+      "seconds": 20,
+      "transition_cap": 8500
+    },
+    {
+      "kind": "recurrent",
+      "backend": "cpu",
+      "hidden": 512,
+      "batch": 512,
+      "cycles": 4,
+      "seconds": 20,
+      "transition_cap": 8500
+    },
+    {
+      "kind": "recurrent",
+      "backend": "mps",
+      "hidden": 512,
+      "batch": 512,
+      "cycles": 4,
+      "seconds": 20,
+      "transition_cap": 8500
+    },
+    {
+      "kind": "recurrent",
+      "backend": "split",
+      "hidden": 512,
+      "batch": 512,
+      "cycles": 4,
+      "seconds": 20,
+      "transition_cap": 8500
+    }
+  ]
+}

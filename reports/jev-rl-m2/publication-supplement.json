@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-14",
+  "files": [
+    {
+      "before_publication_sha256": "b107ed11f828839f145c9c8f9c54c6a452cece726f08c61cc97fca7512b79b83",
+      "bytes": 12012,
+      "path": "README.md",
+      "sha256": "c9f501e4b2b2d2c250155adae600a4b9f30d700e87981f99556582390ab88bdb"
+    },
+    {
+      "before_publication_sha256": "0ffb16e1f58d34ca2549fc6652e2e2b971b7a1faa3ae45d58ce82543de9c4837",
+      "bytes": 9641,
+      "path": "docs/results.md",
+      "sha256": "56dd34ee3bbe233f0c25c10f5b0a7bc12a234a1a56e9c04bc6f0425b2a318689"
+    },
+    {
+      "bytes": 9502,
+      "path": "scripts/summarize_ppo_m2.py",
+      "sha256": "832f1640b8667f529f4be4222b519695995f5c421fe6a1b77e59ab6246e6aa83"
+    },
+    {
+      "bytes": 13722,
+      "path": "reports/jev-rl-m2/REPORT.md",
+      "sha256": "5490bfcbd96e376daa6e152946fa700bb0480546ea96b643c6d9db55e5268827"
+    },
+    {
+      "bytes": 70811,
+      "path": "reports/jev-rl-m2/summary-01/summary.json",
+      "sha256": "0b57b551e79e3a55b52a3aa2df43d234d1adc008644dd86f4716f14be93b735b"
+    },
+    {
+      "bytes": 7158,
+      "path": "reports/jev-rl-m2/summary-01/COMPARISONS.md",
+      "sha256": "1bf901f93dedaf59c1b6270caacf6b34e40db52168eed40b42d2f47bd6c1e91a"
+    },
+    {
+      "bytes": 145808,
+      "path": "reports/jev-rl-m2/summary-01/m2-comparison.png",
+      "sha256": "177e15aba5bd7298b437ad3612b85e5851ec1afe676d6848ddd554df58ea1c83"
+    },
+    {
+      "bytes": 204,
+      "path": "reports/jev-rl-m2/preservation-final.json",
+      "sha256": "cba54cd0b23753ee6e8b0c5ee567c82c9e7c37909500f98df37332843c6fc2d3"
+    },
+    {
+      "bytes": 581,
+      "path": "reports/jev-rl-m2/final-primary-tests-03.log",
+      "sha256": "c8a362daeb612bec214c211f6c9177d1d058cbee36bdd42196d68afbcade9a31"
+    },
+    {
+      "bytes": 581,
+      "path": "reports/jev-rl-m2/final-public-tests-02.log",
+      "sha256": "fae0752ef2c9863a19686e395d7bb90fc6673362d59cc2240bdbe940d4084f13"
+    },
+    {
+      "bytes": 978,
+      "path": "reports/jev-rl-m2/verification.json",
+      "sha256": "b1acab23da759a6c9281466da883aa757475e5cea2e0a0f0f8378c65051c7df5"
+    },
+    {
+      "bytes": 680483,
+      "path": "reports/jev-rl-m2/publication-export.json",
+      "sha256": "08183d82dfbcc688c795b321c865e556176ff603c74948b503b25f6c5894291a"
+    },
+    {
+      "bytes": 2915,
+      "path": "reports/jev-rl-m2/publication-integrity-audit.json",
+      "sha256": "dd177f4fdd33187c5ccc78ae00b6caac04dce26dce9c51b940800f74671a0c51"
+    }
+  ],
+  "final_split_opened": false,
+  "historical_public_base": "ae6cdc8e731cb4b1d427a7604adad86d74b5ec12",
+  "hosted_analysis_registration_commit": "5145460",
+  "new_m2_hosted_calls": 0,
+  "schema": "jev-m2-publication-supplement-v1",
+  "scope": "Narrative/index updates, static reporting code/outputs, final checks and export receipts; scientific execution artifacts are mapped by publication-export.json.",
+  "source_scientific_outputs_unchanged": true,
+  "supplemental_private_path_scan_passed": true
+}

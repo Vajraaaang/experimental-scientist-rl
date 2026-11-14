@@ -1,0 +1,29 @@
+{
+  "ci_status": "not yet run for final release commit",
+  "date": "2026-11-14",
+  "final_split_opened": false,
+  "fixture_analysis_reproduced": true,
+  "historical_test_failure": "Initial public suite failed four tests because unpublished weights were assumed. Tests now construct synthetic registered checkpoints; production admission and original weights unchanged. The original failing log is retained locally.",
+  "m1_evidence_files_unchanged": 1268,
+  "new_m2_hosted_calls": 0,
+  "original_files_unchanged": 695,
+  "primary_tests": {
+    "failed": 0,
+    "log": "reports/jev-rl-m2/final-primary-tests-03.log",
+    "passed": 473,
+    "seconds": 14.87
+  },
+  "public_tests": {
+    "failed": 0,
+    "log": "reports/jev-rl-m2/final-public-tests-02.log",
+    "passed": 477,
+    "seconds": 15.96
+  },
+  "schema": "jev-m2-release-verification-v1",
+  "snapshot_replay_counts": {
+    "m1_fixture": 100,
+    "m1_hosted": 15,
+    "m2_fixture": 75,
+    "ppo_confirmation": 5632
+  }
+}

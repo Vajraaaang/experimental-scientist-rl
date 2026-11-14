@@ -1,0 +1,127 @@
+{
+  "api_receipts": [],
+  "case_id": "m001-imitation-s23",
+  "journal": "episodes/m001-imitation-s23.jsonl",
+  "journal_sha256": "5bb7f39f2c0f411cf557f973c7ddedf78951b0d9cf70e128d5fa037ced0d175a",
+  "result": {
+    "action_id": 42,
+    "actions": [
+      7,
+      20,
+      42
+    ],
+    "assays": 2,
+    "decision_seconds": [
+      0.0007138749933801591,
+      0.0007183330017141998,
+      0.0008805420075077564
+    ],
+    "effort": 0.8,
+    "end_to_end_seconds": 0.008907209004973993,
+    "failure": null,
+    "final_cultures": 128,
+    "final_mse": 0.0007059424477781984,
+    "forecast_coverage": {
+      "frozen_candidate_events": 216,
+      "jev_requested_events": 0,
+      "jev_validated_events": 0,
+      "probe_expected_events": null,
+      "purchased_events": 4,
+      "scored_jev_events": 0,
+      "scored_reference_events": 4
+    },
+    "forecasts": [
+      {
+        "action_id": 7,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.25020819620982393,
+          "prior": 0.2502081962098305,
+          "public_heuristic": 0.25
+        },
+        "node": 6,
+        "observed_mean": 0.4746286569839471,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.5002081528822016,
+          "prior": 0.5002081528822081,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.49820901765227954
+      },
+      {
+        "action_id": 7,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.24947652429326903,
+          "prior": 0.24947652429326236,
+          "public_heuristic": 0.25
+        },
+        "node": 7,
+        "observed_mean": 0.5296575044805798,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.5005237500208153,
+          "prior": 0.500523750020822,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.4965750311415215
+      },
+      {
+        "action_id": 20,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.055220122806753424,
+          "prior": 0.055220122806753424,
+          "public_heuristic": 0.25
+        },
+        "node": 4,
+        "observed_mean": 0.5045870861000578,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.23498962276397106,
+          "prior": 0.23498962276397106,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5051089371541277
+      },
+      {
+        "action_id": 20,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.25257919587892563,
+          "prior": 0.2527348028865178,
+          "public_heuristic": 0.25
+        },
+        "node": 5,
+        "observed_mean": 0.4862398606772397,
+        "outcome": 0,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.5025725777227859,
+          "prior": 0.5027273643701105,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.49729593610969847
+      }
+    ],
+    "immediate_stop": false,
+    "method": "imitation",
+    "observed_return": -0.15659424477781986,
+    "online_seconds": 0.00869608300854452,
+    "reference_forecast_seconds": [
+      0.001055542001267895,
+      0.001229999994393438,
+      0.0012974579876754433
+    ],
+    "return_": -0.15659424477781986,
+    "setup_cost": 3.0,
+    "status": "completed",
+    "timing_scope": "instrumented controller loop; includes forecast references and synchronous journal writes; end_to_end also includes reset",
+    "total_assay_cost": 7.6,
+    "variable_cost": 4.6
+  }
+}

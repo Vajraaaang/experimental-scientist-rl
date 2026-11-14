@@ -1,0 +1,25 @@
+{
+  "scope": "sampled remaining-race window; not full-race or exact allocator peak",
+  "samples": 10,
+  "started_after_race_seconds_approx": 2837.394382821454,
+  "seconds": 135.84404879200156,
+  "interval_seconds": 15,
+  "sampled_peak_owned_training_rss_bytes": 2343567360,
+  "sampled_peak_nonfree_unified_pool_bytes": 37032722432,
+  "thermal_state_codes": [
+    0
+  ],
+  "thermal_code_meanings": {
+    "0": "nominal",
+    "1": "fair",
+    "2": "serious",
+    "3": "critical"
+  },
+  "temperature_celsius_measured": false,
+  "limitations": [
+    "nonfree machine memory includes caches and unrelated apps",
+    "RSS sums may share pages",
+    "15-second sampling can miss shorter peaks",
+    "monitor starts after initial profiling/training; no retrospective peak claim"
+  ]
+}

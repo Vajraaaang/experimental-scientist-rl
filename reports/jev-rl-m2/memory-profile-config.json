@@ -1,0 +1,21 @@
+{
+  "backend": "cpu",
+  "batch": 256,
+  "entropy_end": 0.001,
+  "entropy_start": 0.001,
+  "eval_every_interactions": 100000,
+  "hard_wall_seconds": 30,
+  "hidden": 512,
+  "initial_checkpoint_record": "reports/jev-rl-m2/memory-profile-initial.json",
+  "initialization": "scratch",
+  "joint_epochs": 2,
+  "joint_hard_interactions": 1900,
+  "joint_interactions": 1900,
+  "joint_lr": 0.0001,
+  "kind": "recurrent",
+  "name": "selected-memory-profile-only",
+  "seed": 20,
+  "selector_interactions": 0,
+  "threads": 1,
+  "wall_snapshot_seconds": 0
+}

@@ -1,0 +1,31 @@
+{"completed": ["joint-cpu-b128"], "elapsed": 2.8884991249942686, "transitions": 2134}
+{"completed": ["joint-mps-b128"], "elapsed": 7.006128707987955, "transitions": 4264}
+{"completed": ["joint-split-b128"], "elapsed": 10.5391592909873, "transitions": 6398}
+{"completed": ["joint-cpu-b512"], "elapsed": 13.040661832987098, "transitions": 14267}
+{"completed": ["joint-mps-b512"], "elapsed": 17.43292950000614, "transitions": 22145}
+{"completed": ["joint-split-b512"], "elapsed": 21.4061053750047, "transitions": 30014}
+{"completed": ["joint-cpu-b1024"], "elapsed": 24.75366383299115, "transitions": 45569}
+{"completed": ["joint-mps-b1024"], "elapsed": 29.938238582981285, "transitions": 61118}
+{"completed": ["joint-split-b1024"], "elapsed": 34.7219672909996, "transitions": 76673}
+{"completed": ["cpu-threads2"], "elapsed": 37.204813082993496, "transitions": 84542}
+{"completed": ["cpu-threads4"], "elapsed": 39.68773604099988, "transitions": 92411}
+{"completed": ["selector-history-h64-cpu"], "elapsed": 42.389713415992446, "transitions": 102971}
+{"completed": ["selector-history-h64-mps"], "elapsed": 46.32579570799135, "transitions": 113531}
+{"completed": ["selector-history-h64-split"], "elapsed": 49.638178624998545, "transitions": 124091}
+{"completed": ["selector-history-h128-cpu"], "elapsed": 52.34163716598414, "transitions": 134651}
+{"completed": ["selector-history-h128-mps"], "elapsed": 55.87566474999767, "transitions": 145211}
+{"completed": ["selector-history-h128-split"], "elapsed": 59.19275387498783, "transitions": 155771}
+{"completed": ["selector-history-h256-cpu"], "elapsed": 61.89692329100217, "transitions": 166331}
+{"completed": ["selector-history-h256-mps"], "elapsed": 65.42593199998373, "transitions": 176891}
+{"completed": ["selector-history-h256-split"], "elapsed": 68.76070087499102, "transitions": 187451}
+{"completed": ["selector-recurrent-h128-cpu"], "elapsed": 71.47188649998861, "transitions": 198011}
+{"completed": ["selector-recurrent-h128-mps"], "elapsed": 75.18414308299543, "transitions": 208571}
+{"completed": ["selector-recurrent-h128-split"], "elapsed": 78.49492804097827, "transitions": 219131}
+{"completed": ["selector-recurrent-h256-cpu"], "elapsed": 81.40028004097985, "transitions": 229691}
+{"completed": ["selector-recurrent-h256-mps"], "elapsed": 85.13745229100459, "transitions": 240251}
+{"completed": ["selector-recurrent-h256-split"], "elapsed": 88.66649241599953, "transitions": 250811}
+{"completed": ["sustained-cpu"], "elapsed": 149.8492604159983, "transitions": 771150}
+{"completed": ["sustained-mps"], "elapsed": 211.51496495798347, "transitions": 1145258}
+{"completed": ["sustained-split"], "elapsed": 272.76017612498254, "transitions": 1593971}
+{"completed": ["concurrency2-seed20", "concurrency2-seed21"], "elapsed": 304.35363299999153, "transitions": 2098344}
+{"completed": ["concurrency4-seed20", "concurrency4-seed21", "concurrency4-seed22", "concurrency4-seed23"], "elapsed": 332.46054229099536, "transitions": 2933190}

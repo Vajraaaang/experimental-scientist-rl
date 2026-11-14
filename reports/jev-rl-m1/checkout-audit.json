@@ -1,0 +1,124 @@
+{
+  "public_head": "ae6cdc8e731cb4b1d427a7604adad86d74b5ec12",
+  "public_branch": "vajraang/publication",
+  "public_remote": "https://github.com/Vajraaaang/experimental-scientist-rl.git",
+  "primary_branch": "vajraang/jev-rl-m1",
+  "primary_has_commits": false,
+  "differences_before_m1": [
+    {
+      "path": "README.md",
+      "status": "different",
+      "primary_before_sha256": "356aa1f3b4c4fd4c297ea63e57fd4eed1a6370db2e46c2d5b3e60f2bd2dcc917",
+      "public_sha256": "b107ed11f828839f145c9c8f9c54c6a452cece726f08c61cc97fca7512b79b83"
+    },
+    {
+      "path": "autonomous_scientist_build_spec.md",
+      "status": "different",
+      "primary_before_sha256": "f4afb36001041f62ba52a51026f0b48878474c2b25cce58027aee46c8ec2676a",
+      "public_sha256": "e5123d20ba52bc1321243546ed57250148fedcf1b551955214a67667f1c8a1c6"
+    },
+    {
+      "path": "docs/feasibility-v1.md",
+      "status": "local_only",
+      "primary_before_sha256": "97426488c92782b897bf1c94271f029a3ee8f27e19a913ac26e57a384017c4aa",
+      "public_sha256": null
+    },
+    {
+      "path": "docs/feasibility.md",
+      "status": "different",
+      "primary_before_sha256": "9359e2373b002b08e60d845d936edd5f939bb8eb2bb5c55c7f311b375e9fa333",
+      "public_sha256": "2cd0373214b6113a97a29b27effb0363690fa609dca66d529426c819e2db0ef3"
+    },
+    {
+      "path": "docs/milestones.md",
+      "status": "local_only",
+      "primary_before_sha256": "cfd0e0a5b373562fa4cdc534c96411d28e16fdd614b3faa2c10674bbd21cd557",
+      "public_sha256": null
+    },
+    {
+      "path": "docs/ppo_cost_efficiency.md",
+      "status": "different",
+      "primary_before_sha256": "8efdc8c595b3e7e24800dfd9c7ab11a77f6b4ceb703de6a71efbbc26287dc542",
+      "public_sha256": "f4d4bf49537d0f372f7d42cb6c3213e94583042d917f0e2a75c8d3a5e9402a3b"
+    },
+    {
+      "path": "docs/ppo_cost_plan.md",
+      "status": "local_only",
+      "primary_before_sha256": "079ee8abcebb4b36530f97ca315d10fbbee26609685332379c37ab6363f41a41",
+      "public_sha256": null
+    },
+    {
+      "path": "docs/ppo_efficiency_v6.md",
+      "status": "different",
+      "primary_before_sha256": "3bc8c53429d94b48199c997e775d2cfc19b4f330def66cb4a9adcab594b2d2ce",
+      "public_sha256": "ad88d03bb15ad6bddaa4ace504aaffbf9a810918fcce7f3268dc54ed299a8741"
+    },
+    {
+      "path": "docs/ppo_efficiency_v6_plan.md",
+      "status": "local_only",
+      "primary_before_sha256": "c8d98546feaa8e00c888a358d03acc38d576826f6cbf139abd5eb8ebd94bc52a",
+      "public_sha256": null
+    },
+    {
+      "path": "docs/ppo_followup.md",
+      "status": "different",
+      "primary_before_sha256": "3ae8a8f77fb3e37554f5f4812492d8b2f5166d23c9219c319647579a36ecb524",
+      "public_sha256": "c6ae463a0576c9b5f951750bd09b0a5c13ba70fcee1525074cc15a3226e59fc4"
+    },
+    {
+      "path": "docs/ppo_followup_plan.md",
+      "status": "local_only",
+      "primary_before_sha256": "8454edd0295c684afeb5fa74eeb3ca987c43907c18f28250fdaf1840e1131c32",
+      "public_sha256": null
+    },
+    {
+      "path": "integrations/jev_demo.py",
+      "status": "local_only",
+      "primary_before_sha256": "903bed7d7d8d2caf52291d6690f1161c1bca0df5cb5605c9c06a05817526464b",
+      "public_sha256": null
+    },
+    {
+      "path": "pyproject.toml",
+      "status": "different",
+      "primary_before_sha256": "4289cd062799175aa0725cea4a590dcfbc3dcb647db2885bd7c2be4864e37abd",
+      "public_sha256": "8f212ba51699834600ecbba21561a86985efe047a8f42917b6bc02692eb58cd5"
+    },
+    {
+      "path": "scripts/ppo_cost_locked.py",
+      "status": "different",
+      "primary_before_sha256": "5e28864cbe5585fea2b59443f38fd89bcaf72655fa364f2fb8fd90ebb534e6e7",
+      "public_sha256": "346ea6cb5faed5c12f5872169a7de8ba3f9e4914c018f3c5ed33e259e810649f"
+    },
+    {
+      "path": "scripts/ppo_v4_benchmark.py",
+      "status": "different",
+      "primary_before_sha256": "b1b5d49ab785e77e8f41c434eeec01c6f32b959f83c97059ca7601f898777c46",
+      "public_sha256": "27397f70c2df5f559f1628a2bc98b5cac193a1a4753919f277f5b8f96fb91ea0"
+    },
+    {
+      "path": "scripts/report_ppo_cost.py",
+      "status": "different",
+      "primary_before_sha256": "ea6b2d3f94ba8a9a35006fd91d77674e768c73ea8e6f0a17bb73ef25bc2724de",
+      "public_sha256": "d526f4607e73a5af71dd92ef8b09cd26783e0a3e2bd96c26d09ad6a0c32c6d0a"
+    },
+    {
+      "path": "src/experimentlab/compute.py",
+      "status": "different",
+      "primary_before_sha256": "17a4bc2d429ef99e43fc246ab7649fdaa0911f7a29287919ee4a65590a37ea41",
+      "public_sha256": "cb6535fbfd4a9d86570e7857d9590f6273cf7705ab112302d40f6ffc97144577"
+    }
+  ],
+  "public_only": [
+    "docs/documentation-update-2026-10-29.json",
+    "docs/media/manifest.json",
+    "docs/publication-manifest.json",
+    "docs/publication-update-2026-10-26.json",
+    "docs/publication-update-v6.json",
+    "docs/results.md",
+    "scripts/publication_figure.py",
+    "tests/test_portability.py",
+    "tests/test_publication_evidence.py"
+  ],
+  "release_action": "none; publication checkout unchanged",
+  "jev_demo_preserved": "903bed7d7d8d2caf52291d6690f1161c1bca0df5cb5605c9c06a05817526464b"
+}

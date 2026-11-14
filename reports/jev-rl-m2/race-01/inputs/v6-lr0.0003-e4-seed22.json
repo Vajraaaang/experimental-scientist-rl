@@ -1,0 +1,20 @@
+{
+  "backend": "cpu",
+  "batch": 512,
+  "entropy_end": 0.001,
+  "entropy_start": 0.01,
+  "eval_every_interactions": 100000,
+  "hard_wall_seconds": 360.0,
+  "hidden": 64,
+  "initialization": "v6",
+  "joint_epochs": 4,
+  "joint_hard_interactions": 750000,
+  "joint_interactions": 500000,
+  "joint_lr": 0.0003,
+  "kind": "recurrent",
+  "name": "v6-lr0.0003-e4",
+  "seed": 22,
+  "selector_interactions": 0,
+  "threads": 1,
+  "wall_snapshot_seconds": 70.0
+}

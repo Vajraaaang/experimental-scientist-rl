@@ -1,0 +1,28 @@
+{
+  "accounting": {
+    "episodes": 5632,
+    "finalization_reserve_seconds": 30.0,
+    "scoring_deadline_seconds": 570.0,
+    "scoring_wall_overrun_seconds": 0.0,
+    "scoring_wall_seconds": 34.89897366598598,
+    "step_calls": 16814,
+    "summary_seconds": 3.48639191701659,
+    "total_wall_overrun_seconds": 0.0,
+    "total_wall_seconds": 38.47410191598465,
+    "unrecorded_reset_failures": 0,
+    "wall_cap_seconds": 600.0
+  },
+  "artifacts": {
+    "REPORT.md": "5e55d044cd51b4b67d840d4abce22268f221c5e1ff9547fed8403b02e0b88958",
+    "episodes.jsonl.gz": "e7ea0d44ef9a261134af84a172e9ca5b6091599f88a44666e4ae2abbbef6585f",
+    "metrics.jsonl.gz": "903728cc0a5ffe7fde5eaf523a289cefe47cd2225dc79b19ea555651e2ae6bc5",
+    "summary.json": "2a93de5c35d1512f59bb8fc3a8f0da3d42a904ef075d836dab1b97ca272bb869"
+  },
+  "errors": [],
+  "final_test_opened": false,
+  "hosted_calls": 0,
+  "run_manifest_sha256": "e15f8d59d4129aabd8d9e78772f6e5e825f8973d82d0478f015203c376f0a09b",
+  "schema": "m2-ppo-confirmation-v1",
+  "source_and_model_hashes_unchanged": true,
+  "status": "completed"
+}
