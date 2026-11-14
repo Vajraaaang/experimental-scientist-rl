@@ -26,6 +26,8 @@ SCHEMA = 'jev-m2-publication-export-v1'
 HOSTED_RUN = 'reports/jev-rl-m2/hosted-study-01'
 HOSTED_ANALYSIS = 'reports/jev-rl-m2/hosted-analysis-01'
 HOSTED_PLAN = 'reports/jev-rl-m2/hosted-plan-study-01.json'
+RECORDED_TASKS = 'reports/jev-rl-m2/hosted-recorded-action-tasks.json'
+ACTION_REPLAY = 'scripts/replay_jev_m2_recorded_actions.py'
 REGISTRATION = 'docs/jev_rl_m2_analysis_registration.json'
 ANALYZER = 'scripts/analyze_jev_m2.py'
 STUDY_RUNS = ('reports/jev-rl-m1/fixture-04', 'reports/jev-rl-m1/hosted-20261113-204144',
@@ -458,6 +460,9 @@ def default_paths(source):
         paths.update(HOSTED_REQUIRED)
         for directory in (HOSTED_RUN, HOSTED_ANALYSIS):
             paths.update(str(p.relative_to(source)) for p in (source / directory).rglob('*') if p.is_file() or p.is_symlink())
+        action_files = (RECORDED_TASKS, ACTION_REPLAY)
+        if all((source / name).is_file() for name in action_files):
+            paths.update(action_files)
     return sorted(paths)
 
 
@@ -598,7 +603,7 @@ def snapshot_replays(target, included_paths):
     return verification
 
 
-def verify_published(target, *, archive_only=False):
+def verify_published(target, *, archive_only=False, replay_recorded_actions=False):
     """Read-only verification of receipt-listed files and copied replay sources."""
     target = Path(target).resolve()
     receipt_path = target / RECEIPT
@@ -626,7 +631,13 @@ def verify_published(target, *, archive_only=False):
         validate_hosted_registration(target, {name: row['original_sha256'] for name, row in records.items()},
                                      public_hashes)
     validate_bundle_bindings(target, public_hashes)
+    if replay_recorded_actions and (not archive_only or not hosted
+                                    or not {RECORDED_TASKS, ACTION_REPLAY} <= records.keys()):
+        raise ValueError('recorded-action replay requires the complete hosted archive and task packet')
     runs = recorded_analyses(target, public_hashes) if archive_only else snapshot_replays(target, records)
+    if replay_recorded_actions:
+        replay = load_replay_module(target / ACTION_REPLAY, 'replay_jev_m2_recorded_actions')
+        runs.append({'name': 'hosted_recorded_action_replay', **replay.replay_hosted_actions(target)})
     if receipt_path.read_bytes() != raw:
         raise ValueError('publication receipt changed during read-only verification')
     for name, record in records.items():
@@ -636,7 +647,7 @@ def verify_published(target, *, archive_only=False):
             'files_verified': len(records), 'hosted_pair_included': hosted,
             'scope': ('Archive integrity and recomputation of statistics from recorded outcomes.'
                       if archive_only else 'Artifact integrity and exact recorded-evidence replay.'),
-            'archive_only': archive_only, 'simulator_replay_run': not archive_only,
+            'archive_only': archive_only, 'simulator_replay_run': not archive_only or replay_recorded_actions,
             'credentials_excluded_from_environment': True, 'source': 'receipt-listed publication artifacts', 'runs': runs}
 
 

@@ -1,7 +1,7 @@
 {
   "api_request_response_payloads_canonically_unchanged": true,
   "checkpoints_exported": false,
-  "created_at_utc": "2026-11-14T19:21:26.363227+00:00",
+  "created_at_utc": "2026-11-14T19:31:46.568025+00:00",
   "credentials_used": false,
   "destination_root": "<PUBLIC_PROJECT>",
   "excluded": [
@@ -11763,6 +11763,15 @@
         "relative_project_path:models.ppo-seed23.m2_provenance.config.initial_checkpoint_record",
         "relative_project_path:models.ppo-seed24.m2_provenance.config.initial_checkpoint_record"
       ]
+    },
+    {
+      "original_bytes": 16225,
+      "original_sha256": "1d495be846db56784b16187c64f011e5ad6442f57627b541a52682da6b1fd056",
+      "owned": true,
+      "path": "reports/jev-rl-m2/hosted-recorded-action-tasks.json",
+      "public_bytes": 16225,
+      "public_sha256": "1d495be846db56784b16187c64f011e5ad6442f57627b541a52682da6b1fd056",
+      "transformations": []
     },
     {
       "original_bytes": 3536,
@@ -28465,12 +28474,12 @@
       "transformations": []
     },
     {
-      "original_bytes": 46481,
-      "original_sha256": "214241f0602282e0f12c0e1a84a38a914a0634ac9bd5d3c4072e219ad64c8d21",
+      "original_bytes": 47327,
+      "original_sha256": "d5f3c1a7d487b9010b4a02bc8d624271016635d444fac563a8a9c62384a0283d",
       "owned": true,
       "path": "scripts/export_jev_m2_public.py",
-      "public_bytes": 46481,
-      "public_sha256": "214241f0602282e0f12c0e1a84a38a914a0634ac9bd5d3c4072e219ad64c8d21",
+      "public_bytes": 47327,
+      "public_sha256": "d5f3c1a7d487b9010b4a02bc8d624271016635d444fac563a8a9c62384a0283d",
       "transformations": []
     },
     {
@@ -28507,6 +28516,15 @@
       "path": "scripts/profile_m3_ppo.py",
       "public_bytes": 2103,
       "public_sha256": "7350ae61766ee9283a9bd992518e66d398304bb8b6aa121d2ffd819ff4afc91c",
+      "transformations": []
+    },
+    {
+      "original_bytes": 6225,
+      "original_sha256": "2de7e665bd33cd9811df164b80b4880fa2d168d0a164639ad3d703bbf6dfe717",
+      "owned": true,
+      "path": "scripts/replay_jev_m2_recorded_actions.py",
+      "public_bytes": 6225,
+      "public_sha256": "2de7e665bd33cd9811df164b80b4880fa2d168d0a164639ad3d703bbf6dfe717",
       "transformations": []
     },
     {
@@ -28663,10 +28681,10 @@
   "inventory": {
     "excluded_bytes": 4605718114,
     "excluded_files": 747,
-    "included_files": 2383,
+    "included_files": 2385,
     "largest_public_file_bytes": 11353656,
-    "original_bytes": 361429157,
-    "public_bytes": 351907953,
+    "original_bytes": 361452453,
+    "public_bytes": 351931249,
     "reused_existing_files": 4,
     "transformed_files": 1157
   },
@@ -28689,8 +28707,19 @@
   "verification": {
     "archive_only": false,
     "credentials_excluded_from_environment": true,
-    "files_verified": 2383,
+    "exact_replay_reference_commit": "da67fa17590e1f17e571e1de0e352143b7bd9841",
+    "files_verified": 2385,
     "hosted_pair_included": true,
+    "recorded_action_replay": {
+      "abs_float_tolerance": 1e-12,
+      "case_count": 600,
+      "hosted_calls_dispatched": 0,
+      "max_absolute_error": 0.0,
+      "mechanism_hashes_verified": 8,
+      "passed": true,
+      "reference_machine": "Apple M3 Max",
+      "simulator_steps": 1750
+    },
     "runs": [
       {
         "command": [

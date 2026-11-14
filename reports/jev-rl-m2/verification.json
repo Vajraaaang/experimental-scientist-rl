@@ -1,15 +1,26 @@
 {
+  "apple_silicon_exact_replay_diagnostic": "https://github.com/Vajraaaang/experimental-scientist-rl/actions/runs/43631793675",
   "archive_statistical_checks": [
     "fixture_recorded_analysis",
     "hosted_recorded_analysis",
     "confirmation_recorded_analysis"
   ],
-  "ci_status": "Check the Linux archive job and Apple Silicon replay job on the release commit.",
+  "ci_status": "Linux and Apple Silicon jobs use the recorded-action verifier. Exact controller replay is scoped to the reference environment.",
   "date": "2026-11-14",
   "final_split_opened": false,
   "fixture_analysis_reproduced": true,
   "historical_test_failure": "Initial public suite failed four tests because unpublished weights were assumed. Tests now construct synthetic registered checkpoints; production admission and original weights unchanged. The original failing log is retained locally.",
   "hosted_analysis_reproduced": true,
+  "hosted_recorded_action_replay": {
+    "abs_float_tolerance": 1e-12,
+    "case_count": 600,
+    "hosted_calls_dispatched": 0,
+    "max_absolute_error": 0.0,
+    "mechanism_hashes_verified": 8,
+    "passed": true,
+    "reference_machine": "Apple M3 Max",
+    "simulator_steps": 1750
+  },
   "linux_exact_replay_diagnostic": "https://github.com/Vajraaaang/experimental-scientist-rl/actions/runs/43630568248",
   "m1_evidence_files_unchanged": 1268,
   "new_m2_hosted_calls": 1586,
@@ -23,9 +34,9 @@
   "public_tests": {
     "failed": 0,
     "passed": 495,
-    "seconds": 18.77
+    "seconds": 18.21
   },
-  "publication_verified_files": 2383,
+  "publication_verified_files": 2385,
   "published_ci_checks": ".github/workflows/tests.yml",
   "reference_checkpoint_advice_steps": 1497,
   "schema": "jev-m2-release-verification-v2",

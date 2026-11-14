@@ -15,16 +15,16 @@ The **M2 development study** compared full Jev arbitration, reranking three lega
 
 ## Replay the study
 
-For exact simulator replay, run the following from the repository root on Apple Silicon with the reference Python 3.12.1 and pinned dependencies:
+Verify the evidence and rerun the simulator on the 600 recorded hosted cases. Use Python 3.12 from a checkout containing the M2 release:
 
 ```bash
 PROJECT="$(pwd -P)"
 python3.12 "$PROJECT/scripts/bootstrap.py"
-env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_jev_m2_public.py" \
-  --destination "$PROJECT" --verify-published
+env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/replay_jev_m2_recorded_actions.py" \
+  --root "$PROJECT"
 ```
 
-Replay runs on CPU without an API key or checkpoints. It reconstructs decisions and regenerates the paired analyses. On Linux, append `--archive-only` to check file and protocol bindings and recompute statistics from the sealed outcomes. The original weights are held locally, and the repository currently specifies no reuse license. The final split remains unopened. [Full reproduction guide](docs/m2-reproduction.md) · [Artifact hashes and checks](reports/jev-rl-m2/publication-export.json)
+The command checks archive hashes, regenerates statistics and reexecutes the stored actions on CPU without a key or checkpoints. The reference M3 Max also passed exact replay of the controller decisions. Exact replay depends on the numerical runtime. The original weights are held locally, and the repository currently specifies no reuse license. The final split remains unopened. [Verification modes](docs/m2-reproduction.md) · [Artifact hashes and checks](reports/jev-rl-m2/publication-export.json)
 
 ## Episode walkthrough
 
