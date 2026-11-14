@@ -1,0 +1,79 @@
+{
+  "checked_on": "2026-11-13",
+  "scope": "public primary implementation inspections; no third-party code or model outputs trained",
+  "github_blobs": [
+    {
+      "url": "https://github.com/AppliedMachineLearning-Lab/jev-benchmarking/blob/main/README.md",
+      "blob_sha": "65a6174308fe9b59aa5cdf5a2af2c789b6483308",
+      "inspected_file": "README.md"
+    },
+    {
+      "url": "https://github.com/willkelly/jev-evaluation/blob/main/README.md",
+      "blob_sha": "c1872c272d73424729dc832da0c9356639bf7bbc",
+      "inspected_file": "README.md"
+    },
+    {
+      "url": "https://github.com/openai/baselines/blob/master/baselines/ppo2/ppo2.py",
+      "blob_sha": "d307e9bc86cb4f2add624c096477e82512fda382",
+      "inspected_file": "ppo2.py"
+    },
+    {
+      "url": "https://github.com/google-deepmind/acme/blob/master/acme/agents/jax/ppo/learning.py",
+      "blob_sha": "f729f4aff3d1eff340274006487cf3d6fbe8e7e5",
+      "inspected_file": "learning.py"
+    },
+    {
+      "url": "https://github.com/AppliedMachineLearning-Lab/jev-benchmarking/blob/main/jev_benchmarking/runner.py",
+      "blob_sha": "f6de40cf091e0f05069beba9eece89212bbc4b39",
+      "inspected_file": "runner.py"
+    },
+    {
+      "url": "https://github.com/willkelly/jev-evaluation/blob/main/jev-evaluation-plan.md",
+      "blob_sha": "01c05680b6e7a406ecd72d0bcded72f0c82fb875",
+      "inspected_file": "jev-evaluation-plan.md"
+    },
+    {
+      "url": "https://github.com/openai/baselines/blob/master/baselines/ppo2/runner.py",
+      "blob_sha": "5a30505fd622494df6e3facf4c02c4fa8c90eaf0",
+      "inspected_file": "runner.py"
+    },
+    {
+      "url": "https://github.com/valentynkit/jev-plays-pokemon-red/blob/main/src/jpp/policy.py",
+      "blob_sha": "a1376669b757b6b9c71aa827abec87458981eb89",
+      "inspected_file": "policy.py"
+    },
+    {
+      "url": "https://github.com/valentynkit/jev-plays-pokemon-red/blob/main/README.md",
+      "blob_sha": "fb6903daf1db74ef14261873e577213a56e773e5",
+      "inspected_file": "README.md"
+    },
+    {
+      "url": "https://github.com/ae-foster/dad/blob/main/location_finding.py",
+      "blob_sha": "64b8525b41991d43287f354d73350b03e698941e",
+      "inspected_file": "location_finding.py"
+    },
+    {
+      "url": "https://github.com/google-deepmind/acme/blob/master/acme/agents/jax/r2d2/learning.py",
+      "blob_sha": "55165c85533ee47f7d4f0de5b857ebdd370948f4",
+      "inspected_file": "learning.py"
+    },
+    {
+      "url": "https://github.com/vwxyzjn/ppo-implementation-details/blob/main/ppo.py",
+      "blob_sha": "432a3790b44f8af867da047a04ba49e7537d0f89",
+      "inspected_file": "ppo.py"
+    }
+  ],
+  "frontier_use_search": {
+    "domains": [
+      "openai.com",
+      "anthropic.com",
+      "deepmind.google",
+      "research.google"
+    ],
+    "query_terms": [
+      "Jev",
+      "TypeSafe"
+    ],
+    "result": "no verified public frontier-lab Jev deployment found in targeted sources; absence of evidence is not proof of non-use"
+  }
+}
