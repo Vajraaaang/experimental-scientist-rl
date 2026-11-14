@@ -1,7 +1,7 @@
 {
   "api_request_response_payloads_canonically_unchanged": true,
   "checkpoints_exported": false,
-  "created_at_utc": "2026-11-14T18:53:39.844169+00:00",
+  "created_at_utc": "2026-11-14T19:21:26.363227+00:00",
   "credentials_used": false,
   "destination_root": "<PUBLIC_PROJECT>",
   "excluded": [
@@ -28465,12 +28465,12 @@
       "transformations": []
     },
     {
-      "original_bytes": 42778,
-      "original_sha256": "ae60586ea54245f16bce94a32bb7b611fd42c5412e29c54495b3fc207c6ce615",
+      "original_bytes": 46481,
+      "original_sha256": "214241f0602282e0f12c0e1a84a38a914a0634ac9bd5d3c4072e219ad64c8d21",
       "owned": true,
       "path": "scripts/export_jev_m2_public.py",
-      "public_bytes": 42778,
-      "public_sha256": "ae60586ea54245f16bce94a32bb7b611fd42c5412e29c54495b3fc207c6ce615",
+      "public_bytes": 46481,
+      "public_sha256": "214241f0602282e0f12c0e1a84a38a914a0634ac9bd5d3c4072e219ad64c8d21",
       "transformations": []
     },
     {
@@ -28537,12 +28537,12 @@
       "transformations": []
     },
     {
-      "original_bytes": 29151,
-      "original_sha256": "e707c8714ba3ccfab64bba58ef40aef5f765176ef987fd38509c81fe7b7595d6",
+      "original_bytes": 31453,
+      "original_sha256": "fbff081a9298823d18a8ab892c036e6b70541912ec3612bdc22fbc0690865ced",
       "owned": true,
       "path": "tests/test_export_jev_m2_public.py",
-      "public_bytes": 29151,
-      "public_sha256": "e707c8714ba3ccfab64bba58ef40aef5f765176ef987fd38509c81fe7b7595d6",
+      "public_bytes": 31453,
+      "public_sha256": "fbff081a9298823d18a8ab892c036e6b70541912ec3612bdc22fbc0690865ced",
       "transformations": []
     },
     {
@@ -28665,8 +28665,8 @@
     "excluded_files": 747,
     "included_files": 2383,
     "largest_public_file_bytes": 11353656,
-    "original_bytes": 361423152,
-    "public_bytes": 351901948,
+    "original_bytes": 361429157,
+    "public_bytes": 351907953,
     "reused_existing_files": 4,
     "transformed_files": 1157
   },
@@ -28687,6 +28687,7 @@
   "scientific_values_actions_observations_preserved": true,
   "source_root": "<PROJECT>",
   "verification": {
+    "archive_only": false,
     "credentials_excluded_from_environment": true,
     "files_verified": 2383,
     "hosted_pair_included": true,
@@ -28716,7 +28717,7 @@
         },
         "stderr": "",
         "stdout": null,
-        "wall_seconds": 3.1168947909900453
+        "wall_seconds": 2.580915708007524
       },
       {
         "command": [
@@ -28743,7 +28744,7 @@
         },
         "stderr": "",
         "stdout": null,
-        "wall_seconds": 1.3474662080116104
+        "wall_seconds": 1.415153250010917
       },
       {
         "command": [
@@ -28774,7 +28775,7 @@
         },
         "stderr": "",
         "stdout": null,
-        "wall_seconds": 2.469055416993797
+        "wall_seconds": 2.565939874999458
       },
       {
         "command": [
@@ -28803,7 +28804,7 @@
         },
         "stderr": "",
         "stdout": null,
-        "wall_seconds": 23.811895791004645
+        "wall_seconds": 23.61543483301648
       },
       {
         "command": [
@@ -28841,7 +28842,7 @@
         },
         "stderr": "",
         "stdout": null,
-        "wall_seconds": 11.078233459003968
+        "wall_seconds": 11.081267916975776
       },
       {
         "command": [
@@ -28863,7 +28864,7 @@
           "summary_identical": true
         },
         "stderr": "",
-        "wall_seconds": 2.8114920420048293
+        "wall_seconds": 3.012681791995419
       },
       {
         "command": [
@@ -28885,11 +28886,12 @@
           "summary_identical": true
         },
         "stderr": "",
-        "wall_seconds": 12.510892666003201
+        "wall_seconds": 13.821039041009499
       }
     ],
-    "scope": "Artifact integrity and exact stored-evidence replay; no assertion that failed/skipped outcomes succeeded.",
-    "source": "receipt-listed copied source_snapshot scripts",
+    "scope": "Artifact integrity and exact recorded-evidence replay.",
+    "simulator_replay_run": true,
+    "source": "receipt-listed publication artifacts",
     "status": "passed"
   }
 }

@@ -1,28 +1,35 @@
 {
-  "ci_status": "See the checks attached to the commit containing this packet.",
+  "archive_statistical_checks": [
+    "fixture_recorded_analysis",
+    "hosted_recorded_analysis",
+    "confirmation_recorded_analysis"
+  ],
+  "ci_status": "Check the Linux archive job and Apple Silicon replay job on the release commit.",
   "date": "2026-11-14",
   "final_split_opened": false,
   "fixture_analysis_reproduced": true,
   "historical_test_failure": "Initial public suite failed four tests because unpublished weights were assumed. Tests now construct synthetic registered checkpoints; production admission and original weights unchanged. The original failing log is retained locally.",
   "hosted_analysis_reproduced": true,
+  "linux_exact_replay_diagnostic": "https://github.com/Vajraaaang/experimental-scientist-rl/actions/runs/43630568248",
   "m1_evidence_files_unchanged": 1268,
   "new_m2_hosted_calls": 1586,
   "original_files_unchanged": 695,
   "primary_tests": {
     "failed": 0,
-    "passed": 490,
-    "seconds": 15.26
+    "passed": 491,
+    "seconds": 18.84
   },
   "prior_release_verification_sha256": "b1acab23da759a6c9281466da883aa757475e5cea2e0a0f0f8378c65051c7df5",
   "public_tests": {
     "failed": 0,
-    "passed": 494,
-    "seconds": 18.62
+    "passed": 495,
+    "seconds": 18.77
   },
   "publication_verified_files": 2383,
   "published_ci_checks": ".github/workflows/tests.yml",
   "reference_checkpoint_advice_steps": 1497,
   "schema": "jev-m2-release-verification-v2",
+  "simulator_replay_reference": "Apple M3 Max, macOS 26.3.1, CPython 3.12.1",
   "snapshot_replay_counts": {
     "m1_fixture": 100,
     "m1_hosted": 15,

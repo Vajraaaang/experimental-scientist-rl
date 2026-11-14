@@ -1,7 +1,11 @@
 {
   "api_payload_objects_compared": 8309,
   "boolean_values_compared": 282015,
-  "checked_at_utc": "2026-11-14T19:03:49+00:00",
+  "changed_receipt_inputs_after_numeric_audit": [
+    "scripts/export_jev_m2_public.py",
+    "tests/test_export_jev_m2_public.py"
+  ],
+  "checked_at_utc": "2026-11-14T19:22:52+00:00",
   "checkpoint_files_accessed": false,
   "credentials_accessed": false,
   "files_checked": 2383,
@@ -16,10 +20,11 @@
   "new_hosted_calls": 0,
   "numeric_scalars_compared": 11615254,
   "passed": true,
-  "previous_integrity_audit_sha256": "dd177f4fdd33187c5ccc78ae00b6caac04dce26dce9c51b940800f74671a0c51",
+  "previous_integrity_audit_sha256": "e3ed50ac401b6f7cea67ffc4948f23ce5459f991b0cad06385df46c9c34f5f9b",
   "problems": [],
-  "publication_export_sha256": "513c50acb4e999d96286f16b1048042a833719e83be164608a116964fc49a264",
+  "publication_export_sha256": "60a51cb0b516cfc358f9dcc95f99056301cc301b9108f1bc2e686e42e514bb76",
   "python_source_files_byte_identical": 257,
   "schema": "jev-m2-publication-integrity-audit-v2",
-  "scope": "Full original/public receipt inventory compared. Numeric/boolean values, sequence positions and canonical API payloads are preserved. Python source bytes match their originals."
+  "scope": "Full original/public receipt inventory compared. Numeric/boolean values, sequence positions and canonical API payloads are preserved. Python source bytes match their originals.",
+  "unchanged_numeric_comparison_from_revision": "d731136c601ab2fc3a9515f33f26117ab0c41f25"
 }

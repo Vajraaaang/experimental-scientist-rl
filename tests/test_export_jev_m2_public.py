@@ -479,6 +479,47 @@ def test_read_only_cli_rejects_export_options(tmp_path, write_option):
     assert list(tmp_path.iterdir()) == []
 
 
+def test_archive_analysis_checks_saved_outcomes_without_running_simulator(tmp_path):
+    e = exporter()
+    target = published_hosted_bundle(tmp_path)
+    receipt = json.loads((target / e.RECEIPT).read_text())
+    summary = json.loads((target / HOSTED_ANALYSIS / 'summary.json').read_text())
+    summary['scientific_benefit'] = True
+    save(target, HOSTED_ANALYSIS + '/summary.json', summary)
+    analyzer = target / 'scripts/analyze_jev_m2.py'
+    analyzer.write_text(
+        'def _read_journal(path):\n    return []\n'
+        'def summarize_study(manifest, results, journals):\n'
+        '    return ' + repr({k: v for k, v in summary.items()
+                             if k not in ('provenance', 'scientific_benefit')} | {'scientific_benefit': False}) + '\n'
+        'def report_text(summary):\n    return "Synthetic only: one completed, one failed, one skipped.\\n"\n'
+    )
+    summary['provenance']['analysis_source_sha256'] = e.sha256(analyzer.read_bytes())
+    save(target, HOSTED_ANALYSIS + '/summary.json', summary)
+    registration = json.loads((target / REGISTRATION).read_text())
+    registration['analysis_source_sha256'] = e.sha256(analyzer.read_bytes())
+    save(target, REGISTRATION, registration)
+    for name in ('scripts/analyze_jev_m2.py', REGISTRATION, HOSTED_ANALYSIS + '/summary.json'):
+        entry = next(item for item in receipt['files'] if item['path'] == name)
+        entry['public_sha256'] = entry['original_sha256'] = e.sha256((target / name).read_bytes())
+    save(target, e.RECEIPT, receipt)
+
+    result = e.verify_published(target, archive_only=True)
+    assert result['status'] == 'failed'
+    assert result['simulator_replay_run'] is False
+    assert result['runs'] == [
+        {'name': 'hosted_recorded_analysis', 'passed': False, 'cases': 3, 'dynamics_reexecuted': False}
+    ]
+
+    summary['scientific_benefit'] = False
+    path = save(target, HOSTED_ANALYSIS + '/summary.json', summary)
+    entry = next(item for item in receipt['files'] if item['path'] == HOSTED_ANALYSIS + '/summary.json')
+    entry['public_sha256'] = entry['original_sha256'] = e.sha256(path.read_bytes())
+    save(target, e.RECEIPT, receipt)
+    result = e.verify_published(target, archive_only=True)
+    assert result['status'] == 'passed' and result['runs'][0]['passed'] is True
+
+
 def test_failed_verifier_diagnostics_do_not_echo_response_content(tmp_path):
     e = exporter()
     records = minimal_publication(tmp_path)

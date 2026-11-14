@@ -15,7 +15,7 @@ The **M2 development study** compared full Jev arbitration, reranking three lega
 
 ## Replay the study
 
-In a checkout containing the M2 evidence, run the following from the repository root with Python 3.12:
+For exact simulator replay, run the following from the repository root on Apple Silicon with the reference Python 3.12.1 and pinned dependencies:
 
 ```bash
 PROJECT="$(pwd -P)"
@@ -24,7 +24,7 @@ env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_
   --destination "$PROJECT" --verify-published
 ```
 
-Replay runs on CPU without an API key or checkpoints. It reconstructs the recorded decisions and reproduces the paired analyses. The original learned weights are held locally, and the repository currently specifies no reuse license. Evidence covers the declared simulator families. The final split remains unopened. [Full reproduction guide](docs/m2-reproduction.md) · [Artifact hashes and checks](reports/jev-rl-m2/publication-export.json)
+Replay runs on CPU without an API key or checkpoints. It reconstructs decisions and regenerates the paired analyses. On Linux, append `--archive-only` to check file and protocol bindings and recompute statistics from the sealed outcomes. The original weights are held locally, and the repository currently specifies no reuse license. The final split remains unopened. [Full reproduction guide](docs/m2-reproduction.md) · [Artifact hashes and checks](reports/jev-rl-m2/publication-export.json)
 
 ## Episode walkthrough
 

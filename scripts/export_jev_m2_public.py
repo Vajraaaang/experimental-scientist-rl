@@ -10,6 +10,7 @@ from collections import Counter
 from datetime import datetime, timezone
 import gzip
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -282,21 +283,26 @@ def transform_bytes(name, raw, source_root):
     return gzip.compress(content, mtime=0) if compressed else content, sorted(set(changes))
 
 
-def validate_original_bindings(source, original):
-    """Never turn a damaged original seal or file binding into a valid derivative."""
+def validate_bundle_bindings(source, hashes):
+    """Check run, journal and analysis bindings against the supplied file hashes."""
     def load(name):
+        if name not in hashes:
+            raise ValueError('missing bound evidence file: ' + name)
         return json.loads((source / name).read_bytes())
 
     def require(name, expected):
-        if original.get(name, {}).get('sha256') != expected:
-            raise ValueError('original artifact hash mismatch: ' + name)
+        if hashes.get(name) != expected:
+            raise ValueError('bundle artifact hash mismatch: ' + name)
 
     for base in STUDY_RUNS:
         manifest_name = base + '/manifest.json'
-        if manifest_name not in original:
+        if manifest_name not in hashes:
             continue
         manifest, result = load(manifest_name), load(base + '/results.json')
         require(manifest_name, result['manifest_sha256'])
+        if 'cases' in manifest and [row['case_id'] for row in result['cases']] != [
+                case['case_id'] for case in manifest['cases']]:
+            raise ValueError('case inventory differs from the frozen manifest')
         for name, expected in manifest['sources'].items():
             require(base + '/source_snapshot/' + name, expected)
         if 'trace_index_sha256' in result:
@@ -305,28 +311,28 @@ def validate_original_bindings(source, original):
             if row['journal'] is not None:
                 require(base + '/' + row['journal'], row['journal_sha256'])
             if load(base + '/episodes/' + row['case_id'] + '.json') != row:
-                raise ValueError('original episode row differs from recorded results')
+                raise ValueError('episode row differs from recorded results')
         if 'plan_sha256' in manifest:
             require(base + '/plan.json', manifest['plan_sha256'])
             plan = load(base + '/plan.json')
             for key, value in plan.items():
                 if key != 'kind' and manifest[key] != value:
-                    raise ValueError('original plan/manifest binding mismatch')
+                    raise ValueError('plan/manifest binding mismatch')
             for key, value in {'plan_content_sha256': plan, 'registered_inputs_sha256': plan['registered_inputs'],
                                'models_sha256': plan['models'], 'runtime_sources_sha256': plan['sources']}.items():
                 if manifest['admission'][key] != digest(value):
-                    raise ValueError('original admission hash mismatch')
+                    raise ValueError('admission hash mismatch')
     for base in ('reports/jev-rl-m2/confirmation-freeze-02', 'reports/jev-rl-m2/confirmation-01'):
         name = base + '/freeze.json'
-        if name not in original:
+        if name not in hashes:
             continue
         freeze = load(name)
         if freeze['seal_sha256'] != digest({k: v for k, v in freeze.items() if k != 'seal_sha256'}):
-            raise ValueError('original confirmation seal hash mismatch')
+            raise ValueError('confirmation seal hash mismatch')
         cohort = freeze['selected_ppo']['cohort']
         if freeze['selected_ppo_records_content_sha256'] != digest(freeze['cohorts'][cohort]['records']):
-            raise ValueError('original selected-record hash mismatch')
-        if base + '/run-manifest.json' in original:
+            raise ValueError('selected-record hash mismatch')
+        if base + '/run-manifest.json' in hashes:
             manifest, result = load(base + '/run-manifest.json'), load(base + '/results.json')
             require(name, manifest['freeze_sha256'])
             require(base + '/run-manifest.json', result['run_manifest_sha256'])
@@ -338,14 +344,14 @@ def validate_original_bindings(source, original):
                 require(base + '/' + name, expected)
     for run, analysis_folder in ANALYSIS_PAIRS:
         analysis_name = analysis_folder + '/summary.json'
-        if analysis_name not in original:
+        if analysis_name not in hashes:
             continue
         analysis = load(analysis_name)
         if analysis['schema'] != 'jev-m2-analysis-v1':
             raise ValueError('unsupported analysis publication schema')
         provenance = analysis['provenance']
         if (source / provenance['run']).resolve() != source / run:
-            raise ValueError('original analysis does not bind the selected study')
+            raise ValueError('analysis does not bind the selected study')
         require('scripts/analyze_jev_m2.py', provenance['analysis_source_sha256'])
         require(run + '/manifest.json', provenance['manifest_sha256'])
         require(run + '/results.json', provenance['results_sha256'])
@@ -354,14 +360,11 @@ def validate_original_bindings(source, original):
         for name, expected in provenance['verification']['verified_input_sha256'].items():
             require(run + '/' + name, expected)
         if digest(analysis['analysis_contract']) != provenance['analysis_contract_sha256']:
-            raise ValueError('original analysis contract hash mismatch')
+            raise ValueError('analysis contract hash mismatch')
         manifest = load(run + '/manifest.json')
         if (provenance['study_source_sha256'] != manifest['sources'] or
                 provenance['checkpoint_metadata_only'] != manifest['models']):
-            raise ValueError('original analysis source/model metadata mismatch')
-    if hosted_selected(original):
-        hashes = {name: record['sha256'] for name, record in original.items()}
-        validate_hosted_registration(source, hashes, hashes)
+            raise ValueError('analysis source/model metadata mismatch')
 
 
 def rebind_bundles(files, transformations):
@@ -465,6 +468,54 @@ def diagnostic_hashes(completed):
                                (name + '_bytes', len(getattr(completed, name).encode())))}
 
 
+def load_replay_module(path, name):
+    """Load a receipt-verified source without activating its CLI entry point."""
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def recorded_analyses(target, hashes):
+    """Recompute statistics from recorded outcomes without rebuilding dynamics."""
+    runs = []
+    for run, folder in ANALYSIS_PAIRS:
+        if folder + '/summary.json' not in hashes:
+            continue
+        if folder + '/REPORT.md' not in hashes:
+            raise ValueError('analysis report is missing from the publication receipt')
+        manifest = json.loads((target / run / 'manifest.json').read_bytes())
+        results = json.loads((target / run / 'results.json').read_bytes())
+        analyzer = load_replay_module(target / ANALYZER, 'registered_jev_m2_analyzer')
+        journals = {row['case_id']: analyzer._read_journal(target / run / row['journal'])
+                    for row in results['cases'] if row['journal'] is not None}
+        actual = analyzer.summarize_study(manifest, results, journals)
+        expected = json.loads((target / folder / 'summary.json').read_bytes())
+        expected.pop('provenance')  # The archive check validates provenance separately.
+        passed = (canonical(actual) == canonical(expected)
+                  and analyzer.report_text(actual) == (target / folder / 'REPORT.md').read_text())
+        runs.append({'name': manifest['mode'] + '_recorded_analysis', 'passed': passed,
+                     'cases': len(results['cases']), 'dynamics_reexecuted': False})
+
+    confirmation = 'reports/jev-rl-m2/confirmation-01'
+    if confirmation + '/run-manifest.json' in hashes:
+        folder = target / confirmation
+        runner = load_replay_module(folder / 'source_snapshot/scripts/ppo_m2_confirm.py',
+                                    'registered_ppo_m2_confirmation')
+        freeze = runner.read_freeze(folder / 'freeze.json')
+        results = json.loads((folder / 'results.json').read_bytes())
+        expected = json.loads((folder / 'summary.json').read_bytes())
+        with gzip.open(folder / 'episodes.jsonl.gz', 'rt', encoding='utf-8') as stream:
+            rows = [json.loads(line) for line in stream]
+        actual = runner.confirmation_summary(rows, freeze, freeze['evaluation']['count'],
+                                             intervals=expected['intervals_computed'])
+        passed = (canonical(actual) == canonical(expected)
+                  and runner.report_text(freeze, actual, results) == (folder / 'REPORT.md').read_text())
+        runs.append({'name': 'confirmation_recorded_analysis', 'passed': passed,
+                     'cases': len(rows), 'dynamics_reexecuted': False})
+    return runs
+
+
 def snapshot_replays(target, included_paths):
     included_paths = set(included_paths)
     cases = [
@@ -547,7 +598,7 @@ def snapshot_replays(target, included_paths):
     return verification
 
 
-def verify_published(target):
+def verify_published(target, *, archive_only=False):
     """Read-only verification of receipt-listed files and copied replay sources."""
     target = Path(target).resolve()
     receipt_path = target / RECEIPT
@@ -570,10 +621,12 @@ def verify_published(target):
             raise ValueError('publication file hash mismatch: ' + name)
         records[name] = record
     hosted = hosted_selected(records)
+    public_hashes = {name: row['public_sha256'] for name, row in records.items()}
     if hosted:
         validate_hosted_registration(target, {name: row['original_sha256'] for name, row in records.items()},
-                                     {name: row['public_sha256'] for name, row in records.items()})
-    runs = snapshot_replays(target, records)
+                                     public_hashes)
+    validate_bundle_bindings(target, public_hashes)
+    runs = recorded_analyses(target, public_hashes) if archive_only else snapshot_replays(target, records)
     if receipt_path.read_bytes() != raw:
         raise ValueError('publication receipt changed during read-only verification')
     for name, record in records.items():
@@ -581,8 +634,10 @@ def verify_published(target):
             raise ValueError('publication file changed during read-only verification: ' + name)
     return {'status': 'passed' if all(run['passed'] for run in runs) else 'failed',
             'files_verified': len(records), 'hosted_pair_included': hosted,
-            'scope': 'Artifact integrity and exact stored-evidence replay; no assertion that failed/skipped outcomes succeeded.',
-            'credentials_excluded_from_environment': True, 'source': 'receipt-listed copied source_snapshot scripts', 'runs': runs}
+            'scope': ('Archive integrity and recomputation of statistics from recorded outcomes.'
+                      if archive_only else 'Artifact integrity and exact recorded-evidence replay.'),
+            'archive_only': archive_only, 'simulator_replay_run': not archive_only,
+            'credentials_excluded_from_environment': True, 'source': 'receipt-listed publication artifacts', 'runs': runs}
 
 
 def export_paths(source, target, paths, *, apply=False, replace_owned=False, verify=False):
@@ -608,9 +663,13 @@ def export_paths(source, target, paths, *, apply=False, replace_owned=False, ver
             files[name], transformations[name] = transform_bytes(name, raw, source)
         except (ValueError, UnicodeError) as error:
             raise ValueError(name + ': ' + str(error)) from None
-    validate_original_bindings(source, original)
+    original_hashes = {name: row['sha256'] for name, row in original.items()}
+    try:
+        validate_bundle_bindings(source, original_hashes)
+    except ValueError as error:
+        raise ValueError('original evidence: ' + str(error)) from None
     rebind_bundles(files, transformations)
-    hosted_binding = validate_hosted_registration(source, {name: row['sha256'] for name, row in original.items()},
+    hosted_binding = validate_hosted_registration(source, original_hashes,
         {name: sha256(value) for name, value in files.items()}) if hosted else None
     receipt_path = target / RECEIPT
     previous = json.loads(receipt_path.read_text()) if receipt_path.exists() else None
@@ -700,12 +759,16 @@ def main(argv=None):
     parser.add_argument('--replace-owned', action='store_true', help='Update only unchanged files owned by an earlier export.')
     parser.add_argument('--verify', action='store_true', help='Verify copied snapshots and analyses after export, including a sealed hosted pair.')
     parser.add_argument('--verify-published', action='store_true', help='Read-only: verify a published receipt, snapshots and analyses; never export.')
+    parser.add_argument('--archive-only', action='store_true',
+                        help='With --verify-published, check hashes and recompute recorded statistics without simulator replay.')
     args = parser.parse_args(argv)
+    if args.archive_only and not args.verify_published:
+        parser.error('--archive-only requires --verify-published')
     if args.verify_published:
         if args.apply or args.replace_owned or args.verify:
             parser.error('--verify-published cannot be combined with export/write options')
         try:
-            result = verify_published(args.destination)
+            result = verify_published(args.destination, archive_only=args.archive_only)
         except (OSError, ValueError, KeyError, TypeError) as error:
             result = {'status': 'failed', 'error': str(error)}
         print(json.dumps(result, indent=2))

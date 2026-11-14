@@ -1,10 +1,10 @@
 # Replay and reproduce the M2 development evidence
 
-The public workflow verifies artifact hashes, replays recorded decisions, and recomputes the reported analyses. It uses the same frozen simulator snapshots and stored Jev responses as the public evidence. It runs on CPU without a TypeSafe key or policy checkpoints. This verification level follows TypeSafe's example of replay from saved answers and the NeurIPS guidance on documenting exact environments, commands and reproducibility limits. [TypeSafe autoresearch cookbook](https://docs.typesafe.ai/cookbooks/autoresearch_feature_discovery) · [NeurIPS paper checklist](https://neurips.cc/public/guides/PaperChecklist)
+The public workflow provides exact simulator replay in the reference environment and statistical recomputation from recorded outcomes on Linux. Both run on CPU without a TypeSafe key or policy checkpoints. [TypeSafe autoresearch cookbook](https://docs.typesafe.ai/cookbooks/autoresearch_feature_discovery) · [NeurIPS paper checklist](https://neurips.cc/public/guides/PaperChecklist)
 
 ## Quick start
 
-Clone the repository and check out a commit containing the M2 hosted evidence. To replay the current M2 branch, run:
+Clone the repository and check out a commit containing the M2 hosted evidence. For exact simulator replay, use Apple Silicon, CPython 3.12.1, and the pinned package versions. The original run used macOS 26.3.1. To replay the current M2 branch, run:
 
 ```bash
 git clone --branch vajraang/jev-rl-m2 https://github.com/Vajraaaang/experimental-scientist-rl.git
@@ -14,7 +14,16 @@ env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_
   --destination "$PROJECT" --verify-published
 ```
 
-`bootstrap.py` installs the pinned dependencies and runs the tests inside the clone's virtual environment. GitHub Actions runs the tests, simulator diagnostics, and publication replay on Linux CPU. The original measurement environment used arm64 macOS, CPython 3.12.1, and the package versions recorded in the lock file. [Dependency lock](../requirements.lock) · [CI workflow](../.github/workflows/tests.yml)
+`bootstrap.py` installs the pinned dependencies and runs the tests inside the clone's virtual environment. Exact replay binds reconstructed floating-point values to saved state and forecast hashes. Linux wheels yielded different values in forecast tables and generated mechanism bytes during validation. The verifier keeps the original equality checks. Linux CI validates the archive and recomputes the M2 statistics on the saved outcomes. The Apple Silicon CI job runs the original snapshot replay. [Dependency lock](../requirements.lock) · [CI workflow](../.github/workflows/tests.yml)
+
+To verify the archive and regenerate its M2 analyses from stored cases, including on Linux:
+
+```bash
+env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_jev_m2_public.py" \
+  --destination "$PROJECT" --verify-published --archive-only
+```
+
+This mode checks each receipt-listed file and the plan, journal and analysis bindings. It recomputes the PPO confirmation intervals and both M2 paired analyses using the registered analysis code. The report marks simulator dynamics as unreexecuted in this mode.
 
 ## Rebuild the PPO tables and figure
 
@@ -34,7 +43,8 @@ Start with the run's `trace-index.json` or an individual case listed in `results
 
 | Mode | Inputs | Result |
 |---|---|---|
-| Public replay | Published traces, hashes, source snapshots and CPU dependencies | Reconstructs decisions from recorded advice and responses, runs the simulator, checks receipts and recomputes paired statistics |
+| Reference simulator replay | Published traces, hashes, source snapshots and reference Apple Silicon CPU dependencies | Reconstructs decisions from recorded advice and responses, runs the simulator, checks receipts and recomputes paired statistics |
+| Archive verification | Published traces, summaries, hashes, analysis code and pinned CPU dependencies | Verifies file and protocol bindings and recomputes the statistics from recorded outcomes |
 | Checkpoint evaluation | Original checkpoint files, their recorded hashes and frozen policies | Recomputes policy advice from the trained tensors. The public bundle includes hashes, traces and the reference audit receipt. |
 | Training reproduction | Registered training configurations, warm-start artifacts, native dependencies and the declared compute budget | Reruns optimization. Exact timing and trained results can differ with device, package versions and scheduling. |
 | New hosted replication | Fresh TypeSafe access, current pricing, declared budget, and a prospectively frozen design | Obtains newly sampled responses from the provider. Stored responses support independent replay even if later service behavior differs. |
