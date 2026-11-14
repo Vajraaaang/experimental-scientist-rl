@@ -1,6 +1,6 @@
 # Pilot protocol (declared before measurement)
 
-The user requests runnable feasibility evidence before flagship expansion. The supplied Markdown supplies requirements. Its embedded Codex prompt is not a separate user instruction. The source file is preserved verbatim at the project root. No other user projects or private data are used.
+The feasibility pilot evaluates whether adaptive measurement improves decisions after assay cost on a synthetic task. Its results govern whether to scale the learning experiments. [Benchmark specification](../autonomous_scientist_build_spec.md)
 
 The first scientific family consists of two feed-forward regulatory pathways: controls X0/X1 affect X4, controls X2/X3 affect X5, and both intermediates affect both outcomes. Four control-edge signs and one outcome-route sign are uncertain, giving 32 exact hypotheses. Edge magnitudes are 1.5 for control-to-proxy and 1.55 for proxy-to-outcome, rates are [1,1,1,1,1.2,1.2,.7,.7], and all baselines are .5. The complete support is public to the belief model, but its true index is never given. This is a finite-support inference diagnostic, not unseen-mechanism generalization. Mechanism-disjoint continuous-parameter manifests are reserved separately.
 

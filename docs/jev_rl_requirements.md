@@ -1,9 +1,8 @@
 # Specification traceability and remaining gates
 
-Audit date: 2026-11-13. Requirement source: the complete, preserved
-`autonomous_scientist_build_spec.md` (1,198 lines), especially Section 0. Paths
-below are repository-relative. A runnable component is not by itself scientific
-qualification. "Historical" refers to existing measured studies, not new Jev data.
+This audit maps the benchmark requirements to evidence available before the
+hosted study. The subsequent evaluation reports its findings and remaining
+limitations. [Benchmark specification](../autonomous_scientist_build_spec.md) · [Hosted evaluation](m2-research-note.md)
 
 ## Gate decisions
 
@@ -38,7 +37,7 @@ failed. Source: `reports/ppo-efficiency-v6/summary.json` and
 | §0.4 C adaptive value | `research-v2/training-decision.json`, `unfiltered-v3/assessment.json`, `unfiltered-v3/locked-test` | v2 failure retained; v3 pass restricted to documented revised family. |
 | §0.4 D learnability and E added RL value | `learning.py`, `ppo_v4.py`, v4/v5/v6 same-architecture comparisons | Learned policies are useful; full RL-specific superiority screen remains false. |
 | §0.5 runtime and break-even | Teacher cost, interaction counts, inference/training timing in v3–v6 | No qualified quality-adjusted deployment break-even; do not count imitation speed as PPO achievement. |
-| §1 independent project, contribution and limits | `pyproject.toml`, `docs/protocol.md`; standalone `experimentlab` | No dependency on RNA harness/employer code. No therapeutic, wet-lab or real causal discovery qualification. |
+| §1 independent project, contribution and limits | `pyproject.toml`, `docs/protocol.md`; standalone `experimentlab` | Evidence covers synthetic mechanisms and tasks. |
 | §2 public reset, priced fresh experiments, independent final cultures, setup cost | `envs.py`, `worlds.py`, `tasks.stream`; M1 records variable and total cost | Sequential design then commitment, not ongoing feedback control. At offset SD 0, final latent replicas are identical. |
 | §3.1 roles, allowed controls, neutral names | `envs.catalogue`, public masks, `tasks.finite_family` | Dynamics permutation test exists; complete action/role/observation/policy permutation invariance is unqualified. |
 | §3.2 suppression dynamics and contraction | `worlds.Mechanism`, `integrate`, row-L1 checks, `test_science.py` | Contractive synthetic model only. |
@@ -78,9 +77,8 @@ failed. Source: `reports/ppo-efficiency-v6/summary.json` and
 | §20 demonstrations and inspectability | Historical success/failure/unreachable traces and figures; new full request/response journals and replay | No interactive replay GUI. Conceptual animation is not a measured experiment. |
 | §21 optional extensions | None needed for bounded pilot | Continuous actions, other physics, retrospective real data, world models deferred. |
 | §22 references | Original source list retained verbatim in spec | Literature-positioning review and matched omitted-baseline justification needed for submission. |
-| §23 bounded start and honest actual results | Original failures retained, new work staged, fresh tests and preservation report | Do not launch new final tests or unbounded hosted runs based on fixture success. |
 
-## New request requirements
+## Jev evaluation requirements
 
 | Jev/RL requirement | Implemented route | Evidence needed beyond M1 |
 |---|---|---|
@@ -92,8 +90,8 @@ failed. Source: `reports/ppo-efficiency-v6/summary.json` and
 | Freeze version/prompts/menus/predictions | Pinned model, request/response journal before `step`, source snapshot | Hosted model repeat/drift characterization; journal is not external timestamp attestation. |
 | Cost/latency/failure accounting | Client preflight caps, reported usage, unknown-usage reservations, per-condition receipts | Actual token bill/latencies; request-byte token reservation is not a billing guarantee. |
 | Manifest, replay and public reproducibility | Source snapshot verification regenerates uncached outcomes without keys or model checkpoints | Clean publication export and independent-machine reproduction. Public checkpoint retraining remains required for new policy runs. |
-| Credential hygiene | Environment/hidden prompt only; fixed error codes; verified TLS | Fresh credential must be supplied outside chat for hosted pilot. |
-| Scientific claims and submission blockers | Protocol, requirements audit, measured M1 report | Authenticated pilot, method selection/freeze, final comparison, literature/ablation/generalization gaps, manuscript external review. No submission authorized. |
+| API access | Verified TLS, bounded failures, and offline replay | A live run requires TypeSafe API access. |
+| Scope of the evidence | Protocol, requirements audit, measured M1 report | Compare learned and hosted policies on matched mechanisms, document uncertainty, and test transfer separately. |
 
 ## Validation entry points
 

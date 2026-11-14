@@ -39,6 +39,11 @@ jobs:
             --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/ppo-m2-summary"
           cmp "$RUNNER_TEMP/ppo-m2-summary/COMPARISONS.md" "$GITHUB_WORKSPACE/reports/jev-rl-m2/summary-01/COMPARISONS.md"
           cmp "$RUNNER_TEMP/ppo-m2-summary/summary.json" "$GITHUB_WORKSPACE/reports/jev-rl-m2/summary-01/summary.json"
+      - name: Regenerate the hosted outcome figures
+        run: |
+          python -B "$GITHUB_WORKSPACE/scripts/plot_m2_outcomes.py" \
+            --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/hosted-figures"
+          cmp "$RUNNER_TEMP/hosted-figures/figure-data.json" "$GITHUB_WORKSPACE/reports/jev-rl-m2/figures/figure-data.json"
   macos-replay:
     name: Apple Silicon simulator outcome replay
     runs-on: macos-26

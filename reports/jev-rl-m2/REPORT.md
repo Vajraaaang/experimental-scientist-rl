@@ -1,6 +1,6 @@
-# M2: bounded M3 Max PPO study and Jev capability implementation
+# PPO configuration and hosted Jev evaluation
 
-2026-11-14. This development report covers the Mac training race, PPO confirmation, and the completed hosted comparison. [Research note](../../docs/m2-research-note.md)
+This report covers the bounded PPO configuration study, five-seed confirmation, and paired hosted Jev comparison. [Research note](../../docs/m2-research-note.md)
 
 CPU was the fastest measured backend for this complete PPO workload. The bounded
 42-run search selected a scratch-trained GRU512 with batch 512, learning rate 0.0003
@@ -11,13 +11,7 @@ failure accounting and credential-free replay are implemented. Their larger host
 comparison completed 600 cases with 1,586 successful Jev calls. The three hosted
 benefit gates failed. The new final split remains unopened.
 
-## What was preserved and frozen
-
-The original simulator, observation masks, rewards, learning modules, fixed designs,
-five-seed registries, checkpoints and locked v6 evidence were preserved. Historical
-failures remain in the original reports. The M1 report is a historical pre-hosted
-closeout; the subsequent authenticated pilot below supersedes its pending-pilot
-status without rewriting that report.
+## Study registration
 
 The [task-derived protocol](../../docs/jev_rl_m2_protocol.md) and
 [source-to-design rationale](../../docs/jev_rl_m2_sources_and_design.md) were published
@@ -60,17 +54,11 @@ Engineering fixtures, unit tests and replay are separate from training counts.
 Inherited v6/imitation pretraining is recorded separately and is not treated as
 new training or equal-compute evidence.
 
-CPU throughput in the first and second halves of the sustained run was about 8617
-and 8590 transitions/cycle-second (−0.31%). No OS thermal/performance warning was
-reported. Later 15-second resource samples covered only the last approximately 126
-seconds of the race: thermal state stayed nominal, and sampled aggregate owned
-training-process RSS peaked at 2,343,567,360 bytes (2.18 GiB). The machine has 36 GiB
-unified memory; its nonfree pool includes unrelated apps and caches.
-
-A separate post-selection resource probe measured 625,623,040 bytes peak process
-RSS (0.583 GiB) with `/usr/bin/time -l`. That short probe never promoted a checkpoint.
-These are scoped resource measurements, **not** an exact full-race unified-memory
-peak or temperature measurement. Sampling can miss shorter peaks.
+Sustained CPU throughput fell 0.31% between the two halves of the run. The last
+approximately 126 seconds of the race had a nominal OS thermal state and a sampled
+aggregate training-process RSS peak of 2.18 GiB. A separate short resource probe
+measured 0.583 GiB peak process RSS. These measurements cover the sampled processes
+and intervals. [Resource measurements](resource-summary.json)
 
 ## Capacity, recipes and budget-dependent rankings
 
@@ -131,49 +119,13 @@ the mechanism samples differ. The frozen scoring configuration is the same.
 In the confirmation panel, thick intervals are 95% and thin intervals are 98.333%.
 Screen means have only two training seeds and no inferential superiority claim.
 
-## Jev capabilities and actual hosted evidence
+## Hosted development results
 
-The [capability audit](../../docs/jev_capabilities_audit.md) maps current official
-documentation to implemented behavior. Calls retain provider request IDs, local
-trace/span IDs, UTC/monotonic timings, canonical request/response hashes, HTTP
-status, bounded retry hints, complete typed outputs, token usage and dated cost
-estimates. Forecast/action/observation events join to the originating call span.
-Model drift, invalid probabilities, oversized requests, unsafe usage values and
-budget exhaustion fail closed. Unknown usage retains a reservation; failures and
-missing forecasts remain visible. Automatic retries are disabled.
-
-No native Jev telemetry backend or W3C propagation contract was found in reviewed
-official docs/source. Local journals do not expose provider internals or supply an
-independent timestamp attestation. No extra telemetry service receives packets.
-Choice confidence is preserved separately from Noul outcome probabilities.
-
-The authenticated M1 pilot made 11 successful HTTP 200 calls to pinned`jev-1.14.0`,
-with 11 unique provider request IDs,77,860 input/11,811 output tokens, estimated
-input cost$0.00327012, and 2.6853 seconds transport time. Its 15 episodes replayed.
-On six fixed-probe events, Jev Brier was 0.24938 versus posterior-reference 0.18235
-and chance 0.25. Jev-only and hybrid both had MSE 0.0064, with costs 2.7 and 2.9.
-This tiny one-mechanism/one-seed pilot establishes neither calibration nor benefit.
-
-The implemented M2 roles are full legal-action arbitration, prediction-only
-selected-assay forecasts, and restricted PPO-proposal reranking. The preserved M1
-incumbent uses its original v6 policy. Matched hidden/chance/public forecasts,
-rerank-shadow, pure PPO, v6, strong imitation, fixed and Bayesian baselines remain.
-Forecast-only and post-reranking prediction failures do not veto already selected
-actions. Decision-stage failures remain failures without covert fallback.
-
-The 75-episode M2 fixture used all five selected PPO seeds, made zero hosted calls,
-and passed independent replay. Its analysis is explicitly fixture-only and cannot
-enable efficacy or calibration claims. Learned-method intervals require all five
-registered seeds; an 8-mechanism/one-seed plan remains descriptive. Fixed-probe
-inference clusters six events per mechanism and retains missingness bounds.
-
-Primary-source research examined TypeSafe documentation/SDK code, an independent
-academic Jev benchmark and released code, and community application code. Targeted
-official-domain searches found no verified public Jev deployment at OpenAI,
-Anthropic, DeepMind or Google Research. That is a bounded search result, not proof
-of non-use. Other typed models and developer affiliations are not Jev adoption.
-
-### Hosted development results
+The study compares full arbitration, forecast-only assistance, and reranking three
+legal PPO proposals. It includes matched forecast controls, the rerank shadow,
+standalone PPO, imitation, fixed designs, and Bayesian planning. Typed forecasts
+are frozen before observation and linked to their call receipts and measurements.
+[Hosted protocol](../../docs/jev_rl_m2_hosted_protocol.md) · [Trace schema and controls](../../docs/jev_capabilities_audit.md)
 
 The full eight-mechanism study used all five PPO seeds and completed all 600 cases
 with zero failed or skipped episodes. All 1,586 call receipts reported HTTP 200,
@@ -193,36 +145,13 @@ $0.03788 estimated input spend versus $0.08660 for arbitration. Its mean return
 was lower than standalone PPO's. Forecast-only Jev left all 40 PPO action sequences
 unchanged. [All role results, MSE intervals, and spending](hosted-analysis-01/REPORT.md)
 
-## Reproduction and remaining work
+The preregistered limits were 2,800 calls, $1 estimated input cost, and a 1,200-second
+dispatch window. All were met. The final split remains unopened after the
+development benefit criteria failed. [Prospective analysis registration](../../docs/jev_rl_m2_analysis_registration.json) · [Public plan](hosted-study-01/plan.json)
 
-The export preserves numerical values and API payloads while normalizing known
-machine paths and removing the private handoff link. Original-to-public hashes,
-relinked journals/seals and independent replay results are recorded in
-`publication-export.json`. This public repository omits binary weights and private
-credentials. Replay validates recorded actions/advice and outcomes; without weights
-it cannot independently establish the advice's neural origin or reproduce exact
-training. Frozen execution snapshots preserve original runtime source bytes.
+## Reproduction
 
-From a configured clone, these commands replay existing data without hosted calls.
-The first command validates the public export and reruns every published analysis.
-
-```bash
-PROJECT="$PWD"
-env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_jev_m2_public.py" --destination "$PROJECT" --verify-published
-"$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/scripts/jev_rl_study.py" verify --run "$PROJECT/reports/jev-rl-m1/hosted-20261113-204144"
-"$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m2/candidate-fixture-02/source_snapshot/scripts/jev_m2_study.py" verify --run "$PROJECT/reports/jev-rl-m2/candidate-fixture-02"
-"$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m2/hosted-study-01/source_snapshot/scripts/jev_m2_study.py" verify --run "$PROJECT/reports/jev-rl-m2/hosted-study-01"
-"$PROJECT/.venv/bin/python" "$PROJECT/reports/jev-rl-m2/confirmation-01/source_snapshot/scripts/ppo_m2_confirm.py" replay --output "$PROJECT/reports/jev-rl-m2/confirmation-01"
-"$PROJECT/.venv/bin/python" "$PROJECT/scripts/summarize_ppo_m2.py" --root "$PROJECT" --output "$PROJECT/runs/m2-report-reproduction"
-```
-
-The [prospective analysis registration](../../docs/jev_rl_m2_analysis_registration.json)
-binds the analyzer, contract and concrete hosted-plan hashes before new M2 dispatch.
-The approved full plan had a 2,800-call and $1 estimated input cost cap, and a
-1,200-second dispatch window. The measured run stayed within those limits. The
-original and public plan hashes are bound in the export receipt. [Public plan](hosted-study-01/plan.json)
-
-The public export replays 100 M1 fixture, 15 M1 hosted, 75 M2 fixture, 5,632
-confirmation, and 600 M2 hosted episodes. It reproduces both M2 analysis summaries
-and reports. The final split stays closed after the local and hosted benefit gates
-failed. [Reproduction guide](../../docs/m2-reproduction.md) · [Export receipt](publication-export.json)
+The public workflow regenerates the statistics and replays recorded simulator
+outcomes without model weights or API access. Exact controller replay and
+checkpoint inference have separate verification requirements.
+[Reproduction guide](../../docs/m2-reproduction.md) · [Export receipt](publication-export.json)

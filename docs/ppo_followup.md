@@ -69,13 +69,13 @@ The exhaustive fixed and quality-focused schedules remain byte-for-byte preserve
 
 Replaying curriculum PPO's assays with the common final selector gives RMSE 0.04896, versus fully learned 0.04985. For imitation the corresponding figures are 0.04921 and 0.04940. These are interpretation ablations; replay timing is not a full-policy latency measurement.
 
-## Compute and the 30-core GPU
+## Compute comparison
 
 The main comparison consumed 20,002,755 physical interactions: 15,001,648 for reward-only selector/joint PPO and 5,001,107 for imitation fine-tuning. 16,669,040 were sampled policy decisions; forced public assay positions are counted in physical interactions but not actor updates. Development controls used another 5,492,836 interactions.
 
 Summed main PPO training/validation wall time is 3164.9s across parallel processes, not elapsed wall time. Imitation training/validation totals 275.8s; critic warmup totals 27.3s. The shared teacher cost 122.5s for 2,048 episodes and 6,145 public-history decisions, paid once for the shared dataset. Actual per-seed counts and selected checkpoints are in summary.json.
 
-Actual hardware inspection confirms an M3 Max with 30 GPU cores, 14 CPU cores and 36 GiB unified RAM, macOS 26.3.1(a), native arm64 Python 3.12.1 and PyTorch 2.14.1. Scientific reference calculations stay NumPy/SciPy float64 on CPU; neural models use float32. Native MPS works with fallback disabled.
+The device comparison used arm64 macOS. The reference simulator uses NumPy/SciPy float64 on CPU, and the policy uses PyTorch float32. Native MPS was tested with CPU fallback disabled. [Benchmark and runtime metadata](../reports/ppo-v4/device-benchmark.json)
 
 Compute rework was limited to measured bottlenecks. An evaluator-owned zero-offset endpoint cache preserves every checked observation/reward exactly (maximum error 0.0), fresh noise and RNG consumption; unsupported settings use the original simulator. It gives about 9.25x rollout speedup. Policies never receive its hidden endpoints. The locked comparison uses the original uncached simulator.
 

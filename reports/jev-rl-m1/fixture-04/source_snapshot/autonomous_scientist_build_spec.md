@@ -1,13 +1,12 @@
+This specification defines a reinforcement learning benchmark for sequential experimental design. The policy buys measurements from an unfamiliar simulated system, then chooses a final intervention.
 
-This specification defines a new, standalone reinforcement learning project for a MacBook Pro with an M3 Max: an autonomous experimental scientist that purchases informative experiments on unfamiliar simulated regulatory systems, then chooses a final intervention. The deliverable is a reproducible research result about experimental decisions under uncertainty.
-
-The first scientific domain is a deliberately transparent biological-inspired dynamical system. The learning system is a small recurrent policy. Its weights are trained across mechanisms; at evaluation it adapts to a new mechanism by accumulating experimental evidence in memory. All numerical parameters below are initial design choices to validate, not measured M3 Max performance or established biological constants.
+The first scientific domain is a deliberately transparent biological-inspired dynamical system. The learning system is a small recurrent policy. Its weights are trained across mechanisms; at evaluation it adapts to a new mechanism by accumulating experimental evidence in memory. All numerical parameters below are initial design choices to validate, rather than measured runtime or established biological constants.
 
 # 0 Feasibility contract before committing to RL
 
-This project is feasible as a small simulated experimental-design benchmark on an M3 Max. That is an engineering assessment of the proposed scale, not a measured runtime guarantee. Whether adaptive experimentation helps, and whether RL training improves on simpler learned or planned strategies, are separate empirical questions.
+The proposed scale suits a small simulation study. Measure runtime and evaluate two separate questions: whether adaptive experimentation helps and whether RL improves on simpler policies and planners.
 
-The user's priority is a project whose RL environment is useful. Therefore these gates take precedence over expanding the feature list below. Build a bounded feasibility pilot first. Do not interpret a functioning simulator or a rising PPO reward curve as evidence that RL is necessary.
+The feasibility gates govern whether to expand the benchmark. Build a bounded feasibility pilot first. Do not interpret a functioning simulator or a rising PPO reward curve as evidence that RL is necessary.
 
 ## 0.1 What has already been checked
 
@@ -36,9 +35,9 @@ The fixed designs used 8 cultures per assay, culture-offset standard deviation 0
 
 Aggregate RMSE is the square root of mean squared error over mechanisms, fresh cultures, and both outcomes. The reference knows the mechanism, chooses using nominal zero-offset dynamics, then is evaluated on fresh cultures; it is not a rigorous optimum under the culture distribution. Its zero assay cost is a privileged reference condition, not an attainable budget-matched baseline. The two-control subset was chosen on calibration data only.
 
-These results show that a fixed identification strategy nearly reaches this reference's final quality at the generous budget. They do not establish adaptive value at the tighter budget. This was one exploratory generator with parameter-held-out seeds, not a locked multi-family benchmark or structural-generalization result. No BO, calibrated continuous-posterior planner, imitation policy, or RL method was evaluated in this audit. Audit scripts and captured outputs accompany the Codex handoff.
+These results show that a fixed identification strategy nearly reaches this reference's final quality at the generous budget. They do not establish adaptive value at the tighter budget. This was one exploratory generator with parameter-held-out seeds, not a locked multi-family benchmark or structural-generalization result. No BO, calibrated continuous-posterior planner, imitation policy, or RL method was evaluated in this audit.
 
-No recurrent policy has been trained for this specification, no scientific adaptive advantage has yet been established for the eight-variable generator, and no M3 Max throughput has been measured. The bounded pilot must resolve those questions.
+At the design stage, recurrent-policy performance, adaptive value for the eight-variable generator, and training throughput remain open questions.
 
 ## 0.2 Three distinct claims
 
@@ -95,13 +94,13 @@ These gates are development decisions evaluated on training/validation pilot dat
 
 A successful project can show either better final decisions at a fixed experimental cost or comparable decision quality with substantially cheaper online planning. In the latter case compare against imitation too, and report offline training cost. If comparing repeated deployments, report the approximate compute break-even number of episodes as offline training cost divided by per-episode planning-cost savings, when those quantities are comparable and savings are positive.
 
-The environment provides controllable ground truth, repeated independent mechanisms, priced evidence, and hidden final evaluation. Those properties make experimental policies testable. It cannot by itself establish that a learned policy improves a real wet-lab process or guarantees a job. A defensible simulator, strong comparisons, reproducible software, and an honest research result are the intended portfolio deliverables.
+The environment provides controllable ground truth, repeated independent mechanisms, priced evidence, and hidden final evaluation. Those properties make experimental policies testable. Its conclusions apply to the simulated task.
 
 # 1 Project objective and contribution
 
 Working repository name: `experimental-scientist`. Python import package: `experimentlab`. Command name: `experimentlab`.
 
-Build a fresh repository. Do not import from, modify, or depend on the user's RNA-seq harness, jev-rl repository, Avenio implementation, or private employer data.
+The benchmark uses standalone code and synthetic data.
 
 Primary question: Can a policy trained across hidden mechanisms choose experiments that yield better final interventions at the same experimental budget, while adapting to previously unseen mechanisms?
 
@@ -633,7 +632,7 @@ Train prediction using visible experiment histories. Evaluate predictive calibra
 
 # 10 Apple Silicon execution plan
 
-The user has an M3 Max MacBook Pro, but installed memory and OS version are unknown. Inspect the actual machine before choosing throughput settings.
+Record the runtime, available memory, and device support before measuring throughput.
 
 Use:
 
@@ -1173,25 +1172,3 @@ These sources establish relevant methods and platform behavior. The specific sim
 - [SciPy solve_ivp](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html).
 
 - [SB3-contrib MaskablePPO](https://sb3-contrib.readthedocs.io/en/master/modules/ppo_mask.html) and [RecurrentPPO](https://sb3-contrib.readthedocs.io/en/master/modules/ppo_recurrent.html): verify supported interfaces before choosing an implementation.
-
-# 23 Codex starting instruction
-
-```codex-prompt
-Build a new standalone repository implementing this Autonomous Experimental Scientist specification. My development machine is a MacBook Pro with an M3 Max. Inspect its actual RAM, macOS version, Python architecture, and PyTorch CPU/MPS support; do not assume CUDA or a particular memory capacity.
-
-The scientific objective is to learn cost-aware experiments on unfamiliar hidden regulatory mechanisms and select a final intervention using the evidence collected. Use fresh matched cultures for every assay, preserve the private evaluator boundary, and score the final intervention on independent cultures.
-
-The feasibility contract in Section 0 takes precedence over the flagship feature list. Begin with the package and configuration contracts, two diagnostic fixtures, exact small-case baselines, and the CPU reference simulator. Then implement only the restricted 45-action scientific pilot and the baselines needed to test it. Prove that experiments help and that adapting the scientific experiment sequence improves over strong fixed schedules before expanding the action space or starting long training.
-
-Use NumPy/SciPy float64 for scientific reference calculations and a small PyTorch float32 recurrent actor–critic for the learned policy. Compare CPU and MPS on the actual rollout-and-update workload. Provide a complete CPU path.
-
-Build serious baselines: prior-informed commitment; fixed single-control assays; an additive response model; validated belief-based decision-value planning; a fair direct-assay Bayesian optimization baseline when the pilot warrants it; and same-architecture imitation. Compare imitation, PPO, and imitation followed by PPO. Do not call faster learned inference an RL-specific benefit without this comparison. Keep training, validation, and test mechanisms separate. Compare learned and model-based decisions at matched experimental budgets, and report computation separately.
-
-Implement the specified reward and observation boundaries. Do not leak hidden mechanisms, oracle utility, unpurchased measurements, or final-evaluation noise to the policy. Do not replace the scientific model with an arbitrary action-to-reward lookup table.
-
-Make the implementation decisions explicit in docs. If an assumption makes the task trivial, unidentifiable, numerically unreliable, or too expensive, demonstrate the problem and revise the smallest relevant component before scaling. Record every revision that changes the benchmark.
-
-The first deliverable is a measured feasibility report stating which of information value, adaptive value, and RL value has actually been established. Record workload and memory measurements on my Mac and forecast full-run cost before a long experiment. If the scientific adaptive advantage is absent, preserve the negative result and revise the smallest scientifically justified assumption; never weaken a baseline to manufacture a win.
-
-After each milestone, report what was implemented, the meaningful checks run, actual results, unresolved issues, and the next milestone. Produce runnable code and measured experiments, not only architecture or a dashboard. Do not fabricate training outcomes or promise real biological validity.
-```

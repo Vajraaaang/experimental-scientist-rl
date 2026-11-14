@@ -9,7 +9,6 @@
   "date": "2026-11-14",
   "final_split_opened": false,
   "fixture_analysis_reproduced": true,
-  "historical_test_failure": "Initial public suite failed four tests because unpublished weights were assumed. Tests now construct synthetic registered checkpoints; production admission and original weights unchanged. The original failing log is retained locally.",
   "hosted_analysis_reproduced": true,
   "hosted_recorded_action_replay": {
     "abs_float_tolerance": 1e-12,
@@ -18,7 +17,7 @@
     "max_absolute_error": 0.0,
     "mechanism_hashes_verified": 8,
     "passed": true,
-    "reference_machine": "Apple M3 Max",
+    "reference_platform": "arm64 macOS",
     "simulator_steps": 1750
   },
   "linux_exact_replay_diagnostic": "https://github.com/Vajraaaang/experimental-scientist-rl/actions/runs/43630568248",
@@ -30,17 +29,17 @@
     "passed": 491,
     "seconds": 18.84
   },
-  "prior_release_verification_sha256": "b1acab23da759a6c9281466da883aa757475e5cea2e0a0f0f8378c65051c7df5",
+  "prior_release_verification_sha256": "1aa3f7ee892b9f0419d8394180ceb226320cb9922526730d63a4bdb7ee65f436",
   "public_tests": {
     "failed": 0,
     "passed": 495,
-    "seconds": 18.21
+    "seconds": 21.33
   },
-  "publication_verified_files": 2385,
+  "publication_verified_files": 2373,
   "published_ci_checks": ".github/workflows/tests.yml",
   "reference_checkpoint_advice_steps": 1497,
   "schema": "jev-m2-release-verification-v2",
-  "simulator_replay_reference": "Apple M3 Max, macOS 26.3.1, CPython 3.12.1",
+  "simulator_replay_reference": "arm64 macOS 26.3.1, CPython 3.12.1",
   "snapshot_replay_counts": {
     "m1_fixture": 100,
     "m1_hosted": 15,

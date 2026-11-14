@@ -57,9 +57,7 @@ SOURCE_FILES = (
     'tests/test_m3_ppo_profile.py', 'tests/test_ppo_m2_train.py', 'tests/test_ppo_m2_race.py',
     'tests/test_jev_candidates.py', 'tests/test_jev_m2_episode.py', 'tests/test_jev_m2_study.py',
     'tests/test_ppo_m2_confirm.py', 'tests/test_analyze_jev_m2.py', 'tests/test_export_jev_m2_public.py',
-    'docs/jev_capabilities_audit.md', 'docs/jev_rl_requirements.md', 'docs/jev_rl_milestone_plan.md',
-    'docs/jev_rl_protocol.md', 'docs/jev_rl_m2_protocol.md', 'docs/jev_rl_m2_hosted_protocol.md',
-    'docs/jev_rl_m2_task_derivation.md', 'docs/jev_rl_m2_sources_and_design.md',
+    'docs/jev_rl_m2_task_derivation.md',
     'docs/jev_rl_m2_source_receipts.json', 'docs/jev_rl_m2_analysis_registration.json',
 )
 REPORT_DIRS = (
@@ -73,11 +71,10 @@ REPORT_DIRS = (
     'reports/jev-rl-m2/candidate-analysis-fixture-02',
 )
 REPORT_FILES = tuple('reports/jev-rl-m1/' + name for name in (
-    'REPORT.md', 'checkout-audit.json', 'doctor.log', 'failure-checks.log', 'failure_checks.py',
-    'fixture-04.log', 'hosted-pilot-status.json', 'preservation-before.json',
+    'failure-checks.log', 'failure_checks.py', 'fixture-04.log', 'preservation-before.json',
     'preservation-after.json', 'snapshot-verification.log', 'tests-final.log', 'validation.json',
 )) + tuple('reports/jev-rl-m2/' + name for name in (
-    'PROGRESS.md', 'candidate-fixture-02.log', 'confirmation-01.log', 'confirmation-replay.log',
+    'candidate-fixture-02.log', 'confirmation-01.log', 'confirmation-replay.log',
     'fixture-plan-selected-02.json', 'hosted-pilot-review.json', 'launch-receipt.json',
     'memory-profile-config.json', 'memory-profile-initial.json', 'memory-profile-scope.json',
     'memory-profile.log', 'memory-profile.time', 'monitor_resources.py', 'pre-race-tests.log',

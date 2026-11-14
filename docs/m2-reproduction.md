@@ -4,13 +4,13 @@ The public workflow verifies the archive, recomputes the measured analyses, and 
 
 ## Quick start
 
-Clone the repository and check out a commit containing the M2 hosted evidence. To reproduce the recorded-outcome checks, run:
+Use Python 3.12 with the pinned dependencies. To reproduce the recorded outcomes:
 
 ```bash
-git clone --branch vajraang/jev-rl-m2 https://github.com/Vajraaaang/experimental-scientist-rl.git
+git clone https://github.com/Vajraaaang/experimental-scientist-rl.git
 PROJECT="$(pwd -P)/experimental-scientist-rl"
 python3.12 "$PROJECT/scripts/bootstrap.py"
-env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/replay_jev_m2_recorded_actions.py" \
+"$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/replay_jev_m2_recorded_actions.py" \
   --root "$PROJECT"
 ```
 
@@ -27,7 +27,7 @@ This mode checks each receipt-listed file and the plan, journal and analysis bin
 
 ## Exact reference replay
 
-The original M3 Max environment used macOS 26.3.1, CPython 3.12.1 and the pinned packages. Its strict verifier also recomputes controller and Bayesian reference decisions. That run reproduced all 6,422 archived episodes. Linux exact replay stopped at forecast or task reconstruction checks. On GitHub's Apple Silicon runner, exact replay reproduced the 5,632 PPO confirmation episodes and stopped at the baseline-action check in the Jev runs. These results delimit exact replay to the tested reference environment. [Linux diagnostic run](https://github.com/Vajraaaang/experimental-scientist-rl/actions/runs/43630568248) · [Apple Silicon diagnostic run](https://github.com/Vajraaaang/experimental-scientist-rl/actions/runs/43631793675)
+The strict verifier also recomputes controller and Bayesian reference decisions. It reproduced all 6,422 archived episodes in the reference runtime (arm64 macOS 26.3.1, CPython 3.12.1, pinned packages). Exact forecast, task, or baseline-action checks diverged on other tested runtimes. Recorded-action replay passed on Linux and macOS. [Verification record](../reports/jev-rl-m2/verification.json)
 
 ```bash
 env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/export_jev_m2_public.py" \
@@ -44,6 +44,16 @@ OUTPUT="$(mktemp -d)"
 
 The output contains `COMPARISONS.md`, `summary.json` and `m2-comparison.png`. Table values come from registered race and confirmation records. Compare the regenerated summary and Markdown to the published files. Figure rendering can vary with fonts or the graphics backend. [Measured PPO tables and figure](../reports/jev-rl-m2/summary-01)
 
+## Rebuild the hosted figures
+
+```bash
+OUTPUT="$(mktemp -d)"
+"$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/plot_m2_outcomes.py" \
+  --root "$PROJECT" --output "$OUTPUT/hosted-figures"
+```
+
+The renderer reads the registered analysis and per-case records. It writes three figures and `figure-data.json` with the plotted values and source hashes. [Published figures and values](../reports/jev-rl-m2/figures)
+
 ## Inspect a decision
 
 Start with the run's `trace-index.json` or an individual case listed in `results.json`. Each case JSON points to its JSONL journal. Follow the sequence from public state through a typed forecast and legal action choice to the purchased observation. Each forecast records the public cutoff and links to its later outcome. The snapshot verifier also checks API usage, stopping rules, and the recorded plan.
@@ -59,7 +69,7 @@ Start with the run's `trace-index.json` or an individual case listed in `results
 | Training reproduction | Registered training configurations, warm-start artifacts, native dependencies and the declared compute budget | Reruns optimization. Exact timing and trained results can differ with device, package versions and scheduling. |
 | New hosted replication | Fresh TypeSafe access, current pricing, declared budget, and a prospectively frozen design | Obtains newly sampled responses from the provider. Stored responses support independent replay even if later service behavior differs. |
 
-The original checkout with the registered checkpoints and original hosted plan can repeat the checkpoint advice audit using the same CPU environment:
+With the original checkpoint files and hosted plan, repeat the checkpoint advice audit in the reference environment:
 
 ```bash
 OUTPUT="$(mktemp -d)"
@@ -67,4 +77,4 @@ env -u TYPESAFE_API_KEY "$PROJECT/.venv/bin/python" -B "$PROJECT/scripts/verify_
   --output "$OUTPUT/checkpoint-advice.json"
 ```
 
-The public clone verifies the stored decisions. The command above additionally requires the original checkpoint files and pre-export evidence named by the receipt. [Checkpoint audit](../reports/jev-rl-m2/hosted-checkpoint-advice-audit.json) · [Research note](m2-research-note.md) · [Evidence card](m2-evidence-card.md)
+The audit receipt names the pre-export inputs required by this command. [Checkpoint audit](../reports/jev-rl-m2/hosted-checkpoint-advice-audit.json) · [Research note](m2-research-note.md) · [Evidence card](m2-evidence-card.md)

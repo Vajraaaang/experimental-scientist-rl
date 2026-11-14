@@ -3743,39 +3743,12 @@
   ],
   "files": [
     {
-      "original_bytes": 8798,
-      "original_sha256": "adbd11102ad50d2e322f5fdbc0a64bfbe0180a90cf62c2957e8ef5104d423f45",
-      "owned": true,
-      "path": "docs/jev_capabilities_audit.md",
-      "public_bytes": 8798,
-      "public_sha256": "adbd11102ad50d2e322f5fdbc0a64bfbe0180a90cf62c2957e8ef5104d423f45",
-      "transformations": []
-    },
-    {
       "original_bytes": 15458,
       "original_sha256": "91c581c36e91e53ac7d22b3157c82d4473f84f1803537e1f4808d7e1f0f5f30e",
       "owned": true,
       "path": "docs/jev_rl_m2_analysis_registration.json",
       "public_bytes": 15458,
       "public_sha256": "91c581c36e91e53ac7d22b3157c82d4473f84f1803537e1f4808d7e1f0f5f30e",
-      "transformations": []
-    },
-    {
-      "original_bytes": 4703,
-      "original_sha256": "4dbc2e24a4e468e218769c55cff9fd1a267c5ed69679acafed51f7dcb2d793a6",
-      "owned": true,
-      "path": "docs/jev_rl_m2_hosted_protocol.md",
-      "public_bytes": 4703,
-      "public_sha256": "4dbc2e24a4e468e218769c55cff9fd1a267c5ed69679acafed51f7dcb2d793a6",
-      "transformations": []
-    },
-    {
-      "original_bytes": 10177,
-      "original_sha256": "c899a3d71312a956b41a02d89a31caaaf75ea7f51fae487ac051206b0651a292",
-      "owned": false,
-      "path": "docs/jev_rl_m2_protocol.md",
-      "public_bytes": 10177,
-      "public_sha256": "c899a3d71312a956b41a02d89a31caaaf75ea7f51fae487ac051206b0651a292",
       "transformations": []
     },
     {
@@ -3788,48 +3761,12 @@
       "transformations": []
     },
     {
-      "original_bytes": 12013,
-      "original_sha256": "aa93a5bd8f214b0cadb7fc05c394d67a4d66f9a63e49fdf056aa7f8bb2210d61",
-      "owned": false,
-      "path": "docs/jev_rl_m2_sources_and_design.md",
-      "public_bytes": 12013,
-      "public_sha256": "aa93a5bd8f214b0cadb7fc05c394d67a4d66f9a63e49fdf056aa7f8bb2210d61",
-      "transformations": []
-    },
-    {
       "original_bytes": 4622,
       "original_sha256": "6d150202a4feeeeecf542373f4295711b459125e97663f0db25095debdbef5f7",
       "owned": false,
       "path": "docs/jev_rl_m2_task_derivation.md",
       "public_bytes": 4622,
       "public_sha256": "6d150202a4feeeeecf542373f4295711b459125e97663f0db25095debdbef5f7",
-      "transformations": []
-    },
-    {
-      "original_bytes": 3546,
-      "original_sha256": "34afe9db978420d34c6bf2ad21dfd333d73007eb86ee910ae0636ddced745300",
-      "owned": true,
-      "path": "docs/jev_rl_milestone_plan.md",
-      "public_bytes": 3546,
-      "public_sha256": "34afe9db978420d34c6bf2ad21dfd333d73007eb86ee910ae0636ddced745300",
-      "transformations": []
-    },
-    {
-      "original_bytes": 11516,
-      "original_sha256": "51f0ef1d680e8930869f422fb492115ae8127e9874df3b7290e1a4cbeacaa9d0",
-      "owned": true,
-      "path": "docs/jev_rl_protocol.md",
-      "public_bytes": 11516,
-      "public_sha256": "51f0ef1d680e8930869f422fb492115ae8127e9874df3b7290e1a4cbeacaa9d0",
-      "transformations": []
-    },
-    {
-      "original_bytes": 15728,
-      "original_sha256": "33ef3dadfe7ce1d3d083416eab50a922810629a0bc9d812a9da44b80620b5adf",
-      "owned": true,
-      "path": "docs/jev_rl_requirements.md",
-      "public_bytes": 15728,
-      "public_sha256": "33ef3dadfe7ce1d3d083416eab50a922810629a0bc9d812a9da44b80620b5adf",
       "transformations": []
     },
     {
@@ -3905,15 +3842,6 @@
       "transformations": []
     },
     {
-      "original_bytes": 12315,
-      "original_sha256": "412c9b74426267410efac71e08a4cffb1f6e86a39054cbc1e44010057fa82507",
-      "owned": true,
-      "path": "reports/jev-rl-m1/REPORT.md",
-      "public_bytes": 12315,
-      "public_sha256": "412c9b74426267410efac71e08a4cffb1f6e86a39054cbc1e44010057fa82507",
-      "transformations": []
-    },
-    {
       "original_bytes": 1094,
       "original_sha256": "f61c81805fb213da0608d7600f066c906d7dc1165487337df1e422836cb5c035",
       "owned": true,
@@ -3927,9 +3855,10 @@
       "original_sha256": "06ce328b83e2f5c81c109aad0940c13121faa352ea0e5eb0ec1d0ddf3729d937",
       "owned": true,
       "path": "reports/jev-rl-m1/baseline-checks/hardware.json",
-      "public_bytes": 652,
-      "public_sha256": "d2e4697b0fb70e1466ca50ebaf080697b07ea1be7a25345f4a344a6ef936abc6",
+      "public_bytes": 594,
+      "public_sha256": "426037c944864e888b32e1e7963704b75501d6b1e996a8d4bfd4805e2485ab9a",
       "transformations": [
+        "publication_metadata_cleanup",
         "relative_project_path:python"
       ]
     },
@@ -3941,26 +3870,6 @@
       "public_bytes": 1006,
       "public_sha256": "5cc828db9cc20d21b08415a14000b78138d72ce64ea3ca5ddb043138e8303dfc",
       "transformations": []
-    },
-    {
-      "original_bytes": 5073,
-      "original_sha256": "f002d5e58bfbe97cbe3e7cabffa34fbc447f0fcf8b0a2499705892a5c987c793",
-      "owned": true,
-      "path": "reports/jev-rl-m1/checkout-audit.json",
-      "public_bytes": 5073,
-      "public_sha256": "f002d5e58bfbe97cbe3e7cabffa34fbc447f0fcf8b0a2499705892a5c987c793",
-      "transformations": []
-    },
-    {
-      "original_bytes": 734,
-      "original_sha256": "06ce328b83e2f5c81c109aad0940c13121faa352ea0e5eb0ec1d0ddf3729d937",
-      "owned": true,
-      "path": "reports/jev-rl-m1/doctor.log",
-      "public_bytes": 662,
-      "public_sha256": "3784d5156907c8845df9cc43bfb40a94cec7c73b0ab7943c2db1080b86663276",
-      "transformations": [
-        "project_marker_in_text_metadata"
-      ]
     },
     {
       "original_bytes": 3502,
@@ -5851,8 +5760,9 @@
       "owned": true,
       "path": "reports/jev-rl-m1/fixture-04/manifest.json",
       "public_bytes": 30959,
-      "public_sha256": "f2cb3c761d8031651d56b21bd1bf7f0dcb49a7d9d6929accf8b16ecfbaa2d0e2",
+      "public_sha256": "8a42876c3549ae03531db11de811182335676918c6397dbe62d169dd31c5f452",
       "transformations": [
+        "rebind_public_documentation_hashes",
         "rebind_public_manifest_and_admission"
       ]
     },
@@ -5862,8 +5772,9 @@
       "owned": true,
       "path": "reports/jev-rl-m1/fixture-04/results.json",
       "public_bytes": 2278923,
-      "public_sha256": "b608cfafc24f2f55eaf767dd50377be214133416c328d9a689cc72f41f302308",
+      "public_sha256": "3f0079ca63c2d22c593461cc1fcf2bbf6b04732f4f92f56f11d718ebaac9550e",
       "transformations": [
+        "rebind_public_documentation_hashes",
         "rebind_public_result_manifest_and_journals"
       ]
     },
@@ -5872,9 +5783,10 @@
       "original_sha256": "f4afb36001041f62ba52a51026f0b48878474c2b25cce58027aee46c8ec2676a",
       "owned": true,
       "path": "reports/jev-rl-m1/fixture-04/source_snapshot/autonomous_scientist_build_spec.md",
-      "public_bytes": 66077,
-      "public_sha256": "e5123d20ba52bc1321243546ed57250148fedcf1b551955214a67667f1c8a1c6",
+      "public_bytes": 61916,
+      "public_sha256": "409f587d302dafa6121224190df13ab2485fec9ad966269914e7a5a53c028555",
       "transformations": [
+        "remove_non_project_details_from_specification",
         "remove_private_handoff_first_line"
       ]
     },
@@ -6036,9 +5948,11 @@
       "original_sha256": "a76a94fa7698505534c151cb784b9f8dc68540c7c2e34508582bfe08390b1f8c",
       "owned": true,
       "path": "reports/jev-rl-m1/fixture-04/source_snapshot/scripts/package_report.py",
-      "public_bytes": 19831,
-      "public_sha256": "a76a94fa7698505534c151cb784b9f8dc68540c7c2e34508582bfe08390b1f8c",
-      "transformations": []
+      "public_bytes": 19785,
+      "public_sha256": "930316899d4bba1a0aef2e97fab3e187e845854d947a6a7995530bfd05e7383b",
+      "transformations": [
+        "generalize_report_template_environment"
+      ]
     },
     {
       "original_bytes": 9368,
@@ -6153,9 +6067,11 @@
       "original_sha256": "af50448b3066e29651d95b530e6095e24c18491e07ec978c3afb23dc42f4331d",
       "owned": true,
       "path": "reports/jev-rl-m1/fixture-04/source_snapshot/scripts/report_ppo_v4.py",
-      "public_bytes": 21576,
-      "public_sha256": "af50448b3066e29651d95b530e6095e24c18491e07ec978c3afb23dc42f4331d",
-      "transformations": []
+      "public_bytes": 21533,
+      "public_sha256": "5e6ff5d8a38a3330b6a6ad1e6119e7d46a1622e05181583e8c0068b9fd9f6089",
+      "transformations": [
+        "generalize_report_template_environment"
+      ]
     },
     {
       "original_bytes": 11382,
@@ -6874,8 +6790,9 @@
       "owned": true,
       "path": "reports/jev-rl-m1/hosted-20261113-204144/manifest.json",
       "public_bytes": 13996,
-      "public_sha256": "52b15f653ec91194b0525701712acb3ddd73292633e589a46e68a641d8c3e8e6",
+      "public_sha256": "b5b1f488dc16e7284a8cc4021b345ca49e653fe1bd6c3116e6a9087eec7960f2",
       "transformations": [
+        "rebind_public_documentation_hashes",
         "rebind_public_manifest_and_admission"
       ]
     },
@@ -6885,8 +6802,9 @@
       "owned": true,
       "path": "reports/jev-rl-m1/hosted-20261113-204144/results.json",
       "public_bytes": 313916,
-      "public_sha256": "b4c7b02857f331d78bbcd76449152cdc39a31259cf5adeda960bd34ddf653b91",
+      "public_sha256": "76203d76a43d9c1bc95283fc3897e4ba08adc89297f8e1b1e0a3e6f13e50baac",
       "transformations": [
+        "rebind_public_documentation_hashes",
         "rebind_public_result_manifest_and_journals"
       ]
     },
@@ -6895,9 +6813,10 @@
       "original_sha256": "f4afb36001041f62ba52a51026f0b48878474c2b25cce58027aee46c8ec2676a",
       "owned": true,
       "path": "reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/autonomous_scientist_build_spec.md",
-      "public_bytes": 66077,
-      "public_sha256": "e5123d20ba52bc1321243546ed57250148fedcf1b551955214a67667f1c8a1c6",
+      "public_bytes": 61916,
+      "public_sha256": "409f587d302dafa6121224190df13ab2485fec9ad966269914e7a5a53c028555",
       "transformations": [
+        "remove_non_project_details_from_specification",
         "remove_private_handoff_first_line"
       ]
     },
@@ -7059,9 +6978,11 @@
       "original_sha256": "a76a94fa7698505534c151cb784b9f8dc68540c7c2e34508582bfe08390b1f8c",
       "owned": true,
       "path": "reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/scripts/package_report.py",
-      "public_bytes": 19831,
-      "public_sha256": "a76a94fa7698505534c151cb784b9f8dc68540c7c2e34508582bfe08390b1f8c",
-      "transformations": []
+      "public_bytes": 19785,
+      "public_sha256": "930316899d4bba1a0aef2e97fab3e187e845854d947a6a7995530bfd05e7383b",
+      "transformations": [
+        "generalize_report_template_environment"
+      ]
     },
     {
       "original_bytes": 9368,
@@ -7176,9 +7097,11 @@
       "original_sha256": "af50448b3066e29651d95b530e6095e24c18491e07ec978c3afb23dc42f4331d",
       "owned": true,
       "path": "reports/jev-rl-m1/hosted-20261113-204144/source_snapshot/scripts/report_ppo_v4.py",
-      "public_bytes": 21576,
-      "public_sha256": "af50448b3066e29651d95b530e6095e24c18491e07ec978c3afb23dc42f4331d",
-      "transformations": []
+      "public_bytes": 21533,
+      "public_sha256": "5e6ff5d8a38a3330b6a6ad1e6119e7d46a1622e05181583e8c0068b9fd9f6089",
+      "transformations": [
+        "generalize_report_template_environment"
+      ]
     },
     {
       "original_bytes": 11382,
@@ -7622,15 +7545,6 @@
       "transformations": []
     },
     {
-      "original_bytes": 371,
-      "original_sha256": "86557fb7d13c82b83c4f43950c1e5648807bbda1f71376a6944824d92dc5327d",
-      "owned": true,
-      "path": "reports/jev-rl-m1/hosted-pilot-status.json",
-      "public_bytes": 371,
-      "public_sha256": "86557fb7d13c82b83c4f43950c1e5648807bbda1f71376a6944824d92dc5327d",
-      "transformations": []
-    },
-    {
       "original_bytes": 179,
       "original_sha256": "8daa7230bd4c638b44ed26d8936bc223433947fbea3509add17ef146b2fa70af",
       "owned": true,
@@ -7673,15 +7587,6 @@
       "path": "reports/jev-rl-m1/validation.json",
       "public_bytes": 476,
       "public_sha256": "82da7f8c7d9164899708a30854b61ff3aa0a5c06655ae1118544835f72836760",
-      "transformations": []
-    },
-    {
-      "original_bytes": 9787,
-      "original_sha256": "ecdb0dfdaffc6c365d6307cd4d39b2d23e41da52d12aedef0da6c57b8e613e88",
-      "owned": true,
-      "path": "reports/jev-rl-m2/PROGRESS.md",
-      "public_bytes": 9787,
-      "public_sha256": "ecdb0dfdaffc6c365d6307cd4d39b2d23e41da52d12aedef0da6c57b8e613e88",
       "transformations": []
     },
     {
@@ -11745,9 +11650,11 @@
       "original_sha256": "3b4c1b7661c6ed2633635a5652bfc4d1e1c8783b96446ebd00a157739e7fa85e",
       "owned": true,
       "path": "reports/jev-rl-m2/hosted-pilot-review.json",
-      "public_bytes": 1370,
-      "public_sha256": "3b4c1b7661c6ed2633635a5652bfc4d1e1c8783b96446ebd00a157739e7fa85e",
-      "transformations": []
+      "public_bytes": 1336,
+      "public_sha256": "c99eb428010fbb6d222bdce64b3af02758e557f583b36b2aed379168a8bbfa58",
+      "transformations": [
+        "publication_metadata_cleanup"
+      ]
     },
     {
       "original_bytes": 1268884,
@@ -28478,9 +28385,11 @@
       "original_sha256": "d5f3c1a7d487b9010b4a02bc8d624271016635d444fac563a8a9c62384a0283d",
       "owned": true,
       "path": "scripts/export_jev_m2_public.py",
-      "public_bytes": 47327,
-      "public_sha256": "d5f3c1a7d487b9010b4a02bc8d624271016635d444fac563a8a9c62384a0283d",
-      "transformations": []
+      "public_bytes": 46990,
+      "public_sha256": "042dd254ea97b6a2ebd7e9cac91ce42a10b174a717a6d6219cb4555179f15dd0",
+      "transformations": [
+        "publication_metadata_cleanup"
+      ]
     },
     {
       "original_bytes": 57206,
@@ -28665,11 +28574,12 @@
       "original registry/schedule input hashes"
     ],
     "rebound": [
-      "public source snapshot inventory after private handoff line removal",
+      "public source snapshot bindings for editorially cleaned specifications and report templates",
       "public plan/admission/manifest/journal/result bindings",
       "public confirmation selected-record digest, freeze seal and run manifest",
       "analysis provenance bound to the matching public fixture or sealed hosted inputs"
-    ]
+    ],
+    "runtime_scope": "Simulation, policy, scoring, and replay code are byte-identical. Two M1 report templates contain editorial changes only."
   },
   "hosted_registration_binding": {
     "analysis_contract_sha256": "d3441d56620e4e6ac2114c58765bdaa33db97728d5458b0a7f7bffaba00f7602",
@@ -28681,12 +28591,12 @@
   "inventory": {
     "excluded_bytes": 4605718114,
     "excluded_files": 747,
-    "included_files": 2385,
+    "included_files": 2373,
     "largest_public_file_bytes": 11353656,
-    "original_bytes": 361452453,
-    "public_bytes": 351931249,
-    "reused_existing_files": 4,
-    "transformed_files": 1157
+    "original_bytes": 361357692,
+    "public_bytes": 351827631,
+    "reused_existing_files": 2,
+    "transformed_files": 1162
   },
   "limitations": [
     "No checkpoint inference or full retraining is reproduced.",
@@ -28708,7 +28618,7 @@
     "archive_only": false,
     "credentials_excluded_from_environment": true,
     "exact_replay_reference_commit": "da67fa17590e1f17e571e1de0e352143b7bd9841",
-    "files_verified": 2385,
+    "files_verified": 2373,
     "hosted_pair_included": true,
     "recorded_action_replay": {
       "abs_float_tolerance": 1e-12,
@@ -28717,7 +28627,7 @@
       "max_absolute_error": 0.0,
       "mechanism_hashes_verified": 8,
       "passed": true,
-      "reference_machine": "Apple M3 Max",
+      "reference_platform": "arm64 macOS",
       "simulator_steps": 1750
     },
     "runs": [

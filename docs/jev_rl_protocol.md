@@ -126,14 +126,12 @@ tokens per call before dispatch against a 1,200,000 input-token allowance and
 $0.10 estimated-input-cost ceiling. These are conservative client accounting
 limits, not a guarantee about undocumented server tokenization/billing. Record
 actual reported usage; a reservation overrun terminates further calls. Model drift
-terminates the episode and preserves the receipt. No API credential is present in
-the initial process; hosted validation is therefore pending, not a fixture result.
+terminates the episode and preserves the receipt. Hosted behavior is evaluated
+separately from the engineering fixtures. [Hosted pilot](../reports/jev-rl-m1/hosted-20261113-204144)
 
-Credentials come only from `TYPESAFE_API_KEY` in the process or an interactive
-hidden prompt. Never read credentials from files, browser state, prior chats, or
-Git. HTTP errors and exceptions are reduced to fixed codes; no raw error body,
-headers, or credential enters artifacts. Verified TLS and the macOS CA fallback
-are retained. Fixture responses are conspicuously labeled and are not Jev data.
+Live runs accept `TYPESAFE_API_KEY` in the process environment or an interactive
+hidden prompt. HTTP failures are represented by fixed codes and sanitized
+transport metadata. The fixture and hosted modes use distinct model labels.
 
 The output directory refuses overwrite. The manifest is written before execution,
 records reproducible task seeds only for the trusted evaluator, source/checkpoint
@@ -144,7 +142,7 @@ Replay verifies a receipt; it cannot independently reproduce hosted model weight
 Pretrained weights remain absent from the public checkout; public users can verify
 recorded episodes without them, but new learned-policy runs require training.
 
-Tracing amendment requested on 2026-11-13: each API call now has a local study
+The tracing protocol records a local study
 trace ID and call span ID, UTC timestamps, monotonic latency, request/validated
 response hashes, canonical wire question/candidate order, and optional provider
 `x-typesafe-request-id`. Safe HTTP status, bounded numeric retry hints and a digest

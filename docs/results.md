@@ -24,8 +24,8 @@
 | `reports/ppo-cost-v5/` | Development cost diagnosis/calibration, paired-return controls and another 2,048-mechanism frozen comparison |
 | `reports/ppo-efficiency-v6/` | 50M completed new interactions, another 4,096-mechanism frozen test; PPO improves over its previous version but full efficiency parity with imitation remains unestablished |
 | `reports/jev-rl-m1/` | Additive Jev tracing/control implementation, 100-episode fixture and subsequent 11-call authenticated pilot; no demonstrated hybrid or calibration benefit |
-| `reports/jev-rl-m2/` | Bounded M3 Max comparison, 42 training runs, five-seed/128-mechanism PPO confirmation, and 600-case paired hosted Jev study. Both sets of registered benefit gates failed. |
-| `reports/compute/benchmark.json` | Complete CPU/MPS workload measurements on the actual Mac |
+| `reports/jev-rl-m2/` | Bounded PPO configuration study, five-seed confirmation on 128 mechanisms, and a 600-case paired hosted Jev study. Both sets of benefit criteria failed. |
+| `reports/compute/benchmark.json` | End-to-end CPU and MPS workload measurements |
 
 The original external audit scripts and seeds were absent from the supplied specification. `generous-audit.json` is explicitly an independent reconstruction, not an exact reproduction of its original rows.
 
@@ -39,11 +39,7 @@ Timing fields have different scopes. Complete learned-policy timing includes sim
 
 ## Publication snapshot
 
-The snapshot includes completed evidence records and the complete training code. Active training output and weight files are excluded. Public setup uses the clone's absolute path rather than the author's machine path. A private handoff URL and machine-specific path prefixes were removed; the publication manifest records original and published hashes.
-
-Publication-only portability changes make optional Mac hardware commands report unavailability on other platforms and use the platform's temporary directory for checkpoint round trips. They do not change simulator dynamics, observations, costs, or learning objectives. The local publication tests exercise these changes. Hosted CPU CI is configured separately and is not considered passing until GitHub runs it.
-
-Measured records originated in the development environment before publication-only portability cleanup. Their original code hashes are provenance, not assertions that the cleaned snapshot is byte-identical. Reproduction commands write to `runs/` to preserve the supplied evidence.
+The release includes training code and recorded evidence. Weights remain separate. Reproduction commands use a fresh output directory. [Reproduction guide](m2-reproduction.md)
 
 ## Latest cost-efficiency conclusion
 
@@ -63,4 +59,4 @@ The [M2 report](../reports/jev-rl-m2/REPORT.md) separates equal-interaction and 
 
 The hosted Jev comparison completed 600 cases and 1,586 successful calls. None of the three registered benefit gates passed. Reranking reduced estimated API spend relative to arbitration. Jev's Brier error was 0.26511 versus 0.22480 for the Bayesian posterior on the same 48 probe events. The original 11-call pilot and 75-case engineering fixture remain documented. The next final split remains unopened. [Hosted analysis](../reports/jev-rl-m2/hosted-analysis-01/REPORT.md) · [Research note](m2-research-note.md)
 
-Public M1/M2 derivatives retain numeric values and API request/response objects. Known machine-path metadata and the private handoff link were removed, then journal/manifest bindings were recomputed and independently replayed. [The export receipt](../reports/jev-rl-m2/publication-export.json) maps original and public hashes; [the integrity audit](../reports/jev-rl-m2/publication-integrity-audit.json) records the comparison. Source snapshots preserve executed runtime code. Public replay needs neither weights nor credentials, but cannot reproduce exact checkpoint inference or retraining without the omitted weights.
+The public evidence preserves scientific values and API payloads. Replay verifies the recorded decisions and outcomes. Repeating checkpoint inference or training requires the corresponding weights and training inputs. The export receipt maps original hashes to the published files. [Export receipt](../reports/jev-rl-m2/publication-export.json) · [Integrity audit](../reports/jev-rl-m2/publication-integrity-audit.json)
