@@ -1,0 +1,23 @@
+{
+  "architecture": "arm64",
+  "chip": "Apple M3 Max",
+  "dependencies": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.5.4",
+    "pytest": "9.1.1",
+    "scipy": "1.18.1",
+    "torch": "2.14.1"
+  },
+  "hardware_model": "Mac15,11",
+  "learning_dtype": "PyTorch float32",
+  "logical_cpus": 14,
+  "macos": "ProductName:\t\tmacOS\nProductVersion:\t\t26.3.1\nProductVersionExtra:\t(a)\nBuildVersion:\t\t25D771280a",
+  "mps_available": true,
+  "mps_built": true,
+  "mps_fallback_environment": "unset",
+  "python": ".venv/bin/python",
+  "python_version": "3.12.1",
+  "ram_bytes": "38654705664",
+  "reference_dtype": "NumPy/SciPy float64 CPU",
+  "torch_cpu": true
+}

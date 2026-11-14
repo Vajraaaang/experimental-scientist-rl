@@ -1,0 +1,20 @@
+{
+  "backend": "cpu",
+  "batch": 512,
+  "entropy_end": 0.001,
+  "entropy_start": 0.001,
+  "eval_every_interactions": 100000,
+  "hard_wall_seconds": 300.0,
+  "hidden": 64,
+  "initialization": "imitation_ppo",
+  "joint_epochs": 2,
+  "joint_hard_interactions": 500000,
+  "joint_interactions": 500000,
+  "joint_lr": 0.0001,
+  "kind": "recurrent",
+  "name": "historical-imitation-ppo-continuation",
+  "seed": 20,
+  "selector_interactions": 0,
+  "threads": 1,
+  "wall_snapshot_seconds": 0.0
+}

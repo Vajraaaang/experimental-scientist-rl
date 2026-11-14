@@ -1,0 +1,42 @@
+{
+  "diagnostic_pair": {
+    "proxy_time1": [
+      0.45704468735693765,
+      0.5429553126430625
+    ],
+    "outcome_time1": [
+      0.4948601226080801,
+      0.505139877391919
+    ],
+    "outcome_time6": [
+      0.40946742843304995,
+      0.5905325715669483
+    ],
+    "sign_error": 6.207172554217636e-10,
+    "informed_mse": 2.836527041701698e-07,
+    "no_intervention_mse": 0.0081,
+    "negative_return": 0.056528365270417026,
+    "interpretation": "One fixed assay solves this diagnostic; no evidence of adaptive RL value."
+  },
+  "branching": {
+    "adaptive_accuracy": 1.0,
+    "best_fixed_accuracy": 0.75,
+    "fixed_schedules": {
+      "(0, 0)": 0.5,
+      "(0, 1)": 0.75,
+      "(0, 2)": 0.75,
+      "(1, 1)": 0.75,
+      "(1, 2)": 0.75,
+      "(2, 2)": 0.75
+    },
+    "worlds_enumerated": 16,
+    "interpretation": "Routing diagnostic only; no scientific simulator conclusion."
+  },
+  "integration": {
+    "method": "exponential Euler",
+    "dtype": "float64",
+    "dt": 0.05,
+    "max_error_vs_DOP853": 0.00039487073007493656,
+    "dt_half_max_error": 0.00019559277551289833
+  }
+}

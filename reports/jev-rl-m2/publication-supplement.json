@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-14",
+  "files": [
+    {
+      "before_publication_sha256": "b107ed11f828839f145c9c8f9c54c6a452cece726f08c61cc97fca7512b79b83",
+      "bytes": 14447,
+      "path": "README.md",
+      "sha256": "ab0fca97ba186099e442ff7b007c5b964ba277b6d502317150497ef6387b106b"
+    },
+    {
+      "before_publication_sha256": "0ffb16e1f58d34ca2549fc6652e2e2b971b7a1faa3ae45d58ce82543de9c4837",
+      "bytes": 9612,
+      "path": "docs/results.md",
+      "sha256": "17565436c3a27453ff108e142ae91bb71ef668d29ba73d849aa3d40b4de89371"
+    },
+    {
+      "bytes": 9502,
+      "path": "scripts/summarize_ppo_m2.py",
+      "sha256": "832f1640b8667f529f4be4222b519695995f5c421fe6a1b77e59ab6246e6aa83"
+    },
+    {
+      "bytes": 14762,
+      "path": "reports/jev-rl-m2/REPORT.md",
+      "sha256": "62d648ba2eb1aa47184faba02caa1ea651faeeee1680dc2b065519a95124401d"
+    },
+    {
+      "bytes": 70811,
+      "path": "reports/jev-rl-m2/summary-01/summary.json",
+      "sha256": "0b57b551e79e3a55b52a3aa2df43d234d1adc008644dd86f4716f14be93b735b"
+    },
+    {
+      "bytes": 7158,
+      "path": "reports/jev-rl-m2/summary-01/COMPARISONS.md",
+      "sha256": "1bf901f93dedaf59c1b6270caacf6b34e40db52168eed40b42d2f47bd6c1e91a"
+    },
+    {
+      "bytes": 145808,
+      "path": "reports/jev-rl-m2/summary-01/m2-comparison.png",
+      "sha256": "177e15aba5bd7298b437ad3612b85e5851ec1afe676d6848ddd554df58ea1c83"
+    },
+    {
+      "bytes": 204,
+      "path": "reports/jev-rl-m2/preservation-final.json",
+      "sha256": "cba54cd0b23753ee6e8b0c5ee567c82c9e7c37909500f98df37332843c6fc2d3"
+    },
+    {
+      "bytes": 581,
+      "path": "reports/jev-rl-m2/final-primary-tests-03.log",
+      "sha256": "c8a362daeb612bec214c211f6c9177d1d058cbee36bdd42196d68afbcade9a31"
+    },
+    {
+      "bytes": 581,
+      "path": "reports/jev-rl-m2/final-public-tests-02.log",
+      "sha256": "fae0752ef2c9863a19686e395d7bb90fc6673362d59cc2240bdbe940d4084f13"
+    },
+    {
+      "bytes": 2014,
+      "path": "reports/jev-rl-m2/verification.json",
+      "sha256": "1aa3f7ee892b9f0419d8394180ceb226320cb9922526730d63a4bdb7ee65f436"
+    },
+    {
+      "bytes": 1228294,
+      "path": "reports/jev-rl-m2/publication-export.json",
+      "sha256": "f98c12a19a33c1115fbe60b987e8416e80976b1054124c8e7a5f497dfad1dace"
+    },
+    {
+      "bytes": 1632,
+      "path": "reports/jev-rl-m2/publication-integrity-audit.json",
+      "sha256": "83bbccdd9e6d0726ba0245309372635a8c6a7e67084fbf8735f4e3f879f82206"
+    },
+    {
+      "bytes": 2866,
+      "path": ".github/workflows/tests.yml",
+      "sha256": "385a82c068a0ba9d1fdb66997d43d52068b512ef09fd68f579dab426a1640de3"
+    },
+    {
+      "bytes": 549,
+      "path": "CITATION.cff",
+      "sha256": "b96291c0c1251a2985cc0cfe1bd6d3702909fb92f4fb8675b174135a16a9890a"
+    },
+    {
+      "bytes": 12001,
+      "path": "docs/m2-research-note.md",
+      "sha256": "4c1fc89529e8142e40575b25f3354f54f7f52a0035336da1e94918364ecd6774"
+    },
+    {
+      "bytes": 6131,
+      "path": "docs/m2-reproduction.md",
+      "sha256": "457757793df38cae9c35e518e6bb29f5fe88d9f2798e730b3d0db346ee982908"
+    },
+    {
+      "bytes": 3721,
+      "path": "docs/m2-policy-card.md",
+      "sha256": "dac71ebc987929a659f91ca3a456f14c3e4aff0e9b117a44be8655a921c71a72"
+    },
+    {
+      "bytes": 4205,
+      "path": "docs/m2-evidence-card.md",
+      "sha256": "9ccb4ba2d3a2a70f9ab985f012ca5dbf08b9f7d729904d03243468003b12fe63"
+    },
+    {
+      "bytes": 5054,
+      "path": "scripts/verify_jev_m2_checkpoint_advice.py",
+      "sha256": "72341600d57f3fe12e70d35f0c7d15423207f76bf6393cd9ee8247076826892e"
+    },
+    {
+      "bytes": 832,
+      "path": "reports/jev-rl-m2/hosted-checkpoint-advice-audit.json",
+      "sha256": "cf4acc76beba8d976bd8d9ef372c577bb6e10d3edcf9565d1fd6acaaa763daac"
+    }
+  ],
+  "final_split_opened": false,
+  "historical_public_base": "ae6cdc8e731cb4b1d427a7604adad86d74b5ec12",
+  "hosted_analysis_registration_commit": "5145460",
+  "new_m2_hosted_calls": 1586,
+  "previous_supplement_sha256": "fa2463d5a4da1bec3758a3beefcdf1ca7a560dd8933cd9fd8e4a994485d0626f",
+  "schema": "jev-m2-publication-supplement-v2",
+  "scope": "Current documentation, replay CI, reporting code/outputs, checkpoint advice audit, and evidence receipts.",
+  "source_scientific_outputs_unchanged": true,
+  "supplemental_private_path_scan_passed": true
+}

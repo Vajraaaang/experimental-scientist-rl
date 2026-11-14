@@ -1,4 +1,4 @@
-name: CPU tests
+name: Research verification
 
 on:
   push:
@@ -8,7 +8,8 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  linux:
+    name: Linux CPU tests and archived results
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -28,3 +29,36 @@ jobs:
           python -m pytest "$GITHUB_WORKSPACE/tests" -c "$GITHUB_WORKSPACE/pyproject.toml"
           experimentlab validate-science --suite diagnostic --output "$RUNNER_TEMP/science-validation"
           experimentlab doctor --output "$RUNNER_TEMP/machine-inspection"
+      - name: Verify the archive, recompute statistics and replay hosted outcomes
+        run: |
+          env -u TYPESAFE_API_KEY python -B "$GITHUB_WORKSPACE/scripts/replay_jev_m2_recorded_actions.py" \
+            --root "$GITHUB_WORKSPACE"
+      - name: Regenerate the PPO comparison tables
+        run: |
+          python -B "$GITHUB_WORKSPACE/scripts/summarize_ppo_m2.py" \
+            --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/ppo-m2-summary"
+          cmp "$RUNNER_TEMP/ppo-m2-summary/COMPARISONS.md" "$GITHUB_WORKSPACE/reports/jev-rl-m2/summary-01/COMPARISONS.md"
+          cmp "$RUNNER_TEMP/ppo-m2-summary/summary.json" "$GITHUB_WORKSPACE/reports/jev-rl-m2/summary-01/summary.json"
+  macos-replay:
+    name: Apple Silicon simulator outcome replay
+    runs-on: macos-26
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12.1'
+          cache: pip
+      - name: Install the reference platform dependencies
+        run: python -m pip install -r "$GITHUB_WORKSPACE/requirements.lock"
+      - name: Record the numerical runtime
+        run: python -c 'import numpy; numpy.show_config(); numpy.show_runtime()'
+      - name: Replay the complete PPO confirmation with its original verifier
+        run: |
+          env -u TYPESAFE_API_KEY python -B \
+            "$GITHUB_WORKSPACE/reports/jev-rl-m2/confirmation-01/source_snapshot/scripts/ppo_m2_confirm.py" \
+            replay --output "$GITHUB_WORKSPACE/reports/jev-rl-m2/confirmation-01"
+      - name: Replay hosted measurements, costs and rewards
+        run: |
+          env -u TYPESAFE_API_KEY python -B "$GITHUB_WORKSPACE/scripts/replay_jev_m2_recorded_actions.py" \
+            --root "$GITHUB_WORKSPACE"

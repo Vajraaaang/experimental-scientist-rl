@@ -1,0 +1,87 @@
+{
+  "api_receipts": [],
+  "case_id": "m001-ppo_v6-s22",
+  "journal": "episodes/m001-ppo_v6-s22.jsonl",
+  "journal_sha256": "f9495728fb918cb016e84d43f00c238de26ba36ef61da0e8c5102e182114e5d8",
+  "method": "ppo_v6",
+  "result": {
+    "action_id": 40,
+    "actions": [
+      15,
+      40
+    ],
+    "assays": 1,
+    "decision_seconds": [
+      0.001159709005150944,
+      0.0007166250143200159
+    ],
+    "effort": 0.8,
+    "end_to_end_seconds": 0.007991040998604149,
+    "failure": null,
+    "final_cultures": 128,
+    "final_mse": 0.001069621407766187,
+    "forecast_coverage": {
+      "frozen_candidate_events": 144,
+      "jev_requested_events": 0,
+      "jev_validated_events": 0,
+      "probe_expected_events": null,
+      "purchased_events": 2,
+      "scored_jev_events": 0,
+      "scored_reference_events": 2
+    },
+    "forecasts": [
+      {
+        "action_id": 15,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.2502379518773237,
+          "prior": 0.2502379518773172,
+          "public_heuristic": 0.25
+        },
+        "node": 6,
+        "observed_mean": 0.5267640653637623,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.499762104716842,
+          "prior": 0.49976210471684857,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5019932538107535
+      },
+      {
+        "action_id": 15,
+        "brier": {
+          "chance": 0.25,
+          "posterior": 0.2510720657090267,
+          "prior": 0.25107206570902013,
+          "public_heuristic": 0.25
+        },
+        "node": 7,
+        "observed_mean": 0.5154022155054112,
+        "outcome": 1,
+        "probabilities": {
+          "chance": 0.5,
+          "posterior": 0.49892908115813916,
+          "prior": 0.4989290811581457,
+          "public_heuristic": 0.5
+        },
+        "threshold": 0.5049562592652044
+      }
+    ],
+    "immediate_stop": false,
+    "method": "ppo",
+    "observed_return": -0.1749621407766187,
+    "online_seconds": 0.0068066249950788915,
+    "reference_forecast_seconds": [
+      0.00121366698294878,
+      0.0011409590078983456
+    ],
+    "return_": -0.1749621407766187,
+    "setup_cost": 3.0,
+    "status": "completed",
+    "timing_scope": "instrumented controller loop; includes forecast references and synchronous journal writes; end_to_end also includes reset",
+    "total_assay_cost": 5.8,
+    "variable_cost": 2.8
+  }
+}

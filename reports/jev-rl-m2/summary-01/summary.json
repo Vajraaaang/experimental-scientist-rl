@@ -1,0 +1,2304 @@
+{
+  "confirmation": {
+    "bootstrap_draws": 10000,
+    "bootstrap_rng_seed": 991499,
+    "cohorts": {
+      "additive": {
+        "aggregate_rmse": 0.05588645022112517,
+        "all_attempt_latency_seconds": 0.5220328731811605,
+        "all_attempt_variable_cost": 742.4,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 2.0,
+        "mean_effort": 0.49999999999999994,
+        "mean_final_mse": 0.0031232953183183017,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.39532953183183017,
+        "mean_total_assay_cost": 8.799999999999999,
+        "mean_variable_cost": 5.799999999999998,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "bo": {
+        "aggregate_rmse": 0.058208258280950415,
+        "all_attempt_latency_seconds": 0.5633829581202008,
+        "all_attempt_variable_cost": 635.1,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 1.7109375,
+        "mean_effort": 0.4375,
+        "mean_final_mse": 0.003388201332101832,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.4103123207101832,
+        "mean_total_assay_cost": 7.961718749999999,
+        "mean_variable_cost": 4.961718749999999,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "calibrated_imitation": {
+        "aggregate_rmse": 0.04696970682346056,
+        "all_attempt_latency_seconds": 1.4790228329657111,
+        "all_attempt_variable_cost": 2909.6,
+        "attempted_count": 640,
+        "completed_count": 640,
+        "expected_count": 640,
+        "failed_count": 0,
+        "mean_assays": 1.96875,
+        "mean_effort": 0.6137499999999999,
+        "mean_final_mse": 0.0022061533590818374,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.29676533590818377,
+        "mean_total_assay_cost": 7.546249999999999,
+        "mean_variable_cost": 4.54625,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "eig": {
+        "aggregate_rmse": 0.05324924647288426,
+        "all_attempt_latency_seconds": 7.582569622143637,
+        "all_attempt_variable_cost": 985.6,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 3.0,
+        "mean_effort": 0.51875,
+        "mean_final_mse": 0.0028354822499299767,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.3864857249929976,
+        "mean_total_assay_cost": 10.699999999999998,
+        "mean_variable_cost": 7.700000000000002,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "fixed": {
+        "aggregate_rmse": 0.052613922008439805,
+        "all_attempt_latency_seconds": 0.5709738698205911,
+        "all_attempt_variable_cost": 819.2,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 3.0,
+        "mean_effort": 0.5375,
+        "mean_final_mse": 0.0027682247891101866,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.36769747891101867,
+        "mean_total_assay_cost": 9.400000000000002,
+        "mean_variable_cost": 6.400000000000001,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "fixed_quality": {
+        "aggregate_rmse": 0.052613922008439805,
+        "all_attempt_latency_seconds": 0.6269432930566836,
+        "all_attempt_variable_cost": 947.2,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 3.0,
+        "mean_effort": 0.5375,
+        "mean_final_mse": 0.0027682247891101866,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.3776974789110187,
+        "mean_total_assay_cost": 10.400000000000002,
+        "mean_variable_cost": 7.400000000000002,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "imitation": {
+        "aggregate_rmse": 0.04696970682346056,
+        "all_attempt_latency_seconds": 1.445785499032354,
+        "all_attempt_variable_cost": 2910.2,
+        "attempted_count": 640,
+        "completed_count": 640,
+        "expected_count": 640,
+        "failed_count": 0,
+        "mean_assays": 1.96875,
+        "mean_effort": 0.6137499999999999,
+        "mean_final_mse": 0.0022061533590818374,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.2967747109081838,
+        "mean_total_assay_cost": 7.5471875,
+        "mean_variable_cost": 4.5471875,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "imitation_ppo": {
+        "aggregate_rmse": 0.04696970682346056,
+        "all_attempt_latency_seconds": 1.4474925420363434,
+        "all_attempt_variable_cost": 2919.1,
+        "attempted_count": 640,
+        "completed_count": 640,
+        "expected_count": 640,
+        "failed_count": 0,
+        "mean_assays": 1.96875,
+        "mean_effort": 0.6137499999999999,
+        "mean_final_mse": 0.0022061533590818374,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.2969137734081838,
+        "mean_total_assay_cost": 7.56109375,
+        "mean_variable_cost": 4.5610937499999995,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "imitation_ppo_continued": {
+        "aggregate_rmse": 0.04696970682346056,
+        "all_attempt_latency_seconds": 1.4627401249890681,
+        "all_attempt_variable_cost": 2919.9,
+        "attempted_count": 640,
+        "completed_count": 640,
+        "expected_count": 640,
+        "failed_count": 0,
+        "mean_assays": 1.96875,
+        "mean_effort": 0.6137499999999999,
+        "mean_final_mse": 0.0022061533590818374,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.2969262734081838,
+        "mean_total_assay_cost": 7.562343749999999,
+        "mean_variable_cost": 4.562343749999999,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "ppo": {
+        "aggregate_rmse": 0.0475515093123054,
+        "all_attempt_latency_seconds": 1.4747690430376679,
+        "all_attempt_variable_cost": 3104.8,
+        "attempted_count": 640,
+        "completed_count": 640,
+        "expected_count": 640,
+        "failed_count": 0,
+        "mean_assays": 2.0375,
+        "mean_effort": 0.59875,
+        "mean_final_mse": 0.0022611460378782673,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.30456460378782674,
+        "mean_total_assay_cost": 7.8512499999999985,
+        "mean_variable_cost": 4.851249999999999,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "prior": {
+        "aggregate_rmse": 0.08,
+        "all_attempt_latency_seconds": 0.4628586279868614,
+        "all_attempt_variable_cost": 0.0,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 0.0,
+        "mean_effort": 0.0,
+        "mean_final_mse": 0.0063999999999999994,
+        "mean_immediate_stop": 1.0,
+        "mean_return_": -0.6399999999999999,
+        "mean_total_assay_cost": 3.0,
+        "mean_variable_cost": 0.0,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "random": {
+        "aggregate_rmse": 0.06720274868199982,
+        "all_attempt_latency_seconds": 0.608659290795913,
+        "all_attempt_variable_cost": 903.4,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 3.1484375,
+        "mean_effort": 0.3625,
+        "mean_final_mse": 0.004516209430416029,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.5403240680416029,
+        "mean_total_assay_cost": 10.0578125,
+        "mean_variable_cost": 7.0578125,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "reference": {
+        "aggregate_rmse": 0.04680038658315973,
+        "all_attempt_latency_seconds": 0.25560279106139205,
+        "all_attempt_variable_cost": 0.0,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 0.0,
+        "mean_effort": 0.6125,
+        "mean_final_mse": 0.002190276184333197,
+        "mean_immediate_stop": 1.0,
+        "mean_return_": -0.2496526184333197,
+        "mean_total_assay_cost": 3.0,
+        "mean_variable_cost": 0.0,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "scratch_selected": {
+        "aggregate_rmse": 0.04680038658315973,
+        "all_attempt_latency_seconds": 1.5907017489953432,
+        "all_attempt_variable_cost": 3111.4,
+        "attempted_count": 640,
+        "completed_count": 640,
+        "expected_count": 640,
+        "failed_count": 0,
+        "mean_assays": 1.9921875,
+        "mean_effort": 0.6125,
+        "mean_final_mse": 0.0021902761843331973,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.29826824343331976,
+        "mean_total_assay_cost": 7.8615625,
+        "mean_variable_cost": 4.8615625,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "v6_continued": {
+        "aggregate_rmse": 0.0475515093123054,
+        "all_attempt_latency_seconds": 1.4240701259986963,
+        "all_attempt_variable_cost": 3060.4,
+        "attempted_count": 640,
+        "completed_count": 640,
+        "expected_count": 640,
+        "failed_count": 0,
+        "mean_assays": 2.0015625,
+        "mean_effort": 0.59875,
+        "mean_final_mse": 0.0022611460378782673,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.3038708537878267,
+        "mean_total_assay_cost": 7.781874999999999,
+        "mean_variable_cost": 4.781874999999999,
+        "missing_count": 0,
+        "status": "complete"
+      },
+      "voi": {
+        "aggregate_rmse": 0.04680038658315973,
+        "all_attempt_latency_seconds": 7.3220749191823415,
+        "all_attempt_variable_cost": 584.2,
+        "attempted_count": 128,
+        "completed_count": 128,
+        "expected_count": 128,
+        "failed_count": 0,
+        "mean_assays": 1.96875,
+        "mean_effort": 0.6125,
+        "mean_final_mse": 0.002190276184333197,
+        "mean_immediate_stop": 0.0,
+        "mean_return_": -0.2952932434333197,
+        "mean_total_assay_cost": 7.5640624999999995,
+        "mean_variable_cost": 4.5640625,
+        "missing_count": 0,
+        "status": "complete"
+      }
+    },
+    "comparisons": {
+      "imitation_ppo_continued-minus-imitation_ppo": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "imitation_ppo_continued minus imitation_ppo",
+        "independent_baseline_replicates": null,
+        "inference_scope": "development confirmation; descriptive, selection-affected; conservative intersection-union gate",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "ci98_333333": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "effort": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "ci98_333333": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "final_mse": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "ci98_333333": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "ci98_333333": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -4.2187499999996926e-05,
+              1.5625000000000056e-06
+            ],
+            "ci98_333333": [
+              -5.156249999999848e-05,
+              4.179687500002047e-06
+            ],
+            "difference": -1.249999999999949e-05
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -0.00015624999999999943,
+              0.004218749999999977
+            ],
+            "ci98_333333": [
+              -0.0004179687500000035,
+              0.005156249999999982
+            ],
+            "difference": 0.0012499999999999955
+          },
+          "variable_cost": {
+            "ci95": [
+              -0.00015624999999999943,
+              0.004218749999999977
+            ],
+            "ci98_333333": [
+              -0.0004179687500000035,
+              0.005156249999999982
+            ],
+            "difference": 0.0012499999999999955
+          }
+        },
+        "paired_cells": 640,
+        "scientific_return_gain": false,
+        "status": "complete"
+      },
+      "scratch_selected-minus-ppo": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "scratch_selected minus ppo",
+        "independent_baseline_replicates": null,
+        "inference_scope": "development confirmation; descriptive, selection-affected; conservative intersection-union gate",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.1484375,
+              0.0328125
+            ],
+            "ci98_333333": [
+              -0.1734375,
+              0.0484375
+            ],
+            "difference": -0.0453125
+          },
+          "effort": {
+            "ci95": [
+              0.0,
+              0.04375
+            ],
+            "ci98_333333": [
+              0.0,
+              0.052500000000000005
+            ],
+            "difference": 0.013750000000000002
+          },
+          "final_mse": {
+            "ci95": [
+              -0.000225400528681053,
+              1.2874900798265365e-20
+            ],
+            "ci98_333333": [
+              -0.0002705983598602884,
+              2.168404344971009e-20
+            ],
+            "difference": -7.086985354507024e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "ci98_333333": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.0016987109375000038,
+              0.020618547979694195
+            ],
+            "ci98_333333": [
+              -0.0025671874999999922,
+              0.0244492136387707
+            ],
+            "difference": 0.006296360354507022
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -0.1343828124999999,
+              0.23328906249999995
+            ],
+            "ci98_333333": [
+              -0.16781249999999984,
+              0.30599609375000103
+            ],
+            "difference": 0.010312500000000118
+          },
+          "variable_cost": {
+            "ci95": [
+              -0.13438281250000003,
+              0.23328906249999992
+            ],
+            "ci98_333333": [
+              -0.1678125,
+              0.30599609375000086
+            ],
+            "difference": 0.010312500000000002
+          }
+        },
+        "paired_cells": 640,
+        "scientific_return_gain": false,
+        "status": "complete"
+      },
+      "v6_continued-minus-ppo": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "v6_continued minus ppo",
+        "independent_baseline_replicates": null,
+        "inference_scope": "development confirmation; descriptive, selection-affected; conservative intersection-union gate",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.1171875,
+              0.009375
+            ],
+            "ci98_333333": [
+              -0.14375,
+              0.0171875
+            ],
+            "difference": -0.0359375
+          },
+          "effort": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "ci98_333333": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "final_mse": {
+            "ci95": [
+              -2.0667603913004927e-20,
+              1.6601845766184288e-20
+            ],
+            "ci98_333333": [
+              -3.009931578068156e-20,
+              2.439454888092385e-20
+            ],
+            "difference": -5.082197683525802e-22
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "ci98_333333": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.00017812500000000017,
+              0.002226562500000001
+            ],
+            "ci98_333333": [
+              -0.00032031250000000094,
+              0.0027406250000000013
+            ],
+            "difference": 0.0006937500000000005
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -0.22265624999999992,
+              0.017812499999999995
+            ],
+            "ci98_333333": [
+              -0.27406249999999993,
+              0.03203125
+            ],
+            "difference": -0.06937499999999999
+          },
+          "variable_cost": {
+            "ci95": [
+              -0.22265625,
+              0.017812500000000002
+            ],
+            "ci98_333333": [
+              -0.2740625,
+              0.03203125000000002
+            ],
+            "difference": -0.069375
+          }
+        },
+        "paired_cells": 640,
+        "scientific_return_gain": false,
+        "status": "complete"
+      }
+    },
+    "descriptive_comparisons": {
+      "imitation_ppo_continued-minus-calibrated_imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "imitation_ppo_continued minus calibrated_imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "effort": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "final_mse": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.00034062499999999837,
+              -2.8124999999999156e-05
+            ],
+            "difference": -0.0001609374999999984
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.0028124999999999912,
+              0.03406250000000004
+            ],
+            "difference": 0.01609375000000001
+          },
+          "variable_cost": {
+            "ci95": [
+              0.0028124999999999912,
+              0.03406250000000004
+            ],
+            "difference": 0.01609375000000001
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "imitation_ppo_continued-minus-fixed": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "imitation_ppo_continued minus fixed",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.1640625,
+              -0.890625
+            ],
+            "difference": -1.03125
+          },
+          "effort": {
+            "ci95": [
+              0.0375,
+              0.11875000000000002
+            ],
+            "difference": 0.07625000000000001
+          },
+          "final_mse": {
+            "ci95": [
+              -0.0008828894503810391,
+              -0.0002782473997055675
+            ],
+            "difference": -0.0005620714300283488
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.044055347831640314,
+              0.1010502396870633
+            ],
+            "difference": 0.07077120550283489
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -2.0793789062500005,
+              -1.5845312500000006
+            ],
+            "difference": -1.8376562500000007
+          },
+          "variable_cost": {
+            "ci95": [
+              -2.0793789062500005,
+              -1.5845312500000006
+            ],
+            "difference": -1.8376562500000007
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "imitation_ppo_continued-minus-fixed_quality": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "imitation_ppo_continued minus fixed_quality",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.1640625,
+              -0.890625
+            ],
+            "difference": -1.03125
+          },
+          "effort": {
+            "ci95": [
+              0.0375,
+              0.11875000000000002
+            ],
+            "difference": 0.07625000000000001
+          },
+          "final_mse": {
+            "ci95": [
+              -0.0008828894503810391,
+              -0.0002782473997055675
+            ],
+            "difference": -0.0005620714300283488
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.0540553478316403,
+              0.11105023968706329
+            ],
+            "difference": 0.08077120550283487
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -3.0793789062500005,
+              -2.5845312500000004
+            ],
+            "difference": -2.8376562500000007
+          },
+          "variable_cost": {
+            "ci95": [
+              -3.0793789062500005,
+              -2.5845312500000004
+            ],
+            "difference": -2.8376562500000007
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "imitation_ppo_continued-minus-imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "imitation_ppo_continued minus imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "effort": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "final_mse": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.00032656249999999857,
+              -2.187499999999863e-05
+            ],
+            "difference": -0.0001515624999999984
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.0021874999999999924,
+              0.03265625000000004
+            ],
+            "difference": 0.01515625000000001
+          },
+          "variable_cost": {
+            "ci95": [
+              0.0021874999999999924,
+              0.03265625000000004
+            ],
+            "difference": 0.01515625000000001
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "imitation_ppo_continued-minus-voi": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "imitation_ppo_continued minus voi",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "effort": {
+            "ci95": [
+              0.0,
+              0.0075000000000000015
+            ],
+            "difference": 0.00125
+          },
+          "final_mse": {
+            "ci95": [
+              0.0,
+              9.526304849184365e-05
+            ],
+            "difference": 1.587717474864061e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.00982942984918437,
+              0.00017187499999999373
+            ],
+            "difference": -0.0016330299748640645
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -0.017968750000000016,
+              0.018281249999999964
+            ],
+            "difference": -0.0017187500000000009
+          },
+          "variable_cost": {
+            "ci95": [
+              -0.017968750000000012,
+              0.018281249999999968
+            ],
+            "difference": -0.0017187499999999952
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "ppo-minus-calibrated_imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "ppo minus calibrated_imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.065625,
+              0.1953125
+            ],
+            "difference": 0.06875
+          },
+          "effort": {
+            "ci95": [
+              -0.045,
+              0.0
+            ],
+            "difference": -0.015000000000000003
+          },
+          "final_mse": {
+            "ci95": [
+              -6.350869899456246e-05,
+              0.00022222348641925412
+            ],
+            "difference": 5.4992678796429606e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.022498534820079123,
+              0.0037979402119562564
+            ],
+            "difference": -0.007799267879642949
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.06342968749999987,
+              0.5376640624999999
+            ],
+            "difference": 0.3049999999999999
+          },
+          "variable_cost": {
+            "ci95": [
+              0.06342968749999998,
+              0.5376640625
+            ],
+            "difference": 0.305
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "ppo-minus-fixed": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "ppo minus fixed",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.0546875,
+              -0.865625
+            ],
+            "difference": -0.9625
+          },
+          "effort": {
+            "ci95": [
+              0.011875000000000002,
+              0.11125
+            ],
+            "difference": 0.061250000000000006
+          },
+          "final_mse": {
+            "ci95": [
+              -0.0008465580220443719,
+              -0.00018604612755846104
+            ],
+            "difference": -0.0005070787512319192
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.0333698714749668,
+              0.09492055849144412
+            ],
+            "difference": 0.06313287512319193
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -1.7247031250000011,
+              -1.3668398437500011
+            ],
+            "difference": -1.5487500000000005
+          },
+          "variable_cost": {
+            "ci95": [
+              -1.7247031250000011,
+              -1.3668398437500011
+            ],
+            "difference": -1.5487500000000005
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "ppo-minus-fixed_quality": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "ppo minus fixed_quality",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.0546875,
+              -0.865625
+            ],
+            "difference": -0.9625
+          },
+          "effort": {
+            "ci95": [
+              0.011875000000000002,
+              0.11125
+            ],
+            "difference": 0.061250000000000006
+          },
+          "final_mse": {
+            "ci95": [
+              -0.0008465580220443719,
+              -0.00018604612755846101
+            ],
+            "difference": -0.0005070787512319192
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.043369871474966785,
+              0.10492055849144412
+            ],
+            "difference": 0.07313287512319191
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -2.724703125000001,
+              -2.3668398437500007
+            ],
+            "difference": -2.548750000000001
+          },
+          "variable_cost": {
+            "ci95": [
+              -2.724703125000001,
+              -2.3668398437500007
+            ],
+            "difference": -2.5487500000000005
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "ppo-minus-imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "ppo minus imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.065625,
+              0.1953125
+            ],
+            "difference": 0.06875
+          },
+          "effort": {
+            "ci95": [
+              -0.045,
+              0.0
+            ],
+            "difference": -0.015000000000000003
+          },
+          "final_mse": {
+            "ci95": [
+              -6.350869899456246e-05,
+              0.00022222348641925412
+            ],
+            "difference": 5.4992678796429606e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.022489316070079122,
+              0.0038102839619562553
+            ],
+            "difference": -0.007789892879642948
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.06233984374999983,
+              0.5373476562499999
+            ],
+            "difference": 0.30406249999999996
+          },
+          "variable_cost": {
+            "ci95": [
+              0.06233984374999996,
+              0.5373476562499999
+            ],
+            "difference": 0.3040625
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "ppo-minus-voi": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "ppo minus voi",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.065625,
+              0.1953125
+            ],
+            "difference": 0.06875
+          },
+          "effort": {
+            "ci95": [
+              -0.04375,
+              0.0
+            ],
+            "difference": -0.013750000000000002
+          },
+          "final_mse": {
+            "ci95": [
+              -4.0657581468206416e-20,
+              0.00022540052868105293
+            ],
+            "difference": 7.086985354507021e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.023040431876101847,
+              -0.0011530468749999876
+            ],
+            "difference": -0.009271360354507015
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.0442148437499999,
+              0.5229687499999999
+            ],
+            "difference": 0.28718749999999993
+          },
+          "variable_cost": {
+            "ci95": [
+              0.04421484374999996,
+              0.5229687500000001
+            ],
+            "difference": 0.28718750000000004
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "scratch_selected-minus-calibrated_imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "scratch_selected minus calibrated_imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.12503906249999996,
+              0.1796875
+            ],
+            "difference": 0.0234375
+          },
+          "effort": {
+            "ci95": [
+              -0.0075000000000000015,
+              0.0
+            ],
+            "difference": -0.00125
+          },
+          "final_mse": {
+            "ci95": [
+              -9.526304849184366e-05,
+              0.0
+            ],
+            "difference": -1.5877174748640628e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.0058329296874999985,
+              0.005276611912312781
+            ],
+            "difference": -0.0015029075251359273
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.023437500000000038,
+              0.6709375000000001
+            ],
+            "difference": 0.3153125
+          },
+          "variable_cost": {
+            "ci95": [
+              0.02343750000000001,
+              0.6709375
+            ],
+            "difference": 0.3153125
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "scratch_selected-minus-fixed": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "scratch_selected minus fixed",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.0984375,
+              -0.9125
+            ],
+            "difference": -1.0078125
+          },
+          "effort": {
+            "ci95": [
+              0.0375,
+              0.11875
+            ],
+            "difference": 0.075
+          },
+          "final_mse": {
+            "ci95": [
+              -0.000899271473134036,
+              -0.00029994111701538205
+            ],
+            "difference": -0.0005779486047769895
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.04297284444736646,
+              0.09951210859776384
+            ],
+            "difference": 0.06942923547769894
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -1.7468828125000007,
+              -1.2942109375000006
+            ],
+            "difference": -1.5384375000000003
+          },
+          "variable_cost": {
+            "ci95": [
+              -1.7468828125000007,
+              -1.2942109375000006
+            ],
+            "difference": -1.5384375000000003
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "scratch_selected-minus-fixed_quality": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "scratch_selected minus fixed_quality",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.0984375,
+              -0.9125
+            ],
+            "difference": -1.0078125
+          },
+          "effort": {
+            "ci95": [
+              0.0375,
+              0.11875
+            ],
+            "difference": 0.075
+          },
+          "final_mse": {
+            "ci95": [
+              -0.000899271473134036,
+              -0.000299941117015382
+            ],
+            "difference": -0.0005779486047769895
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.05297284444736645,
+              0.10951210859776381
+            ],
+            "difference": 0.07942923547769894
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -2.7468828125,
+              -2.2942109375000004
+            ],
+            "difference": -2.5384375000000006
+          },
+          "variable_cost": {
+            "ci95": [
+              -2.7468828125,
+              -2.2942109375000004
+            ],
+            "difference": -2.5384375000000006
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "scratch_selected-minus-imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "scratch_selected minus imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.12503906249999996,
+              0.1796875
+            ],
+            "difference": 0.0234375
+          },
+          "effort": {
+            "ci95": [
+              -0.0075000000000000015,
+              0.0
+            ],
+            "difference": -0.00125
+          },
+          "final_mse": {
+            "ci95": [
+              -9.526304849184366e-05,
+              0.0
+            ],
+            "difference": -1.5877174748640628e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.005828203124999998,
+              0.005288944373691905
+            ],
+            "difference": -0.0014935325251359273
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.022339843750000036,
+              0.67047265625
+            ],
+            "difference": 0.314375
+          },
+          "variable_cost": {
+            "ci95": [
+              0.022339843750000008,
+              0.6704726562500001
+            ],
+            "difference": 0.31437499999999996
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "scratch_selected-minus-voi": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "scratch_selected minus voi",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.12503906249999996,
+              0.1796875
+            ],
+            "difference": 0.0234375
+          },
+          "effort": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "final_mse": {
+            "ci95": [
+              -5.3532482266471784e-20,
+              0.0
+            ],
+            "difference": -1.998997755520149e-20
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.006543828125000005,
+              -3.902343750000067e-05
+            ],
+            "difference": -0.0029749999999999937
+          },
+          "total_assay_cost": {
+            "ci95": [
+              0.003902343750000018,
+              0.6543828125
+            ],
+            "difference": 0.29750000000000004
+          },
+          "variable_cost": {
+            "ci95": [
+              0.0039023437500000013,
+              0.6543828125000001
+            ],
+            "difference": 0.2975
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "v6_continued-minus-calibrated_imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "v6_continued minus calibrated_imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.1125,
+              0.15625
+            ],
+            "difference": 0.0328125
+          },
+          "effort": {
+            "ci95": [
+              -0.045,
+              0.0
+            ],
+            "difference": -0.015000000000000003
+          },
+          "final_mse": {
+            "ci95": [
+              -6.350869899456246e-05,
+              0.00022222348641925412
+            ],
+            "difference": 5.49926787964296e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.02204374308360643,
+              0.004572108785478878
+            ],
+            "difference": -0.0071055178796429475
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -0.02281250000000006,
+              0.45344140624999985
+            ],
+            "difference": 0.23562499999999992
+          },
+          "variable_cost": {
+            "ci95": [
+              -0.022812499999999937,
+              0.45344140625
+            ],
+            "difference": 0.23562500000000003
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "v6_continued-minus-fixed": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "v6_continued minus fixed",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.0937890625,
+              -0.8890625
+            ],
+            "difference": -0.9984375
+          },
+          "effort": {
+            "ci95": [
+              0.011875000000000002,
+              0.11125
+            ],
+            "difference": 0.061250000000000006
+          },
+          "final_mse": {
+            "ci95": [
+              -0.0008465580220443719,
+              -0.00018604612755846104
+            ],
+            "difference": -0.0005070787512319192
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.03410537538124629,
+              0.0954551729128906
+            ],
+            "difference": 0.06382662512319194
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -1.7956250000000005,
+              -1.4229687500000008
+            ],
+            "difference": -1.6181250000000005
+          },
+          "variable_cost": {
+            "ci95": [
+              -1.7956250000000005,
+              -1.4229687500000003
+            ],
+            "difference": -1.6181250000000005
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "v6_continued-minus-fixed_quality": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "v6_continued minus fixed_quality",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -1.0937890625,
+              -0.8890625
+            ],
+            "difference": -0.9984375
+          },
+          "effort": {
+            "ci95": [
+              0.011875000000000002,
+              0.11125
+            ],
+            "difference": 0.061250000000000006
+          },
+          "final_mse": {
+            "ci95": [
+              -0.0008465580220443719,
+              -0.00018604612755846101
+            ],
+            "difference": -0.0005070787512319192
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              0.04410537538124627,
+              0.1054551729128906
+            ],
+            "difference": 0.07382662512319192
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -2.7956250000000002,
+              -2.422968750000001
+            ],
+            "difference": -2.6181250000000005
+          },
+          "variable_cost": {
+            "ci95": [
+              -2.7956250000000002,
+              -2.4229687500000003
+            ],
+            "difference": -2.6181250000000005
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "v6_continued-minus-imitation": {
+        "baseline_tiled_across_training_seeds": false,
+        "direction": "v6_continued minus imitation",
+        "independent_baseline_replicates": null,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.1125,
+              0.15625
+            ],
+            "difference": 0.0328125
+          },
+          "effort": {
+            "ci95": [
+              -0.045,
+              0.0
+            ],
+            "difference": -0.015000000000000003
+          },
+          "final_mse": {
+            "ci95": [
+              -6.350869899456246e-05,
+              0.00022222348641925412
+            ],
+            "difference": 5.49926787964296e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.022040539958606428,
+              0.004579151149456255
+            ],
+            "difference": -0.0070961428796429485
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -0.023750000000000014,
+              0.45265624999999987
+            ],
+            "difference": 0.23468749999999994
+          },
+          "variable_cost": {
+            "ci95": [
+              -0.02375,
+              0.4526562500000001
+            ],
+            "difference": 0.23468750000000002
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      },
+      "v6_continued-minus-voi": {
+        "baseline_tiled_across_training_seeds": true,
+        "direction": "v6_continued minus voi",
+        "independent_baseline_replicates": 1,
+        "inference_scope": "descriptive 95% development comparison; no multiplicity-adjusted gain claim",
+        "metrics": {
+          "assays": {
+            "ci95": [
+              -0.1125,
+              0.15625
+            ],
+            "difference": 0.0328125
+          },
+          "effort": {
+            "ci95": [
+              -0.04375,
+              0.0
+            ],
+            "difference": -0.013750000000000002
+          },
+          "final_mse": {
+            "ci95": [
+              -3.9137157327884946e-20,
+              0.00022540052868105293
+            ],
+            "difference": 7.08698535450702e-05
+          },
+          "immediate_stop": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "difference": 0.0
+          },
+          "return_": {
+            "ci95": [
+              -0.02262851038946746,
+              -0.000267109374999992
+            ],
+            "difference": -0.008577610354507017
+          },
+          "total_assay_cost": {
+            "ci95": [
+              -0.04094140625000008,
+              0.43642187499999974
+            ],
+            "difference": 0.21781249999999996
+          },
+          "variable_cost": {
+            "ci95": [
+              -0.04094140624999997,
+              0.4364218749999999
+            ],
+            "difference": 0.21781250000000002
+          }
+        },
+        "paired_cells": 640,
+        "status": "complete"
+      }
+    },
+    "failures": {},
+    "final_test_opened": false,
+    "intervals_computed": true,
+    "limitations": [
+      "All outcomes are development confirmation after tuning; intervals are selection-affected.",
+      "Scratch cohort: GRU512; preserved imitation: GRU64. This is a comparison of complete systems whose network capacities and training histories are not held equal across all cohorts. It does not isolate PPO algorithmic or training value; matched-capacity imitation and matched lifetime-compute comparisons remain necessary for that claim.",
+      "Five training seeds and common mechanisms are crossed resampling units; baseline copies are not independent replicates.",
+      "Aggregate RMSE is sqrt(mean MSE), never mean per-case RMSE.",
+      "Parameter holdout within familiar motifs does not establish structural or biological generalization.",
+      "Warm starts inherit prior compute outside the new-training budget; equal lifetime compute is not claimed.",
+      "Latency is scoped CPU runtime, with allocated neural batch latency; no temperature or profiling claim."
+    ],
+    "raw_row_count": 5632
+  },
+  "inputs": {
+    "reports/jev-rl-m2/confirmation-01/summary.json": "2a93de5c35d1512f59bb8fc3a8f0da3d42a904ef075d836dab1b97ca272bb869",
+    "reports/jev-rl-m2/hardware-sweep/summary.json": "d9eff2c3d2de95402e10051c05eb96070abb0f628545ad96961e0a43a81acf42",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h128-seed20/result.json": "62c05f9227ccc31896bcd5ef5240d7ad55f61f7fc2d40fa79836aa84779b643c",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h128-seed21/result.json": "2f2fe91da303a1f4b7cbd7dd10763f3de490f05bec22cc186414cdcb12ce3b2d",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h256-seed20/result.json": "71c57db8289f3e9a151a8747a227fc2c1a67f15ad1582e8063181794d2cee07d",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h256-seed21/result.json": "4d72a715bfd241d355a77b9a9793bc6622a0903945dea7985633748990493856",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h512-seed20/result.json": "419a529a6565c3d37b20a605266e3685b3ca6c8368af1eb2a0d7ce11154b1d4e",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h512-seed21/result.json": "6286c560dfd2de65bd682c91bedaf8cf37eca399da9c8fa5796cef0b3ffeddfe",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h64-seed20/result.json": "90527fb34b1dc2ce459255b8322ded2f251c3b80c0e87ed794402b209c5ade37",
+    "reports/jev-rl-m2/race-01/jobs/arch-history-h64-seed21/result.json": "b567cff56c9fb50f4f786c6af029d1e26edf289003da6900e670ab05dc0e089c",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h128-seed20/result.json": "01a0b12340014204063e849ee347ff132fab0169399b2150c1b5c04132a578dc",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h128-seed21/result.json": "9d6f1c61a082c4e04379c10d5812e8acc9860e5c217318b7c63f01b4bb219e38",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h256-seed20/result.json": "49773c16d2c76aa4f1e6c235038089f3a6ba75aeaba6f297c8c02622ab072de0",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h256-seed21/result.json": "a4862977aa6c40a71a3b5074332d55f527f7fd6842b811e3f01e34effb986fd1",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h512-seed20/result.json": "483ca2d8c678add1d31a341bfda579584bfc9805b3dfba7fc34a9ea409e1a2a2",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h512-seed21/result.json": "cf01ba3320ed93ddcb2d7d7089dd6b26cff80491ad8ce48c492eac0de2f82928",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h64-seed20/result.json": "0b1dc9945388ebdc6d5a00fa421054e528ce8b444b2b9c30a9c52af26238244f",
+    "reports/jev-rl-m2/race-01/jobs/arch-recurrent-h64-seed21/result.json": "39dfcc1b5e2de398553204621a006d0b52b67d02ee139325c9904f45fca24f86",
+    "reports/jev-rl-m2/race-01/jobs/update-b1024-lr0.0001-e4-seed20/result.json": "b17ec0511c7eb73a1b302419003fcd5390d8d612c77c1fbbc6ebed0db4a694d4",
+    "reports/jev-rl-m2/race-01/jobs/update-b1024-lr0.0001-e4-seed21/result.json": "72a2c556608a3cfb6bb8930b2565fadc2beb7d42403f95073fe6fa4705720bc4",
+    "reports/jev-rl-m2/race-01/jobs/update-b128-lr0.0003-e2-seed20/result.json": "ddeb82de4cee5983423051e4a47b95c9d02dbf4018cb68097793f33f1cff7cdd",
+    "reports/jev-rl-m2/race-01/jobs/update-b128-lr0.0003-e2-seed21/result.json": "a69f87484bfca842313d9c0c59686cb472e86f2bc5382fb6d94751f429a92a21",
+    "reports/jev-rl-m2/race-01/jobs/update-b256-lr0.0003-e2-seed20/result.json": "ab9e5f262b2755ab199a0f23311c277d17330f9fe22418ffbd5d00b67a82b69f",
+    "reports/jev-rl-m2/race-01/jobs/update-b256-lr0.0003-e2-seed21/result.json": "f987975bb04c51408e94e752480994fb61712d35234fa3a1be5aed98b4c9d3de",
+    "reports/jev-rl-m2/race-01/jobs/update-b512-lr0.0003-e2-seed20/result.json": "d711bb199d958e7f7ae374bc83f155340f738e47aac7ab98903a13560c3ebfa6",
+    "reports/jev-rl-m2/race-01/jobs/update-b512-lr0.0003-e2-seed21/result.json": "4542e189b8a43a1c23f276629016a8c71345a0e03bbfb0f9ba76a2487ec77636",
+    "reports/jev-rl-m2/race-01/jobs/v6-lr0.0001-e2-seed20/result.json": "fd379282abd135d4199e7b0cd234f4244b7291bd6bde055d3486c67bfb756eba",
+    "reports/jev-rl-m2/race-01/jobs/v6-lr0.0001-e2-seed21/result.json": "93d5e39e22ddc7892ea1ca34208cb7ea5260bc16a2a9ba4f4bdfd2b90b5c5a26",
+    "reports/jev-rl-m2/race-01/jobs/v6-lr0.0003-e4-seed20/result.json": "1982330bee2cd1e3983e2f19dff32c9b010f9eaa61e974b70fc94a4fb4e9592f",
+    "reports/jev-rl-m2/race-01/jobs/v6-lr0.0003-e4-seed21/result.json": "efeb2af9564dc1d273acc76c17798135ec7854de978f82a7d3a506976c3e45db",
+    "reports/jev-rl-m2/race-01/ledger.json": "abc4c72fd79323aafa4aac794f2c86e67d33f2740cee0b9dd2233b4a78e22cd9",
+    "reports/jev-rl-m2/race-01/selection.json": "223fe6118af3d19698dacbe56efc6941db68d75f8ee2e78594cd57251d7142e4"
+  },
+  "race": {
+    "all_observed_training_transitions": 49652308,
+    "all_observed_validation_transitions": 166142,
+    "architecture": "arch-recurrent-h512",
+    "completed_jobs": 42,
+    "elapsed_seconds": 2963.5135803750018,
+    "total_jobs": 42,
+    "update_recipe": "update-b512-lr0.0003-e2",
+    "v6_recipe": "v6-lr0.0003-e4"
+  },
+  "schema": "ppo-m2-descriptive-report-v1",
+  "scope": "Existing development evidence only; two-seed screen means have no uncertainty claim; no new selection or final evaluation.",
+  "screens": {
+    "architecture": {
+      "arch-history-h128": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 291.47377229151607,
+          "mean_mse": 0.004318861066256575,
+          "mean_new_training_transitions": 1999996.0,
+          "mean_return": -0.4844056378756575,
+          "mean_variable_cost": 3.798828124999999,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.09210706200975,
+          "mean_mse": 0.004318861066256575,
+          "mean_new_training_transitions": 1650114.0,
+          "mean_return": -0.49021032537565745,
+          "mean_variable_cost": 4.379296875,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        }
+      },
+      "arch-history-h256": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 313.9223892919981,
+          "mean_mse": 0.003861696361902144,
+          "mean_new_training_transitions": 1999995.5,
+          "mean_return": -0.44491572994021455,
+          "mean_variable_cost": 4.1089843749999995,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.08032872951298,
+          "mean_mse": 0.0039715989931647325,
+          "mean_new_training_transitions": 1505913.5,
+          "mean_return": -0.4624177118164733,
+          "mean_variable_cost": 4.846093750000001,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      },
+      "arch-history-h512": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 391.94841620851366,
+          "mean_mse": 0.0044465964324253045,
+          "mean_new_training_transitions": 1999994.0,
+          "mean_return": -0.49607370574253057,
+          "mean_variable_cost": 3.7507812499999993,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.10047854151344,
+          "mean_mse": 0.006107449953811853,
+          "mean_new_training_transitions": 1173684.0,
+          "mean_return": -0.6203387453811854,
+          "mean_variable_cost": 0.7484374999999999,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      },
+      "arch-history-h64": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 282.1355620420072,
+          "mean_mse": 0.004852229891514057,
+          "mean_new_training_transitions": 1999995.5,
+          "mean_return": -0.5314378329014057,
+          "mean_variable_cost": 3.4964843749999996,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.03902981251304,
+          "mean_mse": 0.004936668095059294,
+          "mean_new_training_transitions": 1713731.5,
+          "mean_return": -0.5384597782559295,
+          "mean_variable_cost": 3.4167968749999993,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        }
+      },
+      "arch-recurrent-h128": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 300.5679988125048,
+          "mean_mse": 0.0025665179405078013,
+          "mean_new_training_transitions": 1999996.5,
+          "mean_return": -0.34091351280078014,
+          "mean_variable_cost": 5.629296875,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.08044122951105,
+          "mean_mse": 0.0026090672812040497,
+          "mean_new_training_transitions": 1551265.5,
+          "mean_return": -0.345770009370405,
+          "mean_variable_cost": 5.720703124999999,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        }
+      },
+      "arch-recurrent-h256": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 367.2899615409988,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 1999994.0,
+          "mean_return": -0.33592871712861155,
+          "mean_variable_cost": 5.3277343749999995,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.09815927050659,
+          "mean_mse": 0.004087140943414615,
+          "mean_new_training_transitions": 1200249.0,
+          "mean_return": -0.4614680005914615,
+          "mean_variable_cost": 3.5878906249999996,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      },
+      "arch-recurrent-h512": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 561.9606052290037,
+          "mean_mse": 0.002556113412670101,
+          "mean_new_training_transitions": 1999995.0,
+          "mean_return": -0.3345839975170102,
+          "mean_variable_cost": 5.069140625,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.16638993749802,
+          "mean_mse": 0.0063999999999999994,
+          "mean_new_training_transitions": 706162.0,
+          "mean_return": -0.6399999999999999,
+          "mean_variable_cost": 0.0,
+          "phases": [
+            "selector",
+            "selector"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      },
+      "arch-recurrent-h64": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 275.7713437495113,
+          "mean_mse": 0.0028206602291148512,
+          "mean_new_training_transitions": 1999995.0,
+          "mean_return": -0.3655074291614851,
+          "mean_variable_cost": 5.789453125,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 240.0545105205092,
+          "mean_mse": 0.003009531446150581,
+          "mean_new_training_transitions": 1717699.5,
+          "mean_return": -0.38681642586505804,
+          "mean_variable_cost": 6.016015625,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        }
+      }
+    },
+    "updates": {
+      "update-b1024-lr0.0001-e4": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 173.7838774999982,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 499997.0,
+          "mean_return": -0.33201074837861155,
+          "mean_variable_cost": 4.9359375,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 70.15624079150439,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 178506.5,
+          "mean_return": -0.3325107483786115,
+          "mean_variable_cost": 4.9859374999999995,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      },
+      "update-b128-lr0.0003-e2": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 132.8690904584946,
+          "mean_mse": 0.002581589777504343,
+          "mean_new_training_transitions": 499996.5,
+          "mean_return": -0.33646366525043436,
+          "mean_variable_cost": 5.00234375,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 70.03414960448572,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 270419.0,
+          "mean_return": -0.33292481087861153,
+          "mean_variable_cost": 5.02734375,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      },
+      "update-b256-lr0.0003-e2": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 153.10836281299999,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 499996.5,
+          "mean_return": -0.33259277962861156,
+          "mean_variable_cost": 4.994140625,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 70.07180735449947,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 230248.5,
+          "mean_return": -0.33241309212861153,
+          "mean_variable_cost": 4.976171875,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      },
+      "update-b512-lr0.0003-e2": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 139.57053441648895,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 499997.5,
+          "mean_return": -0.3319326233786115,
+          "mean_variable_cost": 4.928125,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 70.33189077099087,
+          "mean_mse": 0.002545263733786115,
+          "mean_new_training_transitions": 256780.5,
+          "mean_return": -0.33261621712861156,
+          "mean_variable_cost": 4.996484375,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            21,
+            20
+          ]
+        }
+      }
+    },
+    "v6_screen": {
+      "v6-lr0.0001-e2": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 64.05311481250101,
+          "mean_mse": 0.0026578981978281095,
+          "mean_new_training_transitions": 499997.0,
+          "mean_return": -0.342453882282811,
+          "mean_variable_cost": 4.96328125,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 70.07686456250667,
+          "mean_mse": 0.0026578981978281095,
+          "mean_new_training_transitions": 547637.0,
+          "mean_return": -0.342453882282811,
+          "mean_variable_cost": 4.96328125,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        }
+      },
+      "v6-lr0.0003-e4": {
+        "equal_interaction": {
+          "mean_elapsed_seconds": 69.12129697899218,
+          "mean_mse": 0.0026578981978281095,
+          "mean_new_training_transitions": 499996.5,
+          "mean_return": -0.34134060103281094,
+          "mean_variable_cost": 4.851953125,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        },
+        "equal_wall": {
+          "mean_elapsed_seconds": 70.09500204148935,
+          "mean_mse": 0.0026578981978281095,
+          "mean_new_training_transitions": 506914.5,
+          "mean_return": -0.34134060103281094,
+          "mean_variable_cost": 4.851953125,
+          "phases": [
+            "joint",
+            "joint"
+          ],
+          "seeds": [
+            20,
+            21
+          ]
+        }
+      }
+    }
+  },
+  "source_sha256": "832f1640b8667f529f4be4222b519695995f5c421fe6a1b77e59ab6246e6aa83",
+  "sustained_hardware": {
+    "cpu": {
+      "all_transitions": 520339,
+      "all_transitions_per_wall_second": 8659.74128494507,
+      "cycle_seconds": 59.51730446491274,
+      "cycles": 167,
+      "measured_stage_seconds": 60.03373091240064,
+      "training_episodes": 171008,
+      "training_policy_decisions": 512066,
+      "training_transitions": 512066,
+      "training_transitions_per_cycle_second": 8603.649049695765,
+      "training_transitions_per_wall_second": 8522.057890753302,
+      "validation_transitions": 8273,
+      "wall_seconds": 60.087129959021695
+    },
+    "mps": {
+      "all_transitions": 374108,
+      "all_transitions_per_wall_second": 6179.651282633428,
+      "cycle_seconds": 59.976521170086926,
+      "cycles": 120,
+      "measured_stage_seconds": 60.49912142957328,
+      "training_episodes": 122880,
+      "training_policy_decisions": 368111,
+      "training_transitions": 368111,
+      "training_transitions_per_cycle_second": 6137.585055259825,
+      "training_transitions_per_wall_second": 6080.590667137494,
+      "validation_transitions": 5997,
+      "wall_seconds": 60.53869108299841
+    },
+    "split": {
+      "all_transitions": 448713,
+      "all_transitions_per_wall_second": 7461.5808158272275,
+      "cycle_seconds": 59.585027707886184,
+      "cycles": 144,
+      "measured_stage_seconds": 60.08764171245275,
+      "training_episodes": 147456,
+      "training_policy_decisions": 441580,
+      "training_transitions": 441580,
+      "training_transitions_per_cycle_second": 7410.922122329669,
+      "training_transitions_per_wall_second": 7342.967234408156,
+      "validation_transitions": 7133,
+      "wall_seconds": 60.13645245900261
+    }
+  }
+}

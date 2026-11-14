@@ -1,0 +1,45 @@
+{
+  "api_receipts": [],
+  "case_id": "m004-prior-snone",
+  "journal": "episodes/m004-prior-snone.jsonl",
+  "journal_sha256": "2e0405620bbc98ebf9ed02eca01b1a962c9d76cf406e65557ce705960c581f9c",
+  "method": "prior",
+  "result": {
+    "action_id": 36,
+    "actions": [
+      36
+    ],
+    "assays": 0,
+    "decision_seconds": [
+      0.0008614999824203551
+    ],
+    "effort": 0.0,
+    "end_to_end_seconds": 0.003733166988240555,
+    "failure": null,
+    "final_cultures": 128,
+    "final_mse": 0.006399999999999998,
+    "forecast_coverage": {
+      "frozen_candidate_events": 72,
+      "jev_requested_events": 0,
+      "jev_validated_events": 0,
+      "probe_expected_events": null,
+      "purchased_events": 0,
+      "scored_jev_events": 0,
+      "scored_reference_events": 0
+    },
+    "forecasts": [],
+    "immediate_stop": true,
+    "method": "prior",
+    "observed_return": -0.6399999999999998,
+    "online_seconds": 0.0034260000102221966,
+    "reference_forecast_seconds": [
+      0.0010616670188028365
+    ],
+    "return_": -0.6399999999999998,
+    "setup_cost": 3.0,
+    "status": "completed",
+    "timing_scope": "instrumented controller loop; includes forecast references and synchronous journal writes; end_to_end also includes reset",
+    "total_assay_cost": 3.0,
+    "variable_cost": 0.0
+  }
+}

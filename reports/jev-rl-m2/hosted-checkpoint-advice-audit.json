@@ -1,0 +1,19 @@
+{
+  "audit_source_sha256": "72341600d57f3fe12e70d35f0c7d15423207f76bf6393cd9ee8247076826892e",
+  "device": "cpu",
+  "distinct_policy_objects_loaded": 25,
+  "exact_probability_and_argmax_match": true,
+  "hosted_calls_dispatched": 0,
+  "max_absolute_probability_error": 0.0,
+  "neural_cases": 520,
+  "original_inputs_sha256": {
+    "manifest.json": "6005f6439154692a4a4c3e679b5da8d8ad3e091fa33c0b837adf97c5c4b6dc6d",
+    "plan.json": "b07f3cc2c74c6075c40b4129eda60c76cd5f273e7c4b78bea89c146f8fd3f893",
+    "results.json": "577d183a18e10e3b743e96e6d8e3ea50cb674fd948065857f546c97a3681f822"
+  },
+  "policy_steps": 1497,
+  "run": "hosted-study-01",
+  "schema": "jev-m2-checkpoint-advice-audit-v1",
+  "scope": "Original local checkpoints, stored hosted traces, frozen simulator, same software environment.",
+  "verified_run_cases": 600
+}

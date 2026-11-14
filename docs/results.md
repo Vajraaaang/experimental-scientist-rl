@@ -23,6 +23,8 @@
 | `reports/ppo-v4/` | Reward-only curriculum, five-seed training, failed controls, GPU profiles and fresh 1,024-mechanism frozen comparison |
 | `reports/ppo-cost-v5/` | Development cost diagnosis/calibration, paired-return controls and another 2,048-mechanism frozen comparison |
 | `reports/ppo-efficiency-v6/` | 50M completed new interactions, another 4,096-mechanism frozen test; PPO improves over its previous version but full efficiency parity with imitation remains unestablished |
+| `reports/jev-rl-m1/` | Additive Jev tracing/control implementation, 100-episode fixture and subsequent 11-call authenticated pilot; no demonstrated hybrid or calibration benefit |
+| `reports/jev-rl-m2/` | Bounded M3 Max comparison, 42 training runs, five-seed/128-mechanism PPO confirmation, and 600-case paired hosted Jev study. Both sets of registered benefit gates failed. |
 | `reports/compute/benchmark.json` | Complete CPU/MPS workload measurements on the actual Mac |
 
 The original external audit scripts and seeds were absent from the supplied specification. `generous-audit.json` is explicitly an independent reconstruction, not an exact reproduction of its original rows.
@@ -54,3 +56,11 @@ The raw latest record is gzip-compressed to avoid an oversized Git blob. The rep
 The latest [locked comparison](ppo_efficiency_v6.md) improves PPO cost, target MSE and return over the previous efficient PPO with favorable paired intervals. The remaining cost premium over unchanged imitation is 0.1586 units, 95% interval [0.1050, 0.2101]. The declared quality margin passes, while cost/return bounds prevent an efficiency-gap closure claim. All five seeds and the original baselines remain retained. This uses more optimization and per-seed development selection; it is not an equal-compute PPO-versus-imitation experiment.
 
 V6 raw shards and final rows are atomic, lossless gzip packets. Original hashes remain development provenance; the v6 publication manifest records redacted published hashes. Checkpoint binaries remain excluded. The curated final report clarifies fixed-design versus self-policy exploratory curricula without changing numerical outputs.
+
+## M2 development continuation and Jev
+
+The [M2 report](../reports/jev-rl-m2/REPORT.md) separates equal-interaction and equal-wall screens, inherited training, fresh development confirmation, and hosted API evidence. CPU was fastest for the tested full loop. Larger GRU512 PPO was selected within the finite race, while GRU128 led the shorter 240-second screen. Five-seed confirmation did not establish a return gain over v6; strong imitation and VOI retained cheaper assays and higher point-estimate returns. GRU512 versus GRU64 imitation is a system comparison with capacity and training-history differences.
+
+The hosted Jev comparison completed 600 cases and 1,586 successful calls. None of the three registered benefit gates passed. Reranking reduced estimated API spend relative to arbitration. Jev's Brier error was 0.26511 versus 0.22480 for the Bayesian posterior on the same 48 probe events. The original 11-call pilot and 75-case engineering fixture remain documented. The next final split remains unopened. [Hosted analysis](../reports/jev-rl-m2/hosted-analysis-01/REPORT.md) · [Research note](m2-research-note.md)
+
+Public M1/M2 derivatives retain numeric values and API request/response objects. Known machine-path metadata and the private handoff link were removed, then journal/manifest bindings were recomputed and independently replayed. [The export receipt](../reports/jev-rl-m2/publication-export.json) maps original and public hashes; [the integrity audit](../reports/jev-rl-m2/publication-integrity-audit.json) records the comparison. Source snapshots preserve executed runtime code. Public replay needs neither weights nor credentials, but cannot reproduce exact checkpoint inference or retraining without the omitted weights.

@@ -1,0 +1,20 @@
+{
+  "backend": "cpu",
+  "batch": 256,
+  "entropy_end": 0.001,
+  "entropy_start": 0.03,
+  "eval_every_interactions": 100000,
+  "hard_wall_seconds": 900.0,
+  "hidden": 256,
+  "initialization": "scratch",
+  "joint_epochs": 2,
+  "joint_hard_interactions": 1250000,
+  "joint_interactions": 1000000,
+  "joint_lr": 0.0003,
+  "kind": "recurrent",
+  "name": "arch-recurrent-h256",
+  "seed": 20,
+  "selector_interactions": 1000000,
+  "threads": 1,
+  "wall_snapshot_seconds": 240.0
+}

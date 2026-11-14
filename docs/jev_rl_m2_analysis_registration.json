@@ -1,0 +1,365 @@
+{
+  "analysis_contract_sha256": "d3441d56620e4e6ac2114c58765bdaa33db97728d5458b0a7f7bffaba00f7602",
+  "analysis_source": "scripts/analyze_jev_m2.py",
+  "analysis_source_sha256": "c19339d7c1cb2a144124ee5e7e49387fb3638aa05935a1189e4ab8e1d4826c41",
+  "analysis_tests_sha256": "9ee310e9f741f44158cf5eb0d2d99b8f9e07b88619dfe4d48df4520add414a74",
+  "chronology": "Publish this registration before any new M2 hosted dispatch. Local hashes are not independent timestamp attestation.",
+  "confirmation": "PPO development confirmation already observed; no additional PPO tuning is proposed. Hosted roles and contrasts were specified before M2 hosted outcomes.",
+  "contract": {
+    "bootstrap": {
+      "descriptive_level": 0.95,
+      "draws": 10000,
+      "families": 3,
+      "minimum_mechanisms_for_intervals": 8,
+      "mse_margin": 0.0001,
+      "primary_level": 0.9833333333333333,
+      "rng_seed": 991499
+    },
+    "cost_scope": "virtual variable and setup-inclusive assay cost; API cost separately, conditional on known usage",
+    "fixture_scope": "descriptive synthetic numbers only; efficacy and calibration benefit claims are disabled even with favorable intervals",
+    "learned_pair_training_seeds": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "limitations": [
+      "Development only: intervals and gates are exploratory; no calibration qualification, final-test, or SOTA claim.",
+      "Parameter holdout within one simulator family does not establish structural or biological generalization.",
+      "At most eight development mechanisms and five training seeds limit precision and generalization; one mechanism has no intervals or inferential success claim.",
+      "Learned-method comparisons require all five registered training seeds (20 through 24) for intervals or benefit gates; smaller seed cohorts are descriptive only. The fixed probe resamples mechanisms only.",
+      "PPO architecture/checkpoint selection and prior development/fixture reuse can affect results; these comparisons are not an untouched final evaluation.",
+      "Seed-independent baselines, Jev-only, and the fixed probe run once per mechanism. Tiling for pairing does not create independent replicates.",
+      "Adaptive assay forecasts are selection-affected. The forecast primary uses only the fixed common probe and requires all six paired events per mechanism.",
+      "Missing forecasts are never replaced by chance. Conditional paired Brier scores do not establish unconditional whole-probe improvement.",
+      "Recorded end-to-end timing includes reset in both engines, reference computations, and synchronous journals; historical native inference speed is not compared.",
+      "Estimated API USD is conditional on reported usage and the manifest price; unknown usage is not free. Simulator costs and API dollars are separate units.",
+      "Repeated exact requests describe observed reply variability, not proof of model-weight drift; model labels alone do not certify fixed weights.",
+      "Prospective registration requires independently recording the analysis source and contract hashes before hosted dispatch; an analysis output alone cannot establish chronology."
+    ],
+    "missing_forecasts": "retain missingness, paired-valid counts, expected counts, and best/worst whole-probe Brier bounds; no chance imputation",
+    "missing_outcomes": "block a comparison unless every planned seed/mechanism cell in both methods completed with finite outcomes",
+    "primary_families": [
+      {
+        "benefit_rule": "adjusted return lower > 0 and adjusted MSE upper <= 0.0001",
+        "id": "arbitration-minus-ppo",
+        "left": "arbitration",
+        "metrics": [
+          "return_",
+          "final_mse"
+        ],
+        "right": "ppo"
+      },
+      {
+        "benefit_rule": "adjusted return lower > 0 and adjusted MSE upper <= 0.0001",
+        "id": "rerank-minus-arbitration",
+        "left": "rerank",
+        "metrics": [
+          "return_",
+          "final_mse"
+        ],
+        "right": "arbitration"
+      },
+      {
+        "benefit_rule": "complete planned probe and paired coverage; adjusted delta-Brier upper < 0",
+        "events": "six fixed-probe events per mechanism",
+        "id": "probe-jev-minus-posterior",
+        "left": "jev",
+        "metrics": [
+          "brier"
+        ],
+        "right": "posterior"
+      }
+    ],
+    "resampling": "paired crossed bootstrap of independent seed and mechanism indices; probe resamples whole mechanisms with all six events",
+    "schema": "jev-m2-analysis-v1",
+    "secondary_comparisons": [
+      [
+        "arbitration",
+        "hidden"
+      ],
+      [
+        "arbitration",
+        "chance"
+      ],
+      [
+        "arbitration",
+        "public"
+      ],
+      [
+        "arbitration",
+        "jev_only"
+      ],
+      [
+        "rerank",
+        "rerank_shadow"
+      ],
+      [
+        "rerank",
+        "hidden"
+      ],
+      [
+        "rerank",
+        "ppo"
+      ],
+      [
+        "forecast_only",
+        "ppo"
+      ],
+      [
+        "ppo",
+        "ppo_v6"
+      ],
+      [
+        "ppo",
+        "imitation"
+      ],
+      [
+        "ppo",
+        "calibrated_imitation"
+      ],
+      [
+        "ppo",
+        "fixed"
+      ],
+      [
+        "ppo",
+        "voi"
+      ],
+      [
+        "arbitration",
+        "imitation"
+      ],
+      [
+        "arbitration",
+        "calibrated_imitation"
+      ],
+      [
+        "arbitration",
+        "fixed"
+      ],
+      [
+        "arbitration",
+        "voi"
+      ],
+      [
+        "rerank",
+        "imitation"
+      ],
+      [
+        "rerank",
+        "calibrated_imitation"
+      ],
+      [
+        "rerank",
+        "fixed"
+      ],
+      [
+        "rerank",
+        "voi"
+      ],
+      [
+        "forecast_only",
+        "imitation"
+      ],
+      [
+        "forecast_only",
+        "calibrated_imitation"
+      ],
+      [
+        "forecast_only",
+        "fixed"
+      ],
+      [
+        "forecast_only",
+        "voi"
+      ],
+      [
+        "jev_only",
+        "imitation"
+      ],
+      [
+        "jev_only",
+        "calibrated_imitation"
+      ],
+      [
+        "jev_only",
+        "fixed"
+      ],
+      [
+        "jev_only",
+        "voi"
+      ],
+      [
+        "incumbent_m1",
+        "imitation"
+      ],
+      [
+        "incumbent_m1",
+        "calibrated_imitation"
+      ],
+      [
+        "incumbent_m1",
+        "fixed"
+      ],
+      [
+        "incumbent_m1",
+        "voi"
+      ]
+    ],
+    "secondary_interpretation_notes": {
+      "rerank-minus-hidden": "Both decision inputs omit forecast values. This compares restricted proposals with the full menu, but prompts and forecast-call order, coverage, and failure rules also differ; the menu effect is not isolated."
+    },
+    "secondary_scope": "descriptive paired 95% intervals only; no multiplicity-adjusted secondary claims",
+    "seed_independent_methods": [
+      "additive",
+      "bo",
+      "eig",
+      "fixed",
+      "fixed_quality",
+      "jev_only",
+      "prior",
+      "probe",
+      "random",
+      "voi"
+    ],
+    "study_schema_version": 4,
+    "timing_metric": "reset-inclusive end_to_end_seconds in M1 and M2"
+  },
+  "date": "2026-11-14",
+  "existing_authorization": {
+    "estimated_usd": 0.1,
+    "historical_calls_used": 11,
+    "max_calls": 32
+  },
+  "final_test_opened": false,
+  "new_m2_hosted_calls_at_registration": 0,
+  "plans": [
+    {
+      "authorization": "proposal; not yet authorized or dispatched",
+      "case_count": 23,
+      "limits": {
+        "max_calls": 80,
+        "max_estimated_usd": 0.1,
+        "max_input_tokens": 2380952,
+        "max_request_bytes": 65536,
+        "max_total_request_bytes": 5242880
+      },
+      "mechanisms": 1,
+      "path": "reports/jev-rl-m2/hosted-plan-pilot-01.json",
+      "prior_fixture_overlap": {
+        "mechanism_hashes": [
+          "7d2bc3f2504cc03a22a592d0232fcfb2b817be6c20ccfe8eb9aa07679d5eb594"
+        ],
+        "metadata_sha256": {
+          "reports/jev-rl-m2/candidate-fixture-01/manifest.json": "a6f01add2d73130f9bae0ca91b56cf7bf1a06459b04f6fd493950ba65c095a93",
+          "reports/jev-rl-m2/candidate-fixture-02/manifest.json": "bf497db22d5cf65a99185d62e5dac8f2e095712e3f186047668ddf0c5b6658ad"
+        },
+        "reused_count": 1,
+        "reused_mechanism_hashes": [
+          "7d2bc3f2504cc03a22a592d0232fcfb2b817be6c20ccfe8eb9aa07679d5eb594"
+        ],
+        "scope": "disclosed reuse of development cases for fixture-to-hosted engineering validation; not an independent test"
+      },
+      "requested_model": "jev-1.14.0",
+      "sha256": "696e6cd726ccff023939145d55579ddac5ab2e57f62e52cda85241dadafaa358",
+      "source_hashes": {
+        "docs/jev_rl_m2_hosted_protocol.md": "4dbc2e24a4e468e218769c55cff9fd1a267c5ed69679acafed51f7dcb2d793a6",
+        "docs/jev_rl_m2_protocol.md": "c899a3d71312a956b41a02d89a31caaaf75ea7f51fae487ac051206b0651a292",
+        "docs/jev_rl_protocol.md": "51f0ef1d680e8930869f422fb492115ae8127e9874df3b7290e1a4cbeacaa9d0",
+        "integrations/jev_candidates.py": "63f8204b4dd322c2558f10db540a2c14a0df798cfee3b2b502f8814190554006",
+        "integrations/jev_client.py": "7c03277ec1b06b64d83a82befd7c64226a695b568c6b8343084599865105fbf5",
+        "integrations/jev_demo.py": "903bed7d7d8d2caf52291d6690f1161c1bca0df5cb5605c9c06a05817526464b",
+        "integrations/jev_m2_episode.py": "969ff8576e3c27031a746cabf1405086df5901af79bdbdd9ec9409cc6084f854",
+        "integrations/jev_replay.py": "73361019928af5f914973379858157551edbe14e7d759596483163bd157753dd",
+        "integrations/jev_research.py": "5a34d56fcbb1baa8ac09fa7605729f6870206ea48140e65b6efa984aae56813a",
+        "requirements.lock": "27f3e24b99d53de68c3affdb424e593c5bd6291d0447d9b81dac5db1ffcb85bd",
+        "scripts/jev_m2_study.py": "fa8b57b8a38ea29b1515349fc9445aa77fb2347e12090ea51f79049be0835fa6",
+        "scripts/jev_rl_study.py": "eff7af8a7aa6255e81c226e7b0b32cee823e1893d8de66edef9d0ff8af668f06",
+        "scripts/research_stage.py": "5982d77f22f5d090284480c067c6303363d3b6f34d18a3730aebc1d3086ae914",
+        "src/experimentlab/__init__.py": "4502c01e3934ddcecf59ceceb257e9de901cc749c89a860e644cd1226518bdb4",
+        "src/experimentlab/baselines.py": "b66257566b592c829035413709d280b4436640b6d47dc60dbb9650377873cc41",
+        "src/experimentlab/bo.py": "788ee0e748dc7f28c8796ab4d1f72800ae94ecac5fcdf5368e9ea52a81eab322",
+        "src/experimentlab/cli.py": "1f7697f3763eed2507ac3e7b42e351852dfe946776aa9afedefdabba4129f6e5",
+        "src/experimentlab/cost_policy.py": "c2eeaaf29b9a29b39a6e3e1780ffccf6b83c3d9c9d26ce1e6ec9a13d2fe1352e",
+        "src/experimentlab/envs.py": "219ecccf209fdbc3f2aaa78e6a57bd955cd6338e61abb6c95ca93c1b52c86945",
+        "src/experimentlab/evaluation.py": "122d63d71ee61fa5827f7167b9e68a01dd499c03776b97d7f7bb17d07efa89e4",
+        "src/experimentlab/inference.py": "201b01e521d91454fc00764d35c61b580b87e1b485f25f335fe24826f70210f5",
+        "src/experimentlab/learning.py": "a8eb5ae7d322876c1b0c89e988ea2dec0b79300931edacd09daf838f46aacfe0",
+        "src/experimentlab/tasks.py": "f7cfef94cecf8a41197be39cf3059c83dc6511eb3c14d27818a8d7f251661c70",
+        "src/experimentlab/worlds.py": "0d63da9f7d892b4604053bda243b7cd149da93a6425b8bd1496f378093c087b9"
+      },
+      "training_seeds": [
+        20
+      ],
+      "wall_cap_seconds": 1200.0,
+      "worst_case_api_calls": 79
+    },
+    {
+      "authorization": "proposal; not yet authorized or dispatched",
+      "case_count": 600,
+      "limits": {
+        "max_calls": 2800,
+        "max_estimated_usd": 1.0,
+        "max_input_tokens": 23809523,
+        "max_request_bytes": 65536,
+        "max_total_request_bytes": 183500800
+      },
+      "mechanisms": 8,
+      "path": "reports/jev-rl-m2/hosted-plan-study-01.json",
+      "prior_fixture_overlap": {
+        "mechanism_hashes": [
+          "7d2bc3f2504cc03a22a592d0232fcfb2b817be6c20ccfe8eb9aa07679d5eb594"
+        ],
+        "metadata_sha256": {
+          "reports/jev-rl-m2/candidate-fixture-01/manifest.json": "a6f01add2d73130f9bae0ca91b56cf7bf1a06459b04f6fd493950ba65c095a93",
+          "reports/jev-rl-m2/candidate-fixture-02/manifest.json": "bf497db22d5cf65a99185d62e5dac8f2e095712e3f186047668ddf0c5b6658ad"
+        },
+        "reused_count": 1,
+        "reused_mechanism_hashes": [
+          "7d2bc3f2504cc03a22a592d0232fcfb2b817be6c20ccfe8eb9aa07679d5eb594"
+        ],
+        "scope": "disclosed reuse of development cases for fixture-to-hosted engineering validation; not an independent test"
+      },
+      "requested_model": "jev-1.14.0",
+      "sha256": "b07f3cc2c74c6075c40b4129eda60c76cd5f273e7c4b78bea89c146f8fd3f893",
+      "source_hashes": {
+        "docs/jev_rl_m2_hosted_protocol.md": "4dbc2e24a4e468e218769c55cff9fd1a267c5ed69679acafed51f7dcb2d793a6",
+        "docs/jev_rl_m2_protocol.md": "c899a3d71312a956b41a02d89a31caaaf75ea7f51fae487ac051206b0651a292",
+        "docs/jev_rl_protocol.md": "51f0ef1d680e8930869f422fb492115ae8127e9874df3b7290e1a4cbeacaa9d0",
+        "integrations/jev_candidates.py": "63f8204b4dd322c2558f10db540a2c14a0df798cfee3b2b502f8814190554006",
+        "integrations/jev_client.py": "7c03277ec1b06b64d83a82befd7c64226a695b568c6b8343084599865105fbf5",
+        "integrations/jev_demo.py": "903bed7d7d8d2caf52291d6690f1161c1bca0df5cb5605c9c06a05817526464b",
+        "integrations/jev_m2_episode.py": "969ff8576e3c27031a746cabf1405086df5901af79bdbdd9ec9409cc6084f854",
+        "integrations/jev_replay.py": "73361019928af5f914973379858157551edbe14e7d759596483163bd157753dd",
+        "integrations/jev_research.py": "5a34d56fcbb1baa8ac09fa7605729f6870206ea48140e65b6efa984aae56813a",
+        "requirements.lock": "27f3e24b99d53de68c3affdb424e593c5bd6291d0447d9b81dac5db1ffcb85bd",
+        "scripts/jev_m2_study.py": "fa8b57b8a38ea29b1515349fc9445aa77fb2347e12090ea51f79049be0835fa6",
+        "scripts/jev_rl_study.py": "eff7af8a7aa6255e81c226e7b0b32cee823e1893d8de66edef9d0ff8af668f06",
+        "scripts/research_stage.py": "5982d77f22f5d090284480c067c6303363d3b6f34d18a3730aebc1d3086ae914",
+        "src/experimentlab/__init__.py": "4502c01e3934ddcecf59ceceb257e9de901cc749c89a860e644cd1226518bdb4",
+        "src/experimentlab/baselines.py": "b66257566b592c829035413709d280b4436640b6d47dc60dbb9650377873cc41",
+        "src/experimentlab/bo.py": "788ee0e748dc7f28c8796ab4d1f72800ae94ecac5fcdf5368e9ea52a81eab322",
+        "src/experimentlab/cli.py": "1f7697f3763eed2507ac3e7b42e351852dfe946776aa9afedefdabba4129f6e5",
+        "src/experimentlab/cost_policy.py": "c2eeaaf29b9a29b39a6e3e1780ffccf6b83c3d9c9d26ce1e6ec9a13d2fe1352e",
+        "src/experimentlab/envs.py": "219ecccf209fdbc3f2aaa78e6a57bd955cd6338e61abb6c95ca93c1b52c86945",
+        "src/experimentlab/evaluation.py": "122d63d71ee61fa5827f7167b9e68a01dd499c03776b97d7f7bb17d07efa89e4",
+        "src/experimentlab/inference.py": "201b01e521d91454fc00764d35c61b580b87e1b485f25f335fe24826f70210f5",
+        "src/experimentlab/learning.py": "a8eb5ae7d322876c1b0c89e988ea2dec0b79300931edacd09daf838f46aacfe0",
+        "src/experimentlab/tasks.py": "f7cfef94cecf8a41197be39cf3059c83dc6511eb3c14d27818a8d7f251661c70",
+        "src/experimentlab/worlds.py": "0d63da9f7d892b4604053bda243b7cd149da93a6425b8bd1496f378093c087b9"
+      },
+      "training_seeds": [
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "wall_cap_seconds": 1200.0,
+      "worst_case_api_calls": 2776
+    }
+  ],
+  "schema": "jev-m2-prospective-analysis-registration-v1"
+}
